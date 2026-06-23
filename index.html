@@ -3,218 +3,93 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>The 1913 Index — True Inflation Since the Federal Reserve</title>
-<meta name="description" content="Since the Federal Reserve was founded in 1913, the dollar has lost about 98% of its value measured in real prices — versus the 97% official CPI admits. An independent, sourced, reproducible inflation index.">
-<!-- Open Graph / Twitter. TODO @deploy: set og:url to the live URL and confirm assets/og-default.png (1200×630) is uploaded. -->
+<title>The 1913 Index — what your dollar really lost</title>
+<meta name="description" content="Play the price game, then see the receipts: since the Federal Reserve was founded in 1913, the dollar has lost about 98% of its value measured in the real prices of real things — far more than the official CPI admits.">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="The 1913 Index">
 <meta property="og:title" content="The government says prices rose 34×. They actually rose 52×.">
-<meta property="og:description" content="What the dollar has really lost since the Fed was born — measured in the real prices of real things, with the housing fudge removed.">
+<meta property="og:description" content="Play the price game and watch your dollar melt — measured in the real prices of real things since 1913.">
 <meta property="og:image" content="assets/og-default.png">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="The 1913 Index — true inflation since the Fed">
-<meta name="twitter:description" content="The dollar has lost ~98% of its value since 1913. See the number, and exactly how it's built.">
+<meta name="twitter:title" content="The 1913 Index">
+<meta name="twitter:description" content="Can you guess what things really cost? Your dollar isn't what it was.">
 <meta name="twitter:image" content="assets/og-default.png">
 <link rel="stylesheet" href="styles.css">
 <style>
-  /* Dollar-clock iframe: JS auto-fits height when same-origin; these are safe fallbacks
-     (generous so the clock never clips even if the resize script is blocked on file://). */
-  #clockFrame{height:680px}
-  @media(max-width:560px){ #clockFrame{height:900px} }
+  .hero{text-align:center;padding:26px 0 10px}
+  .hero .eye{font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gold)}
+  .hero h1{font-size:clamp(1.9rem,5.5vw,3.1rem);line-height:1.08;margin:.18em 0 .1em}
+  .hero h1 .melt{color:var(--red)}
+  .hero p.k{font-size:1.05rem;color:var(--ink2);max-width:620px;margin:.4em auto 0}
+  .gameWrap{margin:22px 0 8px}
+  .playmore{font-size:.86rem;color:var(--ink2);margin-top:10px}
+  .playmore a{color:var(--gold);font-weight:700}
+  .numstrip{display:grid;grid-template-columns:1fr 1fr 1fr;gap:0;border:2px solid var(--ink);background:var(--paper2);margin:26px 0 8px}
+  @media(max-width:620px){.numstrip{grid-template-columns:1fr}}
+  .numstrip .c{text-align:center;padding:18px 12px}.numstrip .c+.c{border-left:1px solid var(--rule)}
+  @media(max-width:620px){.numstrip .c+.c{border-left:none;border-top:1px solid var(--rule)}}
+  .numstrip .l{font-size:.62rem;letter-spacing:.12em;text-transform:uppercase;color:var(--ink2)}
+  .numstrip .n{font-family:"Courier New",monospace;font-weight:700;font-size:clamp(1.6rem,5vw,2.3rem);margin:.05em 0}
+  .numstrip .official .n{color:var(--ink2)}.numstrip .ours .n{color:var(--red)}
+  .numstrip .s{font-size:.78rem;color:var(--ink2)}
+  .cards{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px;margin:24px 0}
+  @media(max-width:780px){.cards{grid-template-columns:1fr}}
+  .card{display:block;border:2px solid var(--ink);background:var(--paper2);padding:18px;text-decoration:none;color:var(--ink)}
+  .card:hover{background:#fff}
+  .card .ct{font-size:1.15rem;font-weight:700}
+  .card .cd{font-size:.9rem;color:var(--ink2);margin-top:5px}
+  .card .go{color:var(--gold);font-weight:700;font-size:.85rem;margin-top:8px;display:inline-block}
+  #clockFrame{height:560px;width:100%;border:none;display:block;overflow:hidden}
+  @media(max-width:560px){#clockFrame{height:760px}}
 </style>
 </head>
-<body class="home">
+<body>
 
-<header class="mast">
-  <div class="wrap">
-    <div class="eyebrow">An Independent Measure of True Inflation</div>
-    <h1>The 1913 Index</h1>
-    <div class="estd">What the dollar has really lost since the Fed was born</div>
+<section><div class="wrap">
+  <div class="hero">
+    <div class="eye">An independent measure of true inflation · since 1913</div>
+    <h1>Your dollar is a <span class="melt">melting ice cube</span>.<br>Can you guess how fast?</h1>
+    <p class="k">The government says inflation is mild. The grocery cart says otherwise. Play one round — then see the receipts.</p>
   </div>
-</header>
 
-<nav class="topnav">
-  <a href="index.html">Home</a>
-  <a href="the-number.html">The Number</a>
-  <a href="housing.html">Housing</a>
-  <a href="regional.html">Regional</a>
-  <a href="wages.html">Wages</a>
-  <a href="history.html">The Rate</a>
-  <a href="basket.html">The Basket</a>
-  <a href="afford.html">Afford It?</a>
-  <a href="gold.html">Gold</a>
-  <a href="fed-tracker.html">The Fed</a>
-  <a href="war.html">War Cost</a>
-  <a href="data.html">Data</a>
-  <a href="ask.html">Ask ✦</a>
-  <a href="contribute.html">Contribute</a>
-  <a href="game.html" class="daily">Daily ★</a>
-  <a href="measures.html">Measures</a>
-  <a href="method.html">Method</a>
-</nav>
+  <div class="gameWrap"><div id="game"></div></div>
+  <p class="playmore" style="text-align:center">Hooked? <a href="game.html">Play the full game →</a></p>
 
-<!-- ===== 0. THE DOLLAR CLOCK (live hero) ===== -->
-<section style="padding-top:18px;padding-bottom:6px">
-  <div class="wrap">
-    <iframe id="clockFrame" src="dollar-clock.html" title="The Dollar Clock — what $1 in 1913 is worth today"
-            style="width:100%;border:none;display:block;overflow:hidden"
-            scrolling="no" loading="eager"></iframe>
+  <div class="numstrip">
+    <div class="c official"><div class="l">Official CPI says prices rose</div><div class="n" id="cpiN">34×</div><div class="s">since 1913</div></div>
+    <div class="c ours"><div class="l">The 1913 Index says</div><div class="n" id="idxN">52×</div><div class="s">measuring the real same goods</div></div>
+    <div class="c"><div class="l">So your 1913 dollar is worth</div><div class="n" id="pennyN" style="color:var(--red)">~2¢</div><div class="s">and still falling — <a href="dollar.html" style="color:var(--gold)">see it drop</a></div></div>
   </div>
-</section>
-<script>
-(function(){
-  var f=document.getElementById("clockFrame");
-  function fit(){ try{ var h=f.contentWindow.document.body.scrollHeight; if(h>120) f.style.height=h+"px"; }catch(e){} }
-  f.addEventListener("load", function(){ fit(); setTimeout(fit,300); });
-  window.addEventListener("resize", fit);
-})();
-</script>
 
-<!-- ===== 1. THE FLAGSHIP CHART ===== -->
-<section>
-  <div class="wrap">
-    <p class="eyebrow-c">1913 → Today</p>
-    <h2 class="flag-h">The government says prices rose 34×. They actually rose more than 52×.</h2>
-    <p class="flag-sub">One chart, measured in real prices of real things since the Federal Reserve was founded — beside the official number.</p>
-    <div class="flagchart"><svg id="flag" viewBox="0 0 900 460" preserveAspectRatio="xMidYMid meet" role="img"></svg></div>
-    <p class="chart-cap">Cumulative price growth, 1913 = 100 (log scale). <span style="color:var(--red);font-weight:700">The 1913 Index</span> vs. <span style="color:var(--ink2);font-weight:700">official CPI</span>.</p>
+  <h2 class="sec" style="text-align:center;margin-top:26px">Watch a 1913 dollar melt in real time</h2>
+  <iframe id="clockFrame" src="dollar-clock.html" title="The Dollar Clock" scrolling="no" loading="eager"></iframe>
+
+  <div class="cards">
+    <a class="card" href="explore.html"><div class="ct">🔎 Explore Prices</div><div class="cd">Homes, gas, milk, college, gold, wages — every price, in dollars and in hours of work, from any year to now.</div><span class="go">Dig into the data →</span></a>
+    <a class="card" href="ask.html"><div class="ct">💬 Ask the Index</div><div class="cd">Type a question — "how much more is a home than in 1971?" — and get a real, sourced answer in plain English.</div><span class="go">Ask anything →</span></a>
+    <a class="card" href="why.html"><div class="ct">📜 The Why</div><div class="cd">How CPI undercounts, what the Fed did to the dollar, and what the wars really cost. The receipts behind the number.</div><span class="go">See the argument →</span></a>
   </div>
-</section>
 
-<!-- ===== 2. THE KEY FINDING ===== -->
-<section style="padding-top:0">
-  <div class="wrap">
-    <div class="finding">
-      <div class="fcell"><div class="fl">Official CPI since 1913</div><div class="fn cpi" id="kCpi">—</div><div class="fd">what the government reports</div></div>
-      <div class="fcell"><div class="fl">The 1913 Index since 1913</div><div class="fn ours" id="kOurs">—</div><div class="fd">true inflation, real prices</div></div>
-      <div class="fcell"><div class="fl">The gap</div><div class="fn gap" id="kGap">—</div><div class="fd">how much CPI understates</div></div>
-    </div>
-    <p class="lead-c" style="margin-top:26px">Put plainly: a dollar from 1913 does the work of about <b id="penny">—</b> today by the official measure — and even less once you price the things families actually buy. <a href="dollar.html">See the dollar's collapse →</a></p>
-  </div>
-</section>
+  <p class="disclaimer" style="text-align:center">Independent, sourced, and reproducible. Built on real prices (BLS, Census, FRED, EIA) — not surveys of imagined rents. Not investment advice.</p>
+</div></section>
 
-<!-- ===== 3. WHY THEY DIFFER ===== -->
-<section style="background:var(--paper2)">
-  <div class="wrap">
-    <p class="eyebrow-c">The Reason</p>
-    <h2 class="flag-h" style="font-size:clamp(1.5rem,3.5vw,2.1rem)">Why our number is higher</h2>
-    <p class="lead-c">CPI measures the cost of an <i>equivalent standard of living</i> — so it leans on substitutions, quality adjustments, and a survey-based housing figure. The 1913 Index answers a blunter question: <b>how much more do the actual same goods cost in actual dollars?</b> The single biggest difference is housing — CPI uses "Owners' Equivalent Rent," a survey asking homeowners to guess what their house would rent for, for about a third of the whole index. We use the real price of a home instead.</p>
-    <div class="center-link"><a href="cpi-vs-index.html">See the full category-by-category comparison →</a></div>
-  </div>
-</section>
-
-<!-- ===== 4. HOW WE CALCULATE IT ===== -->
-<section>
-  <div class="wrap">
-    <p class="eyebrow-c">Nothing Hidden</p>
-    <h2 class="flag-h" style="font-size:clamp(1.5rem,3.5vw,2.1rem)">How we calculate this</h2>
-    <div class="method-snap">
-      <div class="msnap"><span class="mn">1</span><p><b>Real prices, not hypotheticals.</b> Every category mirrors CPI's own basket and weights, but uses real transaction prices — with home prices replacing CPI's imagined "owners' equivalent rent."</p></div>
-      <div class="msnap"><span class="mn">2</span><p><b>Every figure sourced and rated.</b> BLS, Census, Shiller, EIA and Treasury data, each with a confidence rating; estimates and pre-1950 figures are flagged.</p></div>
-      <div class="msnap"><span class="mn">3</span><p><b>We steelman the other side.</b> Where the official number is actually fair, we say so. That honesty is what makes the rest credible.</p></div>
-    </div>
-    <div class="center-link"><a href="method.html">Read the full methodology &amp; common criticisms →</a></div>
-  </div>
-</section>
-
-<!-- ===== 4.5 NEWSLETTER SIGNUP ===== -->
-<section style="padding:0">
-  <div class="signup">
-    <div class="wrap">
-      <p class="eyebrow-c">Free · Monthly</p>
-      <h3>The 1913 Index Briefing</h3>
-      <p>Every CPI release: what the government says, what the 1913 Index says, and the gap they'd rather you didn't see. One chart, every number sourced.</p>
-      <!-- TODO: replace action + remove note once Substack publication exists.
-           Substack gives an embeddable form at https://YOURNAME.substack.com/embed -->
-      <form class="form" action="https://SUBSTACK-HANDLE.substack.com/subscribe" method="get" target="_blank">
-        <input type="email" name="email" placeholder="you@email.com" aria-label="Email">
-        <button class="sub" type="submit">Subscribe →</button>
-      </form>
-      <div class="fine">No spam. Unsubscribe anytime. Powered by Substack.</div>
-    </div>
-  </div>
-</section>
-
-<!-- ===== 5. THE DAILY GAME ===== -->
-<section style="padding:0">
-  <div class="gameband">
-    <div class="wrap">
-      <p class="eyebrow-c" style="color:#d8cba0">Play Daily</p>
-      <h3>Sticker Shock</h3>
-      <p>How well do you know what a dollar used to buy? Guess the price, see the erosion, share your score.</p>
-      <a class="playbtn" href="game.html">Play today's round →</a>
-    </div>
-  </div>
-</section>
-
-<!-- ===== 6. RESEARCH LIBRARY ===== -->
-<section>
-  <div class="wrap">
-    <div class="libhead">
-      <p class="eyebrow-c">Explore the Evidence</p>
-      <h2 class="flag-h" style="font-size:clamp(1.5rem,3.5vw,2.1rem)">The research library</h2>
-    </div>
-    <div class="lib">
-      <a href="history.html"><div class="ln">01</div><h4>The 1913 Inflation Rate</h4><p>Our rate vs. CPI for every year since 1913, re-anchorable to any landmark year.</p></a>
-      <a href="dollar.html"><div class="ln">02</div><h4>The Dollar</h4><p>What a single 1913 dollar is worth today — by their math and ours.</p></a>
-      <a href="basket.html"><div class="ln">03</div><h4>The Basket</h4><p>Item by item, then vs. now, fully sourced and confidence-rated.</p></a>
-      <a href="afford.html"><div class="ln">04</div><h4>Can You Afford It?</h4><p>Prices in hours of work — plus a calculator for your own true inflation.</p></a>
-      <a href="gold.html"><div class="ln">05</div><h4>Measured in Gold</h4><p>The dollar priced in the one money the Fed cannot print.</p></a>
-      <a href="fed-tracker.html"><div class="ln">06</div><h4>The Fed Tracker</h4><p>The live money machine: M2, the balance sheet, and the debt clock.</p></a>
-      <a href="fedwatch.html"><div class="ln">07</div><h4>Fed Watch</h4><p>The rebuttal the Fed won't give you — same day, every release.</p></a>
-      <a href="war.html"><div class="ln">08</div><h4>True Cost of War</h4><p>Every U.S. war since WWII, in real dollars, plus the live Iran clock.</p></a>
-      <a href="wilson.html"><div class="ln">09</div><h4>Origins: 1913</h4><p>The income tax, the Fed, and the war — the machinery built in one year.</p></a>
-      <a href="data.html"><div class="ln">10</div><h4>Explore the Data</h4><p>The open, tiered, sourced dataset behind everything — browse and filter it.</p></a>
-      <a href="game.html"><div class="ln">11</div><h4>Play Sticker Shock</h4><p>The daily price-guessing game, powered by the same dataset.</p></a>
-    </div>
-  </div>
-</section>
-
-<footer><div class="wrap">
-  <p class="disclaimer" id="disclaimer"></p>
-  <p style="margin-top:8px;color:#cdbf9b">The 1913 Index · prototype · not yet public · <span id="updated"></span></p>
-</div></footer>
-
-<script src="data.js"></script>
-<script src="core.js"></script>
+<script src="nav.js"></script>
+<script src="game-data.js"></script>
+<script src="game.js"></script>
+<script>window.GAME && window.GAME.mount("game");</script>
+<!-- optional: fill the headline multiples from live data if present -->
+<script src="database.js"></script>
 <script src="series.js"></script>
 <script>
 (function(){
-  var S=window.SMI, rows=window.SERIES.rows;
-  // key finding
-  document.getElementById("kCpi").textContent=S.fmtP(S.cpi.cumulative_pct);
-  document.getElementById("kOurs").textContent=S.fmtP(S.indexPct);
-  document.getElementById("kGap").textContent="+"+Math.round((S.indexMult/S.cpi.dollar_1913_in_now-1)*100)+"%";
-  document.getElementById("penny").textContent="$"+ (1/S.cpi.dollar_1913_in_now).toFixed(2);
-  document.getElementById("disclaimer").textContent="The 1913 Index "+S.D.meta.version+". "+S.D.meta.note;
-  document.getElementById("updated").textContent="data last updated "+S.D.meta.last_updated;
-
-  // flagship chart: CPI vs 1913 Index, 1913-2026, log scale
-  var svg=document.getElementById("flag"), W=900,H=460,L=64,R=120,T=24,B=40, x0=L,x1=W-R,y0=T,y1=H-B;
-  var startY=1913,endY=2026;
-  var xs=function(y){return x0+(x1-x0)*(y-startY)/(endY-startY);};
-  var vals=[]; rows.forEach(function(r){vals.push(r.idx,r.cpi);});
-  var vmin=Math.log10(100*0.95), vmax=Math.log10(Math.max.apply(null,vals)*1.1);
-  var ys=function(v){return y1-(y1-y0)*(Math.log10(v)-vmin)/(vmax-vmin);};
-  function path(key){return rows.map(function(r,i){return (i?"L":"M")+xs(r.y).toFixed(1)+","+ys(r[key]).toFixed(1);}).join(" ");}
-  var g="";
-  // y gridlines at 100,1000,5000
-  [100,500,1000,2500,5000].forEach(function(v){ if(v<Math.pow(10,vmax)){var yy=ys(v);
-    g+='<line x1="'+x0+'" y1="'+yy.toFixed(1)+'" x2="'+x1+'" y2="'+yy.toFixed(1)+'" stroke="#c3b189" stroke-width="1"/>';
-    g+='<text x="'+(x0-8)+'" y="'+(yy+4).toFixed(1)+'" text-anchor="end" font-size="11" fill="#4a3f2a" font-family="Courier New,monospace">'+v.toLocaleString()+'</text>';
-  }});
-  for(var yr=1920;yr<=2020;yr+=20){ g+='<text x="'+xs(yr).toFixed(1)+'" y="'+(y1+22)+'" text-anchor="middle" font-size="11" fill="#4a3f2a" font-family="Courier New,monospace">'+yr+'</text>';
-    g+='<line x1="'+xs(yr).toFixed(1)+'" y1="'+y0+'" x2="'+xs(yr).toFixed(1)+'" y2="'+y1+'" stroke="#e6d8b4" stroke-width="1"/>';}
-  g+='<path d="'+path("cpi")+'" fill="none" stroke="#4a3f2a" stroke-width="2.6"/>';
-  g+='<path d="'+path("idx")+'" fill="none" stroke="#8c1c13" stroke-width="3.4"/>';
-  var last=rows[rows.length-1];
-  g+='<circle cx="'+xs(last.y)+'" cy="'+ys(last.idx)+'" r="4" fill="#8c1c13"/>';
-  g+='<text x="'+(xs(last.y)+8)+'" y="'+(ys(last.idx)+2)+'" font-size="13" font-weight="700" fill="#8c1c13" font-family="Georgia,serif">1913 Index</text>';
-  g+='<text x="'+(xs(last.y)+8)+'" y="'+(ys(last.idx)+19)+'" font-size="12" fill="#8c1c13" font-family="Courier New,monospace">'+(last.idx/100).toFixed(0)+'×</text>';
-  g+='<circle cx="'+xs(last.y)+'" cy="'+ys(last.cpi)+'" r="4" fill="#4a3f2a"/>';
-  g+='<text x="'+(xs(last.y)+8)+'" y="'+(ys(last.cpi)+2)+'" font-size="13" font-weight="700" fill="#4a3f2a" font-family="Georgia,serif">Official CPI</text>';
-  g+='<text x="'+(xs(last.y)+8)+'" y="'+(ys(last.cpi)+19)+'" font-size="12" fill="#4a3f2a" font-family="Courier New,monospace">'+(last.cpi/100).toFixed(0)+'×</text>';
-  svg.innerHTML=g;
+  try{
+    if(window.SERIES && window.SERIES.headline){
+      var h=window.SERIES.headline;
+      if(h.indexMult) document.getElementById("idxN").textContent=Math.round(h.indexMult)+"×";
+      if(h.cpiMult) document.getElementById("cpiN").textContent=Math.round(h.cpiMult)+"×";
+      if(h.indexMult) document.getElementById("pennyN").textContent="~"+(100/h.indexMult).toFixed(0)+"¢";
+    }
+  }catch(e){}
 })();
 </script>
 </body>
