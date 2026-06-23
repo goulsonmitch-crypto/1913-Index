@@ -1,0 +1,105 @@
+{
+ "weights_note": "The 1913 Index now mirrors CPI's full 8-group structure at CPI's own relative-importance weights (BLS, Dec 2024). Every category uses its real BLS sub-index, except shelter — where we replace CPI's Owners' Equivalent Rent survey with real home prices — and transport, where we use raw (anti-hedonic) car and gas prices. New BLS categories carry their quality (hedonic) adjustments; our number is therefore conservative there.",
+ "headline_multiple": 52.63,
+ "categories": [
+  {
+   "name": "Shelter (real home price)",
+   "weight": 35.483,
+   "mult": 68.32,
+   "start": 1913,
+   "est": false,
+   "proxy": false,
+   "basis": "Real median home price — replaces CPI's OER survey"
+  },
+  {
+   "name": "Transportation",
+   "weight": 16.571,
+   "mult": 50.61,
+   "start": 1913,
+   "est": false,
+   "proxy": false,
+   "basis": "Raw new car + gasoline (anti-hedonic)"
+  },
+  {
+   "name": "Food & beverages",
+   "weight": 14.526,
+   "mult": 34.97,
+   "start": 1913,
+   "est": false,
+   "proxy": false,
+   "basis": "BLS Food CPI"
+  },
+  {
+   "name": "Medical care",
+   "weight": 8.273,
+   "mult": 80.5,
+   "start": 1935,
+   "est": true,
+   "proxy": false,
+   "basis": "BLS Medical care CPI"
+  },
+  {
+   "name": "Recreation",
+   "weight": 5.292,
+   "mult": 23.07,
+   "start": 1993,
+   "est": true,
+   "proxy": false,
+   "basis": "BLS Recreation CPI"
+  },
+  {
+   "name": "Fuels & utilities",
+   "weight": 4.312,
+   "mult": 41.99,
+   "start": 1952,
+   "est": true,
+   "proxy": false,
+   "basis": "BLS Fuels & utilities CPI"
+  },
+  {
+   "name": "Household furnishings & operations",
+   "weight": 4.406,
+   "mult": 9.24,
+   "start": 1914,
+   "est": true,
+   "proxy": true,
+   "basis": "Proxied by apparel (durable goods)"
+  },
+  {
+   "name": "Communication",
+   "weight": 3.149,
+   "mult": 10.81,
+   "start": 1993,
+   "est": true,
+   "proxy": false,
+   "basis": "BLS Communication CPI"
+  },
+  {
+   "name": "Other goods & services",
+   "weight": 2.925,
+   "mult": 57.32,
+   "start": 1967,
+   "est": true,
+   "proxy": false,
+   "basis": "BLS Other goods & services CPI"
+  },
+  {
+   "name": "Education",
+   "weight": 2.583,
+   "mult": 99.79,
+   "start": 1977,
+   "est": true,
+   "proxy": false,
+   "basis": "BLS College tuition & fees CPI"
+  },
+  {
+   "name": "Apparel",
+   "weight": 2.48,
+   "mult": 9.24,
+   "start": 1914,
+   "est": false,
+   "proxy": false,
+   "basis": "BLS Apparel CPI"
+  }
+ ]
+}

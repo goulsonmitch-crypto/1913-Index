@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ask the 1913 Index</title>
+<meta name="description" content="Ask any price question and get an answer computed straight from the open, sourced dataset — never invented. Items over time, the dollar in gold, hours of work, and more.">
+<!-- Open Graph / Twitter. TODO @deploy: set og:url; confirm assets/og-default.png. -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="The 1913 Index">
+<meta property="og:title" content="Ask the 1913 Index">
+<meta property="og:description" content="A deterministic engine that answers price questions from the open dataset — and never invents a number.">
+<meta property="og:image" content="assets/og-default.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="assets/og-default.png">
+<link rel="stylesheet" href="styles.css">
+<style>
+  .askbox{background:var(--ink);color:var(--paper);border:2px solid var(--gold);padding:20px;border-radius:6px;margin-top:6px}
+  .askbox .lab{font-size:.66rem;letter-spacing:.16em;text-transform:uppercase;color:#d8cba0}
+  .askbox .row{display:flex;gap:10px;margin-top:8px;flex-wrap:wrap}
+  .askbox input{flex:1;min-width:240px;background:#0e1626;border:1px solid #3a4256;color:#eef2f8;padding:13px 15px;font:inherit;font-size:1rem;border-radius:6px}
+  .askbox button{background:var(--gold);color:#1a1306;border:none;font-weight:700;padding:13px 22px;border-radius:6px;cursor:pointer;font:inherit;font-weight:700}
+  .chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+  .chips button{background:transparent;border:1px solid #5a4a22;color:#e7d9ad;font:inherit;font-size:.82rem;padding:6px 12px;border-radius:20px;cursor:pointer}
+  .chips button:hover{background:#221c0e}
+  #result{margin-top:18px}
+  .ans{border:2px solid var(--ink);background:var(--paper2);border-radius:6px;padding:18px 20px}
+  .ans .ahead{font-size:1.15rem;font-weight:700;margin-bottom:8px;border-bottom:1px solid var(--rule);padding-bottom:8px}
+  .ans p{margin:.45em 0;font-size:1rem}
+  .ans .asrc{font-size:.82rem;color:var(--ink2);margin-top:10px}
+  .ans.miss{border-style:dashed}
+  .note2{font-size:.82rem;color:var(--ink2);margin-top:12px}
+</style>
+</head>
+<body>
+<header class="mast"><div class="wrap">
+  <div class="eyebrow">Ask &amp; Explore</div>
+  <h1><a href="index.html">The 1913 Index</a></h1>
+  <div class="sub">Ask the Index — answers straight from the open dataset</div>
+</div></header>
+<div class="crumb"><div class="wrap"><a href="index.html">← Home</a> · <a href="data.html">Explore the Data</a><span class="here">Ask the Index</span></div></div>
+
+<section>
+  <div class="wrap">
+    <p class="kicker">Natural-language, no black box</p>
+    <h2 class="sec">Ask what a dollar used to buy</h2>
+    <p class="lead">Type a question about any tracked price or about the dollar itself. Every answer is computed directly from the open, sourced dataset — with its source and confidence rating shown. <b>This engine never invents a number:</b> if it can't ground an answer in the data, it tells you so.</p>
+
+    <div class="askbox">
+      <div class="lab">Ask the Index</div>
+      <div class="row">
+        <input id="q" type="text" placeholder='e.g. "how much more does a home cost than in 1971?"' autocomplete="off">
+        <button id="go">Ask →</button>
+      </div>
+      <div class="chips" id="chips"></div>
+    </div>
+
+    <div id="result"></div>
+
+    <p class="note2">It understands six kinds of questions: <b>an item over time</b> ("milk in 1960"), <b>the dollar's purchasing power</b> ("$1 in 1913 today"), <b>priced in gold</b> ("a home in gold since 1971"), <b>in hours of work</b> ("a car in hours of work"), <b>compare two items</b> ("milk vs gas"), and <b>leaderboards</b> ("what rose the most since 1971?"). Every answer is computed from the open dataset — browse it on the <a href="data.html">data page</a>; see how confidence is rated on the <a href="method.html">method page</a>.</p>
+  </div>
+</section>
+
+<footer><div class="wrap">
+  <p class="disclaimer">Answers are deterministic — computed from window.DB / window.CORPUS / window.SERIES, every figure sourced. Not investment advice.</p>
+  <p style="margin-top:8px;color:#cdbf9b"><a href="index.html">← Back to all topics</a></p>
+</div></footer>
+
+<script src="database.js"></script>
+<script src="corpus.js"></script>
+<script src="series.js"></script>
+<script src="verification.js"></script>
+<script src="afford.js"></script>
+<script src="ask.js"></script>
+<script>
+(function(){
+  var input=document.getElementById("q"), out=document.getElementById("result");
+  var examples=["how much more does a home cost than in 1971?","$1 in 1913 today","what rose the most since 1971?","a home in gold since 1971","milk in hours of work","milk vs gas","what fell the most since 1980?","what is $100 from 1971 worth now?"];
+  var chips=document.getElementById("chips");
+  examples.forEach(function(ex){var b=document.createElement("button");b.textContent=ex;b.onclick=function(){input.value=ex;run();};chips.appendChild(b);});
+
+  function run(){
+    var q=input.value.trim(); if(!q){out.innerHTML="";return;}
+    var r=window.ASK.answer(q);
+    out.innerHTML=r.html;
+    try{ history.replaceState(null,"","?q="+encodeURIComponent(q)); }catch(e){}
+  }
+  document.getElementById("go").onclick=run;
+  input.addEventListener("keydown",function(e){ if(e.key==="Enter") run(); });
+
+  // deep-link support: ?q=
+  var qp=new URLSearchParams(location.search).get("q");
+  if(qp){ input.value=qp; run(); }
+  input.focus();
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Explore the Data — The 1913 Index</title>
+<link rel="stylesheet" href="styles.css">
+<style>
+  .ask{background:var(--ink);color:var(--paper);border:2px solid var(--gold);padding:18px 20px;margin-top:8px;border-radius:4px}
+  .ask .lab{font-size:.66rem;letter-spacing:.16em;text-transform:uppercase;color:#d8cba0}
+  .ask .row{display:flex;gap:10px;margin-top:8px;flex-wrap:wrap}
+  .ask input{flex:1;min-width:220px;background:#0e1626;border:1px solid #3a4256;color:#eef2f8;padding:11px 13px;font:inherit;border-radius:6px}
+  .ask button{background:var(--gold);color:#1a1306;border:none;font-weight:700;padding:11px 18px;border-radius:6px;cursor:not-allowed;opacity:.7}
+  .ask .soon{font-size:.72rem;color:#cdbf9b;margin-top:8px;font-style:italic}
+  .tierlegend{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:14px}
+  @media(max-width:680px){.tierlegend{grid-template-columns:1fr}}
+  .tierdef{border-left:5px solid var(--gold);background:rgba(154,125,46,.07);padding:10px 14px}
+  .tierdef h4{margin:.1em 0 .2em;font-size:.95rem}
+  .tierdef p{margin:0;font-size:.8rem;color:var(--ink2)}
+  .tbadge{display:inline-block;font-size:.6rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:2px 7px;border-radius:3px;color:#fff}
+  .filters{display:flex;flex-wrap:wrap;gap:12px;align-items:flex-end;margin:16px 0 4px}
+  .filters .f label{display:block;font-size:.62rem;letter-spacing:.14em;text-transform:uppercase;color:var(--ink2);margin-bottom:3px}
+  .filters input,.filters select{font:inherit;font-size:.95rem;background:var(--paper2);border:2px solid var(--ink);color:var(--ink);padding:7px 10px}
+  table.db{width:100%;border-collapse:collapse;font-size:.92rem;margin-top:10px}
+  table.db th{background:var(--ink);color:var(--paper);text-align:right;padding:8px 9px;font-size:.72rem;letter-spacing:.05em;cursor:pointer;white-space:nowrap}
+  table.db th:first-child,table.db th:nth-child(2){text-align:left}
+  table.db td{text-align:right;padding:8px 9px;border-bottom:1px solid var(--rule);font-family:"Courier New",monospace}
+  table.db td:first-child{text-align:left;font-family:inherit;font-weight:700}
+  table.db td:nth-child(2){text-align:left}
+  .mult{color:var(--red);font-weight:700}
+  .note{font-size:.7rem;color:var(--ink2);font-family:inherit;font-style:italic}
+  .count{font-size:.8rem;color:var(--ink2);margin-top:8px}
+</style>
+</head>
+<body>
+<header class="mast"><div class="wrap">
+  <div class="eyebrow">The Dataset</div>
+  <h1><a href="index.html">The 1913 Index</a></h1>
+  <div class="sub">Explore the Data — every tracked price, tiered and sourced</div>
+</div></header>
+<div class="crumb"><div class="wrap"><a href="index.html">← Home</a><span class="here">Explore the Data</span></div></div>
+
+<section>
+  <div class="wrap">
+    <p class="kicker">Ask &amp; Explore</p>
+    <h2 class="sec">The queryable record of what a dollar used to buy</h2>
+    <p class="lead">This is the open, sourced dataset behind everything on the site — and the foundation for natural-language queries. Browse it below, filter by category and data tier, and see exactly where every number comes from.</p>
+
+    <div class="ask">
+      <div class="lab">Ask the Index</div>
+      <div class="row">
+        <input id="askq" type="text" placeholder="e.g. How much more does a house cost than in 1971?">
+        <button id="askgo">Ask →</button>
+      </div>
+      <div class="soon">A deterministic natural-language layer — every answer computed from this dataset, with sources. <a href="ask.html" style="color:var(--gold)">Open the full Ask page →</a></div>
+    </div>
+
+    <div class="getdata" style="border:2px solid var(--ink);border-radius:6px;padding:14px 18px;margin-top:18px;background:var(--paper2)">
+      <h3 style="margin:0 0 6px">Get the data &amp; cite it</h3>
+      <p style="font-size:.88rem;color:var(--ink2);margin:.2em 0 10px">The whole dataset is open and reproducible. Download it, or cite the headline figure like you would CPI.</p>
+      <div style="display:flex;gap:10px;flex-wrap:wrap;margin-bottom:10px">
+        <button id="dlcsv" style="background:var(--ink);color:var(--paper);border:none;font:inherit;font-weight:700;padding:9px 16px;border-radius:5px;cursor:pointer">Download CSV</button>
+        <button id="dljson" style="background:var(--ink);color:var(--paper);border:none;font:inherit;font-weight:700;padding:9px 16px;border-radius:5px;cursor:pointer">Download JSON</button>
+        <a href="the-number.html" style="background:var(--gold);color:#1a1306;text-decoration:none;font-weight:700;padding:9px 16px;border-radius:5px">The headline number →</a>
+      </div>
+      <p style="font-size:.82rem;color:var(--ink2);margin:0"><b>Suggested citation:</b> <span id="citetext"></span></p>
+    </div>
+
+    <h3 style="margin-top:26px">What the tiers mean</h3>
+    <div class="tierlegend" id="legend"></div>
+
+    <div class="filters">
+      <div class="f"><label>Search</label><input id="q" type="text" placeholder="item name…" style="min-width:160px"></div>
+      <div class="f"><label>Category</label><select id="cat"></select></div>
+      <div class="f"><label>Data tier</label><select id="tier"><option value="">All tiers</option><option value="1">Tier 1 · Gold</option><option value="2">Tier 2 · Sourced</option><option value="3">Tier 3 · Reconstructed</option></select></div>
+      <div class="f"><label>Status</label><select id="status"><option value="">All</option><option value="v">✓ Verified</option><option value="p">Pending</option></select></div>
+      <div class="f"><label>Confidence</label><select id="conf"><option value="">All confidence</option><option value="cross-verified">Cross-verified</option><option value="audited-ok">Audited (item-level)</option><option value="category">Category model</option><option value="plausible">Plausible</option><option value="review">Review</option><option value="conflict">Conflict</option></select></div>
+    </div>
+    <div class="count" id="count"></div>
+
+    <div style="overflow-x:auto;-webkit-overflow-scrolling:touch">
+    <table class="db" style="min-width:760px">
+      <thead><tr>
+        <th data-k="name">Item</th><th data-k="category">Category</th><th data-k="tier">Tier</th>
+        <th data-k="then_price">Then</th><th data-k="now_price">Now</th><th data-k="mult">× change</th><th data-k="pct">% change</th><th data-k="conf">Confidence</th><th data-k="verified">Status</th><th>Source</th>
+      </tr></thead>
+      <tbody id="rows"></tbody>
+    </table>
+    </div>
+    <p style="font-size:.76rem;color:var(--ink2);margin-top:10px"><b>✓ Verified</b> = price web-checked against its source. <b>⏳ Pending</b> = a best-known objective figure already tagged to its official source, awaiting per-item verification (only verified items feed the game and the headline index). We're verifying down the list Tier 1 first. Click a column header to sort.</p>
+    <div style="margin-top:14px;border-top:1px solid var(--rule);padding-top:12px">
+      <h4 style="margin:0 0 6px;font-size:.95rem">How the <b>Confidence</b> column is computed</h4>
+      <p style="font-size:.78rem;color:var(--ink2);margin:0 0 8px">Every figure runs through an automated audit: a statistical outlier check (does this item's implied inflation diverge sharply from comparable goods in its category?), basic sanity checks, real-data-overlay coverage, and — where available — an independent <i>second source</i> for the current price. The dot reflects the result. This is the opposite of a black box: the rule is open (<code>scripts/verify.js</code>) and every flag is shown on hover.</p>
+      <div id="conflegend" style="display:flex;flex-wrap:wrap;gap:10px"></div>
+      <p id="confcounts" style="font-size:.74rem;color:var(--ink2);margin-top:8px"></p>
+    </div>
+  </div>
+</section>
+
+<footer><div class="wrap">
+  <p class="disclaimer">Open dataset. Tier 1 = authoritative official series · Tier 2 = real data with caveats · Tier 3 = reconstructed/estimated. Not investment advice.</p>
+  <p style="margin-top:8px;color:#cdbf9b"><a href="index.html">← Back to all topics</a> · <span id="updated"></span></p>
+</div></footer>
+
+<script src="database.js"></script>
+<script src="verification.js"></script>
+<script>
+(function(){
+  var V=(window.VERIFY&&window.VERIFY.byId)||{};
+  var CONF={
+    "cross-verified":{l:"Cross-verified",c:"#1f6f43",d:"An independent second source confirms the current price within 5%."},
+    "audited-ok":{l:"Audited (item-level)",c:"#3f5d2e",d:"Passes all internal checks and has a REAL item-specific BLS series behind it."},
+    "category":{l:"Category model",c:"#5a7d9a",d:"Endpoints are sourced; the path follows the item's broad BLS CATEGORY index (a labeled proxy), not an item-specific series."},
+    "plausible":{l:"Plausible",c:"#9a7d2e",d:"Passes the internal audit; no second source or real series yet."},
+    "review":{l:"Review",c:"#8c1c13",d:"Flagged by the audit (category outlier or sanity flag) — awaiting a second-source look."},
+    "conflict":{l:"Conflict",c:"#5a0f09",d:"A second source disagrees by more than 10%."}
+  };
+  function confOf(id){ return (V[id]&&V[id].c)||"plausible"; }
+  function confCell(i){
+    var k=confOf(i.id), m=CONF[k]||CONF.plausible, vx=V[i.id]||{};
+    var tip=m.d+(vx.x?(" · 2nd source: "+vx.x.s+" $"+vx.x.v+" ("+(vx.x.d>0?"+":"")+vx.x.d+"%)"):"")+(vx.f&&vx.f.length?(" · flags: "+vx.f.join(", ")):"");
+    return '<span title="'+tip.replace(/"/g,"&quot;")+'" style="display:inline-flex;align-items:center;gap:5px;font-size:.78rem"><span style="width:9px;height:9px;border-radius:50%;background:'+m.c+';display:inline-block"></span>'+m.l+(vx.x?' <span style="color:var(--ink2)">('+(vx.x.d>0?"+":"")+vx.x.d+'%)</span>':'')+'</span>';
+  }
+  var D=window.DB, items=D.items.map(function(i){
+    i.mult=i.now_price/i.then_price; i.pct=(i.mult-1)*100; i.conf=confOf(i.id); return i;
+  });
+  function fmtD(n){ return "$"+n.toLocaleString("en-US",{maximumFractionDigits: n<100?2:0}); }
+  function badge(t){ var tt=D.tiers[t]; return '<span class="tbadge" style="background:'+tt.color+'">'+tt.short+'</span>'; }
+
+  // legend
+  var leg=document.getElementById("legend");
+  [1,2,3].forEach(function(t){var tt=D.tiers[t];var d=document.createElement("div");d.className="tierdef";d.style.borderLeftColor=tt.color;
+    d.innerHTML='<h4>'+badge(t)+' &nbsp;'+tt.name+'</h4><p>'+tt.def+'</p>';leg.appendChild(d);});
+
+  // category dropdown
+  var cats=Array.from(new Set(items.map(function(i){return i.category;}))).sort();
+  var catSel=document.getElementById("cat"); catSel.innerHTML='<option value="">All categories</option>'+cats.map(function(c){return '<option>'+c+'</option>';}).join("");
+
+  var sortK="pct", sortDir=-1;
+  function render(){
+    var q=document.getElementById("q").value.toLowerCase(), c=catSel.value, t=document.getElementById("tier").value, st=document.getElementById("status").value, cf=document.getElementById("conf").value;
+    var list=items.filter(function(i){
+      return (!q||i.name.toLowerCase().indexOf(q)>=0) && (!c||i.category===c) && (!t||i.tier==+t) && (!st||(st==="v"?i.verified:!i.verified)) && (!cf||i.conf===cf);
+    }).sort(function(a,b){var av=a[sortK],bv=b[sortK]; if(typeof av==="string"){return sortDir*av.localeCompare(bv);} return sortDir*(av-bv);});
+    var nv=items.filter(function(i){return i.verified;}).length;
+    document.getElementById("count").textContent=list.length+" of "+items.length+" items  ·  "+nv+" verified, "+(items.length-nv)+" pending verification";
+    document.getElementById("rows").innerHTML=list.map(function(i){
+      var stat=i.verified?'<span style="color:var(--green);font-weight:700">✓ Verified</span>':'<span style="color:#9a7d2e">⏳ Pending</span>';
+      return '<tr'+(i.verified?'':' style="opacity:.82"')+'><td><a href="item.html?id='+encodeURIComponent(i.id)+'">'+i.name+'</a><div class="note">'+(i.note||i.why||"")+'</div></td>'+
+        '<td>'+i.category+'</td>'+
+        '<td style="text-align:left">'+badge(i.tier)+'</td>'+
+        '<td>'+fmtD(i.then_price)+'<div class="note" style="text-align:right">'+i.then_year+'</div></td>'+
+        '<td>'+fmtD(i.now_price)+'<div class="note" style="text-align:right">'+i.now_year+'</div></td>'+
+        '<td class="mult">'+i.mult.toFixed(1)+'×</td>'+
+        '<td class="mult">+'+Math.round(i.pct).toLocaleString()+'%</td>'+
+        '<td style="text-align:left">'+confCell(i)+'</td>'+
+        '<td style="text-align:left;font-size:.78rem">'+stat+'</td>'+
+        '<td style="text-align:left">'+(i.url?'<a href="'+i.url+'" target="_blank" rel="noopener">source ↗</a>':i.source_now)+'</td></tr>';
+    }).join("");
+  }
+  document.querySelectorAll("table.db th[data-k]").forEach(function(th){
+    th.addEventListener("click",function(){var k=th.getAttribute("data-k"); if(sortK===k)sortDir*=-1; else {sortK=k;sortDir=(k==="name"||k==="category")?1:-1;} render();});
+  });
+  ["q","cat","tier","status","conf"].forEach(function(id){document.getElementById(id).addEventListener("input",render);});
+  document.getElementById("updated").textContent="data last updated "+D.meta.last_updated;
+
+  // Download + cite
+  function dl(name, text, type){ var b=new Blob([text],{type:type}); var u=URL.createObjectURL(b); var a=document.createElement("a"); a.href=u; a.download=name; document.body.appendChild(a); a.click(); a.remove(); setTimeout(function(){URL.revokeObjectURL(u);},1000); }
+  function csvCell(v){ v=(v==null?"":String(v)); return /[",\n]/.test(v)?'"'+v.replace(/"/g,'""')+'"':v; }
+  document.getElementById("dlcsv").onclick=function(){
+    var cols=["id","name","category","tier","unit","then_year","then_price","now_year","now_price","mult","source_then","source_now","url","verified"];
+    var lines=[cols.join(",")];
+    items.forEach(function(i){ lines.push(cols.map(function(k){ return csvCell(k==="mult"?(i.now_price/i.then_price).toFixed(3):i[k]); }).join(",")); });
+    dl("1913-index-dataset.csv", lines.join("\n"), "text/csv");
+  };
+  document.getElementById("dljson").onclick=function(){ dl("1913-index-dataset.json", JSON.stringify({meta:D.meta,tiers:D.tiers,items:D.items},null,2), "application/json"); };
+  document.getElementById("citetext").textContent='The 1913 Index, "Tracking True Inflation Since the Federal Reserve" (data as of '+D.meta.last_updated+'). Independent, sourced, reproducible. Retrieved from the 1913 Index dataset.';
+
+  // Ask box → forward to the full Ask page (which loads the corpus/series the engine needs)
+  var aq=document.getElementById("askq"), ag=document.getElementById("askgo");
+  function goAsk(){ var v=(aq.value||"").trim(); location.href="ask.html"+(v?"?q="+encodeURIComponent(v):""); }
+  if(ag){ ag.onclick=goAsk; aq.addEventListener("keydown",function(e){if(e.key==="Enter")goAsk();}); }
+
+  // confidence legend + counts
+  var cl=document.getElementById("conflegend");
+  if(cl){ Object.keys(CONF).forEach(function(k){var m=CONF[k];
+    cl.innerHTML+='<span style="display:inline-flex;align-items:center;gap:5px;font-size:.76rem;border:1px solid var(--rule);border-radius:4px;padding:3px 8px"><span style="width:9px;height:9px;border-radius:50%;background:'+m.c+';display:inline-block"></span><b>'+m.l+'</b> — '+m.d+'</span>';
+  }); }
+  var cc={}; items.forEach(function(i){cc[i.conf]=(cc[i.conf]||0)+1;});
+  var ccEl=document.getElementById("confcounts");
+  if(ccEl){ ccEl.innerHTML=Object.keys(CONF).map(function(k){return (cc[k]||0)+" "+CONF[k].l.toLowerCase();}).join(" · ")+(window.VERIFY?(" · audit last run "+window.VERIFY.meta.last_run):" · (verification.js not loaded)"); }
+
+  render();
+})();
+</script>
+</body>
+</html>

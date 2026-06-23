@@ -1,0 +1,16 @@
+{
+ "name": "The 1913 Index",
+ "last_updated": "2026-06-22",
+ "n_items": 1331,
+ "n_verified": 933,
+ "confidence": {
+  "plausible": 435,
+  "audited-ok": 58,
+  "category": 799,
+  "cross-verified": 11,
+  "conflict": 1,
+  "review": 27
+ },
+ "license": "Open data; cite as 'The 1913 Index'.",
+ "note": "Tier 1 is the verified, owner-approved core (objective official series: BLS, USDA, USGS, EIA, FRED, Census, USPS, Treasury). Tier 2/3 still verify over time. Only verified items feed the game & headline."
+}

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Dollar Clock — The 1913 Index</title>
+<meta name="description" content="A live counter of what the dollar has lost since the Federal Reserve was created in 1913. $1.00 in 1913 is worth less every second.">
+<!-- Open Graph / Twitter. TODO @deploy: set og:url; confirm assets/og-default.png. -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="The 1913 Index">
+<meta property="og:title" content="The Dollar Clock — what $1 in 1913 is worth now">
+<meta property="og:description" content="A live counter of the dollar's collapse since the Fed was founded. It ticks down every second.">
+<meta property="og:image" content="assets/og-default.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="assets/og-default.png">
+<style>
+  :root{
+    --paper:#f4ecd8; --paper2:#efe5cb; --ink:#1c1710; --ink2:#5b4f3a;
+    --red:#8c1c13; --gold:#9a7d2e; --green:#1f6f43; --rule:#cdbb95;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0}
+  body{
+    background:var(--paper); color:var(--ink);
+    font-family:Georgia,"Times New Roman",serif;
+    -webkit-font-smoothing:antialiased; padding:0;
+  }
+  .clock-wrap{max-width:760px;margin:0 auto;padding:26px 20px 30px}
+  .eyebrow{font-size:.66rem;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);font-weight:700;text-align:center}
+  h1{font-size:clamp(1.3rem,4.2vw,2rem);text-align:center;margin:.25em 0 .1em;line-height:1.18}
+  .sub{text-align:center;color:var(--ink2);font-size:.92rem;margin:0 auto 18px;max-width:540px}
+  .panel{
+    border:2px solid var(--ink); background:#14110b; color:#f4ecd8;
+    border-radius:6px; padding:22px 18px; text-align:center; position:relative; overflow:hidden;
+    box-shadow:inset 0 0 0 1px #3a3322, 0 6px 20px rgba(0,0,0,.18);
+  }
+  .panel .label{font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;color:#c9b277;font-weight:700}
+  .odo{
+    font-family:"Courier New",monospace; font-weight:700;
+    font-size:clamp(2.6rem,12vw,5.4rem); line-height:1; letter-spacing:.01em;
+    color:#ffd24a; text-shadow:0 0 14px rgba(255,200,60,.28); margin:.12em 0 .04em;
+    font-variant-numeric:tabular-nums; white-space:nowrap;
+  }
+  .falling{color:#ff6a5c; text-shadow:0 0 14px rgba(255,90,70,.30)}
+  .caption{font-size:.9rem;color:#d8cba0;margin-top:6px}
+  .caption b{color:#fff}
+  .toggle{display:flex;gap:8px;justify-content:center;margin:16px 0 4px;flex-wrap:wrap}
+  .toggle button{
+    font:inherit;font-size:.82rem;font-weight:700;cursor:pointer;
+    background:var(--paper2);border:2px solid var(--ink);color:var(--ink);
+    padding:7px 14px;border-radius:5px;letter-spacing:.02em;
+  }
+  .toggle button.on{background:var(--ink);color:var(--paper)}
+  .grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:14px}
+  @media(max-width:520px){.grid{grid-template-columns:1fr}}
+  .card{border:2px solid var(--ink);background:var(--paper2);border-radius:5px;padding:14px 14px;text-align:center}
+  .card .l{font-size:.6rem;letter-spacing:.14em;text-transform:uppercase;color:var(--ink2)}
+  .card .v{font-family:"Courier New",monospace;font-weight:700;font-size:clamp(1.5rem,6vw,2.1rem);margin:.1em 0}
+  .card.us .v{color:var(--red)} .card.cpi .v{color:var(--ink)}
+  .gap{text-align:center;margin-top:14px;font-size:.95rem;color:var(--ink2)}
+  .gap b{color:var(--red)}
+  .foot{margin-top:18px;font-size:.74rem;color:var(--ink2);text-align:center;line-height:1.5}
+  .foot a{color:var(--gold)}
+  .pp{font-size:.86rem;color:#d8cba0;margin-top:10px}
+  .pp .n{font-family:"Courier New",monospace;font-weight:700;color:#ff8a7c}
+</style>
+</head>
+<body>
+<div class="clock-wrap">
+  <div class="eyebrow">The 1913 Index · The Dollar Clock</div>
+  <h1>What the dollar has lost since the Fed was created</h1>
+  <p class="sub">In 1913 the Federal Reserve was founded. This is what it now takes to buy what a single 1913 dollar once bought — measured in the price of the <em>actual same goods</em>, updating every second.</p>
+
+  <div class="panel">
+    <div class="label">To buy what <span id="anchorLabel">$1.00 in 1913</span> bought, you now need</div>
+    <div class="odo" id="need">$52.63</div>
+    <div class="caption">…and <b>rising</b>. <span id="rateNote">+3.57% a year, every year, since 1913.</span></div>
+    <div class="pp">That 1913 dollar is now worth just <span class="n" id="pp">$0.0190</span> — and falling.</div>
+  </div>
+
+  <div class="toggle">
+    <button data-base="1913" class="on">Since 1913 · the Fed</button>
+    <button data-base="1971">Since 1971 · gold window closed</button>
+  </div>
+
+  <div class="grid">
+    <div class="card us"><div class="l">The 1913 Index (real goods)</div><div class="v" id="usMult">52.6×</div></div>
+    <div class="card cpi"><div class="l">Official CPI says</div><div class="v" id="cpiMult">34.0×</div></div>
+  </div>
+  <div class="gap" id="gapNote">The government's own number admits a <b>34×</b> loss. Measured on real prices, it's far worse.</div>
+
+  <div class="foot">
+    Sources: The 1913 Index CPI-mirrored basket (real BLS component prices; shelter via real home prices, not the CPI rent survey) · official CPI via the <a href="https://www.bls.gov/data/inflation_calculator.htm" target="_blank" rel="noopener">BLS inflation calculator</a>. The ticking figure compounds the measured annual rate continuously between official updates — the endpoints are sourced; the per-second motion is illustrative. Not investment advice.
+  </div>
+</div>
+
+<!-- Live data source. When the clock is served from the site (or embedded via iframe),
+     series.js loads and the anchor multiples below are recomputed from it automatically,
+     so the weekly/quarterly refreshers keep the clock current with zero hand-editing.
+     If series.js is absent (off-site embed), the hardcoded fallbacks are used. -->
+<script src="series.js" onerror="window.__noSeries=1"></script>
+<script>
+(function(){
+  // FALLBACK anchors — kept current as a safety net for off-site embeds where series.js
+  // doesn't load. On-site, these are overwritten from window.SERIES below.
+  // 1913->2026: index 52.632x, CPI 33.982x.  1971->2026: index 12.457x, CPI 8.367x.
+  var ANCHORS = {
+    "1913": { label:"$1.00 in 1913", years:113, usMult:52.632, cpiMult:33.982 },
+    "1971": { label:"$1.00 in 1971", years:55,  usMult:12.457, cpiMult:8.367 }
+  };
+
+  // If the real series is available, recompute anchors from it (single source of truth).
+  try {
+    var S = window.SERIES && window.SERIES.rows;
+    if (S && S.length) {
+      var endY = window.SERIES.meta && window.SERIES.meta.end_year ? window.SERIES.meta.end_year : S[S.length-1].y;
+      var get = function(y){ return S.find(function(o){ return o.y===y; }); };
+      var end = get(endY), base13 = get(1913), base71 = get(1971);
+      if (end && base13) ANCHORS["1913"] = { label:"$1.00 in 1913", years:endY-1913, usMult:end.idx/base13.idx, cpiMult:end.cpi/base13.cpi };
+      if (end && base71) ANCHORS["1971"] = { label:"$1.00 in 1971", years:endY-1971, usMult:end.idx/base71.idx, cpiMult:end.cpi/base71.cpi };
+    }
+  } catch(e) { /* keep fallbacks */ }
+  // The data anchor moment (data.js last_updated). Motion compounds forward from here.
+  var ANCHOR_MS = Date.parse("2026-06-17T00:00:00");
+  var SEC_PER_YEAR = 365.2425*24*3600;
+  var current = "1913";
+
+  function rate(a){ return Math.pow(a.usMult, 1/a.years) - 1; } // effective annual
+  function fmt(n, dp){ return "$"+n.toLocaleString("en-US",{minimumFractionDigits:dp,maximumFractionDigits:dp}); }
+
+  function render(){
+    var a = ANCHORS[current];
+    var r = rate(a);
+    var yrsElapsed = (Date.now() - ANCHOR_MS)/1000/SEC_PER_YEAR;
+    var need = a.usMult * Math.pow(1+r, yrsElapsed);   // dollars needed today, rising
+    var pp = 1/need;                                    // purchasing power of the 1913/1971 dollar, falling
+
+    document.getElementById("need").textContent = fmt(need, 4);
+    document.getElementById("pp").textContent = fmt(pp, 5);
+    document.getElementById("anchorLabel").textContent = a.label;
+    document.getElementById("rateNote").textContent = "+"+(r*100).toFixed(2)+"% a year, every year, since "+current+".";
+    document.getElementById("usMult").textContent = a.usMult.toFixed(1)+"×";
+    document.getElementById("cpiMult").textContent = a.cpiMult.toFixed(1)+"×";
+    document.getElementById("gapNote").innerHTML = "The government's own number admits a <b>"+a.cpiMult.toFixed(1)+"×</b> loss. On real prices it's <b>"+a.usMult.toFixed(1)+"×</b> — a gap of <b>"+(a.usMult-a.cpiMult).toFixed(1)+"×</b>.";
+  }
+
+  document.querySelectorAll(".toggle button").forEach(function(b){
+    b.addEventListener("click", function(){
+      document.querySelectorAll(".toggle button").forEach(function(x){x.classList.remove("on");});
+      b.classList.add("on"); current = b.getAttribute("data-base"); render();
+    });
+  });
+
+  render();
+  setInterval(render, 80);
+})();
+</script>
+</body>
+</html>

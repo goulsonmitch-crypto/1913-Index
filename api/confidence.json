@@ -1,0 +1,12159 @@
+{
+ "as_of": "2026-06-22",
+ "tiers_best_to_worst": [
+  "cross-verified",
+  "audited-ok",
+  "category",
+  "plausible",
+  "review",
+  "conflict"
+ ],
+ "counts": {
+  "plausible": 435,
+  "audited-ok": 58,
+  "category": 799,
+  "cross-verified": 11,
+  "conflict": 1,
+  "review": 27
+ },
+ "by_id": {
+  "10-year-treasury-yield": {
+   "c": "plausible",
+   "r": 0.09,
+   "dev": -3.74,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "alfalfa-hay-ton": {
+   "c": "plausible",
+   "r": 2.69,
+   "dev": 0,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "anthracite-coal-ton": {
+   "c": "plausible",
+   "r": 3.32,
+   "dev": -0.64,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "antimony-lb": {
+   "c": "plausible",
+   "r": 3.64,
+   "dev": 0.96,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "apples": {
+   "c": "audited-ok",
+   "r": 3.27,
+   "dev": -0.21,
+   "f": [],
+   "o": 1,
+   "px": 0,
+   "x": null
+  },
+  "average-hourly-wage-mfg": {
+   "c": "plausible",
+   "r": 4.59,
+   "dev": 0.76,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "average-weekly-earnings-mfg": {
+   "c": "plausible",
+   "r": 4.24,
+   "dev": 0.41,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "bacon": {
+   "c": "audited-ok",
+   "r": 2.96,
+   "dev": -0.52,
+   "f": [],
+   "o": 1,
+   "px": 0,
+   "x": null
+  },
+  "baking-powder-can": {
+   "c": "plausible",
+   "r": 2.89,
+   "dev": -0.58,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "bananas": {
+   "c": "audited-ok",
+   "r": 2.03,
+   "dev": -1.44,
+   "f": [],
+   "o": 1,
+   "px": 0,
+   "x": null
+  },
+  "barber-annual-income": {
+   "c": "plausible",
+   "r": 3.4,
+   "dev": -0.42,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "barite-ton": {
+   "c": "plausible",
+   "r": 3.06,
+   "dev": 0.37,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "barley-bushel": {
+   "c": "plausible",
+   "r": 2.06,
+   "dev": -0.63,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "bauxite-ton": {
+   "c": "plausible",
+   "r": 2.14,
+   "dev": -0.54,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "beeswax-lb": {
+   "c": "plausible",
+   "r": 3.06,
+   "dev": 0.37,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "bentonite-ton": {
+   "c": "plausible",
+   "r": 2.85,
+   "dev": 0.17,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "bicycle": {
+   "c": "category",
+   "r": 2.52,
+   "dev": -0.24,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "bismuth-lb": {
+   "c": "plausible",
+   "r": 1.07,
+   "dev": -1.62,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "boron-borax-ton": {
+   "c": "plausible",
+   "r": 2.69,
+   "dev": 0,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "bread": {
+   "c": "audited-ok",
+   "r": 3.13,
+   "dev": -0.34,
+   "f": [],
+   "o": 1,
+   "px": 0,
+   "x": null
+  },
+  "bricklayer-hourly-wage": {
+   "c": "plausible",
+   "r": 3.71,
+   "dev": -0.11,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "bricks-per-1-000": {
+   "c": "category",
+   "r": 4.02,
+   "dev": 0.59,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "bromine-lb": {
+   "c": "plausible",
+   "r": 1.8,
+   "dev": -0.89,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "buckwheat-bushel": {
+   "c": "plausible",
+   "r": 2.18,
+   "dev": -0.51,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "butter": {
+   "c": "audited-ok",
+   "r": 2.2,
+   "dev": -1.27,
+   "f": [],
+   "o": 1,
+   "px": 0,
+   "x": null
+  },
+  "butterfat-lb": {
+   "c": "plausible",
+   "r": 2.06,
+   "dev": -0.63,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "cabbage-head": {
+   "c": "category",
+   "r": 3.32,
+   "dev": -0.15,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "cabbage-lb": {
+   "c": "category",
+   "r": 3.06,
+   "dev": -0.42,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "cadmium-lb": {
+   "c": "plausible",
+   "r": 1.6,
+   "dev": -1.09,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "carpenter-hourly-wage": {
+   "c": "plausible",
+   "r": 4.02,
+   "dev": 0.19,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "cattle-per-cwt": {
+   "c": "plausible",
+   "r": 2.96,
+   "dev": 0.28,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "caustic-soda-ton": {
+   "c": "plausible",
+   "r": 2.83,
+   "dev": 0.14,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "cement-ton": {
+   "c": "category",
+   "r": 4.47,
+   "dev": 1.04,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "cheese": {
+   "c": "audited-ok",
+   "r": 2.9,
+   "dev": -0.58,
+   "f": [],
+   "o": 1,
+   "px": 0,
+   "x": null
+  },
+  "chromium-ton-ore": {
+   "c": "plausible",
+   "r": 2.52,
+   "dev": -0.17,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "chuck-roast-lb": {
+   "c": "category",
+   "r": 3.26,
+   "dev": -0.21,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "cigar-each": {
+   "c": "plausible",
+   "r": 3.32,
+   "dev": -0.54,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "cigarette-tax-per-pack": {
+   "c": "plausible",
+   "r": 4.17,
+   "dev": 0.34,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "coal-short-ton": {
+   "c": "plausible",
+   "r": 3.32,
+   "dev": -0.64,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "coal-miner-daily-wage": {
+   "c": "plausible",
+   "r": 4.16,
+   "dev": 0.33,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "cobalt-lb": {
+   "c": "plausible",
+   "r": 3.52,
+   "dev": 0.84,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "coffee": {
+   "c": "audited-ok",
+   "r": 3.11,
+   "dev": -0.37,
+   "f": [],
+   "o": 1,
+   "px": 0,
+   "x": null
+  },
+  "copper": {
+   "c": "cross-verified",
+   "r": 3.34,
+   "dev": 0.65,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": {
+    "s": "Trading Economics COMEX copper, per lb (primary is FRED)",
+    "u": "https://tradingeconomics.com/commodity/copper",
+    "v": 6.5,
+    "d": -2.6,
+    "st": "close",
+    "ck": "2026-06-20"
+   }
+  },
+  "copyright-registration": {
+   "c": "plausible",
+   "r": 3.76,
+   "dev": -0.42,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "corn": {
+   "c": "plausible",
+   "r": 1.76,
+   "dev": -0.93,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "cornmeal": {
+   "c": "category",
+   "r": 3.1,
+   "dev": -0.37,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "corporate-tax-rate": {
+   "c": "plausible",
+   "r": 2.73,
+   "dev": -1.09,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "cotton": {
+   "c": "plausible",
+   "r": 1.66,
+   "dev": -1.03,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "cottonseed-ton": {
+   "c": "plausible",
+   "r": 2.57,
+   "dev": -0.12,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "crushed-stone-ton": {
+   "c": "category",
+   "r": 2.95,
+   "dev": -0.48,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "dow-jones-industrial-average": {
+   "c": "plausible",
+   "r": 5.74,
+   "dev": 1.92,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "dry-edible-beans-cwt": {
+   "c": "plausible",
+   "r": 2.48,
+   "dev": -0.2,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "eggs": {
+   "c": "audited-ok",
+   "r": 1.58,
+   "dev": -1.89,
+   "f": [],
+   "o": 1,
+   "px": 0,
+   "x": {
+    "s": "USDA ERS retail (independent of our BLS Avg Price)",
+    "u": "https://www.ers.usda.gov/data-products/meat-price-spreads",
+    "v": 2.348,
+    "d": -6.7,
+    "st": "drift",
+    "ck": "2026-03-01"
+   }
+  },
+  "electrician-annual-salary": {
+   "c": "plausible",
+   "r": 3.92,
+   "dev": 0.1,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "farm-eggs-dozen": {
+   "c": "plausible",
+   "r": 1.76,
+   "dev": -0.93,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "farm-laborer-daily-wage": {
+   "c": "plausible",
+   "r": 4.1,
+   "dev": 0.27,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "farm-milk-per-cwt": {
+   "c": "plausible",
+   "r": 2.35,
+   "dev": -0.34,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "farmland-per-acre": {
+   "c": "plausible",
+   "r": 4.2,
+   "dev": 0.18,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "feeder-cattle-per-cwt": {
+   "c": "plausible",
+   "r": 3.13,
+   "dev": 0.44,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "feeder-pigs-head": {
+   "c": "plausible",
+   "r": 2.57,
+   "dev": -0.12,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "feldspar-ton": {
+   "c": "plausible",
+   "r": 2.14,
+   "dev": -0.54,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "first-class-postcard": {
+   "c": "plausible",
+   "r": 3.63,
+   "dev": 0.07,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "stamp": {
+   "c": "cross-verified",
+   "r": 3.3,
+   "dev": -0.27,
+   "f": [],
+   "o": 1,
+   "px": 0,
+   "x": {
+    "s": "USPS.com current Forever stamp price (rises to $0.82 Jul 12 2026)",
+    "u": "https://faq.usps.com/s/article/2026-Postage-Price-Change",
+    "v": 0.78,
+    "d": 0,
+    "st": "match",
+    "ck": "2026-06-20"
+   }
+  },
+  "fishing-license": {
+   "c": "category",
+   "r": 3.06,
+   "dev": 0.29,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "flaxseed-bushel": {
+   "c": "plausible",
+   "r": 2.06,
+   "dev": -0.63,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "flour": {
+   "c": "audited-ok",
+   "r": 2.52,
+   "dev": -0.95,
+   "f": [],
+   "o": 1,
+   "px": 0,
+   "x": null
+  },
+  "fluorspar-ton": {
+   "c": "plausible",
+   "r": 3.52,
+   "dev": 0.84,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "fresh-fish-lb": {
+   "c": "audited-ok",
+   "r": 3.89,
+   "dev": 0.42,
+   "f": [],
+   "o": 1,
+   "px": 0,
+   "x": null
+  },
+  "gold": {
+   "c": "cross-verified",
+   "r": 4.85,
+   "dev": 1.03,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": {
+    "s": "USAGOLD live spot (independent of our generic spot feed)",
+    "u": "https://www.usagold.com/live-gold-price-today/",
+    "v": 4358.75,
+    "d": 0.3,
+    "st": "match",
+    "ck": "2026-06-20"
+   }
+  },
+  "graphite-lb": {
+   "c": "plausible",
+   "r": 3.52,
+   "dev": 0.84,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "ham": {
+   "c": "audited-ok",
+   "r": 2.66,
+   "dev": -0.81,
+   "f": [],
+   "o": 1,
+   "px": 0,
+   "x": null
+  },
+  "hardwood-lumber-1-000-bd-ft": {
+   "c": "category",
+   "r": 3.49,
+   "dev": 0.06,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "hay-ton": {
+   "c": "plausible",
+   "r": 2.52,
+   "dev": -0.17,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "hogs-per-cwt": {
+   "c": "plausible",
+   "r": 1.93,
+   "dev": -0.76,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "horse-riding-draft": {
+   "c": "plausible",
+   "r": 3.15,
+   "dev": -0.67,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "horseshoeing-set": {
+   "c": "plausible",
+   "r": 4.53,
+   "dev": 0.72,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "hunting-license": {
+   "c": "category",
+   "r": 3.06,
+   "dev": 0.29,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "iodine-kg": {
+   "c": "plausible",
+   "r": 2.32,
+   "dev": -0.37,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "iron-ore-ton": {
+   "c": "plausible",
+   "r": 3.06,
+   "dev": 0.37,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "kaolin-clay-ton": {
+   "c": "plausible",
+   "r": 3.52,
+   "dev": 0.84,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "lamb-lb": {
+   "c": "category",
+   "r": 3.32,
+   "dev": -0.15,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "lambs-per-cwt": {
+   "c": "plausible",
+   "r": 2.92,
+   "dev": 0.23,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "lard": {
+   "c": "category",
+   "r": 2.39,
+   "dev": -1.09,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "laundry-soap-lb": {
+   "c": "category",
+   "r": 3.32,
+   "dev": 0.14,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "lead-lb": {
+   "c": "plausible",
+   "r": 2.76,
+   "dev": 0.07,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "leather-lb": {
+   "c": "plausible",
+   "r": 1.74,
+   "dev": -0.94,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "license-plate": {
+   "c": "category",
+   "r": 3.06,
+   "dev": -0.76,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "lime-ton": {
+   "c": "category",
+   "r": 3.26,
+   "dev": -0.17,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "limestone-ton": {
+   "c": "category",
+   "r": 2.99,
+   "dev": -0.43,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "liver-lb": {
+   "c": "category",
+   "r": 2.95,
+   "dev": -0.52,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "macaroni": {
+   "c": "category",
+   "r": 2.43,
+   "dev": -1.05,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "machinist-annual-salary": {
+   "c": "plausible",
+   "r": 3.66,
+   "dev": -0.17,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "manganese-ton": {
+   "c": "plausible",
+   "r": 3.52,
+   "dev": 0.84,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "mercury-flask": {
+   "c": "plausible",
+   "r": 2.69,
+   "dev": 0,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "metallurgical-coke-ton": {
+   "c": "plausible",
+   "r": 3.95,
+   "dev": -0.01,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "mica-lb": {
+   "c": "plausible",
+   "r": 2.85,
+   "dev": 0.17,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "milk": {
+   "c": "conflict",
+   "r": 2.21,
+   "dev": -1.26,
+   "f": [],
+   "o": 1,
+   "px": 0,
+   "x": {
+    "s": "USDA AMS Retail Milk Prices Report, conventional whole, simple US avg, Feb 2026 (primary is BLS Avg Price; USDA simple-avg runs below BLS)",
+    "u": "https://www.ams.usda.gov/mnreports/dybretail.pdf",
+    "v": 3.68,
+    "d": 14.7,
+    "st": "conflict",
+    "ck": "2026-06-20"
+   }
+  },
+  "milk-cow-head": {
+   "c": "plausible",
+   "r": 3.14,
+   "dev": 0.45,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "mohair-lb": {
+   "c": "plausible",
+   "r": 2.52,
+   "dev": -0.17,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "molybdenum-lb": {
+   "c": "plausible",
+   "r": 2.92,
+   "dev": 0.23,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "money-order-fee": {
+   "c": "plausible",
+   "r": 3.79,
+   "dev": -0.04,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "mule": {
+   "c": "plausible",
+   "r": 2.26,
+   "dev": -1.56,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "nails-lb": {
+   "c": "category",
+   "r": 3.89,
+   "dev": 2.15,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "naturalization-fee": {
+   "c": "plausible",
+   "r": 4.75,
+   "dev": 0.93,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "navy-beans": {
+   "c": "category",
+   "r": 2.96,
+   "dev": -0.51,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "newsprint-ton": {
+   "c": "category",
+   "r": 2.52,
+   "dev": -0.91,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "nickel-lb": {
+   "c": "plausible",
+   "r": 2.69,
+   "dev": 0,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "nyc-subway-fare": {
+   "c": "category",
+   "r": 3.66,
+   "dev": -0.16,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "oats-bushel": {
+   "c": "plausible",
+   "r": 2.06,
+   "dev": -0.63,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "onions": {
+   "c": "category",
+   "r": 3.2,
+   "dev": -0.28,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "oranges": {
+   "c": "audited-ok",
+   "r": 2.48,
+   "dev": -0.99,
+   "f": [],
+   "o": 1,
+   "px": 0,
+   "x": null
+  },
+  "parcel-post-per-lb": {
+   "c": "category",
+   "r": 2.85,
+   "dev": -0.97,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "patent-filing-fee": {
+   "c": "plausible",
+   "r": 2.75,
+   "dev": -1.08,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "peanuts-lb-farm": {
+   "c": "plausible",
+   "r": 1.63,
+   "dev": -1.06,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "phosphate-rock-ton": {
+   "c": "plausible",
+   "r": 3.06,
+   "dev": 0.37,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "pig-iron-ton": {
+   "c": "plausible",
+   "r": 3.15,
+   "dev": 0.47,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "pipe-tobacco-oz": {
+   "c": "audited-ok",
+   "r": 2.89,
+   "dev": -0.96,
+   "f": [],
+   "o": 1,
+   "px": 0,
+   "x": null
+  },
+  "platinum-oz": {
+   "c": "cross-verified",
+   "r": 3.25,
+   "dev": -0.58,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": {
+    "s": "Trading Economics / JM Bullion spot (primary is LBMA/COMEX feed)",
+    "u": "https://tradingeconomics.com/commodity/platinum",
+    "v": 1668,
+    "d": 0,
+    "st": "match",
+    "ck": "2026-06-20"
+   }
+  },
+  "plumber-annual-salary": {
+   "c": "plausible",
+   "r": 3.91,
+   "dev": 0.09,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "po-box-small-yr": {
+   "c": "plausible",
+   "r": 4.06,
+   "dev": 0.5,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "pork-fresh-lb": {
+   "c": "audited-ok",
+   "r": 2.84,
+   "dev": -0.63,
+   "f": [],
+   "o": 1,
+   "px": 0,
+   "x": null
+  },
+  "pork-chops": {
+   "c": "audited-ok",
+   "r": 2.87,
+   "dev": -0.6,
+   "f": [],
+   "o": 1,
+   "px": 0,
+   "x": null
+  },
+  "potash-ton": {
+   "c": "plausible",
+   "r": 2.18,
+   "dev": -0.51,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "potatoes": {
+   "c": "audited-ok",
+   "r": 3.68,
+   "dev": 0.21,
+   "f": [],
+   "o": 1,
+   "px": 0,
+   "x": null
+  },
+  "president-s-salary": {
+   "c": "plausible",
+   "r": 1.49,
+   "dev": -2.33,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "prunes-lb": {
+   "c": "category",
+   "r": 3.32,
+   "dev": -0.15,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "pullman-berth-overnight": {
+   "c": "plausible",
+   "r": 3.79,
+   "dev": 2.31,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "rail-freight-per-ton-mile-cents": {
+   "c": "category",
+   "r": 1.49,
+   "dev": -2.33,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "raisins-lb": {
+   "c": "category",
+   "r": 3.11,
+   "dev": -0.36,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "raw-silk-lb": {
+   "c": "plausible",
+   "r": 2.06,
+   "dev": -0.63,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "registered-mail-fee": {
+   "c": "plausible",
+   "r": 4.7,
+   "dev": 0.88,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "rib-roast-lb": {
+   "c": "category",
+   "r": 3.49,
+   "dev": 0.01,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "rice": {
+   "c": "audited-ok",
+   "r": 2.23,
+   "dev": -1.24,
+   "f": [],
+   "o": 1,
+   "px": 0,
+   "x": null
+  },
+  "round-steak": {
+   "c": "audited-ok",
+   "r": 3.3,
+   "dev": -0.17,
+   "f": [],
+   "o": 1,
+   "px": 0,
+   "x": null
+  },
+  "rubber-lb": {
+   "c": "plausible",
+   "r": 0,
+   "dev": -2.69,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "rye-bushel": {
+   "c": "plausible",
+   "r": 1.89,
+   "dev": -0.79,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "saddle": {
+   "c": "plausible",
+   "r": 2.69,
+   "dev": -1.13,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "salmon-canned-lb": {
+   "c": "category",
+   "r": 2.84,
+   "dev": -0.63,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "salt": {
+   "c": "plausible",
+   "r": 3.22,
+   "dev": -0.25,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "sand-gravel-ton": {
+   "c": "category",
+   "r": 3.06,
+   "dev": -0.37,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "sausage-lb": {
+   "c": "category",
+   "r": 3.24,
+   "dev": -0.23,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "selenium-lb": {
+   "c": "plausible",
+   "r": 2.89,
+   "dev": 0.2,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "shortening-lb": {
+   "c": "category",
+   "r": 2.63,
+   "dev": -0.85,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "silica-sand-ton": {
+   "c": "category",
+   "r": 3.43,
+   "dev": 0,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "silver": {
+   "c": "cross-verified",
+   "r": 4.24,
+   "dev": 0.42,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": {
+    "s": "Kitco / JM Bullion spot (primary is LBMA/COMEX)",
+    "u": "https://www.jmbullion.com/charts/silver-prices/",
+    "v": 65.56,
+    "d": 0,
+    "st": "match",
+    "ck": "2026-06-20"
+   }
+  },
+  "sirloin-steak": {
+   "c": "audited-ok",
+   "r": 3.45,
+   "dev": -0.02,
+   "f": [],
+   "o": 1,
+   "px": 0,
+   "x": null
+  },
+  "soda-ash-ton": {
+   "c": "plausible",
+   "r": 2.89,
+   "dev": 0.2,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "soda-crackers-lb": {
+   "c": "category",
+   "r": 3.29,
+   "dev": -0.18,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "sorghum-bushel": {
+   "c": "plausible",
+   "r": 1.69,
+   "dev": -0.99,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "steel-scrap-ton": {
+   "c": "plausible",
+   "r": 3.03,
+   "dev": 0.34,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "streetcar-fare": {
+   "c": "category",
+   "r": 3.52,
+   "dev": -0.29,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "sugar": {
+   "c": "audited-ok",
+   "r": 2.6,
+   "dev": -0.88,
+   "f": [],
+   "o": 1,
+   "px": 0,
+   "x": null
+  },
+  "sugar-beets-ton": {
+   "c": "plausible",
+   "r": 2.14,
+   "dev": -0.54,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "sugarcane-ton": {
+   "c": "plausible",
+   "r": 2.06,
+   "dev": -0.63,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "sulfur-ton": {
+   "c": "plausible",
+   "r": 1.33,
+   "dev": -1.36,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "sulfuric-acid-ton": {
+   "c": "plausible",
+   "r": 2.63,
+   "dev": -0.06,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "supreme-court-justice-salary": {
+   "c": "plausible",
+   "r": 2.71,
+   "dev": -1.11,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "sweet-potatoes-lb": {
+   "c": "category",
+   "r": 3.46,
+   "dev": -0.01,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "talc-ton": {
+   "c": "plausible",
+   "r": 3.06,
+   "dev": 0.37,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "tea": {
+   "c": "category",
+   "r": 2.57,
+   "dev": -0.9,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "teacher-annual-salary": {
+   "c": "plausible",
+   "r": 4.44,
+   "dev": 0.62,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "telephone-service-monthly": {
+   "c": "plausible",
+   "r": 2.69,
+   "dev": -0.87,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "tin-lb": {
+   "c": "plausible",
+   "r": 3.11,
+   "dev": 0.42,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "tobacco-lb-farm": {
+   "c": "plausible",
+   "r": 2.61,
+   "dev": -0.08,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "top-marginal-income-tax-rate": {
+   "c": "plausible",
+   "r": 1.48,
+   "dev": -2.34,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "tungsten-lb": {
+   "c": "plausible",
+   "r": 3.22,
+   "dev": 0.54,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "u-s-representative-salary": {
+   "c": "plausible",
+   "r": 2.82,
+   "dev": -1,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "u-s-senator-salary": {
+   "c": "plausible",
+   "r": 2.82,
+   "dev": -1,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "usd-per-british-pound": {
+   "c": "review",
+   "r": -1.18,
+   "dev": -5.01,
+   "f": [
+    "category-outlier"
+   ],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "vanadium-lb": {
+   "c": "plausible",
+   "r": 1.6,
+   "dev": -1.09,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "veal-lb": {
+   "c": "category",
+   "r": 3.47,
+   "dev": 0,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "veal-calves-per-cwt": {
+   "c": "plausible",
+   "r": 3.41,
+   "dev": 0.73,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "vehicle-registration-yr": {
+   "c": "category",
+   "r": 3.32,
+   "dev": -0.5,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "wheat": {
+   "c": "plausible",
+   "r": 1.77,
+   "dev": -0.92,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "wood-pulp-ton": {
+   "c": "category",
+   "r": 2.79,
+   "dev": -0.63,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "wool-lb": {
+   "c": "plausible",
+   "r": 1.89,
+   "dev": -0.79,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "wool-yarn-lb": {
+   "c": "plausible",
+   "r": 2.69,
+   "dev": 0,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "world-cocoa-lb": {
+   "c": "plausible",
+   "r": 3.26,
+   "dev": 0.57,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "world-coffee-lb": {
+   "c": "audited-ok",
+   "r": 3.2,
+   "dev": 0.51,
+   "f": [],
+   "o": 1,
+   "px": 0,
+   "x": null
+  },
+  "world-raw-sugar-lb": {
+   "c": "plausible",
+   "r": 2.26,
+   "dev": -0.43,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "zinc-lb": {
+   "c": "plausible",
+   "r": 2.84,
+   "dev": 0.15,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "cotton-fabric-yard": {
+   "c": "category",
+   "r": 3.82,
+   "dev": 1.17,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "fed-discount-rate": {
+   "c": "plausible",
+   "r": -0.09,
+   "dev": -3.92,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "men-s-dress-shirt": {
+   "c": "category",
+   "r": 3.35,
+   "dev": 0.7,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "men-s-suit": {
+   "c": "category",
+   "r": 2.69,
+   "dev": 0.03,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "men-s-work-shoes": {
+   "c": "category",
+   "r": 2.94,
+   "dev": 0.29,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "overalls-pair": {
+   "c": "category",
+   "r": 3.23,
+   "dev": 0.58,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "socks-pair": {
+   "c": "category",
+   "r": 2.88,
+   "dev": 0.23,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "wool-fabric-yard": {
+   "c": "category",
+   "r": 2.92,
+   "dev": 0.27,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "hops-lb": {
+   "c": "plausible",
+   "r": 2.9,
+   "dev": 0.22,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "maple-syrup-gallon": {
+   "c": "plausible",
+   "r": 3.38,
+   "dev": 0.69,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "estate-tax-top-rate": {
+   "c": "plausible",
+   "r": 1.27,
+   "dev": -2.56,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "almonds-lb-farm": {
+   "c": "plausible",
+   "r": 2.39,
+   "dev": -0.3,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "apricots-lb-farm": {
+   "c": "plausible",
+   "r": 3.72,
+   "dev": 1.04,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "asparagus-lb": {
+   "c": "category",
+   "r": 3.23,
+   "dev": -0.24,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "baa-corporate-bond-yield": {
+   "c": "plausible",
+   "r": -0.07,
+   "dev": -3.9,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "baked-beans-can": {
+   "c": "category",
+   "r": 2.39,
+   "dev": -1.08,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "beets-lb": {
+   "c": "category",
+   "r": 3.62,
+   "dev": 0.15,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "canned-corn-can": {
+   "c": "category",
+   "r": 2.18,
+   "dev": -1.3,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "canned-peaches-can": {
+   "c": "category",
+   "r": 2.3,
+   "dev": -1.18,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "canned-peas-can": {
+   "c": "category",
+   "r": 2.18,
+   "dev": -1.3,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "cantaloupe-each": {
+   "c": "category",
+   "r": 3.38,
+   "dev": -0.09,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "cauliflower-head": {
+   "c": "category",
+   "r": 3.38,
+   "dev": -0.09,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "chestnuts-lb": {
+   "c": "plausible",
+   "r": 3.51,
+   "dev": 0.03,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "cocoa-lb": {
+   "c": "category",
+   "r": 3.01,
+   "dev": -0.46,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "corn-flakes-box": {
+   "c": "category",
+   "r": 3.38,
+   "dev": -0.09,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "corporate-aaa-bond-yield": {
+   "c": "plausible",
+   "r": 0,
+   "dev": -3.82,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "dates-lb": {
+   "c": "category",
+   "r": 3.38,
+   "dev": -0.09,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "evaporated-milk-can": {
+   "c": "category",
+   "r": 2.65,
+   "dev": -0.83,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "figs-lb": {
+   "c": "category",
+   "r": 3.51,
+   "dev": 0.03,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "garlic-lb": {
+   "c": "category",
+   "r": 3.12,
+   "dev": -0.36,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "green-peas-lb": {
+   "c": "category",
+   "r": 3.05,
+   "dev": -0.42,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "lima-beans-lb": {
+   "c": "category",
+   "r": 3.27,
+   "dev": -0.2,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "olives-lb": {
+   "c": "category",
+   "r": 3.05,
+   "dev": -0.42,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "peaches-lb-farm": {
+   "c": "plausible",
+   "r": 3.62,
+   "dev": 0.94,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "pecans-lb-farm": {
+   "c": "plausible",
+   "r": 2.56,
+   "dev": -0.12,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "plums-lb": {
+   "c": "category",
+   "r": 3.66,
+   "dev": 0.18,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "rolled-oats-lb": {
+   "c": "category",
+   "r": 2.77,
+   "dev": -0.7,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "snap-beans-lb": {
+   "c": "category",
+   "r": 3.16,
+   "dev": -0.31,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "strawberries-lb-farm": {
+   "c": "plausible",
+   "r": 3.05,
+   "dev": 0.37,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "sweet-corn-dozen": {
+   "c": "category",
+   "r": 3.05,
+   "dev": -0.42,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "turnips-lb": {
+   "c": "category",
+   "r": 3.72,
+   "dev": 0.25,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "walnuts-lb-farm": {
+   "c": "plausible",
+   "r": 2.45,
+   "dev": -0.24,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "kerosene-gal": {
+   "c": "plausible",
+   "r": 3.26,
+   "dev": -0.7,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "u-s-passport-fee": {
+   "c": "plausible",
+   "r": 4.93,
+   "dev": 1.11,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "women-s-dress": {
+   "c": "category",
+   "r": 1.92,
+   "dev": -0.73,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "women-s-shoes": {
+   "c": "category",
+   "r": 2.65,
+   "dev": 0,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "capital-gains-tax-rate": {
+   "c": "plausible",
+   "r": 0.45,
+   "dev": -3.37,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "soybeans-bushel": {
+   "c": "plausible",
+   "r": 2.47,
+   "dev": -0.22,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "ammonia-ton": {
+   "c": "plausible",
+   "r": 2.53,
+   "dev": -0.15,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "ewes-head": {
+   "c": "plausible",
+   "r": 3.47,
+   "dev": 0.78,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "goats-head": {
+   "c": "plausible",
+   "r": 4.18,
+   "dev": 1.49,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "graham-crackers-lb": {
+   "c": "category",
+   "r": 3.3,
+   "dev": -0.17,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "helium-1-000-cu-ft": {
+   "c": "plausible",
+   "r": 3.42,
+   "dev": -0.54,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "honey-lb": {
+   "c": "category",
+   "r": 3.42,
+   "dev": -0.05,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "jam-jelly-jar": {
+   "c": "category",
+   "r": 3.01,
+   "dev": -0.46,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "olive-oil-pint": {
+   "c": "category",
+   "r": 2.9,
+   "dev": -0.57,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "turkeys-lb-farm": {
+   "c": "audited-ok",
+   "r": 1.57,
+   "dev": -1.12,
+   "f": [],
+   "o": 1,
+   "px": 0,
+   "x": null
+  },
+  "vinegar-quart": {
+   "c": "category",
+   "r": 2.6,
+   "dev": -0.88,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "s-p-500-index": {
+   "c": "plausible",
+   "r": 6.07,
+   "dev": 2.25,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "gas": {
+   "c": "cross-verified",
+   "r": 3.09,
+   "dev": -0.72,
+   "f": [],
+   "o": 1,
+   "px": 0,
+   "x": {
+    "s": "EIA weekly retail, U.S. regular all formulations, wk of 06/15/26 (primary is AAA)",
+    "u": "https://www.eia.gov/petroleum/gasdiesel/",
+    "v": 4.052,
+    "d": -0.5,
+    "st": "match",
+    "ck": "2026-06-20"
+   }
+  },
+  "aviation-gasoline-gal": {
+   "c": "plausible",
+   "r": 3.61,
+   "dev": -0.35,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "federal-gas-tax-cents-gal": {
+   "c": "plausible",
+   "r": 3.15,
+   "dev": -0.68,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "savings-account-rate": {
+   "c": "review",
+   "r": -1.52,
+   "dev": -5.35,
+   "f": [
+    "category-outlier"
+   ],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "3-month-treasury-bill": {
+   "c": "plausible",
+   "r": 3.11,
+   "dev": -0.71,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "broiler-chickens-lb-farm": {
+   "c": "plausible",
+   "r": 1.37,
+   "dev": -1.32,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "layer-hens-head": {
+   "c": "plausible",
+   "r": 1.97,
+   "dev": -0.72,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "whiskey-bottle": {
+   "c": "plausible",
+   "r": 3.56,
+   "dev": -0.29,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "auto-tire-each": {
+   "c": "category",
+   "r": 2.91,
+   "dev": -0.9,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "beryllium-lb": {
+   "c": "plausible",
+   "r": 3.93,
+   "dev": 1.24,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "driver-s-license": {
+   "c": "category",
+   "r": 4.93,
+   "dev": 1.12,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "ducks-lb": {
+   "c": "plausible",
+   "r": 3.35,
+   "dev": 0.66,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "heating-oil": {
+   "c": "audited-ok",
+   "r": 4.33,
+   "dev": 0.37,
+   "f": [],
+   "o": 1,
+   "px": 0,
+   "x": null
+  },
+  "intercity-bus-per-mile": {
+   "c": "category",
+   "r": 2.56,
+   "dev": -1.25,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "motor-oil-quart": {
+   "c": "category",
+   "r": 3.55,
+   "dev": -0.26,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "whole-wheat-bread-lb": {
+   "c": "category",
+   "r": 3.62,
+   "dev": 0.14,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "chicken": {
+   "c": "audited-ok",
+   "r": 2.15,
+   "dev": -1.32,
+   "f": [],
+   "o": 1,
+   "px": 0,
+   "x": null
+  },
+  "social-security-tax-rate": {
+   "c": "plausible",
+   "r": 2.07,
+   "dev": -1.75,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "federal-minimum-wage": {
+   "c": "plausible",
+   "r": 3.9,
+   "dev": 0.08,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "bridge-toll-avg": {
+   "c": "category",
+   "r": 4.11,
+   "dev": 0.29,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "median-monthly-rent": {
+   "c": "audited-ok",
+   "r": 4.78,
+   "dev": 0.76,
+   "f": [],
+   "o": 1,
+   "px": 0,
+   "x": null
+  },
+  "pinto-beans-cwt": {
+   "c": "plausible",
+   "r": 2.85,
+   "dev": 0.17,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "welder-annual-salary": {
+   "c": "plausible",
+   "r": 4.11,
+   "dev": 0.29,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "crude-oil-wti": {
+   "c": "cross-verified",
+   "r": 4.9,
+   "dev": 0.94,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": {
+    "s": "Oilprice.com / Investing.com NYMEX (primary is FRED)",
+    "u": "https://oilprice.com/futures/wti/",
+    "v": 76.51,
+    "d": -2,
+    "st": "match",
+    "ck": "2026-06-20"
+   }
+  },
+  "registered-nurse-annual-salary": {
+   "c": "plausible",
+   "r": 4.75,
+   "dev": 0.93,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "trademark-filing": {
+   "c": "plausible",
+   "r": 3.35,
+   "dev": -0.83,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "american-cheese-lb": {
+   "c": "audited-ok",
+   "r": 3.22,
+   "dev": -0.25,
+   "f": [],
+   "o": 1,
+   "px": 0,
+   "x": null
+  },
+  "anchovies-tin": {
+   "c": "category",
+   "r": 4.07,
+   "dev": 0.59,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "antifreeze-gallon": {
+   "c": "category",
+   "r": 3.73,
+   "dev": -0.09,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "appalachian-coal-ton": {
+   "c": "plausible",
+   "r": 3.49,
+   "dev": -0.47,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "artichoke-each": {
+   "c": "category",
+   "r": 4.4,
+   "dev": 0.93,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "asphalt-ton": {
+   "c": "plausible",
+   "r": 6.25,
+   "dev": 2.29,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "avocados-lb-farm": {
+   "c": "plausible",
+   "r": 2.82,
+   "dev": 0.13,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "blackberries-pint": {
+   "c": "category",
+   "r": 3.25,
+   "dev": -0.22,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "blueberries-pint": {
+   "c": "category",
+   "r": 3.33,
+   "dev": -0.14,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "bologna-lb": {
+   "c": "category",
+   "r": 2.96,
+   "dev": -0.52,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "brussels-sprouts-lb": {
+   "c": "category",
+   "r": 3.69,
+   "dev": 0.22,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "bunker-fuel-ton": {
+   "c": "plausible",
+   "r": 4.66,
+   "dev": 0.7,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "buttermilk-quart": {
+   "c": "category",
+   "r": 2.96,
+   "dev": -0.52,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "canned-soup-can": {
+   "c": "plausible",
+   "r": 3.73,
+   "dev": 0.25,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "canned-tuna-can": {
+   "c": "category",
+   "r": 2.29,
+   "dev": -1.18,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "cashews-lb": {
+   "c": "plausible",
+   "r": 3.73,
+   "dev": 0.25,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "caviar-oz": {
+   "c": "category",
+   "r": 4.4,
+   "dev": 0.93,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "celery-stalk": {
+   "c": "category",
+   "r": 3.86,
+   "dev": 0.39,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "cherries-lb": {
+   "c": "category",
+   "r": 3.42,
+   "dev": -0.05,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "cinnamon-oz": {
+   "c": "plausible",
+   "r": 3.49,
+   "dev": 0.01,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "clams-lb": {
+   "c": "category",
+   "r": 3.69,
+   "dev": 0.22,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "cod-lb": {
+   "c": "category",
+   "r": 4.66,
+   "dev": 1.19,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "collard-greens-bunch": {
+   "c": "category",
+   "r": 3.63,
+   "dev": 0.15,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "concrete-cubic-yard": {
+   "c": "category",
+   "r": 3.33,
+   "dev": -0.09,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "container-glass-ton": {
+   "c": "category",
+   "r": 3.33,
+   "dev": -0.09,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "containerboard-ton": {
+   "c": "category",
+   "r": 3.49,
+   "dev": 0.06,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "cooking-oil-16-oz": {
+   "c": "category",
+   "r": 3.16,
+   "dev": -0.31,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "copper-wire-lb": {
+   "c": "category",
+   "r": 3.86,
+   "dev": 0.44,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "corned-beef-lb": {
+   "c": "category",
+   "r": 3.73,
+   "dev": 0.25,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "cottage-cheese-lb": {
+   "c": "category",
+   "r": 3.69,
+   "dev": 0.22,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "cream-cheese-8-oz": {
+   "c": "category",
+   "r": 3.49,
+   "dev": 0.01,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "deli-ham-lb": {
+   "c": "audited-ok",
+   "r": 3.27,
+   "dev": -0.2,
+   "f": [],
+   "o": 1,
+   "px": 0,
+   "x": null
+  },
+  "doughnuts-dozen": {
+   "c": "category",
+   "r": 4.48,
+   "dev": 1.01,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "duct-tape-roll": {
+   "c": "category",
+   "r": 4.24,
+   "dev": 2.49,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "eggplant-lb": {
+   "c": "category",
+   "r": 4.16,
+   "dev": 0.69,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "ginger-lb": {
+   "c": "plausible",
+   "r": 3.33,
+   "dev": -0.14,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "grapefruit-each": {
+   "c": "category",
+   "r": 3.66,
+   "dev": 0.19,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "green-beans-lb": {
+   "c": "category",
+   "r": 3.63,
+   "dev": 0.15,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "grits-lb": {
+   "c": "category",
+   "r": 4.33,
+   "dev": 0.86,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "halibut-lb": {
+   "c": "category",
+   "r": 5.08,
+   "dev": 1.6,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "hazelnuts-lb": {
+   "c": "plausible",
+   "r": 4.24,
+   "dev": 0.77,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "honeydew-each": {
+   "c": "category",
+   "r": 3.49,
+   "dev": 0.01,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "ketchup-bottle": {
+   "c": "category",
+   "r": 4.07,
+   "dev": 0.59,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "kraft-paper-ton": {
+   "c": "category",
+   "r": 3.55,
+   "dev": 0.12,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "lamb-chops-lb": {
+   "c": "category",
+   "r": 3.86,
+   "dev": 0.39,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "leg-of-lamb-lb": {
+   "c": "category",
+   "r": 4,
+   "dev": 0.53,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "limes-each": {
+   "c": "category",
+   "r": 2.96,
+   "dev": -0.52,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "lubricating-oil-gal": {
+   "c": "plausible",
+   "r": 4.78,
+   "dev": 0.82,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "mayonnaise-quart": {
+   "c": "category",
+   "r": 3.55,
+   "dev": 0.08,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "molasses-jar": {
+   "c": "category",
+   "r": 4.16,
+   "dev": 0.69,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "mushrooms-lb": {
+   "c": "category",
+   "r": 2.49,
+   "dev": -0.98,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "mustard-jar": {
+   "c": "category",
+   "r": 4.16,
+   "dev": 0.69,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "nectarines-lb": {
+   "c": "category",
+   "r": 4.16,
+   "dev": 0.69,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "nonfat-dry-milk-lb": {
+   "c": "plausible",
+   "r": 2.77,
+   "dev": 0.08,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "okra-lb": {
+   "c": "category",
+   "r": 3.86,
+   "dev": 0.39,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "oysters-farmed-dozen": {
+   "c": "category",
+   "r": 4.94,
+   "dev": 1.46,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "pancake-mix-lb": {
+   "c": "category",
+   "r": 3.49,
+   "dev": 0.01,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "pancake-syrup-24-oz": {
+   "c": "category",
+   "r": 3.29,
+   "dev": -0.19,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "parsnips-lb": {
+   "c": "category",
+   "r": 4.16,
+   "dev": 0.69,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "pears-lb": {
+   "c": "category",
+   "r": 3.73,
+   "dev": 0.25,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "pineapple-each": {
+   "c": "category",
+   "r": 3.16,
+   "dev": -0.31,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "plywood-sheet": {
+   "c": "category",
+   "r": 3.75,
+   "dev": 0.32,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "potato-chips-bag": {
+   "c": "category",
+   "r": 4.94,
+   "dev": 1.46,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "prime-interest-rate": {
+   "c": "plausible",
+   "r": 1.86,
+   "dev": -1.97,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "primer-gallon": {
+   "c": "category",
+   "r": 2.96,
+   "dev": -0.47,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "propane-gal": {
+   "c": "plausible",
+   "r": 4.16,
+   "dev": 0.2,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "pumpkins-lb-farm": {
+   "c": "category",
+   "r": 3.63,
+   "dev": 0.15,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "radishes-bunch": {
+   "c": "category",
+   "r": 3.96,
+   "dev": 0.48,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "raspberries-pint": {
+   "c": "category",
+   "r": 3.25,
+   "dev": -0.22,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "rebar-ton": {
+   "c": "category",
+   "r": 3.49,
+   "dev": 0.06,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "residual-fuel-oil-gal": {
+   "c": "audited-ok",
+   "r": 4.91,
+   "dev": 0.95,
+   "f": [],
+   "o": 1,
+   "px": 0,
+   "x": null
+  },
+  "salami-lb": {
+   "c": "category",
+   "r": 3.49,
+   "dev": 0.01,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "sardines-can": {
+   "c": "category",
+   "r": 4.16,
+   "dev": 0.69,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "scallions-bunch": {
+   "c": "category",
+   "r": 3.77,
+   "dev": 0.29,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "spaghetti-lb": {
+   "c": "category",
+   "r": 3.04,
+   "dev": -0.43,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "spearmint-oil-lb": {
+   "c": "plausible",
+   "r": 2.72,
+   "dev": 0.03,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "spinach-lb": {
+   "c": "category",
+   "r": 3.86,
+   "dev": 0.39,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "steel-pipe-10-ft": {
+   "c": "category",
+   "r": 3.49,
+   "dev": 0.06,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "strawberries-pint": {
+   "c": "category",
+   "r": 3.16,
+   "dev": -0.31,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "sweet-cherries-lb": {
+   "c": "category",
+   "r": 4.83,
+   "dev": 1.36,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "tangerines-lb": {
+   "c": "category",
+   "r": 3.86,
+   "dev": 0.39,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "tart-cherries-lb": {
+   "c": "category",
+   "r": 4.78,
+   "dev": 1.31,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "vanilla-lb": {
+   "c": "plausible",
+   "r": 3.86,
+   "dev": 0.39,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "watermelon-each": {
+   "c": "category",
+   "r": 3.2,
+   "dev": -0.28,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "winter-squash-lb": {
+   "c": "category",
+   "r": 4.4,
+   "dev": 0.93,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "uranium-lb": {
+   "c": "plausible",
+   "r": 4.84,
+   "dev": 0.88,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "army-private-e-1-monthly-pay": {
+   "c": "plausible",
+   "r": 4.36,
+   "dev": 0.53,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "army-sergeant-e-5-monthly": {
+   "c": "plausible",
+   "r": 4.36,
+   "dev": 0.53,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "diesel": {
+   "c": "plausible",
+   "r": 3.9,
+   "dev": -0.06,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "accountant-annual-salary": {
+   "c": "plausible",
+   "r": 4.02,
+   "dev": 0.2,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "airline-pilot-annual-salary": {
+   "c": "plausible",
+   "r": 4.16,
+   "dev": 0.34,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "bartender-annual-income": {
+   "c": "plausible",
+   "r": 3.53,
+   "dev": -0.29,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "birth-certificate-copy": {
+   "c": "plausible",
+   "r": 4.33,
+   "dev": 0.5,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "black-beans-cwt": {
+   "c": "plausible",
+   "r": 2.77,
+   "dev": 0.09,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "bus-driver-annual-salary": {
+   "c": "plausible",
+   "r": 3.82,
+   "dev": 0,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "butane-gal": {
+   "c": "plausible",
+   "r": 4.02,
+   "dev": 0.06,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "cashier-annual-salary": {
+   "c": "plausible",
+   "r": 3.77,
+   "dev": -0.05,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "chickpeas-cwt": {
+   "c": "plausible",
+   "r": 2.39,
+   "dev": -0.3,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "death-certificate-copy": {
+   "c": "plausible",
+   "r": 4.33,
+   "dev": 0.5,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "dentist-annual-income": {
+   "c": "plausible",
+   "r": 4.19,
+   "dev": 0.37,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "dry-peas-cwt": {
+   "c": "plausible",
+   "r": 2,
+   "dev": -0.69,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "drywall-sheet": {
+   "c": "category",
+   "r": 3.16,
+   "dev": -0.26,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "firefighter-annual-salary": {
+   "c": "plausible",
+   "r": 3.69,
+   "dev": -0.13,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "firewood-cord": {
+   "c": "plausible",
+   "r": 4.23,
+   "dev": 0.27,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "germanium-kg": {
+   "c": "plausible",
+   "r": 2.05,
+   "dev": -0.64,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "indium-kg": {
+   "c": "plausible",
+   "r": 5.28,
+   "dev": 2.6,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "janitor-annual-salary": {
+   "c": "plausible",
+   "r": 3.8,
+   "dev": -0.03,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "lawyer-median-annual": {
+   "c": "plausible",
+   "r": 3.93,
+   "dev": 0.11,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "lithium-lb": {
+   "c": "plausible",
+   "r": 4.58,
+   "dev": 1.89,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "mail-carrier-annual-salary": {
+   "c": "plausible",
+   "r": 3.93,
+   "dev": 0.11,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "marriage-license": {
+   "c": "plausible",
+   "r": 4.97,
+   "dev": 1.15,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "methanol-gal": {
+   "c": "plausible",
+   "r": 2.69,
+   "dev": 0,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "milk-goats-head": {
+   "c": "plausible",
+   "r": 4.23,
+   "dev": 1.55,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "millet-bushel": {
+   "c": "plausible",
+   "r": 2.35,
+   "dev": -0.34,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "municipal-water-1-000-gal": {
+   "c": "plausible",
+   "r": 4.02,
+   "dev": 0,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "niobium-lb": {
+   "c": "plausible",
+   "r": 3.08,
+   "dev": 0.39,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "perlite-ton": {
+   "c": "category",
+   "r": 2.93,
+   "dev": -0.49,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "physician-annual-income": {
+   "c": "plausible",
+   "r": 3.96,
+   "dev": 0.14,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "police-officer-annual-salary": {
+   "c": "plausible",
+   "r": 4.02,
+   "dev": 0.2,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "polyethylene-lb": {
+   "c": "plausible",
+   "r": 1.84,
+   "dev": -0.85,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "rabbits-lb": {
+   "c": "plausible",
+   "r": 3.77,
+   "dev": 1.08,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "secretary-annual-salary": {
+   "c": "plausible",
+   "r": 3.88,
+   "dev": 0.05,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "strontium-ton": {
+   "c": "plausible",
+   "r": 3.84,
+   "dev": 1.15,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "tantalum-lb": {
+   "c": "plausible",
+   "r": 2.53,
+   "dev": -0.16,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "titanium-sponge-lb": {
+   "c": "plausible",
+   "r": 0.78,
+   "dev": -1.91,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "vermiculite-ton": {
+   "c": "category",
+   "r": 4.02,
+   "dev": 0.59,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "zirconium-lb": {
+   "c": "plausible",
+   "r": 3.47,
+   "dev": 0.78,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "municipal-bond-yield": {
+   "c": "plausible",
+   "r": 0.47,
+   "dev": -3.36,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "fed-funds-rate": {
+   "c": "plausible",
+   "r": 2.08,
+   "dev": -1.75,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "certified-mail-fee": {
+   "c": "plausible",
+   "r": 4.87,
+   "dev": 1.05,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "wd-40-can": {
+   "c": "category",
+   "r": 4.16,
+   "dev": 2.41,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "2-milk-gallon": {
+   "c": "category",
+   "r": 3.23,
+   "dev": -0.24,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "bbq-sauce-bottle": {
+   "c": "category",
+   "r": 3.76,
+   "dev": 0.29,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "biscuits-canned-tube": {
+   "c": "category",
+   "r": 3.9,
+   "dev": 0.43,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "blue-cheese-lb": {
+   "c": "category",
+   "r": 3.84,
+   "dev": 0.36,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "charcoal-bag": {
+   "c": "plausible",
+   "r": 4.93,
+   "dev": 0.97,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "chili-powder-jar": {
+   "c": "plausible",
+   "r": 4.19,
+   "dev": 0.72,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "commercial-electricity-kwh": {
+   "c": "plausible",
+   "r": 2.88,
+   "dev": -1.08,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "court-filing-fee-civil": {
+   "c": "plausible",
+   "r": 5.1,
+   "dev": 0.92,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "electricity-industrial-kwh": {
+   "c": "plausible",
+   "r": 3.3,
+   "dev": -0.67,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "electricity-kwh": {
+   "c": "audited-ok",
+   "r": 2.94,
+   "dev": -1.02,
+   "f": [],
+   "o": 1,
+   "px": 0,
+   "x": null
+  },
+  "english-muffins-pack": {
+   "c": "category",
+   "r": 4.29,
+   "dev": 0.82,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "gallium-kg": {
+   "c": "plausible",
+   "r": -0.77,
+   "dev": -3.46,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "garlic-powder-jar": {
+   "c": "category",
+   "r": 4,
+   "dev": 0.53,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "half-and-half-quart": {
+   "c": "category",
+   "r": 3.55,
+   "dev": 0.08,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "hamburger-buns-pack": {
+   "c": "category",
+   "r": 4.43,
+   "dev": 0.96,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "heavy-cream-pint": {
+   "c": "category",
+   "r": 4,
+   "dev": 0.53,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "hot-dog-buns-pack": {
+   "c": "category",
+   "r": 4.43,
+   "dev": 0.96,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "hot-sauce-bottle": {
+   "c": "category",
+   "r": 4,
+   "dev": 0.53,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "insulation-roll": {
+   "c": "category",
+   "r": 4,
+   "dev": 0.58,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "iridium-oz": {
+   "c": "plausible",
+   "r": 6.86,
+   "dev": 3.04,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "jet-fuel-gal": {
+   "c": "plausible",
+   "r": 4.87,
+   "dev": 0.9,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "library-late-fee-per-day": {
+   "c": "plausible",
+   "r": 3.9,
+   "dev": 0.08,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "mortar-mix-bag": {
+   "c": "category",
+   "r": 3.39,
+   "dev": -0.04,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "mozzarella-lb": {
+   "c": "category",
+   "r": 3.41,
+   "dev": -0.06,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "mustard-seed-cwt": {
+   "c": "plausible",
+   "r": 2.47,
+   "dev": -0.22,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "parking-ticket-avg": {
+   "c": "plausible",
+   "r": 5,
+   "dev": 1.17,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "parmesan-lb": {
+   "c": "category",
+   "r": 3.55,
+   "dev": 0.08,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "pepperoni-lb": {
+   "c": "category",
+   "r": 3.55,
+   "dev": 0.08,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "petroleum-coke-ton": {
+   "c": "plausible",
+   "r": 4.93,
+   "dev": 0.97,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "rhodium-oz": {
+   "c": "plausible",
+   "r": 4.83,
+   "dev": 1.01,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "ricotta-lb": {
+   "c": "category",
+   "r": 3.55,
+   "dev": 0.08,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "roofing-shingles-bundle": {
+   "c": "category",
+   "r": 4,
+   "dev": 0.58,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "safflower-cwt": {
+   "c": "plausible",
+   "r": 2.64,
+   "dev": -0.04,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "sherbet-half-gallon": {
+   "c": "category",
+   "r": 3.55,
+   "dev": 0.08,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "skim-milk-gallon": {
+   "c": "category",
+   "r": 3.26,
+   "dev": -0.22,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "soy-sauce-bottle": {
+   "c": "category",
+   "r": 3.55,
+   "dev": 0.08,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "speeding-ticket-avg": {
+   "c": "plausible",
+   "r": 4.19,
+   "dev": 0.36,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "swiss-cheese-lb": {
+   "c": "category",
+   "r": 3.76,
+   "dev": 0.29,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "truck-driver-annual-salary": {
+   "c": "plausible",
+   "r": 3.7,
+   "dev": -0.12,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "urea-fertilizer-ton": {
+   "c": "plausible",
+   "r": 3.1,
+   "dev": 0.41,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "whipped-cream-can": {
+   "c": "category",
+   "r": 3.55,
+   "dev": 0.08,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "wood-screws-box": {
+   "c": "category",
+   "r": 4.48,
+   "dev": 2.73,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "5-year-treasury-yield": {
+   "c": "plausible",
+   "r": 0.08,
+   "dev": -3.75,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "1-year-cd-rate": {
+   "c": "plausible",
+   "r": 0.08,
+   "dev": -3.74,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "median-household-income": {
+   "c": "plausible",
+   "r": 4.19,
+   "dev": 0.37,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "building-permit-avg": {
+   "c": "plausible",
+   "r": 7.59,
+   "dev": 3.56,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "camping-fee-national-forest": {
+   "c": "category",
+   "r": 4.2,
+   "dev": 1.44,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "caulk-tube": {
+   "c": "category",
+   "r": 4.54,
+   "dev": 2.79,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "ceramic-tile-sq-ft": {
+   "c": "category",
+   "r": 3.25,
+   "dev": -0.17,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "dry-whey-lb": {
+   "c": "plausible",
+   "r": 3.09,
+   "dev": 0.4,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "media-mail-per-lb": {
+   "c": "plausible",
+   "r": 5.3,
+   "dev": 1.74,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "national-park-entrance-per-vehicle": {
+   "c": "category",
+   "r": 4.48,
+   "dev": 1.72,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "pvc-pipe-10-ft": {
+   "c": "category",
+   "r": 4,
+   "dev": 0.58,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "sesame-cwt": {
+   "c": "plausible",
+   "r": 1.98,
+   "dev": -0.71,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "software-developer-annual-salary": {
+   "c": "plausible",
+   "r": 4.35,
+   "dev": 0.52,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "tortillas-pack": {
+   "c": "category",
+   "r": 4.48,
+   "dev": 1.01,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "vinyl-siding-per-square": {
+   "c": "category",
+   "r": 4.2,
+   "dev": 0.77,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "nasdaq-composite": {
+   "c": "review",
+   "r": 10.01,
+   "dev": 6.19,
+   "f": [
+    "category-outlier"
+   ],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "usd-per-100-yen": {
+   "c": "plausible",
+   "r": 1.51,
+   "dev": -2.31,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "usd-per-australian-dollar": {
+   "c": "review",
+   "r": -0.96,
+   "dev": -4.78,
+   "f": [
+    "category-outlier"
+   ],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "usd-per-canadian-dollar": {
+   "c": "plausible",
+   "r": -0.57,
+   "dev": -4.4,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "usd-per-swiss-franc": {
+   "c": "plausible",
+   "r": 2.89,
+   "dev": -0.94,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "auto-loan-rate": {
+   "c": "plausible",
+   "r": -0.59,
+   "dev": -4.41,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "credit-card-apr": {
+   "c": "plausible",
+   "r": 0.48,
+   "dev": -3.35,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "u-s-dollar-index-dxy": {
+   "c": "plausible",
+   "r": 0.07,
+   "dev": -3.75,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "2-year-treasury-yield": {
+   "c": "review",
+   "r": -0.97,
+   "dev": -4.79,
+   "f": [
+    "category-outlier"
+   ],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "brent-crude-barrel": {
+   "c": "cross-verified",
+   "r": 3.81,
+   "dev": -0.15,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": {
+    "s": "Trading Economics / Oilprice.com (primary is EIA)",
+    "u": "https://tradingeconomics.com/commodity/brent-crude-oil",
+    "v": 80.38,
+    "d": -3,
+    "st": "close",
+    "ck": "2026-06-19"
+   }
+  },
+  "natural-gas-henry-hub-mmbtu": {
+   "c": "plausible",
+   "r": 3.97,
+   "dev": 0.01,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "sunflower-seed-cwt": {
+   "c": "plausible",
+   "r": 2.31,
+   "dev": -0.38,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "30-year-treasury-yield": {
+   "c": "review",
+   "r": -0.99,
+   "dev": -4.82,
+   "f": [
+    "category-outlier"
+   ],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "college-tuition-private-yr": {
+   "c": "audited-ok",
+   "r": 5.81,
+   "dev": 1.91,
+   "f": [],
+   "o": 1,
+   "px": 0,
+   "x": null
+  },
+  "college-tuition-public-in-state-yr": {
+   "c": "audited-ok",
+   "r": 6.23,
+   "dev": 2.33,
+   "f": [],
+   "o": 1,
+   "px": 0,
+   "x": null
+  },
+  "express-mail-flat": {
+   "c": "plausible",
+   "r": 4.07,
+   "dev": 0.51,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "palladium-oz": {
+   "c": "plausible",
+   "r": 4.15,
+   "dev": 0.33,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "solar-panel-watt": {
+   "c": "review",
+   "r": -10.7,
+   "dev": -14.67,
+   "f": [
+    "category-outlier"
+   ],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "bratwurst-lb": {
+   "c": "category",
+   "r": 2.42,
+   "dev": -1.06,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "brie-lb": {
+   "c": "category",
+   "r": 2.76,
+   "dev": -0.71,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "brisket-lb": {
+   "c": "category",
+   "r": 3.3,
+   "dev": -0.18,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "broccoli-lb": {
+   "c": "category",
+   "r": 3.56,
+   "dev": 0.09,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "catfish-lb-farm": {
+   "c": "audited-ok",
+   "r": 3.15,
+   "dev": 0.46,
+   "f": [],
+   "o": 1,
+   "px": 0,
+   "x": null
+  },
+  "chicken-breast-lb": {
+   "c": "category",
+   "r": 2.42,
+   "dev": -1.06,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "chicken-thighs-lb": {
+   "c": "category",
+   "r": 3.06,
+   "dev": -0.41,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "chicken-wings-lb": {
+   "c": "category",
+   "r": 4.21,
+   "dev": 0.74,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "cilantro-bunch": {
+   "c": "category",
+   "r": 3.97,
+   "dev": 0.5,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "crawfish-lb": {
+   "c": "category",
+   "r": 3.97,
+   "dev": 0.5,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "emissions-smog-test": {
+   "c": "category",
+   "r": 2.65,
+   "dev": -1.17,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "feta-lb": {
+   "c": "category",
+   "r": 3.32,
+   "dev": -0.15,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "granola-lb": {
+   "c": "category",
+   "r": 3.06,
+   "dev": -0.41,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "ground-pork-lb": {
+   "c": "audited-ok",
+   "r": 3.06,
+   "dev": -0.41,
+   "f": [],
+   "o": 1,
+   "px": 0,
+   "x": null
+  },
+  "italian-sausage-lb": {
+   "c": "category",
+   "r": 2.46,
+   "dev": -1.02,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "kale-bunch": {
+   "c": "category",
+   "r": 4.06,
+   "dev": 0.59,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "kiwifruit-each": {
+   "c": "category",
+   "r": 2.65,
+   "dev": -0.82,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "leeks-each": {
+   "c": "category",
+   "r": 4.06,
+   "dev": 0.59,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "macadamia-nuts-lb": {
+   "c": "plausible",
+   "r": 3.41,
+   "dev": -0.07,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "mango-each": {
+   "c": "category",
+   "r": 2.92,
+   "dev": -0.56,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "mdf-sheet": {
+   "c": "category",
+   "r": 3.56,
+   "dev": 0.13,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "mussels-lb": {
+   "c": "category",
+   "r": 3.56,
+   "dev": 0.09,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "osb-sheet": {
+   "c": "category",
+   "r": 3.97,
+   "dev": 0.55,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "papaya-lb": {
+   "c": "category",
+   "r": 3.56,
+   "dev": 0.09,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "persimmon-each": {
+   "c": "category",
+   "r": 4.21,
+   "dev": 0.74,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "pistachios-lb": {
+   "c": "plausible",
+   "r": 3.32,
+   "dev": -0.15,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "pita-bread-pack": {
+   "c": "category",
+   "r": 3.56,
+   "dev": 0.09,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "plantains-lb": {
+   "c": "category",
+   "r": 2.65,
+   "dev": -0.82,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "pomegranate-each": {
+   "c": "category",
+   "r": 3.97,
+   "dev": 0.5,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "pork-loin-lb": {
+   "c": "audited-ok",
+   "r": 2.16,
+   "dev": -1.32,
+   "f": [],
+   "o": 1,
+   "px": 0,
+   "x": null
+  },
+  "pork-ribs-lb": {
+   "c": "audited-ok",
+   "r": 3.15,
+   "dev": -0.32,
+   "f": [],
+   "o": 1,
+   "px": 0,
+   "x": null
+  },
+  "powder-river-coal-ton": {
+   "c": "plausible",
+   "r": 2.42,
+   "dev": -1.54,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "priority-mail-flat-rate": {
+   "c": "plausible",
+   "r": 3.37,
+   "dev": -0.2,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "ranch-dressing-bottle": {
+   "c": "category",
+   "r": 2.92,
+   "dev": -0.56,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "romaine-lettuce-head": {
+   "c": "category",
+   "r": 3.56,
+   "dev": 0.09,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "scallops-lb": {
+   "c": "category",
+   "r": 2.86,
+   "dev": -0.61,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "shredded-cheese-bag": {
+   "c": "category",
+   "r": 2.65,
+   "dev": -0.82,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "smoked-salmon-lb": {
+   "c": "category",
+   "r": 2.76,
+   "dev": -0.71,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "sour-cream-pint": {
+   "c": "category",
+   "r": 3.15,
+   "dev": -0.32,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "trout-lb-farm": {
+   "c": "plausible",
+   "r": 3.06,
+   "dev": 0.37,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "tuna-steak-lb": {
+   "c": "category",
+   "r": 3.06,
+   "dev": -0.41,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "turkey-breast-lb": {
+   "c": "audited-ok",
+   "r": 2.86,
+   "dev": -0.61,
+   "f": [],
+   "o": 1,
+   "px": 0,
+   "x": null
+  },
+  "usd-per-chinese-yuan": {
+   "c": "review",
+   "r": -3.15,
+   "dev": -6.97,
+   "f": [
+    "category-outlier"
+   ],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "ethanol-gal": {
+   "c": "plausible",
+   "r": 1.2,
+   "dev": -2.76,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "high-yield-bond-yield": {
+   "c": "review",
+   "r": -1.11,
+   "dev": -4.94,
+   "f": [
+    "category-outlier"
+   ],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "fennel-bulb": {
+   "c": "category",
+   "r": 4.47,
+   "dev": 0.99,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "fresh-basil-bunch": {
+   "c": "category",
+   "r": 4.47,
+   "dev": 0.99,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "goat-cheese-lb": {
+   "c": "category",
+   "r": 3.44,
+   "dev": -0.03,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "salsa-jar": {
+   "c": "category",
+   "r": 2.42,
+   "dev": -1.05,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "string-cheese-pack": {
+   "c": "category",
+   "r": 2.98,
+   "dev": -0.49,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "russell-2000-index": {
+   "c": "plausible",
+   "r": 7.54,
+   "dev": 3.72,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "bison-lb": {
+   "c": "plausible",
+   "r": 5.1,
+   "dev": 2.42,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "canola-bushel": {
+   "c": "plausible",
+   "r": 1.94,
+   "dev": -0.74,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "concealed-carry-permit": {
+   "c": "plausible",
+   "r": 3.93,
+   "dev": 0.1,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "farmed-salmon-lb": {
+   "c": "plausible",
+   "r": 3.1,
+   "dev": 0.41,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "farmed-shrimp-lb": {
+   "c": "plausible",
+   "r": 1.94,
+   "dev": -0.74,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "farmed-tilapia-lb": {
+   "c": "plausible",
+   "r": 3.54,
+   "dev": 0.85,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "lithium-carbonate-ton": {
+   "c": "plausible",
+   "r": 5.76,
+   "dev": 3.07,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "15-year-mortgage-rate": {
+   "c": "review",
+   "r": -0.92,
+   "dev": -4.75,
+   "f": [
+    "category-outlier"
+   ],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "usd-per-mexican-peso": {
+   "c": "review",
+   "r": -5.25,
+   "dev": -9.07,
+   "f": [
+    "category-outlier"
+   ],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "hummus-tub": {
+   "c": "category",
+   "r": 3,
+   "dev": -0.47,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "usd-per-euro": {
+   "c": "plausible",
+   "r": -0.33,
+   "dev": -4.15,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "dragon-fruit-each": {
+   "c": "category",
+   "r": 3.59,
+   "dev": 0.11,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "lng-mmbtu": {
+   "c": "plausible",
+   "r": 4.32,
+   "dev": 0.35,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "wood-pellets-ton": {
+   "c": "plausible",
+   "r": 3.31,
+   "dev": -0.65,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "global-entry-5-yr": {
+   "c": "plausible",
+   "r": 1.02,
+   "dev": -0.46,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "passport-card": {
+   "c": "plausible",
+   "r": 6.77,
+   "dev": 2.94,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "bitcoin": {
+   "c": "cross-verified",
+   "r": 133.6,
+   "dev": 129.77,
+   "f": [
+    "rate-too-high",
+    "category-outlier"
+   ],
+   "o": 0,
+   "px": 0,
+   "x": {
+    "s": "Yahoo Finance BTC-USD, June 19 2026 (primary is FRED)",
+    "u": "https://finance.yahoo.com/personal-finance/investing/article/bitcoin-and-ethereum-prices-today-friday-june-19-2026-prices-keep-falling-post-fed-decision-123239380.html",
+    "v": 62882,
+    "d": 0,
+    "st": "match",
+    "ck": "2026-06-20"
+   }
+  },
+  "tsa-precheck-5-yr": {
+   "c": "plausible",
+   "r": -0.66,
+   "dev": -2.13,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "ethereum": {
+   "c": "cross-verified",
+   "r": 96.74,
+   "dev": 92.91,
+   "f": [
+    "rate-too-high",
+    "category-outlier"
+   ],
+   "o": 0,
+   "px": 0,
+   "x": {
+    "s": "Yahoo Finance / CoinDesk ETH-USD, June 19 2026 (primary is FRED)",
+    "u": "https://finance.yahoo.com/quote/ETH-USD/history/",
+    "v": 1706,
+    "d": 0.2,
+    "st": "match",
+    "ck": "2026-06-20"
+   }
+  },
+  "aluminum": {
+   "c": "plausible",
+   "r": 1.54,
+   "dev": -1.14,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "cigarettes-pack": {
+   "c": "audited-ok",
+   "r": 3.95,
+   "dev": 0.1,
+   "f": [],
+   "o": 1,
+   "px": 0,
+   "x": null
+  },
+  "coca-cola-bottle": {
+   "c": "category",
+   "r": 3.32,
+   "dev": -0.15,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "beef": {
+   "c": "audited-ok",
+   "r": 3.08,
+   "dev": -0.4,
+   "f": [],
+   "o": 1,
+   "px": 0,
+   "x": null
+  },
+  "lumber-per-1-000-bd-ft": {
+   "c": "category",
+   "r": 2.89,
+   "dev": -0.54,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "home": {
+   "c": "plausible",
+   "r": 3.81,
+   "dev": -0.21,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": {
+    "s": "Zillow ZHVI typical home value, May 2026 (primary is Census MSPUS median sales price — different measure)",
+    "u": "https://www.zillow.com/home-values/102001/united-states/",
+    "v": 370320,
+    "d": 8.9,
+    "st": "drift",
+    "ck": "2026-06-20"
+   }
+  },
+  "movie": {
+   "c": "audited-ok",
+   "r": 4.58,
+   "dev": 1.82,
+   "f": [],
+   "o": 1,
+   "px": 0,
+   "x": null
+  },
+  "car": {
+   "c": "cross-verified",
+   "r": 3.98,
+   "dev": 0.16,
+   "f": [],
+   "o": 1,
+   "px": 0,
+   "x": {
+    "s": "MoneyGeek avg new-car price (primary is Cox/KBB)",
+    "u": "https://www.moneygeek.com/resources/average-price-of-a-new-car/",
+    "v": 48841,
+    "d": 0.8,
+    "st": "match",
+    "ck": "2026-06-20"
+   }
+  },
+  "newspaper-daily": {
+   "c": "category",
+   "r": 5.18,
+   "dev": 2.42,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "steel": {
+   "c": "plausible",
+   "r": 3.35,
+   "dev": 0.66,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "ice-cream-half-gallon": {
+   "c": "category",
+   "r": 2.81,
+   "dev": -0.66,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "comic-book": {
+   "c": "category",
+   "r": 4.65,
+   "dev": 1.89,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "auto-insurance-yr": {
+   "c": "plausible",
+   "r": 3.08,
+   "dev": 0,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "coffee-instant": {
+   "c": "audited-ok",
+   "r": 3.57,
+   "dev": 0.1,
+   "f": [],
+   "o": 1,
+   "px": 0,
+   "x": null
+  },
+  "dining-table-chairs": {
+   "c": "category",
+   "r": 2.58,
+   "dev": 0.34,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "margarine": {
+   "c": "audited-ok",
+   "r": 2.36,
+   "dev": -1.11,
+   "f": [],
+   "o": 1,
+   "px": 0,
+   "x": null
+  },
+  "men-s-haircut": {
+   "c": "category",
+   "r": 5.19,
+   "dev": 2.02,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "paint-per-gallon": {
+   "c": "category",
+   "r": 2.89,
+   "dev": -0.54,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "refrigerator": {
+   "c": "category",
+   "r": 1.77,
+   "dev": -0.47,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "sofa-couch": {
+   "c": "category",
+   "r": 2.67,
+   "dev": 0.43,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "washing-machine": {
+   "c": "category",
+   "r": 1.48,
+   "dev": -0.76,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "chest-freezer": {
+   "c": "category",
+   "r": 0.92,
+   "dev": -1.32,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "frozen-vegetables": {
+   "c": "category",
+   "r": 3.21,
+   "dev": -0.27,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "mattress-queen": {
+   "c": "category",
+   "r": 3.63,
+   "dev": 1.39,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "sewing-machine": {
+   "c": "category",
+   "r": 1.21,
+   "dev": -1.03,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "television-set": {
+   "c": "plausible",
+   "r": 0.92,
+   "dev": 0.91,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "toaster": {
+   "c": "category",
+   "r": 1.3,
+   "dev": -0.94,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "vacuum-cleaner": {
+   "c": "category",
+   "r": 1.6,
+   "dev": -0.64,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "beer-six-pack": {
+   "c": "plausible",
+   "r": 3.24,
+   "dev": -0.23,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "wine-bottle": {
+   "c": "audited-ok",
+   "r": 2.85,
+   "dev": -0.62,
+   "f": [],
+   "o": 1,
+   "px": 0,
+   "x": null
+  },
+  "used-car-average": {
+   "c": "audited-ok",
+   "r": 4.41,
+   "dev": 0.59,
+   "f": [],
+   "o": 1,
+   "px": 0,
+   "x": null
+  },
+  "clothes-dryer": {
+   "c": "category",
+   "r": 1.78,
+   "dev": -0.46,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "disneyland-1-day": {
+   "c": "review",
+   "r": 7.31,
+   "dev": 4.55,
+   "f": [
+    "category-outlier"
+   ],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "lawn-mower": {
+   "c": "category",
+   "r": 2.1,
+   "dev": 0.35,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "window-air-conditioner": {
+   "c": "category",
+   "r": 0.22,
+   "dev": -2.02,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "blender": {
+   "c": "category",
+   "r": 1.5,
+   "dev": -0.74,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "blue-jeans-levi-s": {
+   "c": "category",
+   "r": 4.08,
+   "dev": 1.43,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "bookshelf": {
+   "c": "category",
+   "r": 2.47,
+   "dev": 0.23,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "coffee-table": {
+   "c": "category",
+   "r": 3.26,
+   "dev": 1.02,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "diamond-engagement-ring": {
+   "c": "category",
+   "r": 3.84,
+   "dev": 1.19,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "doctor-office-visit": {
+   "c": "plausible",
+   "r": 5.2,
+   "dev": 1.27,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "dresser": {
+   "c": "category",
+   "r": 2.92,
+   "dev": 0.68,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "necktie": {
+   "c": "category",
+   "r": 4,
+   "dev": 1.35,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "prescription-average": {
+   "c": "audited-ok",
+   "r": 5.1,
+   "dev": 1.17,
+   "f": [],
+   "o": 1,
+   "px": 0,
+   "x": null
+  },
+  "sat-exam-fee": {
+   "c": "plausible",
+   "r": 4.03,
+   "dev": 0.13,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "stand-mixer": {
+   "c": "category",
+   "r": 3.55,
+   "dev": 1.31,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "wedding-band-gold": {
+   "c": "category",
+   "r": 4.19,
+   "dev": 1.54,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "winter-coat": {
+   "c": "category",
+   "r": 3.1,
+   "dev": 0.45,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "auto-repair-labor-hour": {
+   "c": "category",
+   "r": 4.6,
+   "dev": 0.78,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "dishwasher": {
+   "c": "category",
+   "r": 1.7,
+   "dev": -0.54,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "hospital-room-per-day": {
+   "c": "audited-ok",
+   "r": 7.45,
+   "dev": 3.52,
+   "f": [],
+   "o": 1,
+   "px": 0,
+   "x": null
+  },
+  "hotel-room-per-night": {
+   "c": "plausible",
+   "r": 4.09,
+   "dev": 2.62,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "natural-gas-residential": {
+   "c": "audited-ok",
+   "r": 4.63,
+   "dev": 0.67,
+   "f": [],
+   "o": 1,
+   "px": 0,
+   "x": null
+  },
+  "big-mac": {
+   "c": "category",
+   "r": 4.32,
+   "dev": 0.85,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "area-rug": {
+   "c": "category",
+   "r": 2.92,
+   "dev": 0.67,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "bath-towels-set": {
+   "c": "category",
+   "r": 3.45,
+   "dev": 1.2,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "bed-sheets-set": {
+   "c": "category",
+   "r": 3.33,
+   "dev": 1.09,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "car-battery": {
+   "c": "category",
+   "r": 4.54,
+   "dev": 0.72,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "chainsaw": {
+   "c": "category",
+   "r": 1.98,
+   "dev": 0.23,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "circular-saw": {
+   "c": "category",
+   "r": 2.51,
+   "dev": 0.76,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "cookware-set": {
+   "c": "category",
+   "r": 3.45,
+   "dev": 1.2,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "dental-cleaning": {
+   "c": "audited-ok",
+   "r": 5.24,
+   "dev": 1.32,
+   "f": [],
+   "o": 1,
+   "px": 0,
+   "x": null
+  },
+  "deodorant": {
+   "c": "category",
+   "r": 3.86,
+   "dev": 0.68,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "dinnerware-set": {
+   "c": "category",
+   "r": 3.25,
+   "dev": 1.01,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "disposable-diapers-box": {
+   "c": "plausible",
+   "r": 5.15,
+   "dev": 1.98,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "garbage-disposal": {
+   "c": "category",
+   "r": 1.65,
+   "dev": -0.59,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "garden-hose": {
+   "c": "category",
+   "r": 3.54,
+   "dev": 1.79,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "gas-grill": {
+   "c": "category",
+   "r": 2.92,
+   "dev": 0.67,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "golf-greens-fee": {
+   "c": "category",
+   "r": 3.66,
+   "dev": 0.9,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "handbag-purse": {
+   "c": "category",
+   "r": 3.78,
+   "dev": 1.13,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "homeowners-insurance-yr": {
+   "c": "plausible",
+   "r": 5.3,
+   "dev": 2.22,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "leather-belt": {
+   "c": "category",
+   "r": 3.54,
+   "dev": 0.89,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "lobster-dinner": {
+   "c": "category",
+   "r": 3.5,
+   "dev": 0.03,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "national-park-pass-annual": {
+   "c": "category",
+   "r": 3.78,
+   "dev": 1.02,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "pajamas": {
+   "c": "category",
+   "r": 3.54,
+   "dev": 0.89,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "paper-towels-roll": {
+   "c": "category",
+   "r": 4.2,
+   "dev": 1.96,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "parking-monthly-garage": {
+   "c": "category",
+   "r": 4.2,
+   "dev": 0.38,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "pet-food-bag": {
+   "c": "plausible",
+   "r": 4.73,
+   "dev": 1.04,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "power-drill": {
+   "c": "category",
+   "r": 2.31,
+   "dev": 0.56,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "recliner": {
+   "c": "category",
+   "r": 2.58,
+   "dev": 0.34,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "set-of-4-tires": {
+   "c": "category",
+   "r": 4.2,
+   "dev": 0.38,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "shampoo-bottle": {
+   "c": "category",
+   "r": 3.25,
+   "dev": 0.08,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "ski-lift-ticket": {
+   "c": "category",
+   "r": 5.5,
+   "dev": 2.73,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "snow-blower": {
+   "c": "category",
+   "r": 2.79,
+   "dev": 1.04,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "space-heater": {
+   "c": "category",
+   "r": 1.65,
+   "dev": -0.59,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "spark-plugs-set": {
+   "c": "category",
+   "r": 4.2,
+   "dev": 0.38,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "steakhouse-dinner-entree": {
+   "c": "category",
+   "r": 3.5,
+   "dev": 0.03,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "sunglasses": {
+   "c": "category",
+   "r": 3.78,
+   "dev": 1.13,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "swimsuit": {
+   "c": "category",
+   "r": 3.13,
+   "dev": 0.48,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "t-shirt": {
+   "c": "category",
+   "r": 3.66,
+   "dev": 1.01,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "toilet-paper-roll": {
+   "c": "category",
+   "r": 4.2,
+   "dev": 1.96,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "underwear-pack": {
+   "c": "category",
+   "r": 4,
+   "dev": 1.35,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "wallet": {
+   "c": "category",
+   "r": 2.92,
+   "dev": 0.27,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "wheelbarrow": {
+   "c": "category",
+   "r": 3.25,
+   "dev": 1.5,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "wiper-blades-pair": {
+   "c": "category",
+   "r": 3.78,
+   "dev": -0.03,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "work-boots": {
+   "c": "category",
+   "r": 4.07,
+   "dev": 1.42,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "wrench-set": {
+   "c": "category",
+   "r": 3.03,
+   "dev": 1.28,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "wristwatch": {
+   "c": "category",
+   "r": 3.66,
+   "dev": 1.01,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "30-yr-mortgage-rate": {
+   "c": "plausible",
+   "r": -0.13,
+   "dev": -4.15,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "ceiling-fan": {
+   "c": "category",
+   "r": 2.18,
+   "dev": -0.06,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "food-processor": {
+   "c": "category",
+   "r": 1.37,
+   "dev": -0.87,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "microwave-oven": {
+   "c": "review",
+   "r": -2.88,
+   "dev": -5.12,
+   "f": [
+    "category-outlier"
+   ],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "stock-trade-commission": {
+   "c": "review",
+   "r": null,
+   "dev": null,
+   "f": [
+    "nonpositive-now"
+   ],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "denny-s-grand-slam": {
+   "c": "category",
+   "r": 3.73,
+   "dev": 0.26,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "aa-batteries-pack": {
+   "c": "category",
+   "r": 3.56,
+   "dev": 1.32,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "aaa-membership-yr": {
+   "c": "category",
+   "r": 1.86,
+   "dev": -1.96,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "air-compressor": {
+   "c": "category",
+   "r": 1.52,
+   "dev": -0.23,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "airline-ticket-domestic": {
+   "c": "audited-ok",
+   "r": 1.52,
+   "dev": 0.04,
+   "f": [],
+   "o": 1,
+   "px": 0,
+   "x": null
+  },
+  "amusement-park-1-day": {
+   "c": "category",
+   "r": 4.48,
+   "dev": 1.72,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "athletic-sneakers": {
+   "c": "category",
+   "r": 2.82,
+   "dev": 0.17,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "baby-formula-tub": {
+   "c": "plausible",
+   "r": 2.92,
+   "dev": -0.26,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "baseball-cap": {
+   "c": "category",
+   "r": 3.97,
+   "dev": 1.32,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "brake-job": {
+   "c": "category",
+   "r": 3.56,
+   "dev": -0.26,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "breakfast-cereal-box": {
+   "c": "category",
+   "r": 4.92,
+   "dev": 1.44,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "cable-tv-monthly": {
+   "c": "plausible",
+   "r": 5.4,
+   "dev": 2.64,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "carrots": {
+   "c": "category",
+   "r": 3.41,
+   "dev": -0.07,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "cheesecake-slice": {
+   "c": "category",
+   "r": 3.32,
+   "dev": -0.15,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "coffee-maker": {
+   "c": "category",
+   "r": 2.16,
+   "dev": -0.09,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "cola-2-liter": {
+   "c": "category",
+   "r": 1.94,
+   "dev": -1.53,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "comforter": {
+   "c": "category",
+   "r": 2.42,
+   "dev": 0.18,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "crab-legs-lb": {
+   "c": "category",
+   "r": 4.21,
+   "dev": 0.74,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "crib": {
+   "c": "plausible",
+   "r": 2.51,
+   "dev": -0.67,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "croissant": {
+   "c": "category",
+   "r": 3.97,
+   "dev": 0.5,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "dehumidifier": {
+   "c": "category",
+   "r": 0.63,
+   "dev": -1.61,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "dish-soap-bottle": {
+   "c": "category",
+   "r": 3.06,
+   "dev": 0.82,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "eyeglasses-pair": {
+   "c": "plausible",
+   "r": 3.56,
+   "dev": -0.37,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "filet-mignon-restaurant": {
+   "c": "category",
+   "r": 3.06,
+   "dev": -0.41,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "frozen-dinner": {
+   "c": "plausible",
+   "r": 2.65,
+   "dev": -0.82,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "frozen-pizza": {
+   "c": "plausible",
+   "r": 2.76,
+   "dev": -0.71,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "grapes": {
+   "c": "category",
+   "r": 2.6,
+   "dev": -0.87,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "hair-color-salon": {
+   "c": "category",
+   "r": 2.42,
+   "dev": -0.76,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "hot-dogs-frankfurters": {
+   "c": "category",
+   "r": 2.65,
+   "dev": -0.82,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "ihop-pancakes": {
+   "c": "category",
+   "r": 4.15,
+   "dev": 0.68,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "key-copy": {
+   "c": "plausible",
+   "r": 3.97,
+   "dev": 0.36,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "kids-sneakers": {
+   "c": "category",
+   "r": 2.92,
+   "dev": 0.26,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "knife-set": {
+   "c": "category",
+   "r": 3.56,
+   "dev": 1.32,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "laundry-detergent-jug": {
+   "c": "category",
+   "r": 3.56,
+   "dev": 1.32,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "leaf-blower": {
+   "c": "category",
+   "r": 2.01,
+   "dev": 0.26,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "lemons": {
+   "c": "category",
+   "r": 3.27,
+   "dev": -0.2,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "lettuce": {
+   "c": "audited-ok",
+   "r": 3.1,
+   "dev": -0.37,
+   "f": [],
+   "o": 1,
+   "px": 0,
+   "x": null
+  },
+  "magazine-subscription-yr": {
+   "c": "category",
+   "r": 2.01,
+   "dev": -0.75,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "makeup-foundation": {
+   "c": "category",
+   "r": 4.32,
+   "dev": 1.15,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "office-chair": {
+   "c": "category",
+   "r": 2.51,
+   "dev": 0.27,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "orange-juice-frozen": {
+   "c": "category",
+   "r": 2.92,
+   "dev": -0.55,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "otc-pain-reliever-bottle": {
+   "c": "plausible",
+   "r": 3.32,
+   "dev": -0.6,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "pants-hem-alteration": {
+   "c": "category",
+   "r": 3.06,
+   "dev": -0.12,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "passport-photo": {
+   "c": "category",
+   "r": 2.42,
+   "dev": -0.76,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "peanut-butter": {
+   "c": "audited-ok",
+   "r": 2.48,
+   "dev": -0.99,
+   "f": [],
+   "o": 1,
+   "px": 0,
+   "x": null
+  },
+  "perfume-cologne": {
+   "c": "category",
+   "r": 3.32,
+   "dev": 0.15,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "portable-generator": {
+   "c": "category",
+   "r": 2.16,
+   "dev": 0.41,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "razor-cartridges-pack": {
+   "c": "category",
+   "r": 4.72,
+   "dev": 1.54,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "rice-cooker": {
+   "c": "category",
+   "r": 0.89,
+   "dev": -1.36,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "salmon-fillet-lb": {
+   "c": "category",
+   "r": 2.42,
+   "dev": -1.06,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "shrimp-lb": {
+   "c": "category",
+   "r": 2.22,
+   "dev": -1.25,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "stroller": {
+   "c": "plausible",
+   "r": 3.56,
+   "dev": 0.39,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "sunscreen-bottle": {
+   "c": "category",
+   "r": 2.92,
+   "dev": -0.26,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "table-saw": {
+   "c": "category",
+   "r": 2.65,
+   "dev": 0.9,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "textbook-college": {
+   "c": "audited-ok",
+   "r": 3.78,
+   "dev": -0.13,
+   "f": [],
+   "o": 1,
+   "px": 0,
+   "x": null
+  },
+  "trash-bags-box": {
+   "c": "category",
+   "r": 3.97,
+   "dev": 1.73,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "valet-parking": {
+   "c": "plausible",
+   "r": 4.48,
+   "dev": 3,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "vitamins-bottle": {
+   "c": "plausible",
+   "r": 3.56,
+   "dev": -0.37,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "watch-repair": {
+   "c": "category",
+   "r": 3.71,
+   "dev": 0.53,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "wedding-dress": {
+   "c": "category",
+   "r": 2.94,
+   "dev": 0.29,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "windshield-replacement": {
+   "c": "category",
+   "r": 2.42,
+   "dev": -1.4,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "yogurt": {
+   "c": "category",
+   "r": 1.92,
+   "dev": -1.55,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "costco-membership-yr": {
+   "c": "category",
+   "r": 2.25,
+   "dev": -0.51,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "car-seat": {
+   "c": "plausible",
+   "r": 4,
+   "dev": 0.83,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "frozen-yogurt-cup": {
+   "c": "category",
+   "r": 3.1,
+   "dev": -0.37,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "lawyer-per-hour": {
+   "c": "plausible",
+   "r": 2.09,
+   "dev": -2.1,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "personal-computer": {
+   "c": "plausible",
+   "r": -2.21,
+   "dev": -2.22,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "video-game-new-title": {
+   "c": "plausible",
+   "r": 1.37,
+   "dev": 1.37,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "video-game-console": {
+   "c": "plausible",
+   "r": 2.53,
+   "dev": 2.53,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "ap-exam-fee": {
+   "c": "plausible",
+   "r": 1.18,
+   "dev": -2.73,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "avocado-each": {
+   "c": "category",
+   "r": 3.1,
+   "dev": -0.37,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "babysitter-per-hour": {
+   "c": "plausible",
+   "r": 5.69,
+   "dev": 2.52,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "bar-exam-fee": {
+   "c": "plausible",
+   "r": 3.62,
+   "dev": -0.28,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "braces-orthodontics": {
+   "c": "plausible",
+   "r": 2.46,
+   "dev": -1.46,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "brunch-entree": {
+   "c": "category",
+   "r": 2.85,
+   "dev": -0.62,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "business-cards-500": {
+   "c": "plausible",
+   "r": 1.13,
+   "dev": -3.05,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "cappuccino": {
+   "c": "category",
+   "r": 2.58,
+   "dev": -1.07,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "car-detailing": {
+   "c": "category",
+   "r": 4.27,
+   "dev": 0.45,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "cat-litter-jug": {
+   "c": "plausible",
+   "r": 4.27,
+   "dev": 0.57,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "chimney-sweep": {
+   "c": "plausible",
+   "r": 3.4,
+   "dev": -0.21,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "chiropractor-visit": {
+   "c": "plausible",
+   "r": 2.58,
+   "dev": -1.35,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "cruise-per-day": {
+   "c": "plausible",
+   "r": 1.43,
+   "dev": -0.04,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "cupcake-bakery": {
+   "c": "category",
+   "r": 3.93,
+   "dev": 0.45,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "dental-crown": {
+   "c": "audited-ok",
+   "r": 3.33,
+   "dev": -0.6,
+   "f": [],
+   "o": 1,
+   "px": 0,
+   "x": null
+  },
+  "desktop-pc": {
+   "c": "plausible",
+   "r": -2.87,
+   "dev": -2.88,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "dj-event": {
+   "c": "category",
+   "r": 3.93,
+   "dev": 1.16,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "electric-kettle": {
+   "c": "category",
+   "r": 1.94,
+   "dev": -0.3,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "espresso-machine": {
+   "c": "category",
+   "r": 0.62,
+   "dev": -1.62,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "eye-exam": {
+   "c": "plausible",
+   "r": 3.74,
+   "dev": -0.19,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "facial": {
+   "c": "category",
+   "r": 3.1,
+   "dev": -0.08,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "gelato-scoop": {
+   "c": "category",
+   "r": 3.1,
+   "dev": -0.37,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "ground-turkey-lb": {
+   "c": "audited-ok",
+   "r": 3.4,
+   "dev": -0.07,
+   "f": [],
+   "o": 1,
+   "px": 0,
+   "x": null
+  },
+  "gyro": {
+   "c": "category",
+   "r": 3.68,
+   "dev": 0.2,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "hoa-dues-monthly": {
+   "c": "plausible",
+   "r": 3.1,
+   "dev": -0.92,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "k-12-private-tuition-yr": {
+   "c": "plausible",
+   "r": 3.28,
+   "dev": -0.62,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "lawn-care-visit": {
+   "c": "plausible",
+   "r": 2.85,
+   "dev": -0.76,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "limo-rental-hour": {
+   "c": "plausible",
+   "r": 3.1,
+   "dev": 1.63,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "llc-filing-fee": {
+   "c": "plausible",
+   "r": 1.94,
+   "dev": -2.24,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "logo-design": {
+   "c": "plausible",
+   "r": 1.43,
+   "dev": -2.76,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "margarita": {
+   "c": "plausible",
+   "r": 3.54,
+   "dev": -0.11,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "moving-company-local": {
+   "c": "plausible",
+   "r": 4.57,
+   "dev": 0.96,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "music-lessons-hour": {
+   "c": "plausible",
+   "r": 3.1,
+   "dev": -0.81,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "nanny-per-week": {
+   "c": "plausible",
+   "r": 3.93,
+   "dev": 0.75,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "oil-change": {
+   "c": "category",
+   "r": 3.1,
+   "dev": -0.72,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "olive-garden-entree": {
+   "c": "category",
+   "r": 2.58,
+   "dev": -0.9,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "pedicure": {
+   "c": "category",
+   "r": 2.58,
+   "dev": -0.6,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "personal-trainer-session": {
+   "c": "category",
+   "r": 2.76,
+   "dev": 0,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "pizza-large-delivery": {
+   "c": "category",
+   "r": 2.28,
+   "dev": -1.19,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "pool-cleaning-monthly": {
+   "c": "plausible",
+   "r": 2.58,
+   "dev": -1.03,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "pressure-washer": {
+   "c": "category",
+   "r": 1.13,
+   "dev": -0.62,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "real-estate-commission": {
+   "c": "plausible",
+   "r": -0.24,
+   "dev": -4.43,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "rental-car-per-day": {
+   "c": "plausible",
+   "r": 2.38,
+   "dev": 0.91,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "roof-replacement": {
+   "c": "plausible",
+   "r": 2.46,
+   "dev": -1.15,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "root-canal": {
+   "c": "plausible",
+   "r": 3.93,
+   "dev": 0,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "school-lunch": {
+   "c": "plausible",
+   "r": 3.54,
+   "dev": -0.36,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "student-loan-rate": {
+   "c": "plausible",
+   "r": -0.37,
+   "dev": -4.27,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "sushi-platter": {
+   "c": "category",
+   "r": 2.76,
+   "dev": -0.71,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "sushi-roll": {
+   "c": "category",
+   "r": 2.28,
+   "dev": -1.19,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "tax-prep-1040": {
+   "c": "plausible",
+   "r": 2.58,
+   "dev": -1.61,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "title-insurance": {
+   "c": "plausible",
+   "r": 3.1,
+   "dev": -1.09,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "tree-removal": {
+   "c": "plausible",
+   "r": 3.93,
+   "dev": 0.32,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "u-haul-rental-day": {
+   "c": "plausible",
+   "r": 3.93,
+   "dev": 0.32,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "vet-office-visit": {
+   "c": "plausible",
+   "r": 2.69,
+   "dev": -1.01,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "wedding-photographer": {
+   "c": "plausible",
+   "r": 4.18,
+   "dev": 0,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "wings-dozen": {
+   "c": "category",
+   "r": 3.62,
+   "dev": 0.15,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "childbirth-hospital": {
+   "c": "audited-ok",
+   "r": 4.22,
+   "dev": 0.29,
+   "f": [],
+   "o": 1,
+   "px": 0,
+   "x": null
+  },
+  "computer-monitor": {
+   "c": "plausible",
+   "r": -2.21,
+   "dev": -2.22,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "dozen-donuts": {
+   "c": "category",
+   "r": 4.84,
+   "dev": 1.37,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "electrician-per-hour": {
+   "c": "plausible",
+   "r": 3.32,
+   "dev": -0.29,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "hvac-service-call": {
+   "c": "plausible",
+   "r": 3.61,
+   "dev": 0,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "laptop-computer": {
+   "c": "plausible",
+   "r": -3.24,
+   "dev": -3.25,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "life-insurance-20-yr-term-yr": {
+   "c": "plausible",
+   "r": -0.92,
+   "dev": -4.01,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "mcdonald-s-value-meal": {
+   "c": "category",
+   "r": 3.61,
+   "dev": 0.13,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "plumber-per-hour": {
+   "c": "plausible",
+   "r": 3.21,
+   "dev": -0.39,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "printer-inkjet": {
+   "c": "plausible",
+   "r": -2.91,
+   "dev": -2.92,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "rotisserie-chicken": {
+   "c": "category",
+   "r": 2.26,
+   "dev": -1.21,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "starbucks-latte": {
+   "c": "category",
+   "r": 2.86,
+   "dev": -0.79,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "wisdom-teeth-removal": {
+   "c": "plausible",
+   "r": 3,
+   "dev": -0.93,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "cell-phone-plan-monthly": {
+   "c": "plausible",
+   "r": 1.95,
+   "dev": 1.94,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "energy-drink-can": {
+   "c": "category",
+   "r": 1.95,
+   "dev": -1.7,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "atm-fee-out-of-network": {
+   "c": "plausible",
+   "r": 4.16,
+   "dev": 1.43,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "internet-broadband-monthly": {
+   "c": "plausible",
+   "r": 2.27,
+   "dev": 2.26,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "health-insurance-family-yr": {
+   "c": "plausible",
+   "r": 5.72,
+   "dev": 1.79,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "air-purifier": {
+   "c": "category",
+   "r": 1.98,
+   "dev": -0.26,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "ambulance-ride": {
+   "c": "plausible",
+   "r": 4.64,
+   "dev": 0.71,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "blood-test-panel": {
+   "c": "plausible",
+   "r": 4.32,
+   "dev": 0.39,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "boba-tea": {
+   "c": "category",
+   "r": 3.31,
+   "dev": -0.34,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "bounce-house-rental-day": {
+   "c": "category",
+   "r": 3.59,
+   "dev": 0.83,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "colonoscopy": {
+   "c": "plausible",
+   "r": 4.32,
+   "dev": 0.39,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "contact-lenses-yr": {
+   "c": "plausible",
+   "r": 1.98,
+   "dev": -1.94,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "cpa-exam-4-sections": {
+   "c": "plausible",
+   "r": 4.32,
+   "dev": 0.41,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "craft-beer-pint": {
+   "c": "plausible",
+   "r": 3.17,
+   "dev": -0.48,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "ct-scan": {
+   "c": "plausible",
+   "r": 1.57,
+   "dev": -2.35,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "curry-restaurant": {
+   "c": "category",
+   "r": 3.17,
+   "dev": -0.3,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "dental-implant": {
+   "c": "audited-ok",
+   "r": 3.17,
+   "dev": -0.76,
+   "f": [],
+   "o": 1,
+   "px": 0,
+   "x": null
+  },
+  "digital-camera": {
+   "c": "plausible",
+   "r": 0.86,
+   "dev": 0.86,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "dog-grooming": {
+   "c": "plausible",
+   "r": 3.59,
+   "dev": -0.11,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "dog-walking-per-walk": {
+   "c": "plausible",
+   "r": 3.59,
+   "dev": -0.11,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "domain-name-yr": {
+   "c": "plausible",
+   "r": -3.21,
+   "dev": -3.21,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "driving-school": {
+   "c": "plausible",
+   "r": 4.32,
+   "dev": 0.41,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "dumpster-rental-week": {
+   "c": "plausible",
+   "r": 2.36,
+   "dev": -1.25,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "er-visit": {
+   "c": "plausible",
+   "r": 6.55,
+   "dev": 2.62,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "external-hard-drive": {
+   "c": "plausible",
+   "r": -3.96,
+   "dev": -3.96,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "eyebrow-wax": {
+   "c": "category",
+   "r": 3.59,
+   "dev": 0.41,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "graphics-card-gpu": {
+   "c": "plausible",
+   "r": 1.98,
+   "dev": 1.98,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "gutter-cleaning": {
+   "c": "plausible",
+   "r": 3.59,
+   "dev": -0.02,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "headphones": {
+   "c": "plausible",
+   "r": 3.84,
+   "dev": 3.84,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "hearing-aid-pair": {
+   "c": "plausible",
+   "r": 3.17,
+   "dev": -0.76,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "house-cleaning-visit": {
+   "c": "plausible",
+   "r": 4.09,
+   "dev": 0.48,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "insulin-vial": {
+   "c": "plausible",
+   "r": 5.48,
+   "dev": 1.55,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "ivf-cycle": {
+   "c": "plausible",
+   "r": 2.7,
+   "dev": -1.22,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "junk-removal-load": {
+   "c": "plausible",
+   "r": 3.84,
+   "dev": 0.24,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "lasik-per-eye": {
+   "c": "plausible",
+   "r": 0.7,
+   "dev": -3.22,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "mammogram": {
+   "c": "plausible",
+   "r": 4.32,
+   "dev": 0.39,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "manicure": {
+   "c": "category",
+   "r": 3.17,
+   "dev": 0,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "massage-hour": {
+   "c": "category",
+   "r": 3.08,
+   "dev": -0.1,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "mri-scan": {
+   "c": "plausible",
+   "r": 1.57,
+   "dev": -2.35,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "overdraft-fee": {
+   "c": "plausible",
+   "r": 1.3,
+   "dev": -1.43,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "pad-thai": {
+   "c": "category",
+   "r": 3.23,
+   "dev": -0.24,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "pest-control-visit": {
+   "c": "plausible",
+   "r": 3.02,
+   "dev": -0.59,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "pet-boarding-per-night": {
+   "c": "plausible",
+   "r": 3.59,
+   "dev": -0.11,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "pho-bowl": {
+   "c": "category",
+   "r": 3.59,
+   "dev": 0.11,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "physical-therapy-session": {
+   "c": "plausible",
+   "r": 2.7,
+   "dev": -1.22,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "printer-ink-cartridge": {
+   "c": "plausible",
+   "r": 1.3,
+   "dev": 1.3,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "protein-bar": {
+   "c": "plausible",
+   "r": 2.7,
+   "dev": -0.77,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "rehab-30-days": {
+   "c": "plausible",
+   "r": 4.32,
+   "dev": 0.39,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "renters-insurance-yr": {
+   "c": "plausible",
+   "r": 1.11,
+   "dev": -1.97,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "smoothie": {
+   "c": "category",
+   "r": 2.7,
+   "dev": -0.95,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "storage-pod-month": {
+   "c": "plausible",
+   "r": 2.7,
+   "dev": -0.91,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "storage-unit-monthly": {
+   "c": "plausible",
+   "r": 3.02,
+   "dev": -0.59,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "tattoo-hour": {
+   "c": "category",
+   "r": 3.59,
+   "dev": 0.41,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "teeth-whitening": {
+   "c": "category",
+   "r": 1.98,
+   "dev": -1.19,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "therapy-session": {
+   "c": "plausible",
+   "r": 2.7,
+   "dev": -1.22,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "ultrasound": {
+   "c": "plausible",
+   "r": 3.59,
+   "dev": -0.34,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "web-hosting-monthly": {
+   "c": "plausible",
+   "r": 1.57,
+   "dev": 1.57,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "window-cleaning-home": {
+   "c": "plausible",
+   "r": 4.48,
+   "dev": 0.87,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "wireless-router": {
+   "c": "plausible",
+   "r": 1.57,
+   "dev": 1.57,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "yoga-class": {
+   "c": "category",
+   "r": 2.86,
+   "dev": 0.1,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "botox-session": {
+   "c": "category",
+   "r": 2.56,
+   "dev": -0.62,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "robot-vacuum": {
+   "c": "plausible",
+   "r": 1.7,
+   "dev": 1.7,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "sirius-xm-monthly": {
+   "c": "category",
+   "r": 3.89,
+   "dev": 1.13,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "assisted-living-per-month": {
+   "c": "plausible",
+   "r": 3.56,
+   "dev": 0.06,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "home-health-aide-per-hour": {
+   "c": "plausible",
+   "r": 3.35,
+   "dev": -0.16,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "nursing-home-per-day": {
+   "c": "plausible",
+   "r": 3.5,
+   "dev": 0,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "amazon-prime-yr": {
+   "c": "category",
+   "r": 2.73,
+   "dev": -0.03,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "audiobook-audible-each": {
+   "c": "category",
+   "r": 0,
+   "dev": -2.76,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "flu-shot": {
+   "c": "plausible",
+   "r": 4.78,
+   "dev": 0.86,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "gel-manicure": {
+   "c": "category",
+   "r": 3.17,
+   "dev": 0,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "private-tutoring-hour": {
+   "c": "plausible",
+   "r": 3.36,
+   "dev": -0.55,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "projector-home": {
+   "c": "plausible",
+   "r": -3.25,
+   "dev": -3.25,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "spray-tan": {
+   "c": "category",
+   "r": 2.84,
+   "dev": -0.34,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "ssl-certificate-yr": {
+   "c": "plausible",
+   "r": 0.87,
+   "dev": 0.87,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "stock-photo-each": {
+   "c": "plausible",
+   "r": 1.95,
+   "dev": 1.94,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "test-prep-course": {
+   "c": "plausible",
+   "r": 3.04,
+   "dev": -0.87,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "urgent-care-visit": {
+   "c": "plausible",
+   "r": 3.94,
+   "dev": 0.01,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "chipotle-burrito": {
+   "c": "category",
+   "r": 3.53,
+   "dev": 0.05,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "e-reader-kindle": {
+   "c": "review",
+   "r": -5.36,
+   "dev": -5.37,
+   "f": [
+    "category-outlier"
+   ],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "epipen-2-pack": {
+   "c": "review",
+   "r": 10.35,
+   "dev": 6.43,
+   "f": [
+    "category-outlier"
+   ],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "netflix-streaming-monthly": {
+   "c": "category",
+   "r": 4.36,
+   "dev": 1.6,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "smartphone-flagship": {
+   "c": "plausible",
+   "r": 3.72,
+   "dev": 3.71,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "checked-bag-fee": {
+   "c": "plausible",
+   "r": 4.82,
+   "dev": 3.35,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "food-truck-taco": {
+   "c": "category",
+   "r": 3.93,
+   "dev": 0.45,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "streaming-stick": {
+   "c": "review",
+   "r": -4.96,
+   "dev": -4.97,
+   "f": [
+    "category-outlier"
+   ],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "subway-footlong": {
+   "c": "category",
+   "r": 3.32,
+   "dev": -0.15,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "a-a-bowl": {
+   "c": "category",
+   "r": 4.43,
+   "dev": 0.95,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "action-camera-gopro": {
+   "c": "plausible",
+   "r": 1.81,
+   "dev": 1.81,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "almond-milk-half-gal": {
+   "c": "category",
+   "r": 2.57,
+   "dev": -0.91,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "avocado-toast": {
+   "c": "category",
+   "r": 5.44,
+   "dev": 1.97,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "bluetooth-speaker": {
+   "c": "plausible",
+   "r": -1.38,
+   "dev": -1.39,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "charcuterie-board": {
+   "c": "category",
+   "r": 7.11,
+   "dev": 3.63,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "cloud-storage-1tb-yr": {
+   "c": "plausible",
+   "r": -2.2,
+   "dev": -2.21,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "coworking-desk-monthly": {
+   "c": "plausible",
+   "r": 3.56,
+   "dev": -0.63,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "food-truck-rental-event": {
+   "c": "review",
+   "r": 8.34,
+   "dev": 4.86,
+   "f": [
+    "category-outlier"
+   ],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "greek-yogurt-cup": {
+   "c": "category",
+   "r": 2.57,
+   "dev": -0.91,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "hulu-monthly": {
+   "c": "category",
+   "r": 1.4,
+   "dev": -1.36,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "led-light-bulb": {
+   "c": "review",
+   "r": -12.41,
+   "dev": -14.65,
+   "f": [
+    "rate-too-low",
+    "category-outlier"
+   ],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "mechanical-keyboard": {
+   "c": "plausible",
+   "r": 1.4,
+   "dev": 1.4,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "pet-insurance-monthly": {
+   "c": "plausible",
+   "r": 6.53,
+   "dev": 3.44,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "phone-charging-cable": {
+   "c": "plausible",
+   "r": 4.43,
+   "dev": 4.42,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "phone-screen-repair": {
+   "c": "plausible",
+   "r": 2.57,
+   "dev": 2.56,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "power-bank": {
+   "c": "plausible",
+   "r": -2.89,
+   "dev": -2.9,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "ramen-restaurant": {
+   "c": "category",
+   "r": 4.05,
+   "dev": 0.58,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "soundbar": {
+   "c": "plausible",
+   "r": -2.5,
+   "dev": -2.51,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "tablet": {
+   "c": "plausible",
+   "r": 0.01,
+   "dev": 0.01,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "vpn-yr": {
+   "c": "plausible",
+   "r": -1.13,
+   "dev": -1.14,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "website-builder-yr": {
+   "c": "plausible",
+   "r": 1.81,
+   "dev": 1.81,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "smart-thermostat": {
+   "c": "plausible",
+   "r": -4.27,
+   "dev": -4.27,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "streaming-music-monthly": {
+   "c": "category",
+   "r": 1.22,
+   "dev": -1.54,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "airbnb-per-night": {
+   "c": "plausible",
+   "r": 5.08,
+   "dev": 3.6,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "dash-cam": {
+   "c": "plausible",
+   "r": 2.94,
+   "dev": 2.93,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "dating-app-monthly": {
+   "c": "category",
+   "r": 2.94,
+   "dev": 0.18,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "language-app-yr": {
+   "c": "review",
+   "r": -1.24,
+   "dev": -5.14,
+   "f": [
+    "category-outlier"
+   ],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "meditation-app-yr": {
+   "c": "category",
+   "r": 0,
+   "dev": -2.76,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "poke-bowl": {
+   "c": "category",
+   "r": 4.2,
+   "dev": 0.72,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "smart-tv-55-inch": {
+   "c": "review",
+   "r": -9.01,
+   "dev": -9.02,
+   "f": [
+    "category-outlier"
+   ],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "uber-lyft-ride-avg": {
+   "c": "category",
+   "r": 5.38,
+   "dev": 1.57,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "3d-printer": {
+   "c": "review",
+   "r": -10.11,
+   "dev": -10.12,
+   "f": [
+    "category-outlier"
+   ],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "consumer-drone": {
+   "c": "plausible",
+   "r": -1.7,
+   "dev": -1.71,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "fitness-tracker": {
+   "c": "plausible",
+   "r": 3.17,
+   "dev": 3.16,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "microsoft-365-yr": {
+   "c": "plausible",
+   "r": 0,
+   "dev": -0.01,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "coding-bootcamp": {
+   "c": "plausible",
+   "r": 3.44,
+   "dev": -0.47,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "meal-kit-per-serving": {
+   "c": "category",
+   "r": 1.53,
+   "dev": -1.94,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "peloton-bike": {
+   "c": "review",
+   "r": -2.37,
+   "dev": -5.13,
+   "f": [
+    "category-outlier"
+   ],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "standing-desk": {
+   "c": "category",
+   "r": 0,
+   "dev": -2.24,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "video-doorbell": {
+   "c": "review",
+   "r": -5.61,
+   "dev": -5.62,
+   "f": [
+    "category-outlier"
+   ],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "air-fryer": {
+   "c": "category",
+   "r": -0.95,
+   "dev": -3.19,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "cold-brew-coffee": {
+   "c": "category",
+   "r": 3.75,
+   "dev": 0.1,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "e-bike": {
+   "c": "category",
+   "r": 0,
+   "dev": -3.82,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "ev-charging-public-per-kwh": {
+   "c": "category",
+   "r": 7.65,
+   "dev": 3.83,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "instant-pot": {
+   "c": "category",
+   "r": -0.95,
+   "dev": -3.19,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "smart-speaker": {
+   "c": "review",
+   "r": -10.99,
+   "dev": -11,
+   "f": [
+    "category-outlier"
+   ],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "smartwatch": {
+   "c": "plausible",
+   "r": 1.22,
+   "dev": 1.22,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "hard-seltzer-6-pack": {
+   "c": "plausible",
+   "r": 3.24,
+   "dev": -0.42,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "vr-headset": {
+   "c": "plausible",
+   "r": -1.81,
+   "dev": -1.81,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "wireless-earbuds": {
+   "c": "plausible",
+   "r": -2.77,
+   "dev": -2.78,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "electric-scooter": {
+   "c": "plausible",
+   "r": 2.83,
+   "dev": 2.82,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "oat-milk-half-gallon": {
+   "c": "category",
+   "r": 2.83,
+   "dev": -0.64,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "disney-monthly": {
+   "c": "review",
+   "r": 12.54,
+   "dev": 9.77,
+   "f": [
+    "category-outlier"
+   ],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "chatgpt-plus-monthly": {
+   "c": "plausible",
+   "r": 0,
+   "dev": -0.01,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "hershey-bar": {
+   "c": "category",
+   "r": 3.18,
+   "dev": -0.3,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "wonder-bread-loaf": {
+   "c": "category",
+   "r": 3.85,
+   "dev": 0.37,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "spam-can": {
+   "c": "category",
+   "r": 3.16,
+   "dev": -0.31,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "slinky": {
+   "c": "category",
+   "r": 2.6,
+   "dev": -0.16,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "bar-of-soap": {
+   "c": "category",
+   "r": 3.49,
+   "dev": 0.31,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "toothpaste": {
+   "c": "category",
+   "r": 2.96,
+   "dev": -0.22,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "cup-of-diner-coffee": {
+   "c": "category",
+   "r": 4.58,
+   "dev": 1.1,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "movie-popcorn": {
+   "c": "category",
+   "r": 5.94,
+   "dev": 3.17,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "silly-putty": {
+   "c": "category",
+   "r": 1.46,
+   "dev": -1.31,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "wiffle-ball": {
+   "c": "category",
+   "r": 3.23,
+   "dev": 0.47,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "tv-dinner": {
+   "c": "plausible",
+   "r": 1.97,
+   "dev": -1.5,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "mcdonald-s-hamburger": {
+   "c": "category",
+   "r": 3.72,
+   "dev": 0.24,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "play-doh-4-pack": {
+   "c": "category",
+   "r": 3.37,
+   "dev": 0.61,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "whopper": {
+   "c": "category",
+   "r": 4.35,
+   "dev": 0.88,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "hula-hoop": {
+   "c": "category",
+   "r": 2.69,
+   "dev": -0.08,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "barbie-doll": {
+   "c": "category",
+   "r": 2.43,
+   "dev": -0.33,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "2-pencil-each": {
+   "c": "plausible",
+   "r": 3.55,
+   "dev": -0.01,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "baseball-glove": {
+   "c": "category",
+   "r": 3.84,
+   "dev": 1.07,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "board-game-monopoly": {
+   "c": "category",
+   "r": 2.47,
+   "dev": -0.29,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "bubble-gum-piece": {
+   "c": "category",
+   "r": 5,
+   "dev": 1.52,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "candy-corn-bag": {
+   "c": "category",
+   "r": 3.84,
+   "dev": 0.36,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "coloring-book": {
+   "c": "category",
+   "r": 4.29,
+   "dev": 1.53,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "crayons-box-of-24": {
+   "c": "category",
+   "r": 4.35,
+   "dev": 1.59,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "deck-of-cards": {
+   "c": "category",
+   "r": 3.55,
+   "dev": 0.79,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "diner-breakfast": {
+   "c": "category",
+   "r": 4.53,
+   "dev": 1.06,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "draft-beer-at-a-bar": {
+   "c": "plausible",
+   "r": 4.89,
+   "dev": 1.42,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "drive-in-movie": {
+   "c": "audited-ok",
+   "r": 3.84,
+   "dev": 1.07,
+   "f": [],
+   "o": 1,
+   "px": 0,
+   "x": null
+  },
+  "dum-dums": {
+   "c": "category",
+   "r": 4.19,
+   "dev": 0.72,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "etch-a-sketch": {
+   "c": "category",
+   "r": 3.27,
+   "dev": 0.51,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "frisbee": {
+   "c": "category",
+   "r": 3.84,
+   "dev": 1.07,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "hardcover-book": {
+   "c": "category",
+   "r": 3.1,
+   "dev": 0.34,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "hostess-cupcake": {
+   "c": "category",
+   "r": 4,
+   "dev": 0.53,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "ice-cream-cone": {
+   "c": "category",
+   "r": 5.1,
+   "dev": 1.63,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "in-n-out-burger": {
+   "c": "category",
+   "r": 3.79,
+   "dev": 0.32,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "jump-rope": {
+   "c": "category",
+   "r": 4.29,
+   "dev": 1.53,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "kite": {
+   "c": "category",
+   "r": 5.29,
+   "dev": 2.53,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "kool-aid-packet": {
+   "c": "category",
+   "r": 3.55,
+   "dev": -0.1,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "lincoln-logs": {
+   "c": "category",
+   "r": 3.55,
+   "dev": 0.79,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "marbles-bag": {
+   "c": "category",
+   "r": 4.93,
+   "dev": 2.17,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "metal-lunch-box": {
+   "c": "plausible",
+   "r": 3.9,
+   "dev": 0.34,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "milkshake": {
+   "c": "category",
+   "r": 4.64,
+   "dev": 1.17,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "moon-pie": {
+   "c": "category",
+   "r": 4.19,
+   "dev": 0.72,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "nyc-pizza-slice": {
+   "c": "category",
+   "r": 4.89,
+   "dev": 1.42,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "oreos-package": {
+   "c": "category",
+   "r": 3.72,
+   "dev": 0.24,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "pack-of-gum": {
+   "c": "category",
+   "r": 5.29,
+   "dev": 1.82,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "paperback-book": {
+   "c": "category",
+   "r": 5.58,
+   "dev": 2.82,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "peeps": {
+   "c": "category",
+   "r": 3.2,
+   "dev": -0.27,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "root-beer-float": {
+   "c": "category",
+   "r": 4.64,
+   "dev": 0.99,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "shoeshine": {
+   "c": "category",
+   "r": 5.46,
+   "dev": 2.28,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "sled": {
+   "c": "category",
+   "r": 2.47,
+   "dev": -0.29,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "squirt-gun": {
+   "c": "category",
+   "r": 4.29,
+   "dev": 1.53,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "tootsie-pop": {
+   "c": "category",
+   "r": 5,
+   "dev": 1.52,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "twinkies-box": {
+   "c": "category",
+   "r": 4.35,
+   "dev": 0.88,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "view-master": {
+   "c": "category",
+   "r": 3.9,
+   "dev": 1.14,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "vinyl-lp-album": {
+   "c": "category",
+   "r": 3.11,
+   "dev": 0.35,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "white-castle-slider": {
+   "c": "category",
+   "r": 2.92,
+   "dev": -0.56,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "yo-yo": {
+   "c": "category",
+   "r": 4.29,
+   "dev": 1.53,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "easy-bake-oven": {
+   "c": "category",
+   "r": 2.12,
+   "dev": -0.64,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "pop-tarts-box": {
+   "c": "category",
+   "r": 4.46,
+   "dev": 0.99,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "filet-o-fish": {
+   "c": "category",
+   "r": 4.72,
+   "dev": 1.25,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "operation-game": {
+   "c": "category",
+   "r": 3.05,
+   "dev": 0.29,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "super-ball": {
+   "c": "category",
+   "r": 2.71,
+   "dev": -0.05,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "tang-jar": {
+   "c": "category",
+   "r": 3.85,
+   "dev": 0.19,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "chick-fil-a-sandwich": {
+   "c": "category",
+   "r": 4.02,
+   "dev": 0.54,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "ho-hos-box": {
+   "c": "category",
+   "r": 4.49,
+   "dev": 1.02,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "super-bowl-ticket-face": {
+   "c": "review",
+   "r": 11.4,
+   "dev": 8.64,
+   "f": [
+    "category-outlier"
+   ],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "hot-wheels-car": {
+   "c": "category",
+   "r": 1.3,
+   "dev": -1.46,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "wendy-s-frosty": {
+   "c": "category",
+   "r": 3.51,
+   "dev": 0.04,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "basketball": {
+   "c": "category",
+   "r": 3.25,
+   "dev": 0.49,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "bowling-per-game": {
+   "c": "category",
+   "r": 4.2,
+   "dev": 1.44,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "candy-bar-generic": {
+   "c": "category",
+   "r": 5.5,
+   "dev": 2.02,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "caramel-apple": {
+   "c": "category",
+   "r": 5.5,
+   "dev": 2.02,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "carnival-ride-ticket": {
+   "c": "category",
+   "r": 5.5,
+   "dev": 2.73,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "cheetos-bag": {
+   "c": "category",
+   "r": 4.39,
+   "dev": 0.92,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "class-ring": {
+   "c": "plausible",
+   "r": 3.66,
+   "dev": 0.1,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "cocktail-bar": {
+   "c": "plausible",
+   "r": 4.83,
+   "dev": 1.17,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "corn-dog": {
+   "c": "category",
+   "r": 5.5,
+   "dev": 2.02,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "cotton-candy": {
+   "c": "category",
+   "r": 5.5,
+   "dev": 2.02,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "doritos-bag": {
+   "c": "category",
+   "r": 4.2,
+   "dev": 0.72,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "dry-cleaning-shirt": {
+   "c": "category",
+   "r": 4.45,
+   "dev": 1.27,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "eggo-waffles-box": {
+   "c": "category",
+   "r": 3.78,
+   "dev": 0.31,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "greeting-card": {
+   "c": "plausible",
+   "r": 4.86,
+   "dev": 1.3,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "hot-dog-ballpark": {
+   "c": "category",
+   "r": 5.21,
+   "dev": 1.73,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "hot-dog-street-cart": {
+   "c": "category",
+   "r": 4.2,
+   "dev": 0.72,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "jawbreaker": {
+   "c": "category",
+   "r": 4.95,
+   "dev": 1.48,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "kfc-bucket": {
+   "c": "category",
+   "r": 3.57,
+   "dev": 0.1,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "little-debbie-snack": {
+   "c": "category",
+   "r": 3.25,
+   "dev": -0.22,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "m-ms-bag": {
+   "c": "category",
+   "r": 4.73,
+   "dev": 1.26,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "magazine-newsstand": {
+   "c": "category",
+   "r": 5.08,
+   "dev": 2.31,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "matinee-movie": {
+   "c": "audited-ok",
+   "r": 4,
+   "dev": 1.24,
+   "f": [],
+   "o": 1,
+   "px": 0,
+   "x": null
+  },
+  "mcdonald-s-fries": {
+   "c": "category",
+   "r": 4.61,
+   "dev": 1.14,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "mlb-ticket-average": {
+   "c": "category",
+   "r": 4.92,
+   "dev": 2.16,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "mountain-dew-bottle": {
+   "c": "category",
+   "r": 4.73,
+   "dev": 1.08,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "museum-admission": {
+   "c": "category",
+   "r": 5.92,
+   "dev": 3.15,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "pinball-per-play": {
+   "c": "category",
+   "r": 1.98,
+   "dev": -0.78,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "pixy-stix": {
+   "c": "category",
+   "r": 3.78,
+   "dev": 0.31,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "pogo-stick": {
+   "c": "category",
+   "r": 2.26,
+   "dev": -0.5,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "roller-rink-admission": {
+   "c": "category",
+   "r": 4.54,
+   "dev": 1.78,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "school-yearbook": {
+   "c": "plausible",
+   "r": 4.2,
+   "dev": 0.64,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "slim-jim": {
+   "c": "category",
+   "r": 4.95,
+   "dev": 1.48,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "slurpee": {
+   "c": "category",
+   "r": 5.15,
+   "dev": 1.5,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "snickers-bar": {
+   "c": "category",
+   "r": 4.95,
+   "dev": 1.48,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "snow-cone": {
+   "c": "category",
+   "r": 5.5,
+   "dev": 2.02,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "spiral-notebook": {
+   "c": "plausible",
+   "r": 3.78,
+   "dev": 0.22,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "starburst": {
+   "c": "category",
+   "r": 4.2,
+   "dev": 0.72,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "state-fair-admission": {
+   "c": "category",
+   "r": 4.2,
+   "dev": 1.44,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "taxi-initial-fare": {
+   "c": "category",
+   "r": 3.45,
+   "dev": -0.37,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "whiskey-shot-bar": {
+   "c": "plausible",
+   "r": 5.08,
+   "dev": 1.42,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "women-s-haircut-style": {
+   "c": "category",
+   "r": 4.37,
+   "dev": 1.2,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "zoo-admission": {
+   "c": "category",
+   "r": 5.92,
+   "dev": 3.15,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "cup-noodles": {
+   "c": "category",
+   "r": 3.31,
+   "dev": -0.16,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "quarter-pounder": {
+   "c": "category",
+   "r": 4.44,
+   "dev": 0.97,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "mood-ring": {
+   "c": "category",
+   "r": 5.59,
+   "dev": 2.82,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "nfl-ticket-average": {
+   "c": "category",
+   "r": 5.16,
+   "dev": 2.4,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "pop-rocks": {
+   "c": "category",
+   "r": 3.58,
+   "dev": 0.1,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "pringles-can": {
+   "c": "category",
+   "r": 2.28,
+   "dev": -1.19,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "stretch-armstrong": {
+   "c": "category",
+   "r": 2.31,
+   "dev": -0.46,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "happy-meal": {
+   "c": "category",
+   "r": 3.48,
+   "dev": 0.01,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "skittles": {
+   "c": "category",
+   "r": 4.38,
+   "dev": 0.91,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "aquarium-admission": {
+   "c": "category",
+   "r": 4.83,
+   "dev": 2.07,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "bagel-with-cream-cheese": {
+   "c": "category",
+   "r": 4.62,
+   "dev": 1.15,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "batting-cage-round": {
+   "c": "category",
+   "r": 3.97,
+   "dev": 1.21,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "birthday-cake-bakery": {
+   "c": "category",
+   "r": 3.56,
+   "dev": 0.09,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "bumper-car-ride": {
+   "c": "category",
+   "r": 4.62,
+   "dev": 1.86,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "car-wash": {
+   "c": "category",
+   "r": 3.56,
+   "dev": -0.26,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "christmas-tree": {
+   "c": "plausible",
+   "r": 3.06,
+   "dev": -0.5,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "county-fair-ride-bracelet": {
+   "c": "category",
+   "r": 3.56,
+   "dev": 0.8,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "dozen-roses": {
+   "c": "plausible",
+   "r": 3.41,
+   "dev": -0.16,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "dunkin-coffee": {
+   "c": "category",
+   "r": 4.21,
+   "dev": 0.74,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "film-developing-roll": {
+   "c": "category",
+   "r": 2.92,
+   "dev": 0.15,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "funnel-cake": {
+   "c": "category",
+   "r": 3.97,
+   "dev": 0.5,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "glass-of-wine-restaurant": {
+   "c": "audited-ok",
+   "r": 3.97,
+   "dev": 0.32,
+   "f": [],
+   "o": 1,
+   "px": 0,
+   "x": null
+  },
+  "go-kart-ride": {
+   "c": "category",
+   "r": 3.97,
+   "dev": 1.21,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "goldfish-carton": {
+   "c": "category",
+   "r": 3.06,
+   "dev": -0.41,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "hi-c-box": {
+   "c": "category",
+   "r": 3.06,
+   "dev": -0.59,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "lego-set-basic": {
+   "c": "category",
+   "r": 4.62,
+   "dev": 1.86,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "mini-golf-round": {
+   "c": "category",
+   "r": 3.97,
+   "dev": 1.21,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "pack-of-baseball-cards": {
+   "c": "category",
+   "r": 6.31,
+   "dev": 3.55,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "photo-print": {
+   "c": "category",
+   "r": 1.86,
+   "dev": -0.9,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "prom-ticket": {
+   "c": "category",
+   "r": 3.56,
+   "dev": 0.8,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "ring-pop": {
+   "c": "category",
+   "r": 3.97,
+   "dev": 0.5,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "roll-of-35mm-film": {
+   "c": "category",
+   "r": 3.06,
+   "dev": 0.3,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "rubik-s-cube": {
+   "c": "category",
+   "r": 3.97,
+   "dev": 1.21,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "sidewalk-chalk-bucket": {
+   "c": "category",
+   "r": 3.56,
+   "dev": 0.8,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "skateboard": {
+   "c": "category",
+   "r": 3.06,
+   "dev": 0.3,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "snapple": {
+   "c": "category",
+   "r": 2.65,
+   "dev": -1,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "soft-pretzel-street": {
+   "c": "category",
+   "r": 4.62,
+   "dev": 1.15,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "tennis-racket": {
+   "c": "category",
+   "r": 3.97,
+   "dev": 1.21,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "watch-battery-replaced": {
+   "c": "plausible",
+   "r": 3.56,
+   "dev": 0,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "arcade-game-play": {
+   "c": "category",
+   "r": 3.13,
+   "dev": 0.37,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "mcrib": {
+   "c": "category",
+   "r": 2.71,
+   "dev": -0.76,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "trapper-keeper": {
+   "c": "plausible",
+   "r": 2.71,
+   "dev": -0.85,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "fruit-roll-up": {
+   "c": "category",
+   "r": 3.81,
+   "dev": 0.34,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "hot-pockets-box": {
+   "c": "plausible",
+   "r": 2.84,
+   "dev": -0.63,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "mcnuggets-10-piece": {
+   "c": "category",
+   "r": 2.42,
+   "dev": -1.05,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "bagel-bites-box": {
+   "c": "category",
+   "r": 2.26,
+   "dev": -1.21,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "cassette-album": {
+   "c": "category",
+   "r": 0.99,
+   "dev": -1.77,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "cinnabon-roll": {
+   "c": "category",
+   "r": 3.44,
+   "dev": -0.03,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "dq-blizzard": {
+   "c": "category",
+   "r": 2.98,
+   "dev": -0.49,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "gatorade-bottle": {
+   "c": "category",
+   "r": 2.98,
+   "dev": -0.67,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "sour-patch-kids": {
+   "c": "category",
+   "r": 5.2,
+   "dev": 1.73,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "toaster-strudel-box": {
+   "c": "category",
+   "r": 2.72,
+   "dev": -0.76,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "vhs-movie-rental": {
+   "c": "category",
+   "r": 0.7,
+   "dev": -2.06,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "five-guys-burger": {
+   "c": "category",
+   "r": 3.53,
+   "dev": 0.05,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "koosh-ball": {
+   "c": "category",
+   "r": 2.55,
+   "dev": -0.22,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "birthday-party-kids-basic": {
+   "c": "category",
+   "r": 4.57,
+   "dev": 1.81,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "bottled-water": {
+   "c": "category",
+   "r": 2.58,
+   "dev": -0.9,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "capri-sun-box": {
+   "c": "category",
+   "r": 2.76,
+   "dev": -0.71,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "cd-album": {
+   "c": "category",
+   "r": 0,
+   "dev": -2.76,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "disposable-camera": {
+   "c": "plausible",
+   "r": 2.58,
+   "dev": -0.18,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "dunkaroos-pack": {
+   "c": "plausible",
+   "r": 5.1,
+   "dev": 1.63,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "gym-membership-month": {
+   "c": "category",
+   "r": 1.4,
+   "dev": -1.36,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "halloween-costume": {
+   "c": "plausible",
+   "r": 3.4,
+   "dev": -0.16,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "haunted-house-ticket": {
+   "c": "category",
+   "r": 4.18,
+   "dev": 1.42,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "lawn-mowing-service": {
+   "c": "plausible",
+   "r": 2.58,
+   "dev": -0.98,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "lunchable": {
+   "c": "plausible",
+   "r": 2.76,
+   "dev": -0.71,
+   "f": [],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "nerf-gun": {
+   "c": "category",
+   "r": 3.1,
+   "dev": 0.34,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "panda-express-plate": {
+   "c": "category",
+   "r": 2.85,
+   "dev": -0.62,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "pumpkin": {
+   "c": "category",
+   "r": 2.76,
+   "dev": -0.71,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "slap-bracelet": {
+   "c": "category",
+   "r": 5.1,
+   "dev": 2.34,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "super-soaker": {
+   "c": "category",
+   "r": 2.58,
+   "dev": -0.18,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "arizona-iced-tea": {
+   "c": "category",
+   "r": 0.78,
+   "dev": -2.87,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "beanie-baby": {
+   "c": "category",
+   "r": 1.43,
+   "dev": -1.33,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "concert-ticket-average": {
+   "c": "category",
+   "r": 5.78,
+   "dev": 3.02,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "tamagotchi": {
+   "c": "category",
+   "r": 1.14,
+   "dev": -1.62,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "shawarma-pita": {
+   "c": "category",
+   "r": 2.51,
+   "dev": -0.97,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "dvd-movie": {
+   "c": "category",
+   "r": -1.06,
+   "dev": -3.82,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "pok-mon-card-pack": {
+   "c": "category",
+   "r": 1.91,
+   "dev": -0.85,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "karaoke-hour": {
+   "c": "category",
+   "r": 3.17,
+   "dev": 0.41,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "pumpkin-patch-admission": {
+   "c": "category",
+   "r": 5.48,
+   "dev": 2.71,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "hbo-max-monthly": {
+   "c": "category",
+   "r": 1.4,
+   "dev": -1.37,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "spotify-monthly": {
+   "c": "category",
+   "r": 1.41,
+   "dev": -1.35,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "amazon-prime-yearly": {
+   "c": "category",
+   "r": 1.41,
+   "dev": -1.36,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "youtube-premium-monthly": {
+   "c": "category",
+   "r": 1.41,
+   "dev": -1.35,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "apple-tv-monthly": {
+   "c": "category",
+   "r": 1.41,
+   "dev": -1.36,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "peacock-monthly": {
+   "c": "category",
+   "r": 1.41,
+   "dev": -1.35,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "paramount-monthly": {
+   "c": "category",
+   "r": 1.41,
+   "dev": -1.36,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "xbox-gamepass-monthly": {
+   "c": "category",
+   "r": 1.41,
+   "dev": -1.35,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "playstation-plus-monthly": {
+   "c": "category",
+   "r": 1.42,
+   "dev": -1.34,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "audible-monthly": {
+   "c": "category",
+   "r": 1.41,
+   "dev": -1.36,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "yoga-class-drop-in": {
+   "c": "category",
+   "r": 1.4,
+   "dev": -1.36,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "spin-class": {
+   "c": "category",
+   "r": 1.4,
+   "dev": -1.36,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "crossfit-month": {
+   "c": "category",
+   "r": 1.41,
+   "dev": -1.35,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "rock-climbing-day-pass": {
+   "c": "category",
+   "r": 1.4,
+   "dev": -1.36,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "golf-round-18": {
+   "c": "category",
+   "r": 1.41,
+   "dev": -1.36,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "driving-range-bucket": {
+   "c": "category",
+   "r": 1.41,
+   "dev": -1.36,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "bowling-game-2": {
+   "c": "category",
+   "r": 1.41,
+   "dev": -1.35,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "laser-tag-game": {
+   "c": "category",
+   "r": 1.41,
+   "dev": -1.36,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "escape-room-person": {
+   "c": "category",
+   "r": 1.4,
+   "dev": -1.36,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "arcade-hour": {
+   "c": "category",
+   "r": 1.41,
+   "dev": -1.35,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "paintball-day": {
+   "c": "category",
+   "r": 1.41,
+   "dev": -1.35,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "go-kart-race": {
+   "c": "category",
+   "r": 1.4,
+   "dev": -1.36,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "concert-ticket-midtier": {
+   "c": "category",
+   "r": 1.41,
+   "dev": -1.35,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "festival-day-pass": {
+   "c": "category",
+   "r": 1.41,
+   "dev": -1.36,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "comedy-club-cover": {
+   "c": "category",
+   "r": 1.4,
+   "dev": -1.36,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "broadway-ticket": {
+   "c": "category",
+   "r": 1.41,
+   "dev": -1.36,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "zoo-admission-2": {
+   "c": "category",
+   "r": 1.4,
+   "dev": -1.36,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "amusement-park-day": {
+   "c": "category",
+   "r": 1.41,
+   "dev": -1.36,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "water-park-day": {
+   "c": "category",
+   "r": 1.41,
+   "dev": -1.36,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "ice-skating-admission": {
+   "c": "category",
+   "r": 1.41,
+   "dev": -1.36,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "trampoline-park-hour": {
+   "c": "category",
+   "r": 1.4,
+   "dev": -1.36,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "national-park-annual-pass": {
+   "c": "category",
+   "r": 1.41,
+   "dev": -1.35,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "campsite-night": {
+   "c": "category",
+   "r": 1.41,
+   "dev": -1.35,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "kayak-rental-day": {
+   "c": "category",
+   "r": 1.4,
+   "dev": -1.36,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "bike-rental-day": {
+   "c": "category",
+   "r": 1.4,
+   "dev": -1.36,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "board-game": {
+   "c": "category",
+   "r": 1.4,
+   "dev": -1.36,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "jigsaw-puzzle-1000": {
+   "c": "category",
+   "r": 1.39,
+   "dev": -1.37,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "basketball-ball": {
+   "c": "category",
+   "r": 1.41,
+   "dev": -1.35,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "soccer-ball": {
+   "c": "category",
+   "r": 1.4,
+   "dev": -1.36,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "golf-clubs-set": {
+   "c": "category",
+   "r": 1.41,
+   "dev": -1.35,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "fishing-rod": {
+   "c": "category",
+   "r": 1.4,
+   "dev": -1.36,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "yoga-mat": {
+   "c": "category",
+   "r": 1.41,
+   "dev": -1.35,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "dumbbell-set": {
+   "c": "category",
+   "r": 1.41,
+   "dev": -1.36,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "guitar-lesson": {
+   "c": "category",
+   "r": 3.17,
+   "dev": 0.41,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "piano-lesson": {
+   "c": "category",
+   "r": 3.18,
+   "dev": 0.41,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "cooking-class": {
+   "c": "category",
+   "r": 1.41,
+   "dev": -1.36,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "paperback-novel": {
+   "c": "category",
+   "r": 1.39,
+   "dev": -1.37,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "vinyl-record": {
+   "c": "category",
+   "r": 1.41,
+   "dev": -1.35,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "acrylic-nails-full-set": {
+   "c": "category",
+   "r": 3.17,
+   "dev": 0,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "eyebrow-threading": {
+   "c": "category",
+   "r": 3.17,
+   "dev": 0,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "massage-60min": {
+   "c": "category",
+   "r": 3.17,
+   "dev": 0,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "deep-tissue-massage": {
+   "c": "category",
+   "r": 3.17,
+   "dev": -0.01,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "tanning-bed-session": {
+   "c": "category",
+   "r": 3.17,
+   "dev": -0.01,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "brazilian-wax": {
+   "c": "category",
+   "r": 3.17,
+   "dev": 0,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "lash-extensions": {
+   "c": "category",
+   "r": 3.17,
+   "dev": 0,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "microblading": {
+   "c": "category",
+   "r": 3.17,
+   "dev": 0,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "teeth-whitening-pro": {
+   "c": "category",
+   "r": 4.57,
+   "dev": 1.4,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "botox-per-area": {
+   "c": "category",
+   "r": 4.58,
+   "dev": 1.4,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "blowout": {
+   "c": "category",
+   "r": 3.17,
+   "dev": 0,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "hair-coloring": {
+   "c": "category",
+   "r": 3.17,
+   "dev": 0,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "highlights": {
+   "c": "category",
+   "r": 3.17,
+   "dev": 0,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "balayage": {
+   "c": "category",
+   "r": 3.18,
+   "dev": 0,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "keratin-treatment": {
+   "c": "category",
+   "r": 3.17,
+   "dev": 0,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "beard-trim": {
+   "c": "category",
+   "r": 3.18,
+   "dev": 0,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "deodorant-stick": {
+   "c": "category",
+   "r": 3.17,
+   "dev": 0,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "body-wash-bottle": {
+   "c": "category",
+   "r": 3.17,
+   "dev": 0,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "face-cream-jar": {
+   "c": "category",
+   "r": 3.18,
+   "dev": 0,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "shaving-cream-can": {
+   "c": "category",
+   "r": 3.18,
+   "dev": 0,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "mouthwash-bottle": {
+   "c": "category",
+   "r": 3.17,
+   "dev": 0,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "dental-floss": {
+   "c": "category",
+   "r": 3.17,
+   "dev": 0,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "nail-polish-bottle": {
+   "c": "category",
+   "r": 3.17,
+   "dev": 0,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "foundation-makeup": {
+   "c": "category",
+   "r": 3.18,
+   "dev": 0,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "mascara-tube": {
+   "c": "category",
+   "r": 3.17,
+   "dev": -0.01,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "lipstick-tube": {
+   "c": "category",
+   "r": 3.18,
+   "dev": 0,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "perfume-bottle-2": {
+   "c": "category",
+   "r": 3.17,
+   "dev": 0,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "conditioner-bottle": {
+   "c": "category",
+   "r": 3.17,
+   "dev": 0,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "basic-tshirt": {
+   "c": "category",
+   "r": 1.98,
+   "dev": -0.67,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "polo-shirt": {
+   "c": "category",
+   "r": 1.99,
+   "dev": -0.66,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "jeans-pair": {
+   "c": "category",
+   "r": 1.99,
+   "dev": -0.66,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "chinos-pair": {
+   "c": "category",
+   "r": 1.99,
+   "dev": -0.66,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "hoodie-2": {
+   "c": "category",
+   "r": 1.99,
+   "dev": -0.66,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "winter-jacket": {
+   "c": "category",
+   "r": 1.98,
+   "dev": -0.67,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "raincoat": {
+   "c": "category",
+   "r": 1.99,
+   "dev": -0.66,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "socks-pack": {
+   "c": "category",
+   "r": 1.98,
+   "dev": -0.67,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "bra-2": {
+   "c": "category",
+   "r": 1.99,
+   "dev": -0.66,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "pajamas-set": {
+   "c": "category",
+   "r": 1.99,
+   "dev": -0.66,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "casual-dress": {
+   "c": "category",
+   "r": 1.99,
+   "dev": -0.66,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "formal-gown": {
+   "c": "category",
+   "r": 1.99,
+   "dev": -0.66,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "leggings": {
+   "c": "category",
+   "r": 1.99,
+   "dev": -0.66,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "running-shoes-2": {
+   "c": "category",
+   "r": 1.99,
+   "dev": -0.66,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "dress-shoes": {
+   "c": "category",
+   "r": 1.99,
+   "dev": -0.66,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "winter-boots": {
+   "c": "category",
+   "r": 1.98,
+   "dev": -0.67,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "high-heels": {
+   "c": "category",
+   "r": 1.99,
+   "dev": -0.66,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "sandals": {
+   "c": "category",
+   "r": 1.99,
+   "dev": -0.66,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "hiking-boots": {
+   "c": "category",
+   "r": 1.99,
+   "dev": -0.66,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "winter-scarf": {
+   "c": "category",
+   "r": 1.99,
+   "dev": -0.66,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "sunglasses-2": {
+   "c": "category",
+   "r": 1.99,
+   "dev": -0.66,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "backpack-2": {
+   "c": "category",
+   "r": 1.99,
+   "dev": -0.66,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "handbag": {
+   "c": "category",
+   "r": 1.99,
+   "dev": -0.66,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "leather-wallet": {
+   "c": "category",
+   "r": 1.99,
+   "dev": -0.66,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "suitcase": {
+   "c": "category",
+   "r": 2.24,
+   "dev": -0.41,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "queen-mattress": {
+   "c": "category",
+   "r": 2.24,
+   "dev": 0,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "bed-frame": {
+   "c": "category",
+   "r": 2.24,
+   "dev": 0,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "nightstand": {
+   "c": "category",
+   "r": 2.24,
+   "dev": 0,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "office-desk": {
+   "c": "category",
+   "r": 2.24,
+   "dev": 0,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "recliner-chair": {
+   "c": "category",
+   "r": 2.24,
+   "dev": 0,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "bar-stool": {
+   "c": "category",
+   "r": 2.24,
+   "dev": 0,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "tv-stand": {
+   "c": "category",
+   "r": 2.24,
+   "dev": 0,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "bedsheets-set": {
+   "c": "category",
+   "r": 2.24,
+   "dev": 0,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "window-curtains": {
+   "c": "category",
+   "r": 2.24,
+   "dev": 0,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "vacuum-cleaner-2": {
+   "c": "category",
+   "r": 2.24,
+   "dev": 0,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "table-lamp": {
+   "c": "category",
+   "r": 2.24,
+   "dev": 0,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "wall-mirror": {
+   "c": "category",
+   "r": 2.24,
+   "dev": 0,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "throw-pillow": {
+   "c": "category",
+   "r": 2.24,
+   "dev": 0,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "laundry-hamper": {
+   "c": "category",
+   "r": 2.24,
+   "dev": 0,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "ironing-board": {
+   "c": "category",
+   "r": 2.24,
+   "dev": 0,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "storage-bins-set": {
+   "c": "category",
+   "r": 2.24,
+   "dev": 0,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "tire-rotation": {
+   "c": "category",
+   "r": 4.21,
+   "dev": 0.39,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "wheel-alignment": {
+   "c": "category",
+   "r": 4.21,
+   "dev": 0.39,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "brake-pad-replacement": {
+   "c": "category",
+   "r": 4.21,
+   "dev": 0.39,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "new-tires-set": {
+   "c": "category",
+   "r": 4.21,
+   "dev": 0.39,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "car-battery-replacement": {
+   "c": "category",
+   "r": 4.21,
+   "dev": 0.39,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "car-wash-2": {
+   "c": "category",
+   "r": 4.21,
+   "dev": 0.39,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "wiper-blades": {
+   "c": "category",
+   "r": 4.21,
+   "dev": 0.39,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "smog-check": {
+   "c": "category",
+   "r": 4.21,
+   "dev": 0.39,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "state-inspection": {
+   "c": "category",
+   "r": 4.21,
+   "dev": 0.39,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "tow-service": {
+   "c": "category",
+   "r": 4.21,
+   "dev": 0.39,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "roadside-assistance-yr": {
+   "c": "category",
+   "r": 4.21,
+   "dev": 0.39,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "airport-parking-day": {
+   "c": "category",
+   "r": 3.82,
+   "dev": 0,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "monthly-parking-spot": {
+   "c": "category",
+   "r": 3.82,
+   "dev": 0,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "bus-pass-monthly": {
+   "c": "category",
+   "r": 3.82,
+   "dev": 0,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "subway-monthly-pass": {
+   "c": "category",
+   "r": 3.82,
+   "dev": 0,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "taxi-5mi": {
+   "c": "category",
+   "r": 3.82,
+   "dev": 0,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "rideshare-5mi": {
+   "c": "category",
+   "r": 3.82,
+   "dev": 0,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "bike-share-day": {
+   "c": "category",
+   "r": 3.82,
+   "dev": 0,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "claw-hammer": {
+   "c": "category",
+   "r": 0.54,
+   "dev": -1.21,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "screwdriver-set": {
+   "c": "category",
+   "r": 0.54,
+   "dev": -1.21,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "cordless-drill-2": {
+   "c": "category",
+   "r": 0.54,
+   "dev": -1.21,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "tape-measure": {
+   "c": "category",
+   "r": 0.55,
+   "dev": -1.2,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "socket-set": {
+   "c": "category",
+   "r": 0.55,
+   "dev": -1.2,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "work-gloves": {
+   "c": "category",
+   "r": 0.54,
+   "dev": -1.21,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "step-ladder-6ft": {
+   "c": "category",
+   "r": 0.54,
+   "dev": -1.21,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "tool-box": {
+   "c": "category",
+   "r": 0.54,
+   "dev": -1.21,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "shop-vac": {
+   "c": "category",
+   "r": 0.54,
+   "dev": -1.21,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "paint-gallon": {
+   "c": "category",
+   "r": 0.55,
+   "dev": -2.88,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "paint-roller-kit": {
+   "c": "category",
+   "r": 0.54,
+   "dev": -1.21,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "garden-rake": {
+   "c": "category",
+   "r": 0.55,
+   "dev": -1.2,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "potting-soil-bag": {
+   "c": "category",
+   "r": 0.56,
+   "dev": -1.19,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "mulch-bag": {
+   "c": "category",
+   "r": 0.55,
+   "dev": -1.2,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "grass-seed-bag": {
+   "c": "category",
+   "r": 0.55,
+   "dev": -1.2,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "plumber-call": {
+   "c": "category",
+   "r": 4.21,
+   "dev": 0.6,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "electrician-call-2": {
+   "c": "category",
+   "r": 4.21,
+   "dev": 0.6,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "furnace-repair": {
+   "c": "category",
+   "r": 4.21,
+   "dev": 0.6,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "carpet-cleaning": {
+   "c": "category",
+   "r": 3.18,
+   "dev": -0.43,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "window-cleaning": {
+   "c": "category",
+   "r": 3.17,
+   "dev": -0.43,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "handyman-hour": {
+   "c": "category",
+   "r": 4.21,
+   "dev": 0.61,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "appliance-repair": {
+   "c": "category",
+   "r": 4.21,
+   "dev": 0.6,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "locksmith-home": {
+   "c": "category",
+   "r": 4.21,
+   "dev": 0.6,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "lawyer-hour": {
+   "c": "category",
+   "r": 4.58,
+   "dev": 0.39,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "notary-fee": {
+   "c": "category",
+   "r": 4.57,
+   "dev": 0.39,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "will-preparation": {
+   "c": "category",
+   "r": 4.57,
+   "dev": 0.39,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "tax-prep-return": {
+   "c": "category",
+   "r": 4.57,
+   "dev": 0.39,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "accountant-hour": {
+   "c": "category",
+   "r": 4.57,
+   "dev": 0.39,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "home-appraisal": {
+   "c": "category",
+   "r": 4.57,
+   "dev": 0.39,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "home-inspection": {
+   "c": "category",
+   "r": 4.57,
+   "dev": 0.38,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "passport-fee": {
+   "c": "category",
+   "r": 4.57,
+   "dev": 0.39,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "background-check": {
+   "c": "category",
+   "r": 4.57,
+   "dev": 0.39,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "hotel-night-midrange": {
+   "c": "category",
+   "r": 1.4,
+   "dev": -0.07,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "motel-night": {
+   "c": "category",
+   "r": 1.41,
+   "dev": -0.07,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "luxury-hotel-night": {
+   "c": "category",
+   "r": 1.4,
+   "dev": -0.07,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "hostel-night": {
+   "c": "category",
+   "r": 1.4,
+   "dev": -0.07,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "airbnb-night": {
+   "c": "category",
+   "r": 1.41,
+   "dev": -0.06,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "cruise-per-night": {
+   "c": "category",
+   "r": 1.41,
+   "dev": -0.06,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "travel-insurance-trip": {
+   "c": "category",
+   "r": 4.57,
+   "dev": 3.1,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "tsa-precheck-5yr": {
+   "c": "category",
+   "r": 3.82,
+   "dev": 2.34,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "resort-fee-night": {
+   "c": "category",
+   "r": 1.4,
+   "dev": -0.07,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "dog-food-bag": {
+   "c": "category",
+   "r": 3.8,
+   "dev": 0.11,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "cat-food-bag": {
+   "c": "category",
+   "r": 3.81,
+   "dev": 0.11,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "dog-treats-bag": {
+   "c": "category",
+   "r": 3.8,
+   "dev": 0.11,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "pet-bed": {
+   "c": "category",
+   "r": 2.24,
+   "dev": -1.46,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "vet-checkup": {
+   "c": "category",
+   "r": 4.57,
+   "dev": 0.88,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "dog-vaccination": {
+   "c": "category",
+   "r": 4.58,
+   "dev": 0.88,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "dog-grooming-visit": {
+   "c": "category",
+   "r": 3.17,
+   "dev": -0.52,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "pet-boarding-night": {
+   "c": "category",
+   "r": 3.18,
+   "dev": -0.52,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "dog-walking-visit": {
+   "c": "category",
+   "r": 3.17,
+   "dev": -0.52,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "pet-insurance-month": {
+   "c": "category",
+   "r": 4.57,
+   "dev": 0.88,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "baby-wipes-pack": {
+   "c": "category",
+   "r": 3.17,
+   "dev": 0,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "baby-food-jar": {
+   "c": "category",
+   "r": 3.93,
+   "dev": 0.76,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "high-chair": {
+   "c": "category",
+   "r": 2.24,
+   "dev": -0.93,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "baby-onesie": {
+   "c": "category",
+   "r": 1.99,
+   "dev": -1.18,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "diaper-bag": {
+   "c": "category",
+   "r": 1.99,
+   "dev": -1.19,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "breast-pump": {
+   "c": "category",
+   "r": 2.24,
+   "dev": -0.93,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "specialist-visit": {
+   "c": "category",
+   "r": 4.57,
+   "dev": 0.65,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "contact-lenses-box": {
+   "c": "category",
+   "r": 4.57,
+   "dev": 0.64,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "online-course": {
+   "c": "category",
+   "r": 5.42,
+   "dev": 1.52,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "sat-prep-course": {
+   "c": "category",
+   "r": 5.42,
+   "dev": 1.52,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "tutoring-hour": {
+   "c": "category",
+   "r": 5.42,
+   "dev": 1.52,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "preschool-month": {
+   "c": "category",
+   "r": 5.43,
+   "dev": 1.52,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "daycare-month": {
+   "c": "category",
+   "r": 5.42,
+   "dev": 1.52,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "cap-and-gown": {
+   "c": "category",
+   "r": 1.99,
+   "dev": -1.92,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "college-application-fee": {
+   "c": "category",
+   "r": 5.43,
+   "dev": 1.52,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "notebook-pack": {
+   "c": "category",
+   "r": 5.42,
+   "dev": 1.52,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "beer-six-pack-2": {
+   "c": "category",
+   "r": 3.85,
+   "dev": 0,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "craft-beer-pint-2": {
+   "c": "category",
+   "r": 4.06,
+   "dev": 0.2,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "liquor-bottle-750": {
+   "c": "category",
+   "r": 3.85,
+   "dev": 0,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "cocktail-bar-2": {
+   "c": "category",
+   "r": 4.06,
+   "dev": 0.2,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "kombucha-bottle": {
+   "c": "category",
+   "r": 3.85,
+   "dev": 0.2,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "sparkling-water-case": {
+   "c": "category",
+   "r": 3.85,
+   "dev": 0.2,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "bottled-water-case-2": {
+   "c": "category",
+   "r": 3.85,
+   "dev": 0.2,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "coconut-water": {
+   "c": "category",
+   "r": 3.86,
+   "dev": 0.2,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "protein-shake-bottle": {
+   "c": "category",
+   "r": 3.85,
+   "dev": 0.2,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "tomatoes-lb": {
+   "c": "category",
+   "r": 3.93,
+   "dev": 0.45,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "grape-juice-bottle": {
+   "c": "category",
+   "r": 3.85,
+   "dev": 0.38,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "cheddar-cheese-lb": {
+   "c": "category",
+   "r": 3.2,
+   "dev": -0.27,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "cookies-package": {
+   "c": "category",
+   "r": 3.71,
+   "dev": 0.23,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "ground-chuck-lb": {
+   "c": "category",
+   "r": 3.8,
+   "dev": 0.33,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  },
+  "iceberg-lettuce-head": {
+   "c": "category",
+   "r": 3.93,
+   "dev": 0.46,
+   "f": [],
+   "o": 1,
+   "px": 1,
+   "x": null
+  }
+ }
+}

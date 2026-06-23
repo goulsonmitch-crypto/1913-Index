@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" font-family="Georgia, 'Times New Roman', serif">
+<rect width="1200" height="630" fill="#f4ecd8"/>
+<rect x="16" y="16" width="1168" height="598" fill="none" stroke="#1c1710" stroke-width="4"/>
+<text x="64" y="92" font-size="26" letter-spacing="6" fill="#9a7d2e" font-weight="bold">THE 1913 INDEX</text>
+<text x="64" y="210" font-size="62" font-weight="bold" fill="#1c1710">The government says prices</text>
+<text x="64" y="284" font-size="62" font-weight="bold" fill="#1c1710">rose <tspan fill="#5b4f3a">34×</tspan>. They rose <tspan fill="#8c1c13">52×</tspan>.</text>
+<text x="64" y="372" font-size="30" fill="#5b4f3a">The dollar has lost ~98% of its value since the Fed was founded —</text>
+<text x="64" y="414" font-size="30" fill="#5b4f3a">measured in the real prices of real things, with the housing fudge removed.</text>
+<line x1="64" y1="470" x2="1136" y2="470" stroke="#cdbb95" stroke-width="2"/>
+<text x="64" y="528" font-size="26" font-weight="bold" fill="#1c1710">Independent · sourced · reproducible</text>
+<text x="1136" y="528" font-size="22" fill="#5b4f3a" text-anchor="end">since the Federal Reserve, 1913</text>
+</svg>

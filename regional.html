@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Regional — Inflation Isn't One Number — The 1913 Index</title>
+<meta name="description" content="CPI reports a single national housing figure. But home prices since 2000 rose 2× in Chicago and 4× in Miami. Pick your city and see the real Case-Shiller path, from FRED.">
+<link rel="stylesheet" href="styles.css">
+<style>
+  .pick{display:flex;flex-wrap:wrap;gap:6px;margin:14px 0}
+  .pick button{font-family:"Courier New",monospace;font-size:.8rem;padding:7px 12px;border:2px solid var(--ink);background:var(--paper2);color:var(--ink);cursor:pointer}
+  .pick button.on{background:var(--ink);color:var(--paper2)}
+  .stat3{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);margin:16px 0}
+  @media(max-width:620px){.stat3{grid-template-columns:1fr}}
+  .stat3 .c{text-align:center;padding:16px 10px}.stat3 .c+.c{border-left:1px solid var(--rule)}
+  @media(max-width:620px){.stat3 .c+.c{border-left:none;border-top:1px solid var(--rule)}}
+  .stat3 .l{font-size:.62rem;letter-spacing:.12em;text-transform:uppercase;color:var(--ink2)}
+  .stat3 .n{font-family:"Courier New",monospace;font-weight:700;font-size:clamp(1.4rem,4.5vw,2rem);margin:.06em 0;color:var(--red)}
+  .stat3 .s{font-size:.78rem;color:var(--ink2)}
+  .chartbox{border:2px solid var(--ink);background:var(--paper2);padding:14px;margin-top:8px}
+  .chartbox svg{width:100%;height:auto}
+  .ranktbl{width:100%;border-collapse:collapse;margin-top:10px;font-size:.9rem}
+  .ranktbl td,.ranktbl th{border-bottom:1px solid var(--rule);padding:7px 8px;text-align:left}
+  .ranktbl td:last-child,.ranktbl th:last-child{text-align:right;font-family:"Courier New",monospace}
+  .src{font-size:.78rem;color:var(--ink2);margin-top:8px}.src a{color:var(--gold)}
+</style>
+</head>
+<body>
+<header class="mast"><div class="wrap">
+  <div class="eyebrow">Regional Indices</div>
+  <h1><a href="index.html">The 1913 Index</a></h1>
+  <div class="sub">Inflation isn't one number — it's your city's number</div>
+</div></header>
+<div class="crumb"><div class="wrap"><a href="index.html">← Home</a> · <a href="method.html">Method</a> · <a href="housing.html">Housing</a><span class="here">Regional</span></div></div>
+
+<section><div class="wrap">
+  <p class="kicker">One national figure hides everything</p>
+  <h2 class="sec">CPI gives the whole country one housing number. Reality is not one number.</h2>
+  <p class="lead">CPI's shelter component is a single national average. But the cost of a home didn't move the same everywhere: since 2000, real home prices (Case-Shiller, repeat-sales) roughly <b>doubled in Chicago</b> and <b>more than quadrupled in Miami</b>. A national average that splits the difference is technically correct and lived by no one. Pick a city:</p>
+
+  <div class="pick" id="pick"></div>
+
+  <div class="stat3">
+    <div class="c"><div class="l">Home prices since 2000</div><div class="n" id="mult">—</div><div class="s"><span id="cityName"></span>, Case-Shiller</div></div>
+    <div class="c"><div class="l">vs. national</div><div class="n" id="vsnat">—</div><div class="s">national rose <span id="natmult"></span> over the same span</div></div>
+    <div class="c"><div class="l">Peak-to-trough crash</div><div class="n" id="crash">—</div><div class="s">2006-era high to post-2008 low</div></div>
+  </div>
+  <p class="src">Source: S&amp;P CoreLogic Case-Shiller indices via FRED (<a href="https://fred.stlouisfed.org/series/CSUSHPINSA" target="_blank" rel="noopener">national</a>, <a href="https://fred.stlouisfed.org/series/NYXRSA" target="_blank" rel="noopener">NY</a>, <a href="https://fred.stlouisfed.org/series/LXXRSA" target="_blank" rel="noopener">LA</a>, <a href="https://fred.stlouisfed.org/series/MIXRSA" target="_blank" rel="noopener">Miami</a>, <a href="https://fred.stlouisfed.org/series/CHXRSA" target="_blank" rel="noopener">Chicago</a>). All rebased to 2000 = 100.</p>
+
+  <div class="chartbox"><svg id="chart" viewBox="0 0 900 380" preserveAspectRatio="xMidYMid meet"></svg></div>
+
+  <h3 style="margin-top:24px">Home prices since 2000, by metro</h3>
+  <table class="ranktbl"><thead><tr><th>Metro</th><th>× since 2000</th></tr></thead><tbody id="rank"></tbody></table>
+
+  <h3 style="margin-top:24px">Why this matters</h3>
+  <p>This is a small starter set of five metros, not the whole country — we'll say so plainly. But it already makes the point a single national CPI figure cannot: the housing inflation a family actually felt depended enormously on <i>where they lived</i>. The same years that nearly doubled Chicago more than quadrupled Miami. The 1913 Index treats that spread as signal, not noise — because it's the difference between a number being technically accurate and being true to anyone's life.</p>
+  <p style="margin-top:8px;color:var(--ink2);font-size:.85rem">Roadmap: extend to all 20 Case-Shiller metros, add metro-level CPI, and let any user pull their city's full 1913-style basket.</p>
+
+  <p style="margin-top:16px"><a href="housing.html">The national housing teardown →</a></p>
+</div></section>
+
+<footer><div class="wrap">
+  <p class="disclaimer">Real home-price data from FRED (S&amp;P CoreLogic Case-Shiller). A five-metro proof of concept. Not investment advice.</p>
+  <p style="margin-top:8px;color:#cdbf9b"><a href="index.html">← Back to all topics</a></p>
+</div></footer>
+
+<script src="regional.js"></script>
+<script>
+(function(){
+  var R=window.REGIONAL, i2000=2000-R.start, iLast=R.end-R.start;
+  var nat=R.metros[0], natMult=nat.v[iLast]/nat.v[i2000];
+  function crash(m){var hi=0,j0=2004-R.start,j1=2012-R.start;for(var i=j0;i<=j1;i++)hi=Math.max(hi,m.v[i]);var lo=1e9;for(var i=j0;i<=j1;i++)lo=Math.min(lo,m.v[i]);return (lo/hi-1)*100;}
+  var sel="MIA";
+  var pick=document.getElementById("pick");
+  R.metros.forEach(function(m){var b=document.createElement("button");b.textContent=m.name.replace(" (national)","");b.dataset.id=m.id;b.onclick=function(){sel=m.id;render();};pick.appendChild(b);});
+
+  // rank table
+  var rows=R.metros.slice().map(function(m){return {n:m.name.replace(" (national)"," ★"),x:m.v[iLast]/m.v[i2000]};}).sort(function(a,b){return b.x-a.x;});
+  document.getElementById("rank").innerHTML=rows.map(function(r){return '<tr><td>'+r.n+'</td><td>'+r.x.toFixed(2)+'×</td></tr>';}).join("");
+  document.getElementById("natmult").textContent=natMult.toFixed(2)+"×";
+
+  function render(){
+    var m=R.metros.filter(function(x){return x.id===sel;})[0], mult=m.v[iLast]/m.v[i2000];
+    Array.prototype.forEach.call(pick.children,function(b){b.classList.toggle("on",b.dataset.id===sel);});
+    document.getElementById("mult").textContent=mult.toFixed(2)+"×";
+    document.getElementById("cityName").textContent=m.name.replace(" (national)","");
+    document.getElementById("vsnat").textContent=(mult/natMult).toFixed(2)+"×";
+    document.getElementById("crash").textContent=crash(m).toFixed(0)+"%";
+    // chart: selected metro vs national, rebased 2000=100
+    var svg=document.getElementById("chart"), W=900,Ht=380,L=54,Rr=120,T=18,B=34,x0=L,x1=W-Rr,y0=T,y1=Ht-B;
+    function reb(arr){var b=arr[i2000];return arr.map(function(v){return v/b*100;});}
+    var mv=reb(m.v), nv=reb(nat.v), yrs=[];for(var y=R.start;y<=R.end;y++)yrs.push(y);
+    var vmax=Math.max(Math.max.apply(null,mv),Math.max.apply(null,nv))*1.05;
+    var xs=function(y){return x0+(x1-x0)*(y-R.start)/(R.end-R.start);}, ys=function(v){return y1-(y1-y0)*v/vmax;};
+    var g="";
+    [100,200,300,400,500].forEach(function(v){if(v<vmax){var yy=ys(v);g+='<line x1="'+x0+'" y1="'+yy.toFixed(1)+'" x2="'+x1+'" y2="'+yy.toFixed(1)+'" stroke="#c3b189" stroke-width="1"/><text x="'+(x0-6)+'" y="'+(yy+4).toFixed(1)+'" text-anchor="end" font-size="11" fill="#4a3f2a" font-family="Courier New,monospace">'+v+'</text>';}});
+    for(var yr=2000;yr<=2025;yr+=5){g+='<text x="'+xs(yr).toFixed(1)+'" y="'+(y1+20)+'" text-anchor="middle" font-size="11" fill="#4a3f2a" font-family="Courier New,monospace">'+yr+'</text>';}
+    function path(arr){return arr.map(function(v,i){return (i?"L":"M")+xs(R.start+i).toFixed(1)+","+ys(v).toFixed(1);}).join(" ");}
+    g+='<path d="'+path(nv)+'" fill="none" stroke="#34607f" stroke-width="2.4" stroke-dasharray="5 4"/>';
+    g+='<path d="'+path(mv)+'" fill="none" stroke="#8c1c13" stroke-width="3"/>';
+    g+='<text x="'+(xs(R.end)+6)+'" y="'+(ys(mv[iLast])+2)+'" font-size="12" font-weight="700" fill="#8c1c13">'+m.name.replace(" (national)","")+' ('+mv[iLast].toFixed(0)+')</text>';
+    g+='<text x="'+(xs(R.end)+6)+'" y="'+(ys(nv[iLast])+14)+'" font-size="11" font-weight="700" fill="#34607f">National ('+nv[iLast].toFixed(0)+')</text>';
+    svg.innerHTML=g;
+  }
+  render();
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CPI vs. The 1913 Index</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="mast"><div class="wrap">
+  <div class="eyebrow">No. 02</div>
+  <h1><a href="index.html">The 1913 Index</a></h1>
+  <div class="sub">CPI vs. The 1913 Index</div>
+</div></header>
+<div class="crumb"><div class="wrap"><a href="index.html">← Home</a><span class="here">CPI vs. 1913 Index</span></div></div>
+
+<section>
+  <div class="wrap">
+    <p class="kicker">The Crown Jewel</p>
+    <h2 class="sec">Official CPI vs. The 1913 Index</h2>
+    <p class="lead">Cumulative inflation since 1913. CPI measures the cost of an <i>equivalent standard of living</i> — hence substitution, hedonic quality adjustments, and a survey-based housing number. The 1913 Index answers the blunter question: <b>how much more do the actual same goods cost in actual dollars.</b></p>
+    <div class="vs" style="margin-top:8px">
+      <div class="vbox cpi">
+        <div class="badge">Government</div><h3>Official CPI</h3>
+        <div class="pct mono" id="cpiPct">—</div>
+        <div class="small">cumulative since 1913<br>(<span id="cpiAnnual">—</span>/yr avg)</div>
+      </div>
+      <div class="vsmid">vs.</div>
+      <div class="vbox ours">
+        <div class="badge" style="background:var(--red)">The 1913 Index</div><h3>True Inflation</h3>
+        <div class="pct mono" id="oursPct">—</div>
+        <div class="small">cumulative since 1913<br>(<span id="oursAnnual">—</span>/yr avg) · v1</div>
+      </div>
+    </div>
+
+    <div class="method">
+      <h4>How the v1 number is built — in the open</h4>
+      <p id="methodText" style="margin:.3em 0"></p>
+      <p style="margin:.3em 0;font-size:.95rem"><b>The single biggest swap:</b> CPI uses <i>Owners' Equivalent Rent</i> — a survey asking homeowners what they imagine their home would rent for — for about a third of its entire index. We discard that hypothetical and use the <b>real median sale price of a home</b>. That one honest substitution is most of the gap you see above.</p>
+    </div>
+
+    <h3 style="margin-top:30px">The basket, by category</h3>
+    <table style="width:100%;border-collapse:collapse;margin-top:8px;font-size:.95rem">
+      <thead><tr style="background:var(--ink);color:var(--paper);text-align:left">
+        <th style="padding:8px 10px">Category</th><th style="padding:8px 10px">Weight</th>
+        <th style="padding:8px 10px">Avg increase since 1913</th></tr></thead>
+      <tbody id="catRows"></tbody>
+    </table>
+    <p style="font-size:.8rem;color:var(--ink2);margin-top:8px">Weights are CPI's relative importances, renormalized across the groups v1 currently covers. Stamps and movie tickets are shown in the basket for color but excluded from the headline weighting.</p>
+    <p style="margin-top:16px"><a href="basket.html">Inspect every item →</a></p>
+  </div>
+</section>
+
+<footer><div class="wrap">
+  <p class="disclaimer" id="disclaimer"></p>
+  <p style="margin-top:8px;color:#cdbf9b"><a href="index.html">← Back to all topics</a> · <span id="updated"></span></p>
+</div></footer>
+
+<script src="data.js"></script>
+<script src="core.js"></script>
+<script>
+(function(){var S=window.SMI;
+  document.getElementById("cpiPct").textContent=S.fmtP(S.cpi.cumulative_pct);
+  document.getElementById("cpiAnnual").textContent=S.cpi.annual_rate.toFixed(2)+"%";
+  document.getElementById("oursPct").textContent=S.fmtP(S.indexPct);
+  document.getElementById("oursAnnual").textContent=S.indexAnnual.toFixed(2)+"%";
+  document.getElementById("methodText").textContent=S.D.weights_note;
+  var rows=document.getElementById("catRows");
+  (S.D.categories||[]).forEach(function(c){
+    var tr=document.createElement("tr"); tr.style.borderBottom="1px solid var(--rule)";
+    var flag=(c.proxy?' <span style="color:#7a6320;font-size:.7rem">(proxy)</span>':(c.est?' <span style="color:#7a6320;font-size:.7rem">⚑</span>':''));
+    tr.innerHTML="<td style='padding:7px 10px'>"+c.name+flag+"<div style='font-size:.72rem;color:var(--ink2)'>"+c.basis+"</div></td>"+
+      "<td style='padding:7px 10px' class='mono'>"+c.weight.toFixed(1)+"%</td>"+
+      "<td style='padding:7px 10px;color:var(--red)' class='mono'>"+c.mult.toFixed(1)+"×</td>";
+    rows.appendChild(tr);
+  });
+  var trx=document.createElement("tr"); trx.style.background="rgba(140,28,19,.08)"; trx.style.fontWeight="700";
+  trx.innerHTML="<td style='padding:8px 10px'>THE 1913 INDEX (weighted)</td><td style='padding:8px 10px' class='mono'>100%</td>"
+    +"<td style='padding:8px 10px;color:var(--red)' class='mono'>"+S.indexMult.toFixed(1)+"×</td>";
+  rows.appendChild(trx);
+  document.getElementById("disclaimer").textContent="The 1913 Index "+S.D.meta.version+". "+S.D.meta.note;
+  document.getElementById("updated").textContent="data last updated "+S.D.meta.last_updated;
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Hours-of-Work Index — The 1913 Index</title>
+<meta name="description" content="Wages rose, but so did prices. Measured in hours of work — the only currency that can't be printed — here is what an ordinary paycheck actually buys, using real FRED wage data.">
+<link rel="stylesheet" href="styles.css">
+<style>
+  .stat3{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);margin:16px 0}
+  @media(max-width:620px){.stat3{grid-template-columns:1fr}}
+  .stat3 .c{text-align:center;padding:16px 10px}.stat3 .c+.c{border-left:1px solid var(--rule)}
+  @media(max-width:620px){.stat3 .c+.c{border-left:none;border-top:1px solid var(--rule)}}
+  .stat3 .l{font-size:.62rem;letter-spacing:.12em;text-transform:uppercase;color:var(--ink2)}
+  .stat3 .n{font-family:"Courier New",monospace;font-weight:700;font-size:clamp(1.4rem,4.5vw,2rem);margin:.06em 0;color:var(--red)}
+  .stat3 .s{font-size:.78rem;color:var(--ink2)}
+  .chartbox{border:2px solid var(--ink);background:var(--paper2);padding:14px;margin-top:8px}
+  .chartbox svg{width:100%;height:auto}
+  .src{font-size:.78rem;color:var(--ink2);margin-top:8px}
+  .src a{color:var(--gold)}
+</style>
+</head>
+<body>
+<header class="mast"><div class="wrap">
+  <div class="eyebrow">The Wage Engine</div>
+  <h1><a href="index.html">The 1913 Index</a></h1>
+  <div class="sub">The Hours-of-Work Index — the only currency that can't be printed</div>
+</div></header>
+<div class="crumb"><div class="wrap"><a href="index.html">← Home</a> · <a href="method.html">Method</a> · <a href="housing.html">Housing</a><span class="here">Wages</span></div></div>
+
+<section><div class="wrap">
+  <p class="kicker">"Wages went up too" — so let's measure it honestly</p>
+  <h2 class="sec">A raise that buys less is not a raise</h2>
+  <p class="lead">The standard reply to any inflation complaint is "but wages rose too." True — the average hourly wage for ordinary (production &amp; non-supervisory) workers went from <b>$2.54 in 1964 to $31.34 in 2025</b>, about <b>12×</b>. The honest question isn't whether the number got bigger; it's <b>what an hour of work actually buys</b>. Hours of work is the one unit the Fed can't print, so we price the big things in hours.</p>
+
+  <div class="stat3">
+    <div class="c"><div class="l">Avg hourly wage</div><div class="n" id="wageNow">—</div><div class="s"><span id="wageThen"></span> in 1964 · <span id="wageMult"></span></div></div>
+    <div class="c"><div class="l">Hours to buy the median home</div><div class="n" id="hrNow">—</div><div class="s"><span id="hrThen"></span> in 1964 · <span id="hrMult"></span></div></div>
+    <div class="c"><div class="l">Extra working time</div><div class="n" id="extra">—</div><div class="s">more hours for the same house</div></div>
+  </div>
+  <p class="src">Sources: <a href="https://fred.stlouisfed.org/series/AHETPI" target="_blank" rel="noopener">FRED AHETPI</a> (wages), <a href="https://fred.stlouisfed.org/series/MSPUS" target="_blank" rel="noopener">MSPUS</a> (median home price). Hours = median home price ÷ average hourly wage.</p>
+
+  <h3 style="margin-top:24px">Hours of work to buy the median home</h3>
+  <div class="chartbox"><svg id="hours" viewBox="0 0 900 320" preserveAspectRatio="xMidYMid meet"></svg></div>
+
+  <h3 style="margin-top:24px">The honest reading</h3>
+  <p>While some would say wages more than kept up — measured against <i>some</i> goods (a TV, a long-distance call, a basic calculator) an hour of work buys far more than it did in 1964, because technology genuinely got cheaper and CPI is right to capture that — the things that anchor a stable life now cost far more <b>hours</b> than they used to. The same median house that took about <b id="hrThen2">—</b> hours of work in 1964 takes roughly <b id="hrNow2">—</b> today: nearly <b id="hrMult2">—</b> the working time. That is the gap a single "real wages are up slightly" headline buries — and it's why the 1913 Index prices the essentials in hours, not just dollars.</p>
+  <p style="margin-top:8px;color:var(--ink2);font-size:.85rem">Next for this engine: hours-to-buy for gas, eggs, and a year of college, plus wages deflated by the 1913 Index vs. by CPI.</p>
+
+  <p style="margin-top:16px"><a href="housing.html">The housing teardown →</a> &nbsp;·&nbsp; <a href="measures.html">All measures compared →</a></p>
+</div></section>
+
+<footer><div class="wrap">
+  <p class="disclaimer">Real wage and price data from FRED (BLS, Census). Hours-to-buy is a transparent ratio of two published series. Not investment advice.</p>
+  <p style="margin-top:8px;color:#cdbf9b"><a href="index.html">← Back to all topics</a></p>
+</div></footer>
+
+<script src="wages.js"></script>
+<script src="housing.js"></script>
+<script>
+(function(){
+  var W=window.WAGES.ahe, H=window.HOUSING;
+  function at(s,y){var i=y-s.start;return (i>=0&&i<s.v.length)?s.v[i]:null;}
+  function fmt(n){return Math.round(n).toLocaleString();}
+  var wageThen=at(W,1964), wageNowYr=W.start+W.v.length-1, wageNow=W.v[W.v.length-1];
+  var hrThen=at(H.mspus,1964)/wageThen, hrNow=at(H.mspus,wageNowYr)/wageNow;
+  document.getElementById("wageNow").textContent="$"+wageNow.toFixed(2)+"/hr";
+  document.getElementById("wageThen").textContent="$"+wageThen.toFixed(2);
+  document.getElementById("wageMult").textContent=(wageNow/wageThen).toFixed(0)+"× since 1964";
+  document.getElementById("hrNow").textContent=fmt(hrNow)+" hrs";
+  document.getElementById("hrThen").textContent=fmt(hrThen)+" hrs";
+  document.getElementById("hrMult").textContent=(hrNow/hrThen).toFixed(2)+"× since 1964";
+  document.getElementById("extra").textContent="+"+fmt(hrNow-hrThen)+" hrs";
+  document.getElementById("hrThen2").textContent=fmt(hrThen);
+  document.getElementById("hrNow2").textContent=fmt(hrNow);
+  document.getElementById("hrMult2").textContent=(hrNow/hrThen).toFixed(2)+"×";
+
+  (function(){
+    var svg=document.getElementById("hours"), Wd=900,Ht=320,L=64,R=70,T=18,B=34,x0=L,x1=Wd-R,y0=T,y1=Ht-B;
+    var s=1964,e=wageNowYr, pts=[]; for(var y=s;y<=e;y++){var p=at(H.mspus,y),w=at(W,y); if(p!=null&&w!=null)pts.push([y,p/w]);}
+    var vmax=Math.max.apply(null,pts.map(function(p){return p[1];}))*1.08;
+    var xs=function(y){return x0+(x1-x0)*(y-s)/(e-s);}, ys=function(v){return y1-(y1-y0)*v/vmax;};
+    var g="";
+    [3000,6000,9000,12000,15000].forEach(function(v){if(v<vmax){var yy=ys(v);g+='<line x1="'+x0+'" y1="'+yy.toFixed(1)+'" x2="'+x1+'" y2="'+yy.toFixed(1)+'" stroke="#c3b189" stroke-width="1"/><text x="'+(x0-6)+'" y="'+(yy+4).toFixed(1)+'" text-anchor="end" font-size="11" fill="#4a3f2a" font-family="Courier New,monospace">'+(v/1000)+'k</text>';}});
+    for(var yr=1970;yr<=2025;yr+=10){g+='<text x="'+xs(yr).toFixed(1)+'" y="'+(y1+20)+'" text-anchor="middle" font-size="11" fill="#4a3f2a" font-family="Courier New,monospace">'+yr+'</text>';}
+    g+='<path d="'+pts.map(function(p,i){return (i?"L":"M")+xs(p[0]).toFixed(1)+","+ys(p[1]).toFixed(1);}).join(" ")+'" fill="none" stroke="#8c1c13" stroke-width="2.8"/>';
+    g+='<text x="'+x0+'" y="'+(T+2)+'" font-size="11" fill="#4a3f2a">Hours of work to buy the median home — wages rose, but the home pulled away</text>';
+    svg.innerHTML=g;
+  })();
+})();
+</script>
+</body>
+</html>

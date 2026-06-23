@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Housing Fudge — The 1913 Index</title>
+<meta name="description" content="CPI fills about a third of its index with Owners' Equivalent Rent — a survey of imagined rents. Here is the real cost of housing: actual home prices and the actual monthly mortgage payment, from FRED.">
+<link rel="stylesheet" href="styles.css">
+<style>
+  .stat3{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);margin:16px 0}
+  @media(max-width:620px){.stat3{grid-template-columns:1fr}}
+  .stat3 .c{text-align:center;padding:16px 10px}.stat3 .c+.c{border-left:1px solid var(--rule)}
+  @media(max-width:620px){.stat3 .c+.c{border-left:none;border-top:1px solid var(--rule)}}
+  .stat3 .l{font-size:.62rem;letter-spacing:.12em;text-transform:uppercase;color:var(--ink2)}
+  .stat3 .n{font-family:"Courier New",monospace;font-weight:700;font-size:clamp(1.4rem,4.5vw,2rem);margin:.06em 0;color:var(--red)}
+  .stat3 .s{font-size:.78rem;color:var(--ink2)}
+  .chartbox{border:2px solid var(--ink);background:var(--paper2);padding:14px;margin-top:8px}
+  .chartbox svg{width:100%;height:auto}
+  .src{font-size:.78rem;color:var(--ink2);margin-top:8px}
+  .src a{color:var(--gold)}
+</style>
+</head>
+<body>
+<header class="mast"><div class="wrap">
+  <div class="eyebrow">The Methodology Centerpiece</div>
+  <h1><a href="index.html">The 1913 Index</a></h1>
+  <div class="sub">The Housing Fudge — what "Owners' Equivalent Rent" hides</div>
+</div></header>
+<div class="crumb"><div class="wrap"><a href="index.html">← Home</a> · <a href="method.html">Method</a> · <a href="the-number.html">The Number</a><span class="here">Housing</span></div></div>
+
+<section><div class="wrap">
+  <p class="kicker">A third of CPI isn't a price</p>
+  <h2 class="sec">The biggest piece of CPI is a survey of imagined rents</h2>
+  <p class="lead">For housing — the largest component of the index — CPI doesn't use what homes cost. It uses <b>Owners' Equivalent Rent (OER)</b>: a survey asking homeowners to estimate what their home would rent for. That estimate fills about a third of the entire index. Here is the real thing instead: the actual median home price and the actual monthly mortgage payment, straight from FRED.</p>
+
+  <div class="stat3">
+    <div class="c"><div class="l">Median home price</div><div class="n" id="homeNow">—</div><div class="s"><span id="homeThen"></span> in 1963 · <span id="homeMult"></span></div></div>
+    <div class="c"><div class="l">Real monthly payment*</div><div class="n" id="payNow">—</div><div class="s"><span id="payThen"></span> in 1971 · <span id="payMult"></span></div></div>
+    <div class="c"><div class="l">CPI's OER (since 1983)</div><div class="n" id="oerMult">—</div><div class="s">the survey that fills ⅓ of CPI</div></div>
+  </div>
+  <p class="src">*Monthly principal &amp; interest on the median home, 20% down, 30-year fixed at that year's average rate. Sources: <a href="https://fred.stlouisfed.org/series/MSPUS" target="_blank" rel="noopener">FRED MSPUS</a>, <a href="https://fred.stlouisfed.org/series/MORTGAGE30US" target="_blank" rel="noopener">MORTGAGE30US</a>, <a href="https://fred.stlouisfed.org/series/CUUR0000SEHC" target="_blank" rel="noopener">CUUR0000SEHC (OER)</a>.</p>
+
+  <h3 style="margin-top:24px">Real home prices vs. the OER survey (both rebased to 1983 = 100)</h3>
+  <div class="chartbox"><svg id="chart" viewBox="0 0 900 380" preserveAspectRatio="xMidYMid meet"></svg></div>
+
+  <h3 style="margin-top:24px">The lived cost: the monthly payment to buy the median home</h3>
+  <div class="chartbox"><svg id="pay" viewBox="0 0 900 300" preserveAspectRatio="xMidYMid meet"></svg></div>
+
+  <h3 style="margin-top:24px">What this does and doesn't show</h3>
+  <p>While some would say the gap here is small — over long spans OER and real home prices aren't wildly apart, with the median home up about <b id="homeSince83">—</b> since 1983 versus OER's <b id="oer83">—</b> — OER is still a <b>survey of imagined rents, not a price</b>, and it fills the single biggest slot in CPI; substituting a real, observable price for an imagined one is simply more honest. It also <b>smooths away the booms families actually live through</b>: engineered to be slow and rent-like, it muted the 2000s bubble and the 2020–22 surge, exactly the episodes that priced people out. And the real cost of buying isn't the price alone — it's the monthly payment, which swings violently with mortgage rates. The 1913 Index uses real home prices, not OER: the gap from this one swap is real but moderate, and the honesty of the swap is what makes the rest of the index credible.</p>
+
+  <p style="margin-top:16px"><a href="method.html">Full methodology →</a> &nbsp;·&nbsp; <a href="measures.html">All measures compared →</a></p>
+</div></section>
+
+<footer><div class="wrap">
+  <p class="disclaimer">Real housing data from FRED (Census, Freddie Mac, BLS). Monthly payment is an illustrative standard calculation. Not investment advice.</p>
+  <p style="margin-top:8px;color:#cdbf9b"><a href="index.html">← Back to all topics</a></p>
+</div></footer>
+
+<script src="housing.js"></script>
+<script>
+(function(){
+  var H=window.HOUSING;
+  function at(s,y){ var i=y-s.start; return (i>=0&&i<s.v.length)?s.v[i]:null; }
+  function fmt$(n){ return "$"+Math.round(n).toLocaleString(); }
+  var homeThen=at(H.mspus,1963), homeNow=H.mspus.v[H.mspus.v.length-1], homeNowYr=H.mspus.start+H.mspus.v.length-1;
+  // monthly payment per year (where price+rate exist), 20% down, 30yr
+  function payment(year){ var p=at(H.mspus,year), r=at(H.mortgage,year); if(p==null||r==null)return null; var loan=0.8*p, m=r/100/12, n=360; return loan*m*Math.pow(1+m,n)/(Math.pow(1+m,n)-1); }
+  var payThen=payment(1971), payNow=payment(homeNowYr)||payment(homeNowYr-1);
+  var oerThen=at(H.oer,1983), oerNow=H.oer.v[H.oer.v.length-1];
+
+  document.getElementById("homeNow").textContent=fmt$(homeNow);
+  document.getElementById("homeThen").textContent=fmt$(homeThen);
+  document.getElementById("homeMult").textContent=(homeNow/homeThen).toFixed(0)+"× since 1963";
+  document.getElementById("payNow").textContent=fmt$(payNow)+"/mo";
+  document.getElementById("payThen").textContent=fmt$(payThen)+"/mo";
+  document.getElementById("payMult").textContent=(payNow/payThen).toFixed(0)+"× since 1971";
+  document.getElementById("oerMult").textContent=(oerNow/oerThen).toFixed(1)+"×";
+  document.getElementById("homeSince83").textContent=(at(H.mspus,2025)/at(H.mspus,1983)).toFixed(1)+"×";
+  document.getElementById("oer83").textContent=(oerNow/oerThen).toFixed(1)+"×";
+
+  // chart 1: home price index vs OER index, 1983=100
+  (function(){
+    var svg=document.getElementById("chart"), W=900,H2=380,L=54,R=120,T=18,B=34,x0=L,x1=W-R,y0=T,y1=H2-B;
+    var s=1983,e=2025, hp0=at(H.mspus,1983), oe0=at(H.oer,1983);
+    var hp=[],oe=[]; for(var y=s;y<=e;y++){ hp.push([y, at(H.mspus,y)/hp0*100]); oe.push([y, at(H.oer,y)/oe0*100]); }
+    var vmax=Math.max.apply(null,hp.map(function(p){return p[1];}).concat(oe.map(function(p){return p[1];})))*1.05;
+    var xs=function(y){return x0+(x1-x0)*(y-s)/(e-s);}, ys=function(v){return y1-(y1-y0)*(v)/(vmax);};
+    var g="";
+    [100,200,300,400,500,600].forEach(function(v){ if(v<vmax){var yy=ys(v); g+='<line x1="'+x0+'" y1="'+yy.toFixed(1)+'" x2="'+x1+'" y2="'+yy.toFixed(1)+'" stroke="#c3b189" stroke-width="1"/><text x="'+(x0-6)+'" y="'+(yy+4).toFixed(1)+'" text-anchor="end" font-size="11" fill="#4a3f2a" font-family="Courier New,monospace">'+v+'</text>'; }});
+    for(var yr=1985;yr<=2025;yr+=10){ g+='<text x="'+xs(yr).toFixed(1)+'" y="'+(y1+20)+'" text-anchor="middle" font-size="11" fill="#4a3f2a" font-family="Courier New,monospace">'+yr+'</text>'; }
+    function path(arr){return arr.map(function(p,i){return (i?"L":"M")+xs(p[0]).toFixed(1)+","+ys(p[1]).toFixed(1);}).join(" ");}
+    g+='<path d="'+path(oe)+'" fill="none" stroke="#34607f" stroke-width="2.6"/>';
+    g+='<path d="'+path(hp)+'" fill="none" stroke="#8c1c13" stroke-width="3"/>';
+    var lh=hp[hp.length-1], lo=oe[oe.length-1];
+    g+='<text x="'+(xs(2025)+8)+'" y="'+(ys(lh[1])+2)+'" font-size="12" font-weight="700" fill="#8c1c13">Real home price ('+lh[1].toFixed(0)+')</text>';
+    g+='<text x="'+(xs(2025)+8)+'" y="'+(ys(lo[1])+2)+'" font-size="12" font-weight="700" fill="#34607f">CPI OER ('+lo[1].toFixed(0)+')</text>';
+    svg.innerHTML=g;
+  })();
+
+  // chart 2: monthly payment $ over time
+  (function(){
+    var svg=document.getElementById("pay"), W=900,H2=300,L=64,R=70,T=18,B=34,x0=L,x1=W-R,y0=T,y1=H2-B;
+    var s=1971,e=2025, pts=[]; for(var y=s;y<=e;y++){ var p=payment(y); if(p!=null) pts.push([y,p]); }
+    var vmax=Math.max.apply(null,pts.map(function(p){return p[1];}))*1.08;
+    var xs=function(y){return x0+(x1-x0)*(y-s)/(e-s);}, ys=function(v){return y1-(y1-y0)*v/vmax;};
+    var g="";
+    [500,1000,1500,2000,2500].forEach(function(v){ if(v<vmax){var yy=ys(v); g+='<line x1="'+x0+'" y1="'+yy.toFixed(1)+'" x2="'+x1+'" y2="'+yy.toFixed(1)+'" stroke="#c3b189" stroke-width="1"/><text x="'+(x0-6)+'" y="'+(yy+4).toFixed(1)+'" text-anchor="end" font-size="11" fill="#4a3f2a" font-family="Courier New,monospace">$'+v.toLocaleString()+'</text>'; }});
+    for(var yr=1975;yr<=2025;yr+=10){ g+='<text x="'+xs(yr).toFixed(1)+'" y="'+(y1+20)+'" text-anchor="middle" font-size="11" fill="#4a3f2a" font-family="Courier New,monospace">'+yr+'</text>'; }
+    g+='<path d="'+pts.map(function(p,i){return (i?"L":"M")+xs(p[0]).toFixed(1)+","+ys(p[1]).toFixed(1);}).join(" ")+'" fill="none" stroke="#8c1c13" stroke-width="2.8"/>';
+    g+='<text x="'+x0+'" y="'+(T+2)+'" font-size="11" fill="#4a3f2a">Monthly P&amp;I on the median home — note the rate-driven spikes (1981, 2022) CPI never feels</text>';
+    svg.innerHTML=g;
+  })();
+})();
+</script>
+</body>
+</html>

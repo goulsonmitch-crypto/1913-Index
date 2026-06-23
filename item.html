@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Item — The 1913 Index</title>
+<link rel="stylesheet" href="styles.css">
+<style>
+  .ihead{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:baseline;gap:10px}
+  .tbadge{display:inline-block;font-size:.62rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:2px 8px;border-radius:3px;color:#fff}
+  .stat3{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);margin:16px 0}
+  @media(max-width:560px){.stat3{grid-template-columns:1fr}.stat3 .c+ .c{border-top:1px solid var(--rule)}}
+  .stat3 .c{text-align:center;padding:16px 10px}.stat3 .c+.c{border-left:1px solid var(--rule)}
+  @media(max-width:560px){.stat3 .c+.c{border-left:none}}
+  .stat3 .l{font-size:.62rem;letter-spacing:.14em;text-transform:uppercase;color:var(--ink2)}
+  .stat3 .n{font-family:"Courier New",monospace;font-weight:700;font-size:clamp(1.4rem,4vw,2.1rem);margin:.08em 0}
+  .stat3 .n.red{color:var(--red)}
+  .chartbox{border:2px solid var(--ink);background:var(--paper2);padding:14px;margin-top:6px}
+  .chartbox svg{width:100%;height:auto}
+  .prov{background:rgba(154,125,46,.1);border-left:5px solid var(--gold);padding:12px 16px;margin-top:14px;font-size:.9rem}
+  .src{font-size:.78rem;color:var(--ink2);margin-top:10px}
+  .crowd{border:2px dashed var(--ink);padding:14px 16px;margin-top:16px;text-align:center}
+  .crowd b{display:block;margin-bottom:4px}
+  .crowd a{font-weight:700}
+</style>
+</head>
+<body>
+<header class="mast"><div class="wrap">
+  <div class="eyebrow">Item Record</div>
+  <h1><a href="index.html">The 1913 Index</a></h1>
+  <div class="sub" id="sub">—</div>
+</div></header>
+<div class="crumb"><div class="wrap"><a href="index.html">← Home</a> · <a href="data.html">Explore the Data</a><span class="here" id="crumbName">Item</span></div></div>
+
+<section>
+  <div class="wrap">
+    <div class="ihead">
+      <h2 class="sec" id="name">Item</h2>
+      <div id="badge"></div>
+    </div>
+    <p class="lead" id="why" style="margin-top:.2em"></p>
+
+    <div class="stat3">
+      <div class="c"><div class="l" id="ly">Then</div><div class="n" id="then">—</div><div class="l" id="lyu"></div></div>
+      <div class="c"><div class="l">Today (2026)</div><div class="n red" id="now">—</div><div class="l" id="nu"></div></div>
+      <div class="c"><div class="l">Change</div><div class="n red" id="chg">—</div><div class="l">since <span id="sy"></span></div></div>
+    </div>
+
+    <div class="chartbox"><svg id="chart" viewBox="0 0 900 380" preserveAspectRatio="xMidYMid meet"></svg></div>
+
+    <div class="prov" id="prov"></div>
+    <div class="src" id="src"></div>
+
+    <div class="crowd">
+      <b>Know a real price for a year we've modeled?</b>
+      Help build the most accurate price record on the internet — submit a price you remember or have a receipt for.
+      <div style="margin-top:8px"><a href="game.html">Contribute via Sticker Shock →</a></div>
+    </div>
+
+    <p style="margin-top:16px"><a href="data.html">← Back to the full dataset</a> &nbsp;·&nbsp; <a id="cardlink" href="#">Make a shareable card →</a></p>
+  </div>
+</section>
+
+<footer><div class="wrap">
+  <p class="disclaimer">Open, sourced, tiered price record. Endpoints are sourced; intermediate annual values are modeled from the item's category index and refined over time. Not investment advice.</p>
+</div></footer>
+
+<script src="database.js"></script>
+<script src="verification.js"></script>
+<script>
+(function(){
+  var params=new URLSearchParams(location.search), id=params.get("id")||"milk";
+  // Load the bundled corpus (single file). A sharded loader exists for perf, but the single
+  // file keeps the deploy to <100 files for simple drag-and-drop hosting.
+  var sc=document.createElement("script"); sc.src="corpus.js";
+  sc.onload=run; sc.onerror=run; document.head.appendChild(sc);
+  function run(){
+  var D=window.DB, it=D.items.find(function(x){return x.id===id;});
+  if(!it){ document.getElementById("name").textContent="Item not found"; return; }
+  var C=window.CORPUS&&window.CORPUS[id];
+  var tt=D.tiers[it.tier];
+  function fmtD(n){ return "$"+n.toLocaleString("en-US",{maximumFractionDigits:n<100?2:0}); }
+  function fmtP(n){ return (n>=0?"+":"")+Math.round(n).toLocaleString()+"%"; }
+
+  document.title=it.name+" — The 1913 Index";
+  document.getElementById("sub").textContent=it.name+" · "+it.category;
+  document.getElementById("crumbName").textContent=it.name;
+  document.getElementById("name").textContent=it.name;
+  document.getElementById("why").textContent=it.why||it.note||"";
+  document.getElementById("badge").innerHTML='<span class="tbadge" style="background:'+tt.color+'">'+tt.short+" · "+tt.name+'</span>'+(it.verified?' <span style="color:var(--green);font-weight:700;font-size:.8rem">✓ Verified</span>':' <span style="color:#9a7d2e;font-size:.8rem">⏳ Pending</span>');
+  var mult=it.now_price/it.then_price, pct=(mult-1)*100;
+  document.getElementById("ly").textContent=it.then_year;
+  document.getElementById("then").textContent=fmtD(it.then_price);
+  document.getElementById("lyu").textContent=it.unit||"";
+  document.getElementById("now").textContent=fmtD(it.now_price);
+  document.getElementById("nu").textContent=it.unit||"";
+  document.getElementById("chg").textContent=mult.toFixed(1)+"× · "+fmtP(pct);
+  document.getElementById("sy").textContent=it.then_year;
+  document.getElementById("src").innerHTML="<b>Sources:</b> "+it.then_year+" — "+it.source_then+" · 2026 — "+it.source_now+(it.url?' · <a href="'+it.url+'" target="_blank" rel="noopener">series ↗</a>':"");
+  var provTxt = C
+    ? "<b>Provenance.</b> The "+it.then_year+" and 2026 values are sourced prices. The annual path between them is modeled from the BLS <b>"+C.shape+"</b> category index (exponent-anchored to the real endpoints) — flagged as modeled until real per-year points are filled in via the refreshers, archive digitization, and crowd submissions."
+    : "<b>Provenance.</b> Endpoints are sourced; a full annual series for this item is being generated.";
+  if(C&&C.real&&C.real.length){
+    var isProxy=/\[category proxy\]$/.test(C.realsrc||"");
+    if(isProxy){ provTxt += " <span style='color:#34607f'><b>Category model:</b> "+C.real[0][0]+"–"+C.real[C.real.length-1][0]+" follow the broad BLS <b>category</b> index ("+C.realsrc+"), anchored to this item's sourced endpoints — a labeled proxy, not an item-specific series. Drawn over the modeled line.</span>"; }
+    else { provTxt += " <span style='color:var(--green)'><b>Real item-level data:</b> "+C.real[0][0]+"–"+C.real[C.real.length-1][0]+" use the actual BLS item series ("+(C.realsrc||"sourced")+"), drawn in green over the modeled line.</span>"; }
+  }
+  // verification / cross-source audit
+  var Vrec=window.VERIFY&&window.VERIFY.byId&&window.VERIFY.byId[id];
+  if(Vrec){
+    var CONF={"cross-verified":["Cross-verified","#1f6f43","an independent second source confirms today's price within 5%"],"audited-ok":["Audited (item-level)","#3f5d2e","passes every internal check and has a real item-specific BLS series"],"category":["Category model","#5a7d9a","endpoints sourced; the path follows the broad BLS category index (a labeled proxy), not an item-specific series"],"plausible":["Plausible","#9a7d2e","passes the internal audit; no second source yet"],"review":["Review","#8c1c13","flagged for a second-source look"],"conflict":["Conflict","#5a0f09","a second source disagrees by more than 10%"]};
+    var m=CONF[Vrec.c]||CONF.plausible;
+    var vtxt=" <b>Confidence: <span style='color:"+m[1]+"'>●</span> "+m[0]+"</b> — "+m[2]+".";
+    if(Vrec.x){ vtxt+=" Cross-checked against "+Vrec.x.s+" ("+fmtD(Vrec.x.v)+(Vrec.x.ck?", "+Vrec.x.ck:"")+"): "+(Vrec.x.d>0?"+":"")+Vrec.x.d+"% vs our figure ("+Vrec.x.st+")."; }
+    if(Vrec.f&&Vrec.f.length){ vtxt+=" Audit flags: "+Vrec.f.join(", ")+"."; }
+    provTxt+=vtxt;
+  }
+  document.getElementById("prov").innerHTML=provTxt;
+  var cardLink=document.getElementById("cardlink"); if(cardLink) cardLink.href="card.html?id="+encodeURIComponent(it.id);
+
+  // chart
+  var svg=document.getElementById("chart");
+  if(C){
+    var W=900,H=380,L=58,R=16,T=18,B=34,x0=L,x1=W-R,y0=T,y1=H-B;
+    var s=C.s, vals=C.v, end=s+vals.length-1;
+    var xs=function(y){return x0+(x1-x0)*(y-s)/(end-s||1);};
+    var vmin=Math.min.apply(null,vals)*0.95, vmax=Math.max.apply(null,vals)*1.05;
+    var lg=(vmin>0 && vmax/vmin>40);
+    var tv=function(v){return lg?Math.log10(v):v;};
+    var lo=tv(vmin),hi=tv(vmax);
+    var ys=function(v){return y1-(y1-y0)*(tv(v)-lo)/(hi-lo);};
+    var g="";
+    for(var i=0;i<=4;i++){var vv=lg?Math.pow(10,lo+(hi-lo)*i/4):vmin+(vmax-vmin)*i/4;var yy=ys(vv);
+      g+='<line x1="'+x0+'" y1="'+yy.toFixed(1)+'" x2="'+x1+'" y2="'+yy.toFixed(1)+'" stroke="#c3b189" stroke-width="1"/>';
+      g+='<text x="'+(x0-6)+'" y="'+(yy+4).toFixed(1)+'" text-anchor="end" font-size="11" fill="#4a3f2a" font-family="Courier New,monospace">$'+(vv<10?vv.toFixed(2):Math.round(vv).toLocaleString())+'</text>';}
+    var step=(end-s)>60?20:(end-s)>25?10:5;
+    for(var yr=Math.ceil(s/step)*step;yr<=end;yr+=step){g+='<text x="'+xs(yr).toFixed(1)+'" y="'+(y1+20)+'" text-anchor="middle" font-size="11" fill="#4a3f2a" font-family="Courier New,monospace">'+yr+'</text>';}
+    var d=vals.map(function(v,i){return (i?"L":"M")+xs(s+i).toFixed(1)+","+ys(v).toFixed(1);}).join(" ");
+    g+='<path d="'+d+'" fill="none" stroke="#8c1c13" stroke-width="2.6"/>';
+    g+='<circle cx="'+xs(s)+'" cy="'+ys(vals[0])+'" r="4" fill="#3f5d2e"/>';
+    g+='<circle cx="'+xs(end)+'" cy="'+ys(vals[vals.length-1])+'" r="4" fill="#3f5d2e"/>';
+    if(C.real && C.real.length){
+      var isProxyC=/\[category proxy\]$/.test(C.realsrc||"");
+      var oc=isProxyC?"#34607f":"#1f6f43";
+      var rp=C.real.filter(function(p){return p[0]>=s && p[1]>=vmin && p[1]<=vmax;});
+      g+='<path d="'+rp.map(function(p,i){return (i?"L":"M")+xs(p[0]).toFixed(1)+","+ys(p[1]).toFixed(1);}).join(" ")+'" fill="none" stroke="'+oc+'" stroke-width="2.8"'+(isProxyC?' stroke-dasharray="5,3"':'')+'/>';
+      rp.forEach(function(p){ g+='<circle cx="'+xs(p[0]).toFixed(1)+'" cy="'+ys(p[1]).toFixed(1)+'" r="2.4" fill="'+oc+'"/>'; });
+      g+='<text x="'+x0+'" y="'+(T-4)+'" font-size="11" fill="#4a3f2a">Red = modeled · '+(isProxyC?'<tspan fill="#34607f">Blue (dashed) = BLS category model</tspan>':'Green = real item-level data')+(lg?' · log scale':'')+'</text>';
+    } else {
+      g+='<text x="'+x0+'" y="'+(T-4)+'" font-size="11" fill="#4a3f2a">Green dots = sourced endpoints · red = modeled path'+(lg?' · log scale':'')+'</text>';
+    }
+    svg.innerHTML=g;
+  } else { svg.innerHTML='<text x="20" y="40" font-size="13" fill="#4a3f2a">Annual series coming for this item.</text>'; }
+  } // end run()
+})();
+</script>
+</body>
+</html>

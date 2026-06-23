@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fed Watch — Rebuttals to the Fed, Same Day</title>
+<link rel="stylesheet" href="styles.css">
+<style>
+  .post{border:2px solid var(--ink);background:var(--paper2);margin:18px 0;box-shadow:6px 6px 0 rgba(43,35,23,.14)}
+  .post .phead{display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:space-between;
+    background:var(--ink);color:var(--paper);padding:9px 14px}
+  .post .phead .d{font-family:"Courier New",monospace;font-size:.8rem;color:#d8cba0}
+  .ttag{font-size:.62rem;letter-spacing:.14em;text-transform:uppercase;padding:3px 8px;border-radius:2px;font-weight:700}
+  .ttag.CPI{background:var(--red);color:#fff} .ttag.PCE{background:#7a6320;color:#fff}
+  .ttag.FOMC{background:#3f5d2e;color:#fff} .ttag.Speech{background:#5a4f38;color:#fff} .ttag.M2{background:#9a7d2e;color:#fff}
+  .post .pbody{padding:16px 18px}
+  .post h3.hl{margin:.1em 0 .5em;font-size:clamp(1.2rem,3vw,1.7rem);color:var(--ink)}
+  .said{border-left:4px solid var(--ink2);background:rgba(74,63,42,.07);padding:10px 14px;margin:10px 0;font-size:.95rem}
+  .said .lab{font-size:.64rem;letter-spacing:.16em;text-transform:uppercase;color:var(--ink2)}
+  .steel{background:rgba(63,93,46,.12);border-left:5px solid var(--green);padding:10px 14px;margin:10px 0;font-size:.95rem}
+  .steel .lab{font-size:.64rem;letter-spacing:.16em;text-transform:uppercase;color:var(--green)}
+  .reb .lab{font-size:.64rem;letter-spacing:.16em;text-transform:uppercase;color:var(--red);margin-top:8px;display:block}
+  .reb p{margin:.5em 0}
+  .actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:14px}
+  .btn{font:inherit;font-size:.8rem;letter-spacing:.04em;cursor:pointer;background:var(--ink);color:var(--paper);
+    border:none;padding:8px 14px;text-decoration:none;display:inline-block}
+  .btn.alt{background:var(--paper);color:var(--ink);border:2px solid var(--ink);padding:6px 12px}
+  .thread{display:none;margin-top:12px;border-top:1px dashed var(--rule);padding-top:10px}
+  .tweet{background:var(--paper);border:1px solid var(--rule);padding:10px 12px;margin:8px 0;font-size:.9rem;white-space:pre-wrap}
+  .tweet .n{font-family:"Courier New",monospace;color:var(--ink2);font-size:.72rem}
+  .srcline{font-size:.72rem;color:var(--ink2);margin-top:12px;border-top:1px solid var(--rule);padding-top:8px}
+  /* share card */
+  .cardwrap{margin:14px 0}
+  .cardcap{font-size:.66rem;letter-spacing:.12em;text-transform:uppercase;color:var(--ink2);margin-bottom:6px}
+  svg.card{width:100%;max-width:520px;height:auto;border:1px solid var(--ink)}
+</style>
+</head>
+<body>
+<header class="mast"><div class="wrap">
+  <div class="eyebrow">No. 02 · Rapid Response</div>
+  <h1><a href="index.html">The 1913 Index</a></h1>
+  <div class="sub">Fed Watch — the rebuttal the Fed won't give you, same day</div>
+</div></header>
+<div class="crumb"><div class="wrap"><a href="index.html">← Home</a><span class="here">Fed Watch</span></div></div>
+
+<section>
+  <div class="wrap">
+    <p class="kicker">Counter-Programming</p>
+    <h2 class="sec">Fed Watch</h2>
+    <p class="lead">Every time the Fed releases inflation data, changes rates, or makes a claim worth challenging, we answer the same day — stating their strongest case, then dismantling it with the 1913 Index. Each rebuttal comes with a shareable card and a ready-to-post thread.</p>
+    <div id="posts"></div>
+  </div>
+</section>
+
+<footer><div class="wrap">
+  <p class="disclaimer">Editorial rapid-response. Each rebuttal states the official source and its strongest case before countering. Not investment advice.</p>
+  <p style="margin-top:8px;color:#cdbf9b"><a href="index.html">← Back to all topics</a> · <span id="updated"></span></p>
+</div></footer>
+
+<script src="fedwatch.js"></script>
+<script>
+(function(){
+  var F=window.FEDWATCH;
+  function esc(s){return s.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;");}
+
+  function card(e){
+    // self-contained social card (≈ 520×273, ~1.91:1) — screenshot or save to share
+    var c=e.card;
+    return '<svg class="card" viewBox="0 0 1040 545" xmlns="http://www.w3.org/2000/svg">'+
+      '<rect width="1040" height="545" fill="#2b2317"/>'+
+      '<rect x="14" y="14" width="1012" height="517" fill="none" stroke="#9a7d2e" stroke-width="3"/>'+
+      '<text x="44" y="72" fill="#d8cba0" font-family="Courier New,monospace" font-size="22" letter-spacing="6">THE 1913 INDEX · FED WATCH</text>'+
+      '<text x="44" y="150" fill="#f4ecd8" font-family="Georgia,serif" font-size="40" font-weight="bold">'+esc(e.type_label)+' — '+esc(e.date)+'</text>'+
+      // two numbers
+      '<text x="44" y="250" fill="#cdbf9b" font-family="Georgia,serif" font-size="24">'+esc(c.fed_label)+'</text>'+
+      '<text x="44" y="330" fill="#ffffff" font-family="Courier New,monospace" font-size="92" font-weight="bold">'+esc(c.fed_num)+'</text>'+
+      '<text x="560" y="250" fill="#e9c46a" font-family="Georgia,serif" font-size="24">The honest number</text>'+
+      '<text x="560" y="330" fill="#ffd56b" font-family="Courier New,monospace" font-size="92" font-weight="bold">'+esc(c.our_num)+'</text>'+
+      '<line x1="44" y1="372" x2="996" y2="372" stroke="#5a4f38" stroke-width="2"/>'+
+      '<text x="44" y="420" fill="#f4ecd8" font-family="Georgia,serif" font-size="30" font-style="italic">'+esc(c.punch)+'</text>'+
+      '<text x="44" y="500" fill="#cdbf9b" font-family="Georgia,serif" font-size="20">'+esc(c.our_label)+'</text>'+
+      '</svg>';
+  }
+
+  function render(e){
+    var reb=e.rebuttal.map(function(p){return '<p>'+esc(p)+'</p>';}).join("");
+    var tweets=e.x_thread.map(function(t,i){return '<div class="tweet"><span class="n">'+(i+1)+'/'+e.x_thread.length+'</span>\n'+esc(t)+'</div>';}).join("");
+    var srcs=e.sources.map(function(s){return '<a href="'+s.url+'" target="_blank" rel="noopener">'+esc(s.label)+'</a>';}).join(" · ");
+    var threadText = e.x_thread.join("\n\n");
+    var el=document.createElement("div"); el.className="post";
+    el.innerHTML=
+      '<div class="phead"><span class="ttag '+e.type+'">'+esc(e.type_label)+'</span><span class="d">'+esc(e.date)+'</span></div>'+
+      '<div class="pbody">'+
+        '<h3 class="hl">'+esc(e.headline)+'</h3>'+
+        '<div class="said"><span class="lab">What they said</span><div>'+esc(e.official_claim)+'</div>'+
+          '<div style="font-size:.74rem;color:var(--ink2);margin-top:6px">— '+esc(e.official_source)+'</div></div>'+
+        '<div class="steel"><span class="lab">The strongest case for it</span><div>'+esc(e.steelman)+'</div></div>'+
+        '<div class="reb"><span class="lab">The rebuttal</span>'+reb+'</div>'+
+        '<div class="cardwrap"><div class="cardcap">⬇ Shareable card — right-click to save, or screenshot</div>'+card(e)+'</div>'+
+        '<div class="actions">'+
+          '<button class="btn" data-toggle>Show X / Twitter thread ▸</button>'+
+          '<button class="btn alt" data-copy>Copy thread</button>'+
+        '</div>'+
+        '<div class="thread">'+tweets+'</div>'+
+        '<div class="srcline">Sources: '+srcs+'</div>'+
+      '</div>';
+    el.querySelector("[data-toggle]").addEventListener("click",function(){
+      var t=el.querySelector(".thread"); var open=t.style.display==="block";
+      t.style.display=open?"none":"block"; this.textContent=(open?"Show":"Hide")+" X / Twitter thread "+(open?"▸":"▾");
+    });
+    el.querySelector("[data-copy]").addEventListener("click",function(){
+      var self=this; navigator.clipboard.writeText(threadText).then(function(){
+        self.textContent="Copied ✓"; setTimeout(function(){self.textContent="Copy thread";},1500);
+      }).catch(function(){ self.textContent="Press Ctrl/Cmd+C"; });
+    });
+    return el;
+  }
+
+  var posts=document.getElementById("posts");
+  F.entries.forEach(function(e){ posts.appendChild(render(e)); });
+  document.getElementById("updated").textContent="last rebuttal "+F.meta.last_updated;
+})();
+</script>
+</body>
+</html>

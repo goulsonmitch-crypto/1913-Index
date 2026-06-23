@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Number — The 1913 Index</title>
+<meta name="description" content="Since the Federal Reserve was founded in 1913, the dollar has lost about 98% of its purchasing power measured in real prices — versus the 97% the official CPI admits. Here is the single number, and exactly how it is built.">
+<!-- Open Graph / Twitter. TODO @deploy: set og:url; confirm assets/og-default.png. -->
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="The 1913 Index">
+<meta property="og:title" content="The Number: the dollar has lost ~98% of its value since 1913">
+<meta property="og:description" content="The single, citable figure — and the locked methodology behind it. Real prices, CPI's own weights, the housing fudge removed.">
+<meta property="og:image" content="assets/og-default.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="The Number — The 1913 Index">
+<meta name="twitter:description" content="~98% of the dollar's value gone since the Fed was founded. Here's exactly how that number is built.">
+<meta name="twitter:image" content="assets/og-default.png">
+<link rel="stylesheet" href="styles.css">
+<style>
+  .bignum{display:grid;grid-template-columns:1fr 1fr;gap:0;border:2px solid var(--ink);margin:18px 0;background:var(--paper2)}
+  @media(max-width:560px){.bignum{grid-template-columns:1fr}}
+  .bignum .cell{padding:22px 18px;text-align:center}
+  .bignum .cell+.cell{border-left:2px solid var(--ink)}
+  @media(max-width:560px){.bignum .cell+.cell{border-left:none;border-top:2px solid var(--ink)}}
+  .bignum .lab{font-size:.64rem;letter-spacing:.16em;text-transform:uppercase;color:var(--ink2)}
+  .bignum .n{font-family:"Courier New",monospace;font-weight:700;font-size:clamp(2.2rem,8vw,3.4rem);margin:.06em 0}
+  .bignum .ours .n{color:var(--red)} .bignum .sub{font-size:.82rem;color:var(--ink2)}
+  .lockbox{border-left:5px solid var(--green);background:rgba(31,111,67,.08);padding:14px 18px;margin:18px 0}
+  table.wt{width:100%;border-collapse:collapse;font-size:.9rem;margin-top:10px}
+  table.wt th{background:var(--ink);color:var(--paper);text-align:right;padding:7px 9px;font-size:.72rem}
+  table.wt th:first-child{text-align:left}
+  table.wt td{text-align:right;padding:7px 9px;border-bottom:1px solid var(--rule);font-family:"Courier New",monospace}
+  table.wt td:first-child{text-align:left;font-family:inherit}
+  table.wt tr.tot td{font-weight:700;border-top:2px solid var(--ink);background:var(--paper2)}
+  .cite{background:var(--ink);color:var(--paper);border-radius:6px;padding:16px 18px;margin:18px 0;font-size:1.02rem}
+  .cite b{color:#ffd24a}
+</style>
+</head>
+<body>
+<header class="mast"><div class="wrap">
+  <div class="eyebrow">The Headline Figure</div>
+  <h1><a href="index.html">The 1913 Index</a></h1>
+  <div class="sub">The Number — and exactly how it is built</div>
+</div></header>
+<div class="crumb"><div class="wrap"><a href="index.html">← Home</a> · <a href="method.html">Method</a> · <a href="data.html">Data</a><span class="here">The Number</span></div></div>
+
+<section><div class="wrap">
+  <p class="kicker">One figure, fully defensible</p>
+  <h2 class="sec" id="headline">Since 1913, the dollar has lost about 98% of its value.</h2>
+  <p class="lead" id="lede">Measured in the real prices of real goods — using CPI's own basket and weights, but replacing the government's survey-based housing guess with the actual price of a home.</p>
+
+  <div class="bignum">
+    <div class="cell ours"><div class="lab">The 1913 Index</div><div class="n" id="ourMult">—</div><div class="sub">real prices · dollar lost <b id="ourLost">—</b></div></div>
+    <div class="cell"><div class="lab">Official CPI</div><div class="n" id="cpiMult">—</div><div class="sub">government figure · dollar lost <span id="cpiLost">—</span></div></div>
+  </div>
+  <p id="gapline" style="text-align:center;color:var(--ink2);margin-top:-4px"></p>
+
+  <div class="cite">
+    <b>How to cite it:</b> “According to the 1913 Index, the U.S. dollar has lost roughly <b id="citeLost">—</b> of its purchasing power since the Federal Reserve was founded in 1913 — a <b id="citeMult">—</b> rise in the real price of goods, versus the <b id="citeCpi">—</b> the official CPI reports.” <span style="font-size:.82rem;color:#cdbf9b">(Figures update with each data refresh; see sourcing below.)</span>
+  </div>
+
+  <h3 style="margin-top:26px">The locked methodology (why this is the number)</h3>
+  <p>The headline is a <b>fixed basket measured at CPI's own official relative-importance weights</b> — the same eight major groups the Bureau of Labor Statistics uses, in the same proportions. We change exactly one thing, and we change it in the open:</p>
+  <div class="lockbox">
+    <p style="margin:.2em 0"><b>The one substitution — housing.</b> CPI fills about a third of its entire index with <b>Owners' Equivalent Rent</b>: a survey asking homeowners to <i>imagine</i> what their home would rent for. We replace that imagined figure with the <b>real sale price of a home</b> (Case–Shiller / Census). That single, transparent swap is the core of the gap.</p>
+  </div>
+  <p>We considered three ways to build the headline — a fixed basket, a user-adjustable basket, and a pure item-by-item average. We <b>locked the fixed CPI-weighted basket</b> as the official number, because using CPI's <i>own</i> structure is what makes this a fair, apples-to-apples replacement rather than a cherry-pick. The adjustable basket and the raw item list remain available as exploration tools — but the citable figure is the fixed one, so it can't be accused of being tuned to a conclusion.</p>
+
+  <h3 style="margin-top:26px">The basket, in full</h3>
+  <p style="font-size:.9rem;color:var(--ink2)">Each category is measured by its real BLS price index since 1913; shelter uses real home prices (not OER); transportation uses raw car &amp; gas prices. Weights are BLS's published relative importances.</p>
+  <table class="wt"><thead><tr><th>Category</th><th>CPI weight</th><th>1913→2026 multiple</th></tr></thead><tbody id="wtrows"></tbody></table>
+
+  <h3 style="margin-top:26px">The secondary anchor — 1971</h3>
+  <p>The Fed's founding (1913) is the headline anchor. The second anchor is <b>1971</b>, when the dollar's last tie to gold was cut. Since 1971 the 1913 Index shows about <b id="m71">—</b> against CPI's <b id="cpi71">—</b> — the sound-money story in one comparison.</p>
+
+  <h3 style="margin-top:26px">Where we agree with the government</h3>
+  <p>Credibility is the whole point, so we say plainly where CPI is fair: food has risen roughly in line with the official number, and several goods — electronics, clothing, some appliances — are genuinely cheaper, in dollars and in hours of work. The gap is concentrated where it hurts most: <b>housing, healthcare, and college</b>. We don't hide the parts that cut against us; see the <a href="afford.html">hours-of-work lens</a> and the <a href="data.html">full dataset</a>.</p>
+
+  <p style="margin-top:18px"><a href="method.html">Full methodology &amp; criticisms answered →</a> &nbsp;·&nbsp; <a href="cpi-vs-index.html">Category-by-category vs CPI →</a> &nbsp;·&nbsp; <a href="dollar-clock.html">The live Dollar Clock →</a></p>
+</div></section>
+
+<footer><div class="wrap">
+  <p class="disclaimer" id="disclaimer"></p>
+  <p style="margin-top:8px;color:#cdbf9b"><a href="index.html">← Back to all topics</a> · <span id="updated"></span></p>
+</div></footer>
+
+<script src="data.js"></script>
+<script src="core.js"></script>
+<script src="series.js"></script>
+<script>
+(function(){
+  var S=window.SMI, rows=window.SERIES.rows;
+  var a=rows.find(function(r){return r.y===1913;}), b=rows.find(function(r){return r.y===2026;}), c=rows.find(function(r){return r.y===1971;});
+  var idxMult=b.idx/a.idx, cpiMult=b.cpi/a.cpi;
+  var ourLost=100-100/idxMult, cpiLost=100-100/cpiMult;
+  function x1(n){return n.toFixed(1)+"×";}
+  document.getElementById("ourMult").textContent=x1(idxMult);
+  document.getElementById("cpiMult").textContent=x1(cpiMult);
+  document.getElementById("ourLost").textContent=ourLost.toFixed(1)+"%";
+  document.getElementById("cpiLost").textContent=cpiLost.toFixed(1)+"%";
+  document.getElementById("gapline").innerHTML="That is a <b>"+Math.round((idxMult/cpiMult-1)*100)+"%</b> wider loss than the official measure admits — about <b>"+((Math.pow(idxMult,1/113)-1)*100).toFixed(2)+"%</b> a year since 1913, versus CPI's "+((Math.pow(cpiMult,1/113)-1)*100).toFixed(2)+"%.";
+  document.getElementById("citeLost").textContent=ourLost.toFixed(0)+"%";
+  document.getElementById("citeMult").textContent=x1(idxMult);
+  document.getElementById("citeCpi").textContent=x1(cpiMult);
+  document.getElementById("m71").textContent=x1(b.idx/c.idx);
+  document.getElementById("cpi71").textContent=x1(b.cpi/c.cpi);
+
+  // weights table
+  var cats=(S.D.categories||[]).slice().sort(function(p,q){return (q.weight||0)-(p.weight||0);});
+  var tw=0, html="";
+  cats.forEach(function(x){ tw+=(x.weight||0); html+='<tr><td>'+x.name+'</td><td>'+(x.weight?x.weight.toFixed(1)+'%':'—')+'</td><td>'+(x.mult? x.mult.toFixed(1)+'×':'—')+'</td></tr>'; });
+  html+='<tr class="tot"><td>Weighted 1913 Index</td><td>'+tw.toFixed(0)+'%</td><td>'+x1(idxMult)+'</td></tr>';
+  document.getElementById("wtrows").innerHTML=html;
+
+  document.getElementById("disclaimer").textContent="The 1913 Index "+S.D.meta.version+". "+S.D.meta.note;
+  document.getElementById("updated").textContent="data last updated "+S.D.meta.last_updated;
+})();
+</script>
+</body>
+</html>
