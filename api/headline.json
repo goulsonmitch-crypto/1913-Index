@@ -1,23 +1,23 @@
 {
- "as_of": "2026-06-22",
+ "as_of": "2026-07-01",
  "anchor_year": 1913,
  "index_1913": {
-  "multiple": 52.63,
-  "cumulative_pct": 5163.2,
+  "multiple": 52.81,
+  "cumulative_pct": 5180.6,
   "annual_rate_pct": 3.57,
-  "dollar_value_today": 0.019,
+  "dollar_value_today": 0.0189,
   "dollar_lost_pct": 98.1
  },
  "official_cpi": {
-  "multiple": 33.98,
-  "cumulative_pct": 3298.2,
-  "annual_rate_pct": 3.17,
+  "multiple": 34.2,
+  "cumulative_pct": 3319.6,
+  "annual_rate_pct": 3.18,
   "dollar_lost_pct": 97.1
  },
- "gap_x": 1.55,
+ "gap_x": 1.54,
  "since_1971": {
-  "index_multiple": 12.46,
-  "cpi_multiple": 8.37
+  "index_multiple": 12.47,
+  "cpi_multiple": 8.42
  },
- "citation": "According to the 1913 Index, the U.S. dollar has lost about 98% of its purchasing power since the Federal Reserve was founded in 1913 (a 52.6x rise in real prices vs the 34.0x official CPI reports)."
+ "citation": "According to the 1913 Index, the U.S. dollar has lost about 98% of its purchasing power since the Federal Reserve was founded in 1913 (a 52.8x rise in real prices vs the 34.2x official CPI reports)."
 }

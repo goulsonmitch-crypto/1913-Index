@@ -1,11 +1,11 @@
 {
  "weights_note": "The 1913 Index now mirrors CPI's full 8-group structure at CPI's own relative-importance weights (BLS, Dec 2024). Every category uses its real BLS sub-index, except shelter — where we replace CPI's Owners' Equivalent Rent survey with real home prices — and transport, where we use raw (anti-hedonic) car and gas prices. New BLS categories carry their quality (hedonic) adjustments; our number is therefore conservative there.",
- "headline_multiple": 52.63,
+ "headline_multiple": 52.81,
  "categories": [
   {
    "name": "Shelter (real home price)",
    "weight": 35.483,
-   "mult": 68.32,
+   "mult": 68.76,
    "start": 1913,
    "est": false,
    "proxy": false,
@@ -23,7 +23,7 @@
   {
    "name": "Food & beverages",
    "weight": 14.526,
-   "mult": 34.97,
+   "mult": 35.01,
    "start": 1913,
    "est": false,
    "proxy": false,
@@ -32,7 +32,7 @@
   {
    "name": "Medical care",
    "weight": 8.273,
-   "mult": 80.5,
+   "mult": 80.54,
    "start": 1935,
    "est": true,
    "proxy": false,
@@ -50,7 +50,7 @@
   {
    "name": "Fuels & utilities",
    "weight": 4.312,
-   "mult": 41.99,
+   "mult": 42.12,
    "start": 1952,
    "est": true,
    "proxy": false,
@@ -68,7 +68,7 @@
   {
    "name": "Communication",
    "weight": 3.149,
-   "mult": 10.81,
+   "mult": 10.84,
    "start": 1993,
    "est": true,
    "proxy": false,
@@ -77,7 +77,7 @@
   {
    "name": "Other goods & services",
    "weight": 2.925,
-   "mult": 57.32,
+   "mult": 57.47,
    "start": 1967,
    "est": true,
    "proxy": false,
