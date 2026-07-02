@@ -8,24 +8,26 @@
  *   - External UPC APIs: Network-only
  */
 
-const CACHE_NAME = '1913-index-v2';
-const DATA_CACHE = '1913-data-v2';
+const CACHE_NAME = '1913-index-v3';
+const DATA_CACHE = '1913-data-v3';
 
+// RELATIVE paths — the site lives under /1913-Index/ on GitHub Pages, so
+// absolute "/scan.html" would point at the domain root (404) and break install.
 const SHELL_ASSETS = [
-  '/scan.html',
-  '/index.html',
-  '/data.html',
-  '/item.html',
-  '/manifest.json',
-  '/nav.js',
-  '/core.js',
+  './scan.html',
+  './index.html',
+  './data.html',
+  './item.html',
+  './manifest.json',
+  './nav.js',
+  './core.js',
 ];
 
 const DATA_ASSETS = [
-  '/api/meta.json',
-  '/api/headline.json',
-  '/api/categories.json',
-  '/database.js',
+  './api/meta.json',
+  './api/headline.json',
+  './api/categories.json',
+  './database.js',
 ];
 
 // ── Install: cache app shell ──────────────────────────────────────────────────
@@ -68,10 +70,10 @@ self.addEventListener('fetch', event => {
 
   // API / corpus data — Network-first, cache fallback
   if (
-    url.pathname.startsWith('/api/') ||
-    url.pathname.startsWith('/corpus/') ||
-    url.pathname === '/database.js' ||
-    url.pathname === '/corpus.js'
+    url.pathname.includes('/api/') ||
+    url.pathname.includes('/corpus/') ||
+    url.pathname.endsWith('/database.js') ||
+    url.pathname.endsWith('/corpus.js')
   ) {
     event.respondWith(networkFirst(request, DATA_CACHE));
     return;
