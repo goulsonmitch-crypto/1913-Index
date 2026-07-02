@@ -7,7 +7,7 @@
    manufacturing-wage estimates and flagged approximate.
    ===================================================================== */
 window.WAGES = {
-  meta:{ last_updated:"2026-06-22",
+  meta:{ last_updated:"2026-06-29",
     source:"BLS Current Employment Statistics — avg hourly earnings, production & nonsupervisory (CES0500000008); pre-1964 historical manufacturing wages",
     url:"https://fred.stlouisfed.org/series/CES0500000008",
     note:"Average hourly wage of a typical hourly worker. 1964+ from BLS; earlier years are historical estimates (flagged)." },

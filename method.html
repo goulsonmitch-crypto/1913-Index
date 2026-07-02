@@ -1,71 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<link rel="manifest" href="manifest.json">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="icon" href="assets/favicon.ico">
+<meta name="theme-color" content="#0a0a0a">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Method — The 1913 Index</title>
+<meta name="description" content="How the 1913 Index is built: real prices not surveys, every figure sourced and confidence-rated, and the official side steelmanned before it's disputed. CPI is a black box; this is the opposite.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="The 1913 Index">
+<meta property="og:title" content="Method — nothing hidden">
+<meta property="og:image" content="assets/og-default.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="assets/og-default.png">
 <link rel="stylesheet" href="styles.css">
+<style>
+  .lead2{font-size:1.08rem;max-width:680px;color:var(--ink2)}
+  .rules{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;margin:16px 0}
+  @media(max-width:760px){.rules{grid-template-columns:1fr}}
+  .rule{border:2px solid var(--ink);background:var(--paper2);padding:16px}
+  .rule .num{font-family:"Courier New",monospace;font-weight:700;color:var(--red);font-size:1.4rem}
+  .rule h4{margin:.2em 0 .3em}
+  .rule p{font-size:.88rem;color:var(--ink2);margin:0}
+  .blackbox{border-left:5px solid var(--red);background:var(--paper2);padding:14px 16px;margin:16px 0;font-size:1rem}
+  .tiers{display:flex;flex-direction:column;gap:8px;margin-top:10px}
+  .tier{display:flex;align-items:center;gap:12px;border:2px solid var(--ink);background:var(--paper2);padding:11px 14px}
+  .tier .dot{width:16px;height:16px;border-radius:50%;flex:none}
+  .tier .tx{flex:1}.tier .tx b{display:block}.tier .tx span{font-size:.84rem;color:var(--ink2)}
+  .tier .cnt{font-family:"Courier New",monospace;font-weight:700;font-size:.95rem;white-space:nowrap;color:var(--ink2)}
+  .srcq{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;margin-top:10px}
+  @media(max-width:760px){.srcq{grid-template-columns:1fr}}
+  .sq{border:2px solid var(--ink);background:var(--paper2);padding:14px}
+  .sq .badge{display:inline-block;font-size:.62rem;letter-spacing:.1em;text-transform:uppercase;font-weight:700;padding:2px 8px;border-radius:3px;color:#fff}
+  .sq.t1 .badge{background:var(--green)} .sq.t2 .badge{background:var(--gold)} .sq.t3 .badge{background:var(--ink2)}
+  .sq h4{margin:.4em 0 .3em}.sq p{font-size:.85rem;color:var(--ink2);margin:0}
+  .crit{border:2px solid var(--ink);background:var(--paper2);padding:13px 15px;margin:8px 0;cursor:pointer}
+  .crit .q{font-weight:700}
+  .crit .a{display:none;margin-top:7px;font-size:.92rem;color:var(--ink2);border-top:1px dashed var(--rule);padding-top:7px}
+  .crit.open .a{display:block}
+  .crit .q::before{content:"▸ ";color:var(--gold)} .crit.open .q::before{content:"▾ "}
+  .calcbox{border:2px solid var(--ink);background:#1b1610;color:#f4ecd8;border-radius:8px;padding:16px 18px;margin:10px 0;font-size:.96rem}
+  .calcbox b{color:#d9a441}
+</style>
 </head>
 <body>
 <script src="nav.js"></script>
 <header class="mast"><div class="wrap">
-  <div class="eyebrow">No. 07</div>
+  <div class="eyebrow">Methodology &amp; Honesty</div>
   <h1><a href="index.html">The 1913 Index</a></h1>
-  <div class="sub">Methodology &amp; Honesty</div>
+  <div class="sub">Nothing hidden — the opposite of a black box</div>
 </div></header>
-<div class="crumb"><div class="wrap"><a href="index.html">← Home</a><span class="here">Method</span></div></div>
 
-<section>
-  <div class="wrap">
-    <p class="kicker">Nothing Hidden</p>
-    <h2 class="sec">Methodology &amp; Honesty</h2>
-    <p class="lead">Credibility is the whole point. Three rules govern everything here:</p>
-    <p><b>1. Real prices, not hypotheticals.</b> We use actual transaction prices wherever they exist. Most importantly, we replace CPI's Owners' Equivalent Rent — a survey of imagined rents — with the real sale price of a home.</p>
-    <p><b>2. Every figure is sourced, rated, and reproducible.</b> Each item shows its source and a confidence rating. Estimates and pre-1950 figures are flagged. The raw data lives in a single file anyone can audit.</p>
-    <p><b>3. We steelman the other side first.</b> Before criticizing an official number, we state the strongest version of its defense. If a government figure is actually fair, we say so — that honesty is what makes the rest land.</p>
+<section><div class="wrap">
+  <p class="kicker">Why you can trust the number</p>
+  <h2 class="sec">CPI is a black box. This is the opposite.</h2>
+  <p class="lead2">You cannot see how any single CPI number was built. Here, every figure shows its source, its confidence rating, and the exact script that produced it. Three rules govern everything:</p>
 
-    <div class="method">
-      <h4>How the number is computed</h4>
-      <p id="calc" style="margin:.3em 0"></p>
-    </div>
-
-    <h3 style="margin-top:26px">The freshness model</h3>
-    <p>Official figures (BLS, Census, USPS) drive the headline index, so it is maximally citable. The live counters — gold and gasoline — use the freshest daily/weekly number. Scheduled jobs refresh the prices weekly and the category indexes quarterly.</p>
-
-    <h3 style="margin-top:26px">Verification &amp; audit — how every figure earns its confidence rating</h3>
-    <p>CPI is a black box: you cannot see how any single number was built. We do the opposite. Every one of the items in the dataset runs through an <b>automated audit</b> that anyone can re-run from the open script (<code>scripts/verify.js</code>), and each carries a confidence tier shown on the <a href="data.html">data page</a> and on its own item page.</p>
-    <p style="margin:.3em 0"><b>Two independent checks run on every item:</b></p>
-    <p style="margin:.2em 0 .2em 0"><b>1. Internal audit (no outside data needed).</b> We flag any item whose implied inflation diverges sharply from comparable goods in its own category — a statistical outlier test that catches data-entry errors and surfaces genuinely unusual items. Plus basic sanity checks (no non-positive prices, no impossible rates) and a check for whether the item has a <span style="color:var(--green);font-weight:700">real per-year price series</span> behind it.</p>
-    <p style="margin:.2em 0"><b>2. External cross-source.</b> For as many items as we can, we confirm today's price against a fully <i>independent second source</i> — gasoline checked against EIA where the primary is AAA; gold against an independent spot feed; food against USDA. When two unrelated sources agree within 5%, the figure is marked <b>cross-verified</b>. When a second source disagrees by more than 10%, it is flagged <b>conflict</b> and held for correction — we would rather show a disagreement than hide it.</p>
-
-    <div class="method" style="background:rgba(31,111,67,.08);border-left-color:var(--green)">
-      <p style="margin:.3em 0"><b>The five confidence tiers</b> (best to weakest):</p>
-      <p style="margin:.2em 0"><span style="color:#1f6f43;font-weight:700">● Cross-verified</span> — an independent second source confirms the current price within 5%. <span id="vc_cross"></span></p>
-      <p style="margin:.2em 0"><span style="color:#3f5d2e;font-weight:700">● Audited (item-level)</span> — passes every internal check and has a <b>real, item-specific</b> BLS price series (the green line on its chart). <span id="vc_aud"></span></p>
-      <p style="margin:.2em 0"><span style="color:#5a7d9a;font-weight:700">● Category model</span> — endpoints are sourced, but the year-by-year path follows the item's broad BLS <b>category</b> index (a labeled proxy, drawn as a blue dashed line), not an item-specific series. Honest and better than a pure model — but not the same as item-level data. <span id="vc_cat"></span></p>
-      <p style="margin:.2em 0"><span style="color:#9a7d2e;font-weight:700">● Plausible</span> — passes the internal audit; no second source or series yet. <span id="vc_pl"></span></p>
-      <p style="margin:.2em 0"><span style="color:#8c1c13;font-weight:700">● Review</span> — flagged as a category outlier or by a sanity check; awaiting a human or second-source look. <span id="vc_rev"></span></p>
-      <p style="margin:.2em 0"><span style="color:#5a0f09;font-weight:700">● Conflict</span> — a second source actively disagrees by more than 10%. <span id="vc_con"></span></p>
-      <p style="margin:.5em 0 0;font-size:.82rem;color:var(--ink2)" id="vc_meta"></p>
-    </div>
-    <p style="margin-top:10px;font-size:.86rem;color:var(--ink2)">Scheduled jobs grow this automatically: a monthly harvester backfills real per-year series, and a weekly cross-source job adds independent second prices and re-runs the audit. The number of cross-verified figures only goes up over time.</p>
-
-    <h3 style="margin-top:26px">Source-quality tiers</h3>
-    <p><b>Tier 1 · Gold Standard</b> — an authoritative, continuous official series (e.g., BLS Average Price Data, Census, EIA). <b>Tier 2 · Sourced</b> — real data with gaps, a definition shift, or a documented splice (e.g., the Shiller-derived 1913 home price). <b>Tier 3 · Reconstructed</b> — built from catalogs, menus, ads, or estimates. Estimates and pre-1950 figures are flagged.</p>
-
-    <h3 style="margin-top:30px">Common criticisms — answered</h3>
-    <div class="method" style="background:rgba(154,125,46,.08)">
-      <p style="margin:.4em 0"><b>"Why not just use CPI?"</b> We do use CPI's structure — the same eight major groups at CPI's own weights. We change only what CPI measures with a hypothetical: housing. CPI fills ~a third of its index with Owners' Equivalent Rent, a survey asking homeowners to imagine their home's rent. We use the real sale price instead.</p>
-      <p style="margin:.4em 0"><b>"Why these categories and weights?"</b> They are not ours — they are BLS's official relative-importance weights (Dec 2024). Using CPI's own basket is what makes this a fair, apples-to-apples replacement rather than a cherry-pick.</p>
-      <p style="margin:.4em 0"><b>"What about quality improvements (hedonics)?"</b> For the new BLS categories we keep CPI's quality adjustments as-is — so our number is, if anything, conservative there. We only strip hedonics where it most distorts lived cost: cars, where we use raw transaction prices, because you cannot actually buy the 1913 level of car anymore.</p>
-      <p style="margin:.4em 0"><b>"Isn't gold cherry-picked?"</b> Gold is shown on its own page as a sound-money lens, not as a basket item — it does not touch the headline index. The index is built from consumer prices, not gold.</p>
-      <p style="margin:.4em 0"><b>"Aren't wages up too?"</b> Yes — and we show exactly that on the affordability page, in hours of work. Many goods are cheaper in labor terms; housing, healthcare, and college are not. We don't hide the parts that cut against us.</p>
-    </div>
-
-    <p style="margin-top:18px;font-style:italic;color:var(--ink2)">This is a living prototype. The basket now mirrors CPI's full structure; figures, sourcing, and the historical series keep improving. We ship the good rather than wait on the perfect.</p>
-    <p style="margin-top:16px"><a href="basket.html">See the sourced basket →</a> &nbsp;·&nbsp; <a href="cpi-vs-index.html">See the category comparison →</a></p>
+  <div class="rules">
+    <div class="rule"><div class="num">1</div><h4>Real prices, not guesses</h4><p>Actual transaction prices wherever they exist. Most of all, we replace CPI's survey of imagined rents with the real sale price of a home.</p></div>
+    <div class="rule"><div class="num">2</div><h4>Sourced &amp; reproducible</h4><p>Every item carries a source and a confidence rating. Estimates and pre-1950 figures are flagged. The raw data is one auditable file.</p></div>
+    <div class="rule"><div class="num">3</div><h4>Steelman first</h4><p>We state the strongest version of the official defense before disputing it. Where a government figure is fair, we say so — that's what makes the rest land.</p></div>
   </div>
-</section>
+
+  <div class="calcbox" id="calcbox">How the number is computed loads here…</div>
+
+  <h2 class="sec" style="margin-top:30px">Every figure earns a confidence rating</h2>
+  <p class="lead2">Two independent checks run on every item: an <b>internal audit</b> (outlier + sanity tests, and whether a real per-year series exists) and an <b>external cross-source</b> check against a fully independent second source. The six tiers, best to weakest, with live counts from the latest audit:</p>
+  <div class="tiers">
+    <div class="tier"><span class="dot" style="background:#1f6f43"></span><div class="tx"><b>Cross-verified</b><span>An independent second source confirms today's price within 5%.</span></div><div class="cnt" id="vc_cross"></div></div>
+    <div class="tier"><span class="dot" style="background:#3f5d2e"></span><div class="tx"><b>Audited · item-level</b><span>Passes every internal check and has a real, item-specific price series (the green line on its chart).</span></div><div class="cnt" id="vc_aud"></div></div>
+    <div class="tier"><span class="dot" style="background:#5a7d9a"></span><div class="tx"><b>Category model</b><span>Endpoints sourced, but the year-by-year path follows the broad BLS category index (a labeled proxy) — honest, but not item-level.</span></div><div class="cnt" id="vc_cat"></div></div>
+    <div class="tier"><span class="dot" style="background:#9a7d2e"></span><div class="tx"><b>Plausible</b><span>Passes the internal audit; no second source or series yet.</span></div><div class="cnt" id="vc_pl"></div></div>
+    <div class="tier"><span class="dot" style="background:#8c1c13"></span><div class="tx"><b>Review</b><span>Flagged as a category outlier or by a sanity check; awaiting a human or second-source look.</span></div><div class="cnt" id="vc_rev"></div></div>
+    <div class="tier"><span class="dot" style="background:#5a0f09"></span><div class="tx"><b>Conflict</b><span>A second source actively disagrees by more than 10%. We'd rather show the disagreement than hide it.</span></div><div class="cnt" id="vc_con"></div></div>
+  </div>
+  <p style="margin-top:10px;font-size:.86rem;color:var(--ink2)" id="vc_meta"></p>
+  <p style="font-size:.86rem;color:var(--ink2)">Scheduled jobs grow this automatically — a monthly harvester backfills real per-year series and a weekly job adds independent second prices and re-runs the audit. The cross-verified count only goes up.</p>
+
+  <h2 class="sec" style="margin-top:30px">Source-quality tiers</h2>
+  <div class="srcq">
+    <div class="sq t1"><span class="badge">Tier 1</span><h4>Gold Standard</h4><p>An authoritative, continuous official series — BLS Average Price Data, Census, EIA.</p></div>
+    <div class="sq t2"><span class="badge">Tier 2</span><h4>Sourced</h4><p>Real data with gaps, a definition shift, or a documented splice — e.g. the Shiller-derived 1913 home price.</p></div>
+    <div class="sq t3"><span class="badge">Tier 3</span><h4>Reconstructed</h4><p>Built from catalogs, menus, ads, or estimates. Estimates and pre-1950 figures are flagged.</p></div>
+  </div>
+
+  <h2 class="sec" style="margin-top:30px">Common criticisms — answered</h2>
+  <p class="lead2">Tap each. We don't dodge the hard ones.</p>
+  <div id="crits">
+    <div class="crit"><div class="q">"Why not just use CPI?"</div><div class="a">We <i>do</i> use CPI's structure — the same eight major groups at CPI's own weights. We change only what CPI measures with a hypothetical: housing. CPI fills ~⅓ of its index with Owners' Equivalent Rent, a survey of imagined rents. We use the real sale price instead.</div></div>
+    <div class="crit"><div class="q">"Why these categories and weights?"</div><div class="a">They aren't ours — they're BLS's official relative-importance weights. Using CPI's own basket is exactly what makes this a fair, apples-to-apples replacement rather than a cherry-pick.</div></div>
+    <div class="crit"><div class="q">"What about quality improvements (hedonics)?"</div><div class="a">For the BLS categories we keep CPI's quality adjustments as-is — so our number is, if anything, conservative there. We only strip hedonics where it most distorts lived cost: cars, where we use raw transaction prices, because you can't actually buy the 1913 level of car anymore.</div></div>
+    <div class="crit"><div class="q">"Isn't gold cherry-picked?"</div><div class="a">Gold lives on its own page as a sound-money lens — it does <b>not</b> touch the headline index, which is built from consumer prices, not gold.</div></div>
+    <div class="crit"><div class="q">"Aren't wages up too?"</div><div class="a">Yes — and many goods are genuinely cheaper in hours of work (electronics, clothing, some appliances). We say so plainly. But housing, healthcare, and college are dramatically worse in labor terms, and those are the things that determine whether a life feels affordable.</div></div>
+  </div>
+
+  <p style="margin-top:18px;font-style:italic;color:var(--ink2)">A living prototype: the basket mirrors CPI's full structure; figures, sourcing, and the historical series keep improving. We ship the good rather than wait on the perfect.</p>
+  <p style="margin-top:14px"><a href="the-number.html" style="color:var(--gold)">See the headline figure →</a> &nbsp;·&nbsp; <a href="data.html" style="color:var(--gold)">Browse all prices →</a></p>
+</div></section>
 
 <footer><div class="wrap">
   <p class="disclaimer" id="disclaimer"></p>
@@ -76,22 +109,21 @@
 <script src="core.js"></script>
 <script src="verification.js"></script>
 <script>
-(function(){var S=window.SMI;var n=(S.D.categories||[]).length;
-  document.getElementById("calc").textContent=
-    "We mirror CPI's "+n+"-category basket at CPI's own weights. Each category's 1913→2026 multiple comes from its real BLS price index (home prices replace CPI's OER survey; cars & gas use raw prices). "+
-    "The headline = the weighted sum of those multiples = "+S.indexMult.toFixed(1)+
-    "× — i.e. "+S.fmtP(S.indexPct)+" cumulative since 1913, or "+S.indexAnnual.toFixed(2)+"% per year. Official CPI over the same span: "+
-    S.fmtP(S.cpi.cumulative_pct)+" ("+S.cpi.annual_rate.toFixed(2)+"%/yr).";
-  document.getElementById("disclaimer").textContent="The 1913 Index "+S.D.meta.version+". "+S.D.meta.note;
-  document.getElementById("updated").textContent="data last updated "+S.D.meta.last_updated;
+(function(){
+  var S=window.SMI; var n=(S.D.categories||[]).length;
+  document.getElementById("calcbox").innerHTML=
+    "<b>How the number is computed:</b> we mirror CPI's "+n+"-category basket at CPI's own weights. Each category's 1913→2026 multiple comes from its real BLS price index (home prices replace CPI's OER survey; cars &amp; gas use raw prices). The headline = the weighted sum = <b>"+S.indexMult.toFixed(1)+"×</b> — i.e. "+S.fmtP(S.indexPct)+" cumulative since 1913, or <b>"+S.indexAnnual.toFixed(2)+"%/yr</b>. Official CPI over the same span: "+S.fmtP(S.cpi.cumulative_pct)+" ("+S.cpi.annual_rate.toFixed(2)+"%/yr).";
 
-  // live verification counts
   if(window.VERIFY){
-    var c=window.VERIFY.meta.counts||{}, set=function(id,k){var el=document.getElementById(id); if(el) el.textContent="("+(c[k]||0).toLocaleString()+" items)";};
+    var c=(window.VERIFY.meta&&window.VERIFY.meta.counts)||{}, set=function(id,k){var el=document.getElementById(id); if(el) el.textContent=(c[k]||0).toLocaleString()+" items";};
     set("vc_cross","cross-verified"); set("vc_aud","audited-ok"); set("vc_cat","category"); set("vc_pl","plausible"); set("vc_rev","review"); set("vc_con","conflict");
     var mEl=document.getElementById("vc_meta");
-    if(mEl) mEl.textContent="Audit last run "+window.VERIFY.meta.last_run+" across "+window.VERIFY.meta.n_items.toLocaleString()+" items. Outlier threshold: "+window.VERIFY.meta.outlier_threshold_pp+" percentage points from category median.";
+    if(mEl&&window.VERIFY.meta) mEl.textContent="Audit last run "+window.VERIFY.meta.last_run+" across "+(window.VERIFY.meta.n_items||0).toLocaleString()+" items. Outlier threshold: "+window.VERIFY.meta.outlier_threshold_pp+" percentage points from category median. Re-runnable from scripts/verify.js.";
   }
+
+  document.querySelectorAll(".crit").forEach(function(e){ e.addEventListener("click",function(){ e.classList.toggle("open"); }); });
+
+  if(S.D&&S.D.meta){ document.getElementById("disclaimer").textContent="The 1913 Index "+(S.D.meta.version||"")+". "+(S.D.meta.note||""); document.getElementById("updated").textContent="data last updated "+(S.D.meta.last_updated||""); }
 })();
 </script>
 </body>

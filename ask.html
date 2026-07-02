@@ -1,99 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<link rel="manifest" href="manifest.json">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="icon" href="assets/favicon.ico">
+<meta name="theme-color" content="#0a0a0a">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Ask the 1913 Index</title>
-<meta name="description" content="Ask any price question and get an answer computed straight from the open, sourced dataset — never invented. Items over time, the dollar in gold, hours of work, and more.">
-<!-- Open Graph / Twitter. TODO @deploy: set og:url; confirm assets/og-default.png. -->
-<meta property="og:type" content="website">
-<meta property="og:site_name" content="The 1913 Index">
-<meta property="og:title" content="Ask the 1913 Index">
-<meta property="og:description" content="A deterministic engine that answers price questions from the open dataset — and never invents a number.">
-<meta property="og:image" content="assets/og-default.png">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="assets/og-default.png">
+<title>Ask the Index — The 1913 Index</title>
+<meta name="description" content="Ask natural-language price questions. Every answer is computed deterministically from the open 1913 Index dataset — sourced, confidence-rated, never invented.">
 <link rel="stylesheet" href="styles.css">
 <style>
-  .askbox{background:var(--ink);color:var(--paper);border:2px solid var(--gold);padding:20px;border-radius:6px;margin-top:6px}
-  .askbox .lab{font-size:.66rem;letter-spacing:.16em;text-transform:uppercase;color:#d8cba0}
-  .askbox .row{display:flex;gap:10px;margin-top:8px;flex-wrap:wrap}
-  .askbox input{flex:1;min-width:240px;background:#0e1626;border:1px solid #3a4256;color:#eef2f8;padding:13px 15px;font:inherit;font-size:1rem;border-radius:6px}
-  .askbox button{background:var(--gold);color:#1a1306;border:none;font-weight:700;padding:13px 22px;border-radius:6px;cursor:pointer;font:inherit;font-weight:700}
-  .chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
-  .chips button{background:transparent;border:1px solid #5a4a22;color:#e7d9ad;font:inherit;font-size:.82rem;padding:6px 12px;border-radius:20px;cursor:pointer}
-  .chips button:hover{background:#221c0e}
-  #result{margin-top:18px}
-  .ans{border:2px solid var(--ink);background:var(--paper2);border-radius:6px;padding:18px 20px}
-  .ans .ahead{font-size:1.15rem;font-weight:700;margin-bottom:8px;border-bottom:1px solid var(--rule);padding-bottom:8px}
-  .ans p{margin:.45em 0;font-size:1rem}
-  .ans .asrc{font-size:.82rem;color:var(--ink2);margin-top:10px}
-  .ans.miss{border-style:dashed}
-  .note2{font-size:.82rem;color:var(--ink2);margin-top:12px}
+  .ask{background:var(--ink);color:var(--paper);border:2px solid var(--gold);padding:18px 20px;margin-top:8px;border-radius:4px}
+  .ask .lab{font-size:.66rem;letter-spacing:.16em;text-transform:uppercase;color:#d8cba0}
+  .ask .row{display:flex;gap:10px;margin-top:8px;flex-wrap:wrap}
+  .ask input{flex:1;min-width:220px;background:#0e1626;border:1px solid #3a4256;color:#eef2f8;padding:11px 13px;font:inherit;border-radius:6px}
+  .ask button{background:var(--gold);color:#1a1306;border:none;font-weight:700;padding:11px 18px;border-radius:6px;cursor:pointer}
+  .examples{margin-top:10px;display:flex;flex-wrap:wrap;gap:8px}
+  .examples a{font-size:.74rem;color:#d8cba0;border:1px solid #3a4256;border-radius:12px;padding:3px 10px;text-decoration:none;cursor:pointer}
+  .examples a:hover{border-color:var(--gold);color:#ffd56b}
+  #answer{margin-top:22px}
+  #answer .ans{border:2px solid var(--ink);background:var(--paper2);box-shadow:5px 5px 0 rgba(43,35,23,.15);padding:18px 20px;margin-bottom:14px}
+  #answer .ahead{font-size:1.25rem;font-weight:700;color:var(--red);margin-bottom:6px}
+  #answer .asrc{font-size:.78rem;color:var(--ink2)}
+  #loading{display:none;font-style:italic;color:var(--ink2);margin-top:18px}
 </style>
 </head>
 <body>
 <script src="nav.js"></script>
 <header class="mast"><div class="wrap">
-  <div class="eyebrow">Ask &amp; Explore</div>
+  <div class="eyebrow">Ask</div>
   <h1><a href="index.html">The 1913 Index</a></h1>
-  <div class="sub">Ask the Index — answers straight from the open dataset</div>
+  <div class="sub">Ask the Index — deterministic answers from the open dataset. No number is ever invented.</div>
 </div></header>
-<div class="crumb"><div class="wrap"><a href="index.html">← Home</a> · <a href="data.html">Explore the Data</a><span class="here">Ask the Index</span></div></div>
+<div class="crumb"><div class="wrap"><a href="index.html">← Home</a><a href="data.html">Explore the Data</a><span class="here">Ask</span></div></div>
 
 <section>
   <div class="wrap">
-    <p class="kicker">Natural-language, no black box</p>
-    <h2 class="sec">Ask what a dollar used to buy</h2>
-    <p class="lead">Type a question about any tracked price or about the dollar itself. Every answer is computed directly from the open, sourced dataset — with its source and confidence rating shown. <b>This engine never invents a number:</b> if it can't ground an answer in the data, it tells you so.</p>
-
-    <div class="askbox">
+    <div class="ask">
       <div class="lab">Ask the Index</div>
       <div class="row">
-        <input id="q" type="text" placeholder='e.g. "how much more does a home cost than in 1971?"' autocomplete="off">
-        <button id="go">Ask →</button>
+        <input id="askq" type="text" placeholder="e.g. How much more does a house cost than in 1971?">
+        <button id="askgo">Ask →</button>
       </div>
-      <div class="chips" id="chips"></div>
+      <div class="examples">
+        <a data-q="What did $100 in 1913 buy?">$100 in 1913</a>
+        <a data-q="How much more is milk than in 1960?">milk since 1960</a>
+        <a data-q="Compare gas and eggs since 1990">gas vs eggs since 1990</a>
+        <a data-q="What rose the most since 1971?">what rose most since 1971</a>
+        <a data-q="How many hours of work does a new car cost?">a car in hours of work</a>
+      </div>
     </div>
-
-    <div id="result"></div>
-
-    <p class="note2">It understands six kinds of questions: <b>an item over time</b> ("milk in 1960"), <b>the dollar's purchasing power</b> ("$1 in 1913 today"), <b>priced in gold</b> ("a home in gold since 1971"), <b>in hours of work</b> ("a car in hours of work"), <b>compare two items</b> ("milk vs gas"), and <b>leaderboards</b> ("what rose the most since 1971?"). Every answer is computed from the open dataset — browse it on the <a href="data.html">data page</a>; see how confidence is rated on the <a href="method.html">method page</a>.</p>
+    <div id="loading">Loading the dataset (one-time, ~6&nbsp;MB — every answer is computed locally from it)…</div>
+    <div id="answer"></div>
   </div>
 </section>
 
-<footer><div class="wrap">
-  <p class="disclaimer">Answers are deterministic — computed from window.DB / window.CORPUS / window.SERIES, every figure sourced. Not investment advice.</p>
-  <p style="margin-top:8px;color:#cdbf9b"><a href="index.html">← Back to all topics</a></p>
-</div></footer>
-
-<script src="database.js"></script>
-<script src="corpus.js"></script>
-<script src="series.js"></script>
-<script src="verification.js"></script>
-<script src="afford.js"></script>
-<script src="ask.js"></script>
 <script>
-(function(){
-  var input=document.getElementById("q"), out=document.getElementById("result");
-  var examples=["how much more does a home cost than in 1971?","$1 in 1913 today","what rose the most since 1971?","a home in gold since 1971","milk in hours of work","milk vs gas","what fell the most since 1980?","what is $100 from 1971 worth now?"];
-  var chips=document.getElementById("chips");
-  examples.forEach(function(ex){var b=document.createElement("button");b.textContent=ex;b.onclick=function(){input.value=ex;run();};chips.appendChild(b);});
+// Thin shell: lazy-load the heavy data layers + engine on first use, then answer inline.
+// Load order matters — ask.js reads window.DB/CORPUS/SERIES/VERIFY/WAGES at parse time.
+// NOTE: afford.js (not wages.js) — both define window.WAGES, but ask.js needs
+// afford.js's shape (.points map for hours-of-work interpolation). wages.js ({ahe}) is
+// the FRED wage-engine layer for the old wages.html page and would clobber it.
+var ENGINE_FILES = ['database.js','corpus.js','series.js','verification.js','afford.js','ask.js'];
+var engineReady = null;
 
-  function run(){
-    var q=input.value.trim(); if(!q){out.innerHTML="";return;}
-    var r=window.ASK.answer(q);
-    out.innerHTML=r.html;
-    try{ history.replaceState(null,"","?q="+encodeURIComponent(q)); }catch(e){}
-  }
-  document.getElementById("go").onclick=run;
-  input.addEventListener("keydown",function(e){ if(e.key==="Enter") run(); });
+function loadScript(src){return new Promise(function(res,rej){
+  var s=document.createElement('script');s.src=src;s.onload=res;s.onerror=function(){rej(new Error(src));};
+  document.head.appendChild(s);});}
 
-  // deep-link support: ?q=
-  var qp=new URLSearchParams(location.search).get("q");
-  if(qp){ input.value=qp; run(); }
-  input.focus();
-})();
+function ensureEngine(){
+  if(engineReady) return engineReady;
+  document.getElementById('loading').style.display='block';
+  engineReady = ENGINE_FILES.reduce(function(p,f){return p.then(function(){return loadScript(f);});},Promise.resolve())
+    .then(function(){document.getElementById('loading').style.display='none';});
+  return engineReady;
+}
+
+function ask(q){
+  if(!q) return;
+  ensureEngine().then(function(){
+    var out;
+    try { out = window.ASK.answer(q); }
+    catch(e){ out = { ok:false, html:'<div class="ans"><p>Something went wrong computing that answer.</p></div>' }; }
+    document.getElementById('answer').innerHTML = out && out.html ? out.html :
+      '<div class="ans"><p>I couldn\'t ground that question in the dataset. Try naming an item (milk, gas, a house) and a year.</p></div>';
+    try { history.replaceState(null,'','ask.html?q='+encodeURIComponent(q)); } catch(e){}
+  }).catch(function(){
+    document.getElementById('loading').style.display='none';
+    document.getElementById('answer').innerHTML='<div class="ans"><p>Failed to load the dataset. Check your connection and reload.</p></div>';
+  });
+}
+
+var input=document.getElementById('askq');
+document.getElementById('askgo').onclick=function(){ask(input.value.trim());};
+input.addEventListener('keydown',function(e){if(e.key==='Enter')ask(input.value.trim());});
+document.querySelectorAll('.examples a').forEach(function(a){
+  a.onclick=function(){input.value=a.dataset.q;ask(a.dataset.q);};
+});
+
+// Deep link: ask.html?q=...
+var qp=new URLSearchParams(location.search).get('q');
+if(qp){input.value=qp;ask(qp);}
 </script>
 </body>
 </html>

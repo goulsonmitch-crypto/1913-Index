@@ -1,0 +1,23 @@
+{
+  "name": "1913 Index — True Inflation",
+  "short_name": "1913 Index",
+  "description": "Scan barcodes to see how prices have risen since 1913. The honest inflation tracker.",
+  "start_url": "/scan.html",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#0a0a0a",
+  "theme_color": "#0a0a0a",
+  "icons": [
+    { "src": "assets/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any maskable" },
+    { "src": "assets/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable" }
+  ],
+  "screenshots": [
+    { "src": "assets/screenshot-scan.png", "sizes": "390x844", "type": "image/png", "label": "Scan a barcode to see its price history" }
+  ],
+  "shortcuts": [
+    { "name": "Scan a product", "short_name": "Scan", "url": "/scan.html", "icons": [{ "src": "assets/icon-192.png", "sizes": "192x192" }] },
+    { "name": "Browse prices", "short_name": "Prices", "url": "/data.html", "icons": [{ "src": "assets/icon-192.png", "sizes": "192x192" }] }
+  ],
+  "categories": ["finance", "utilities"],
+  "lang": "en-US"
+}

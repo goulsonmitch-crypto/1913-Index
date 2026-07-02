@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="manifest" href="manifest.json">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="icon" href="assets/favicon.ico">
+<meta name="theme-color" content="#0a0a0a">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Fed — Money, Debt &amp; Rebuttals · The 1913 Index</title>
+<meta name="description" content="Live Federal Reserve dashboard: M2 money supply, balance sheet, national debt, federal funds rate — and same-day rebuttals every time the Fed moves or CPI prints.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="The 1913 Index">
+<meta property="og:title" content="The Fed — live money &amp; debt data, plus rebuttals">
+<meta property="og:description" content="M2, balance sheet, debt, rates — all in one place, auto-updated weekly. Plus every CPI rebuttal since launch.">
+<meta property="og:image" content="assets/og-default.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="assets/og-default.png">
+<link rel="stylesheet" href="styles.css">
+<style>
+  .fed-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:18px 0}
+  @media(max-width:580px){.fed-grid{grid-template-columns:1fr}}
+  .fed-card{border:2px solid var(--ink);background:var(--paper2);padding:16px 18px}
+  .fed-card .fc-lbl{font-size:.62rem;letter-spacing:.12em;text-transform:uppercase;color:var(--ink2);margin-bottom:.3em}
+  .fed-card .fc-num{font-family:"Courier New",monospace;font-weight:700;font-size:clamp(1.8rem,6vw,2.6rem);line-height:1;color:var(--red)}
+  .fed-card .fc-sub{font-size:.82rem;color:var(--ink2);margin-top:.3em;line-height:1.4}
+  .fed-card .fc-note{font-size:.78rem;color:var(--ink2);margin-top:.5em;border-top:1px solid var(--rule);padding-top:.5em;font-style:italic}
+  .updated-note{font-size:.78rem;color:var(--ink2);margin-top:6px}
+
+  .section-rule{border:none;border-top:3px solid var(--gold);margin:36px 0 22px}
+
+  .rentry{border:2px solid var(--ink);background:var(--paper2);padding:18px 20px;margin-bottom:14px}
+  .rentry .rtag{display:flex;gap:10px;align-items:center;margin-bottom:.5em}
+  .rentry .rtag .badge{font-size:.62rem;letter-spacing:.1em;text-transform:uppercase;font-weight:700;padding:2px 8px;border:1px solid var(--gold);color:var(--gold)}
+  .rentry .rtag .rdate{font-size:.78rem;color:var(--ink2)}
+  .rentry .rhed{font-size:1.05rem;font-weight:700;line-height:1.35;margin-bottom:.5em}
+  .rentry .kicker-strip{display:flex;gap:12px;flex-wrap:wrap;margin:10px 0}
+  .rentry .kicker-strip .ks{border:1px solid var(--rule);background:#fff;padding:8px 12px;min-width:110px;text-align:center}
+  .rentry .ks .kn{font-family:"Courier New",monospace;font-weight:700;font-size:1.2rem;color:var(--red)}
+  .rentry .ks .kl{font-size:.7rem;color:var(--ink2)}
+  .rentry details summary{cursor:pointer;font-weight:700;font-size:.88rem;color:var(--gold);margin-top:8px}
+  .rentry details .body{margin-top:8px;font-size:.9rem;color:var(--ink2);line-height:1.6}
+  .rentry details .body p{margin:.4em 0}
+  .rentry .steelman{border-left:4px solid var(--green);padding:8px 12px;background:var(--paper2);font-size:.87rem;color:var(--ink2);margin:.8em 0}
+  .rentry .steelman::before{content:"✓ Steelman: ";font-weight:700;color:var(--green)}
+  .empty-state{text-align:center;padding:40px;color:var(--ink2);border:2px dashed var(--rule);margin:20px 0}
+
+  .page-lede{font-size:1rem;color:var(--ink2);max-width:680px;margin:.4em 0 0}
+</style>
+</head>
+<body>
+<script src="nav.js"></script>
+<header class="mast"><div class="wrap">
+  <div class="eyebrow">The Federal Reserve</div>
+  <h1>The Fed</h1>
+  <div class="sub">Live money supply · national debt · same-day rebuttals</div>
+</div></header>
+
+<section><div class="wrap">
+
+  <h2 class="sec">What the Fed is actually doing</h2>
+  <p class="page-lede">Four numbers that tell the whole story. Auto-updated every Tuesday from FRED, the Federal Reserve, and Treasury.</p>
+
+  <div class="fed-grid" id="fedDash">
+    <div class="fed-card"><div class="fc-lbl">M2 money supply</div><div class="fc-num" id="m2val">—</div><div class="fc-sub" id="m2sub">—</div><div class="fc-note" id="m2note"></div></div>
+    <div class="fed-card"><div class="fc-lbl">National debt</div><div class="fc-num" id="debtval">—</div><div class="fc-sub" id="debtsub">—</div><div class="fc-note" id="debtnote"></div></div>
+    <div class="fed-card"><div class="fc-lbl">Fed balance sheet</div><div class="fc-num" id="bsval">—</div><div class="fc-sub" id="bssub">—</div><div class="fc-note" id="bsnote"></div></div>
+    <div class="fed-card"><div class="fc-lbl">Federal funds rate</div><div class="fc-num" id="rateval">—</div><div class="fc-sub" id="ratesub">—</div><div class="fc-note" id="ratenote"></div></div>
+  </div>
+  <p class="updated-note" id="fedUpdated">Fed data last updated: —</p>
+
+  <hr class="section-rule" id="rebuttals">
+
+  <h2 class="sec">Fed Watch — same-day rebuttals</h2>
+  <p class="page-lede">Every time the BLS prints a CPI number or the Fed moves rates, we publish a rebuttal the same day: steelman the official case, then show what our data says. Published to this feed automatically.</p>
+
+  <div id="feedContainer"><div class="empty-state">Loading rebuttals…</div></div>
+
+  <p class="updated-note" id="fwUpdated"></p>
+
+</div></section>
+
+<footer><div class="wrap">
+  <p class="disclaimer">Data sources: Federal Reserve H.6 (M2), H.4.1 (balance sheet), U.S. Treasury Debt to the Penny, FRED, BLS. Updated weekly by scheduled task. Not investment advice.</p>
+</div></footer>
+
+<script src="fed.js"></script>
+<script src="fedwatch.js"></script>
+<script>
+(function(){
+  // ── Fed Dashboard ──
+  try{
+    var F=window.FED; if(!F) throw "no FED";
+
+    function fmtT(t){ return t>=1?"$"+t.toFixed(2)+"T":"$"+(t*1000).toFixed(0)+"B"; }
+
+    // M2
+    document.getElementById("m2val").textContent=fmtT(F.m2.value_t);
+    document.getElementById("m2sub").textContent="as of "+F.m2.as_of+(F.m2.record?" · all-time record":"");
+    document.getElementById("m2note").textContent=F.m2.note||"";
+
+    // Debt
+    document.getElementById("debtval").textContent=fmtT(F.debt.value_t);
+    document.getElementById("debtsub").textContent="as of "+F.debt.as_of+" · +$"+(F.debt.growth_per_year_t||0).toFixed(2)+"T/yr";
+    document.getElementById("debtnote").textContent=F.debt.note||"";
+
+    // Balance sheet
+    document.getElementById("bsval").textContent=fmtT(F.balance_sheet.value_t);
+    document.getElementById("bssub").textContent="as of "+F.balance_sheet.as_of+" · peak $"+F.balance_sheet.peak_t+"T ("+F.balance_sheet.peak_year+")";
+    document.getElementById("bsnote").textContent=F.balance_sheet.note||"";
+
+    // Funds rate
+    var lo=F.funds_rate.low, hi=F.funds_rate.high;
+    document.getElementById("rateval").textContent=(lo===hi?lo.toFixed(2):lo.toFixed(2)+"–"+hi.toFixed(2))+"%";
+    document.getElementById("ratesub").textContent="as of "+F.funds_rate.as_of;
+    document.getElementById("ratenote").textContent=F.funds_rate.note||"";
+
+    document.getElementById("fedUpdated").textContent="Fed data last updated: "+(F.meta.last_updated||"—")+" — refreshed every Tuesday.";
+  }catch(e){ document.getElementById("fedDash").innerHTML="<p style='color:var(--ink2)'>Fed data not yet loaded.</p>"; }
+
+  // ── Rebuttal Feed ──
+  try{
+    var FW=window.FEDWATCH; if(!FW||!FW.entries||!FW.entries.length) throw "no entries";
+    var html="";
+    FW.entries.forEach(function(e){
+      var kickers="";
+      if(e.kicker){
+        kickers='<div class="kicker-strip">';
+        if(e.kicker.big) kickers+='<div class="ks"><div class="kn">'+e.kicker.big+'</div><div class="kl">'+e.kicker.big_label+'</div></div>';
+        if(e.card&&e.card.our_num) kickers+='<div class="ks"><div class="kn">'+e.card.our_num+'</div><div class="kl">'+e.card.our_label+'</div></div>';
+        kickers+='</div>';
+      }
+      var rebuttals="";
+      if(e.rebuttal&&e.rebuttal.length){
+        rebuttals=e.rebuttal.map(function(r){return "<p>"+r+"</p>";}).join("");
+      }
+      var steelman=e.steelman?'<div class="steelman">'+e.steelman+'</div>':"";
+      html+='<div class="rentry">'
+        +'<div class="rtag"><span class="badge">'+(e.type_label||e.type)+'</span><span class="rdate">'+e.date+'</span></div>'
+        +'<div class="rhed">'+e.headline+'</div>'
+        +kickers
+        +'<details><summary>Read the full rebuttal</summary>'
+        +'<div class="body">'+steelman+rebuttals+'</div>'
+        +'</details>'
+        +'</div>';
+    });
+    document.getElementById("feedContainer").innerHTML=html;
+    document.getElementById("fwUpdated").textContent="Rebuttal feed last updated: "+(FW.meta.last_updated||"—")+" — new entries published on BLS release days and after FOMC decisions.";
+  }catch(e2){
+    document.getElementById("feedContainer").innerHTML='<div class="empty-state">No rebuttals yet. The next CPI release is Jul 14, 2026.</div>';
+  }
+})();
+</script>
+</body>
+</html>

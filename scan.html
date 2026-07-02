@@ -1,0 +1,995 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="theme-color" content="#0a0a0a">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="1913 Scan">
+<link rel="manifest" href="manifest.json">
+<link rel="apple-touch-icon" href="assets/icon-192.png">
+<title>Price Scanner — 1913 Index</title>
+<style>
+  :root {
+    --bg: #0a0a0a;
+    --surface: #141414;
+    --card: #1c1c1e;
+    --border: #2c2c2e;
+    --gold: #c9a84c;
+    --gold-dim: #8a6f30;
+    --red: #e53e3e;
+    --green: #38a169;
+    --text: #f0f0f0;
+    --muted: #8e8e93;
+    --safe-top: env(safe-area-inset-top, 0px);
+    --safe-bot: env(safe-area-inset-bottom, 0px);
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
+  html, body { height: 100%; background: var(--bg); color: var(--text); font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; overflow: hidden; }
+
+  /* ── App shell ── */
+  #app { display: flex; flex-direction: column; height: 100vh; height: 100dvh; }
+
+  /* ── Header ── */
+  #header {
+    flex: 0 0 auto;
+    display: flex; align-items: center; justify-content: space-between;
+    padding: calc(12px + var(--safe-top)) 16px 12px;
+    background: var(--surface);
+    border-bottom: 1px solid var(--border);
+    position: relative; z-index: 10;
+  }
+  #header .back { color: var(--gold); font-size: 1rem; text-decoration: none; font-weight: 600; }
+  #header h1 { font-size: 1rem; font-weight: 700; letter-spacing: .04em; color: var(--text); }
+  #header .history-btn { color: var(--muted); font-size: .85rem; cursor: pointer; background: none; border: none; }
+
+  /* ── Main scrollable area ── */
+  #main { flex: 1 1 0; overflow-y: auto; -webkit-overflow-scrolling: touch; }
+
+  /* ── Camera view ── */
+  #scanner-section {
+    position: relative;
+    background: #000;
+    aspect-ratio: 1 / 1;
+    max-height: 60vw;
+    overflow: hidden;
+  }
+  #video { width: 100%; height: 100%; object-fit: cover; display: block; }
+  #canvas { display: none; }
+
+  /* Targeting reticle */
+  #reticle {
+    position: absolute; inset: 0;
+    display: flex; align-items: center; justify-content: center;
+    pointer-events: none;
+  }
+  .reticle-box {
+    width: 65%; aspect-ratio: 3/1;
+    border: 2px solid var(--gold);
+    border-radius: 8px;
+    box-shadow: 0 0 0 9999px rgba(0,0,0,.45);
+    position: relative;
+  }
+  .reticle-box::before {
+    content: '';
+    position: absolute; top: 0; left: 0; right: 0;
+    height: 2px;
+    background: var(--gold);
+    animation: scan-line 2s ease-in-out infinite;
+  }
+  @keyframes scan-line {
+    0%, 100% { top: 0; opacity: 1; }
+    50% { top: calc(100% - 2px); opacity: .6; }
+  }
+
+  /* Corner brackets */
+  .reticle-box::after {
+    content: '';
+    position: absolute;
+    inset: -2px;
+    border-radius: 8px;
+    background:
+      linear-gradient(var(--gold) 0 0) top left / 12px 2px no-repeat,
+      linear-gradient(var(--gold) 0 0) top left / 2px 12px no-repeat,
+      linear-gradient(var(--gold) 0 0) top right / 12px 2px no-repeat,
+      linear-gradient(var(--gold) 0 0) top right / 2px 12px no-repeat,
+      linear-gradient(var(--gold) 0 0) bottom left / 12px 2px no-repeat,
+      linear-gradient(var(--gold) 0 0) bottom left / 2px 12px no-repeat,
+      linear-gradient(var(--gold) 0 0) bottom right / 12px 2px no-repeat,
+      linear-gradient(var(--gold) 0 0) bottom right / 2px 12px no-repeat;
+  }
+
+  #scan-status {
+    position: absolute; bottom: 8px; left: 0; right: 0;
+    text-align: center; font-size: .75rem; color: rgba(255,255,255,.7);
+    letter-spacing: .05em;
+  }
+  #scan-status.scanning { color: var(--gold); }
+  #scan-status.error { color: var(--red); }
+
+  /* ── Camera controls ── */
+  #controls {
+    display: flex; gap: 10px; padding: 12px 16px;
+    background: var(--surface);
+    border-bottom: 1px solid var(--border);
+  }
+  #controls button {
+    flex: 1; padding: 10px; border-radius: 8px; border: 1px solid var(--border);
+    background: var(--card); color: var(--text); font-size: .85rem; font-weight: 600;
+    cursor: pointer; transition: background .15s;
+  }
+  #controls button:active { background: var(--border); }
+  #controls button.primary { background: var(--gold); color: #000; border-color: var(--gold); }
+  #controls button.primary:active { background: var(--gold-dim); }
+
+  /* ── Result card ── */
+  #result-section { padding: 16px; display: none; }
+  #result-section.visible { display: block; }
+
+  .result-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    overflow: hidden;
+    margin-bottom: 12px;
+  }
+
+  .result-product {
+    padding: 14px 16px 10px;
+    border-bottom: 1px solid var(--border);
+  }
+  .result-product .product-brand { font-size: .75rem; color: var(--muted); text-transform: uppercase; letter-spacing: .08em; }
+  .result-product .product-name { font-size: 1rem; font-weight: 700; margin: 2px 0 4px; }
+  .result-product .product-upc { font-size: .72rem; color: var(--muted); font-family: monospace; }
+
+  .result-match {
+    padding: 14px 16px;
+  }
+  .match-label { font-size: .72rem; color: var(--muted); text-transform: uppercase; letter-spacing: .08em; margin-bottom: 6px; }
+  .match-item-name { font-size: .95rem; font-weight: 600; color: var(--gold); margin-bottom: 10px; }
+
+  .price-row {
+    display: flex; align-items: baseline; gap: 8px; margin-bottom: 6px;
+  }
+  .price-then { font-size: .85rem; color: var(--muted); }
+  .price-arrow { font-size: .85rem; color: var(--muted); }
+  .price-now { font-size: 1.1rem; font-weight: 700; }
+  .price-unit { font-size: .75rem; color: var(--muted); }
+
+  .multiplier-badge {
+    display: inline-flex; align-items: center; gap: 6px;
+    background: rgba(229,62,62,.12); color: var(--red);
+    border: 1px solid rgba(229,62,62,.25);
+    padding: 4px 10px; border-radius: 20px;
+    font-size: .85rem; font-weight: 700; margin-bottom: 12px;
+  }
+
+  /* Mini sparkline */
+  #sparkline-wrap { margin-bottom: 8px; }
+  #sparkline { width: 100%; height: 60px; display: block; }
+
+  .series-label {
+    font-size: .7rem; color: var(--muted);
+    display: flex; justify-content: space-between;
+  }
+
+  /* Category tag */
+  .cat-tag {
+    display: inline-block;
+    background: rgba(201,168,76,.1); color: var(--gold);
+    border: 1px solid rgba(201,168,76,.25);
+    padding: 2px 8px; border-radius: 10px;
+    font-size: .72rem; font-weight: 600; margin-top: 6px;
+  }
+
+  /* Source line */
+  .source-line { font-size: .7rem; color: var(--muted); margin-top: 8px; }
+
+  /* Live price row */
+  .live-price-row {
+    display: flex; align-items: center; gap: 8px; flex-wrap: wrap;
+    margin: 10px 0 6px; padding: 8px 10px;
+    background: rgba(154,125,46,.1); border: 1px solid rgba(154,125,46,.3);
+    border-radius: 8px;
+  }
+  .live-price-badge {
+    background: var(--gold); color: #1a1306;
+    font-size: .65rem; font-weight: 800; padding: 2px 6px;
+    border-radius: 4px; letter-spacing: .08em;
+  }
+  .live-price-val { font-size: 1.25rem; font-weight: 800; color: #f4ecd8; }
+  .live-price-src { font-size: .72rem; color: var(--muted); }
+  .live-sale { font-size: .72rem; color: #c9a84c; font-weight: 700; }
+  .live-price-row.manual { background: transparent; border-color: rgba(154,125,46,.15); }
+  .enter-price-btn {
+    background: none; border: 1px solid rgba(154,125,46,.4); color: var(--gold);
+    font-size: .75rem; padding: 4px 10px; border-radius: 6px; cursor: pointer;
+    font-family: Georgia,serif;
+  }
+  .enter-price-btn:hover { background: rgba(154,125,46,.15); }
+
+  /* ── Action buttons ── */
+  .action-row { display: flex; gap: 8px; padding: 12px 16px 4px; }
+  .action-btn {
+    flex: 1; padding: 10px 8px; border-radius: 10px; font-size: .82rem; font-weight: 600;
+    border: 1px solid var(--border); background: var(--card); color: var(--text);
+    cursor: pointer; text-align: center; transition: background .15s;
+  }
+  .action-btn:active { background: var(--border); }
+  .action-btn.confirm { background: var(--green); color: #fff; border-color: var(--green); }
+  .action-btn.fix { border-color: var(--gold-dim); color: var(--gold); }
+
+  /* ── Not found card ── */
+  .not-found-card {
+    background: var(--card); border: 1px solid var(--border); border-radius: 16px;
+    padding: 20px 16px; text-align: center; margin-bottom: 12px;
+  }
+  .not-found-card .nf-icon { font-size: 2.5rem; margin-bottom: 8px; }
+  .not-found-card h3 { font-size: 1rem; font-weight: 700; margin-bottom: 6px; }
+  .not-found-card p { font-size: .85rem; color: var(--muted); margin-bottom: 14px; }
+  .submit-btn {
+    display: block; width: 100%;
+    padding: 12px; border-radius: 10px;
+    background: var(--gold); color: #000; font-weight: 700; font-size: .9rem;
+    border: none; cursor: pointer;
+  }
+
+  /* ── Submission form ── */
+  #submit-section { padding: 0 16px 16px; display: none; }
+  #submit-section.visible { display: block; }
+  .form-card {
+    background: var(--card); border: 1px solid var(--border); border-radius: 16px;
+    padding: 16px;
+  }
+  .form-card h3 { font-size: .95rem; font-weight: 700; margin-bottom: 12px; }
+  .form-field { margin-bottom: 12px; }
+  .form-field label { display: block; font-size: .78rem; color: var(--muted); margin-bottom: 4px; }
+  .form-field input, .form-field select, .form-field textarea {
+    width: 100%; padding: 10px 12px; border-radius: 8px;
+    background: var(--surface); border: 1px solid var(--border);
+    color: var(--text); font-size: .9rem; font-family: inherit;
+  }
+  .form-field textarea { min-height: 60px; resize: vertical; }
+  .form-field select option { background: var(--surface); }
+  .form-submit {
+    width: 100%; padding: 12px; border-radius: 10px;
+    background: var(--gold); color: #000; font-weight: 700; font-size: .9rem;
+    border: none; cursor: pointer;
+  }
+  .form-cancel {
+    width: 100%; padding: 10px; border-radius: 10px; margin-top: 8px;
+    background: none; border: 1px solid var(--border); color: var(--muted);
+    font-size: .85rem; cursor: pointer;
+  }
+
+  /* ── History section ── */
+  #history-section { padding: 16px; display: none; }
+  #history-section.visible { display: block; }
+  #history-section h3 { font-size: .9rem; font-weight: 700; color: var(--muted); margin-bottom: 10px; }
+  .history-item {
+    display: flex; align-items: center; gap: 10px;
+    padding: 10px 0; border-bottom: 1px solid var(--border);
+    cursor: pointer;
+  }
+  .history-item:last-child { border-bottom: none; }
+  .history-item .hi-name { font-size: .88rem; font-weight: 600; flex: 1; }
+  .history-item .hi-mult { font-size: .82rem; color: var(--red); font-weight: 700; }
+  .history-item .hi-date { font-size: .72rem; color: var(--muted); }
+
+  /* ── Manual UPC entry ── */
+  #manual-entry { padding: 0 16px 16px; }
+  .manual-row {
+    display: flex; gap: 8px;
+  }
+  .manual-row input {
+    flex: 1; padding: 10px 12px; border-radius: 8px;
+    background: var(--card); border: 1px solid var(--border);
+    color: var(--text); font-size: .9rem; font-family: monospace;
+  }
+  .manual-row input::placeholder { color: var(--muted); font-family: sans-serif; }
+  .manual-row button {
+    padding: 10px 16px; border-radius: 8px;
+    background: var(--gold); color: #000; font-weight: 700; font-size: .85rem;
+    border: none; cursor: pointer;
+  }
+
+  /* ── Loading state ── */
+  #loading-overlay {
+    position: fixed; inset: 0;
+    background: rgba(10,10,10,.85);
+    display: none; align-items: center; justify-content: center;
+    flex-direction: column; gap: 12px;
+    z-index: 100;
+  }
+  #loading-overlay.visible { display: flex; }
+  .spinner {
+    width: 36px; height: 36px;
+    border: 3px solid var(--border);
+    border-top-color: var(--gold);
+    border-radius: 50%;
+    animation: spin .8s linear infinite;
+  }
+  @keyframes spin { to { transform: rotate(360deg); } }
+  #loading-overlay p { color: var(--muted); font-size: .85rem; }
+
+  /* ── Toast ── */
+  #toast {
+    position: fixed; bottom: calc(24px + var(--safe-bot));
+    left: 50%; transform: translateX(-50%);
+    background: var(--card); color: var(--text);
+    padding: 10px 20px; border-radius: 24px;
+    font-size: .85rem; font-weight: 600;
+    border: 1px solid var(--border);
+    opacity: 0; transition: opacity .3s; pointer-events: none;
+    white-space: nowrap; z-index: 200;
+  }
+  #toast.show { opacity: 1; }
+
+  /* Bottom safe area spacer */
+  .safe-bot { height: var(--safe-bot); }
+</style>
+</head>
+<body>
+
+<div id="app">
+
+  <!-- Header -->
+  <div id="header">
+    <a href="index.html" class="back">← 1913 Index</a>
+    <h1>📷 Price Scanner</h1>
+    <button class="history-btn" onclick="toggleHistory()">History</button>
+  </div>
+
+  <!-- Main scrollable -->
+  <div id="main">
+
+    <!-- Camera section -->
+    <div id="scanner-section">
+      <video id="video" autoplay playsinline muted></video>
+      <canvas id="canvas"></canvas>
+      <div id="reticle"><div class="reticle-box"></div></div>
+      <div id="scan-status">Tap "Start Camera" to begin scanning</div>
+    </div>
+
+    <!-- Camera controls -->
+    <div id="controls">
+      <button id="startBtn" class="primary" onclick="startCamera()">Start Camera</button>
+      <button id="stopBtn" style="display:none" onclick="stopCamera()">Stop</button>
+      <button onclick="toggleFlash()" id="flashBtn" style="display:none">⚡ Flash</button>
+    </div>
+
+    <!-- Manual UPC entry -->
+    <div id="manual-entry">
+      <div class="manual-row" style="margin-top:12px">
+        <input type="number" id="manualUPC" placeholder="Or enter barcode number manually…" inputmode="numeric">
+        <button onclick="lookupManual()">Go</button>
+      </div>
+    </div>
+
+    <!-- Result card -->
+    <div id="result-section">
+      <div id="result-inner"></div>
+    </div>
+
+    <!-- Submit form -->
+    <div id="submit-section">
+      <div class="form-card">
+        <h3>Help us map this product</h3>
+        <div class="form-field">
+          <label>UPC / Barcode</label>
+          <input type="text" id="f-upc" readonly>
+        </div>
+        <div class="form-field">
+          <label>Product name</label>
+          <input type="text" id="f-name" placeholder="e.g. Bounty Select-A-Size Paper Towels 6-roll">
+        </div>
+        <div class="form-field">
+          <label>Best matching category</label>
+          <select id="f-category">
+            <option value="">— Select category —</option>
+            <option>Food</option>
+            <option>Beverages</option>
+            <option>Alcohol</option>
+            <option>Household goods</option>
+            <option>Personal care</option>
+            <option>Pets</option>
+            <option>Baby & children</option>
+            <option>Tech & electronics</option>
+            <option>Apparel</option>
+            <option>Tools & hardware</option>
+            <option>Building</option>
+            <option>Healthcare</option>
+          </select>
+        </div>
+        <div class="form-field">
+          <label>Notes (optional)</label>
+          <textarea id="f-notes" placeholder="Any details that help identify this product…"></textarea>
+        </div>
+        <button class="form-submit" onclick="submitUPC()">Submit</button>
+        <button class="form-cancel" onclick="hideSubmitForm()">Cancel</button>
+      </div>
+    </div>
+
+    <!-- Scan history -->
+    <div id="history-section">
+      <h3>Recent scans</h3>
+      <div id="history-list"></div>
+    </div>
+
+    <div class="safe-bot"></div>
+  </div>
+</div>
+
+<!-- Loading overlay -->
+<div id="loading-overlay">
+  <div class="spinner"></div>
+  <p id="loading-msg">Looking up price history…</p>
+</div>
+
+<!-- Toast -->
+<div id="toast"></div>
+
+<script>
+// ── Config ──────────────────────────────────────────────────────────────────
+// Replace with your deployed Cloudflare Worker URL after deploying
+const WORKER_URL = 'https://1913-index-api.YOUR_SUBDOMAIN.workers.dev';
+
+// ── State ───────────────────────────────────────────────────────────────────
+let stream = null;
+let scanning = false;
+let detector = null;
+let scanAnimFrame = null;
+let currentUPC = '';
+let currentResult = null;
+let lastScanned = null;
+let flashTrack = null;
+let historyVisible = false;
+
+const SCAN_HISTORY_KEY = '1913_scan_history';
+
+// ── Camera ───────────────────────────────────────────────────────────────────
+async function startCamera() {
+  try {
+    setStatus('Requesting camera…');
+    stream = await navigator.mediaDevices.getUserMedia({
+      video: {
+        facingMode: { ideal: 'environment' },
+        width: { ideal: 1280 },
+        height: { ideal: 720 },
+      },
+      audio: false,
+    });
+    const video = document.getElementById('video');
+    video.srcObject = stream;
+    await video.play();
+
+    document.getElementById('startBtn').style.display = 'none';
+    document.getElementById('stopBtn').style.display = 'block';
+
+    // Flash support
+    const [track] = stream.getVideoTracks();
+    if (track.getCapabilities && track.getCapabilities().torch) {
+      flashTrack = track;
+      document.getElementById('flashBtn').style.display = 'block';
+    }
+
+    // Initialize a detector: native BarcodeDetector (Chrome/Android) or ZXing fallback (iOS Safari)
+    detector = await createDetector();
+    if (detector) {
+      setStatus('Point at a barcode…', 'scanning');
+      startScanLoop();
+    } else {
+      // Fallback: show manual entry hint
+      setStatus('Auto-scan not available — enter barcode manually below', 'error');
+    }
+  } catch (err) {
+    setStatus('Camera access denied. Use manual entry below.', 'error');
+    console.error(err);
+  }
+}
+
+function stopCamera() {
+  if (stream) { stream.getTracks().forEach(t => t.stop()); stream = null; }
+  if (scanAnimFrame) { cancelAnimationFrame(scanAnimFrame); scanAnimFrame = null; }
+  scanning = false;
+  document.getElementById('video').srcObject = null;
+  document.getElementById('startBtn').style.display = 'block';
+  document.getElementById('stopBtn').style.display = 'none';
+  document.getElementById('flashBtn').style.display = 'none';
+  flashTrack = null;
+  setStatus('Tap "Start Camera" to begin scanning');
+}
+
+async function toggleFlash() {
+  if (!flashTrack) return;
+  const btn = document.getElementById('flashBtn');
+  const on = btn.dataset.on === '1';
+  await flashTrack.applyConstraints({ advanced: [{ torch: !on }] });
+  btn.dataset.on = on ? '0' : '1';
+  btn.textContent = on ? '⚡ Flash' : '🔦 On';
+}
+
+// ── Detector factory ─────────────────────────────────────────────────────────
+// Prefers the native BarcodeDetector API (Chrome/Android). iOS Safari doesn't
+// support it, so we lazy-load ZXing from CDN and wrap it in the same interface
+// ({ detect(canvas) → [{rawValue}] }) so the scan loop works unchanged.
+const SCAN_FORMATS = ['ean_13', 'ean_8', 'upc_a', 'upc_e', 'code_128', 'code_39', 'itf', 'qr_code'];
+
+async function createDetector() {
+  // 1) Native path
+  if ('BarcodeDetector' in window) {
+    try {
+      const supported = await BarcodeDetector.getSupportedFormats();
+      const formats = SCAN_FORMATS.filter(f => supported.includes(f));
+      if (formats.includes('ean_13') || formats.includes('upc_a')) {
+        return new BarcodeDetector({ formats });
+      }
+    } catch (e) { /* fall through to ZXing */ }
+  }
+  // 2) ZXing fallback (iOS Safari)
+  try {
+    await loadZXing();
+    const hints = new Map();
+    hints.set(ZXing.DecodeHintType.POSSIBLE_FORMATS, [
+      ZXing.BarcodeFormat.EAN_13, ZXing.BarcodeFormat.EAN_8,
+      ZXing.BarcodeFormat.UPC_A, ZXing.BarcodeFormat.UPC_E,
+      ZXing.BarcodeFormat.CODE_128, ZXing.BarcodeFormat.CODE_39,
+      ZXing.BarcodeFormat.ITF, ZXing.BarcodeFormat.QR_CODE,
+    ]);
+    const reader = new ZXing.BrowserMultiFormatReader(hints);
+    let lastTry = 0;
+    return {
+      // Throttled: ZXing decode is CPU-heavy, so only attempt ~6x/sec.
+      // Throws are swallowed by the loop's try/catch (NotFound = no code in frame).
+      detect(canvas) {
+        const now = performance.now();
+        if (now - lastTry < 160) return [];
+        lastTry = now;
+        try {
+          const result = reader.decodeFromCanvas(canvas);
+          return result ? [{ rawValue: result.getText() }] : [];
+        } catch (e) { return []; }
+      },
+    };
+  } catch (e) {
+    console.error('ZXing load failed', e);
+    return null; // manual entry only
+  }
+}
+
+function loadZXing() {
+  if (window.ZXing) return Promise.resolve();
+  return new Promise((resolve, reject) => {
+    const s = document.createElement('script');
+    s.src = 'https://cdn.jsdelivr.net/npm/@zxing/library@0.21.3/umd/index.min.js';
+    s.onload = () => (window.ZXing ? resolve() : reject(new Error('ZXing global missing')));
+    s.onerror = () => reject(new Error('ZXing script failed to load'));
+    document.head.appendChild(s);
+  });
+}
+
+function startScanLoop() {
+  const video = document.getElementById('video');
+  const canvas = document.getElementById('canvas');
+  const ctx = canvas.getContext('2d');
+
+  async function loop() {
+    if (!stream || !detector) return;
+    if (video.readyState === video.HAVE_ENOUGH_DATA) {
+      canvas.width = video.videoWidth;
+      canvas.height = video.videoHeight;
+      ctx.drawImage(video, 0, 0);
+      try {
+        const barcodes = await detector.detect(canvas);
+        if (barcodes.length > 0) {
+          const upc = barcodes[0].rawValue.replace(/\D/g, '');
+          if (upc && upc !== lastScanned) {
+            lastScanned = upc;
+            // Debounce: wait 1.5s before allowing same barcode again
+            setTimeout(() => { if (lastScanned === upc) lastScanned = null; }, 1500);
+            await handleUPC(upc);
+            return; // Pause loop while showing result
+          }
+        }
+      } catch (e) {}
+    }
+    scanAnimFrame = requestAnimationFrame(loop);
+  }
+  scanAnimFrame = requestAnimationFrame(loop);
+}
+
+function resumeScanning() {
+  lastScanned = null;
+  if (stream && detector) {
+    setStatus('Point at a barcode…', 'scanning');
+    startScanLoop();
+  }
+}
+
+// ── UPC handling ─────────────────────────────────────────────────────────────
+async function handleUPC(upc) {
+  currentUPC = upc;
+  setStatus('Found barcode: ' + upc, 'scanning');
+  showLoading('Looking up price history…');
+
+  try {
+    const resp = await fetch(`${WORKER_URL}/scan?upc=${encodeURIComponent(upc)}`);
+    if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
+    const data = await resp.json();
+    hideLoading();
+    currentResult = data;
+    renderResult(data);
+  } catch (err) {
+    hideLoading();
+    showError('Could not reach the 1913 Index server. Check your connection.');
+    resumeScanning();
+  }
+}
+
+async function lookupManual() {
+  const input = document.getElementById('manualUPC');
+  const upc = input.value.replace(/\D/g, '');
+  if (upc.length < 8) { showToast('Enter a valid barcode number'); return; }
+  stopCamera();
+  await handleUPC(upc);
+}
+
+// ── Render result ─────────────────────────────────────────────────────────────
+function renderResult(data) {
+  const section = document.getElementById('result-section');
+  const inner = document.getElementById('result-inner');
+  section.classList.add('visible');
+  document.getElementById('history-section').classList.remove('visible');
+  document.getElementById('submit-section').classList.remove('visible');
+
+  if (!data.found) {
+    inner.innerHTML = `
+      <div class="not-found-card">
+        <div class="nf-icon">🔍</div>
+        <h3>Product not found</h3>
+        <p>UPC <code style="color:var(--gold)">${data.upc}</code> isn't in our database yet.</p>
+        <p style="margin-bottom:16px">Help us add it — takes 10 seconds.</p>
+        <button class="submit-btn" onclick="showSubmitForm('${data.upc}','','')">Submit this product</button>
+      </div>
+      <div class="action-row">
+        <button class="action-btn" onclick="resumeScanning(); document.getElementById('result-section').classList.remove('visible')">Scan another</button>
+      </div>`;
+    return;
+  }
+
+  if (!data.matched) {
+    inner.innerHTML = `
+      <div class="not-found-card">
+        <div class="nf-icon">📦</div>
+        <h3>${data.product_name || 'Unknown product'}</h3>
+        <p style="color:var(--muted);font-size:.8rem;margin-bottom:6px">UPC: ${data.upc}</p>
+        <p>Found the product but couldn't match it to a 1913 Index category yet.</p>
+        <p style="margin-bottom:14px;font-size:.82rem;color:var(--muted)">${data.api_category ? 'Detected category: ' + data.api_category : ''}</p>
+        <button class="submit-btn" onclick="showSubmitForm('${data.upc}','${(data.product_name||'').replace(/'/g,"\\'")}','${data.api_category||''}')">Fix category</button>
+      </div>
+      <div class="action-row">
+        <button class="action-btn" onclick="resumeScanning(); document.getElementById('result-section').classList.remove('visible')">Scan another</button>
+      </div>`;
+    return;
+  }
+
+  const item = data.index_item;
+  const parent = data.parent_item;
+  const livePrice = data.live_price || null;
+  const location = data.location || {};
+
+  // Build sparkline
+  const series = item.series || (parent && parent.series) || [];
+  const sparklineSVG = buildSparkline(series, item.then_year, item.then_price, item.now_price);
+
+  // Determine which series label to show
+  const seriesLabel = item.series
+    ? `${item.then_year}–${item.now_year}`
+    : parent
+      ? `${parent.then_year}–${item.now_year} (via ${parent.name})`
+      : '';
+
+  const thenDisplay = item.then_price < 1
+    ? (item.then_price * 100).toFixed(0) + '¢'
+    : '$' + item.then_price.toFixed(2);
+
+  const displayNowPrice = livePrice ? livePrice.price : item.now_price;
+  const nowDisplay = '$' + displayNowPrice.toFixed(2);
+  const liveMultRaw = livePrice ? (livePrice.price / item.then_price) : item.multiplier_raw;
+  const liveMult = liveMultRaw >= 10 ? `${Math.round(liveMultRaw)}×` : `${liveMultRaw.toFixed(1)}×`;
+
+  const cpiMult = 34;
+  const cityLabel = location.city ? `${location.city}${location.region ? ', ' + location.region : ''}` : null;
+
+  // Save to history
+  addToHistory({
+    upc: data.upc,
+    product_name: data.product_name,
+    item_name: item.name,
+    multiplier: livePrice ? liveMult : item.multiplier,
+    category: item.category,
+    scanned_at: new Date().toISOString(),
+    live_price: livePrice ? livePrice.price : null,
+    city: cityLabel,
+  });
+
+  // Live price block HTML
+  const livePriceHTML = livePrice ? `
+    <div class="live-price-row">
+      <span class="live-price-badge">LIVE</span>
+      <span class="live-price-val">$${livePrice.price.toFixed(2)}</span>
+      <span class="live-price-src">${livePrice.retailer}${cityLabel ? ' · ' + cityLabel : ''}</span>
+      ${livePrice.sale_price ? `<span class="live-sale">Sale: $${livePrice.sale_price.toFixed(2)}</span>` : ''}
+    </div>` : `
+    <div class="live-price-row manual">
+      <span class="live-price-src">See the shelf price?</span>
+      <button class="enter-price-btn" onclick="togglePriceEntry('${item.id}')">Enter price →</button>
+    </div>`;
+
+  // Manual price entry form (hidden by default)
+  const priceEntryHTML = `
+    <div id="price-entry-form" style="display:none;margin-top:8px;padding:10px;background:rgba(154,125,46,.08);border-radius:8px;border:1px solid rgba(154,125,46,.25)">
+      <div style="font-size:.78rem;color:var(--muted);margin-bottom:6px">What's the price on the shelf? (optional — helps track regional inflation)</div>
+      <div style="display:flex;gap:8px;align-items:center">
+        <span style="color:var(--gold);font-weight:700">$</span>
+        <input id="price-input" type="number" min="0.01" max="9999" step="0.01" placeholder="0.00"
+          style="background:#1a1510;border:1px solid var(--gold);color:#f4ecd8;border-radius:6px;padding:6px 10px;font-size:1rem;width:100px;font-family:Georgia,serif">
+        <button onclick="submitPrice('${item.id}')" style="background:var(--gold);color:#1a1306;border:none;border-radius:6px;padding:7px 14px;font-weight:700;font-size:.85rem;cursor:pointer">Submit</button>
+      </div>
+      <div id="price-submit-msg" style="font-size:.75rem;color:var(--gold);margin-top:6px;display:none"></div>
+    </div>`;
+
+  inner.innerHTML = `
+    <div class="result-card">
+      <div class="result-product">
+        ${data.brand ? `<div class="product-brand">${data.brand}</div>` : ''}
+        <div class="product-name">${data.product_name}</div>
+        <div class="product-upc">UPC: ${data.upc}</div>
+      </div>
+      <div class="result-match">
+        <div class="match-label">1913 Index match</div>
+        <div class="match-item-name">${item.name}</div>
+
+        ${livePriceHTML}
+        ${priceEntryHTML}
+
+        <div class="price-row">
+          <span class="price-then">${thenDisplay} in ${item.then_year}</span>
+          <span class="price-arrow">→</span>
+          <span class="price-now">${nowDisplay}</span>
+          <span class="price-unit">${item.unit_display}</span>
+        </div>
+
+        <div class="multiplier-badge">
+          ↑ ${livePrice ? liveMult : item.multiplier} since ${item.then_year}
+          ${item.then_year <= 1913 ? ` &nbsp;·&nbsp; CPI says ${cpiMult}×` : ''}
+        </div>
+
+        ${series.length > 0 ? `
+        <div id="sparkline-wrap">
+          ${sparklineSVG}
+          <div class="series-label">
+            <span>${seriesLabel}</span>
+            <span>Source: ${item.source_then}</span>
+          </div>
+        </div>` : ''}
+
+        <span class="cat-tag">${item.category}</span>
+
+        ${parent ? `<div class="source-line">Historical data via: ${parent.name}</div>` : ''}
+        <div class="source-line">Tier ${item.tier} · ${livePrice ? 'Live: ' + livePrice.retailer : item.source_now}</div>
+      </div>
+    </div>
+
+    <div class="action-row">
+      <button class="action-btn confirm" onclick="confirmMapping()">✓ Correct</button>
+      <button class="action-btn fix" onclick="showSubmitForm('${data.upc}','${(data.product_name||'').replace(/'/g,"\\'")}','${item.category}')">Fix match</button>
+      <button class="action-btn" onclick="shareResult()">Share</button>
+    </div>
+    <div class="action-row">
+      <button class="action-btn" onclick="resumeScanning(); document.getElementById('result-section').classList.remove('visible')">Scan another</button>
+    </div>`;
+
+  // Store current item_id for price submission
+  window._currentItemId = item.id;
+}
+
+function buildSparkline(series, thenYear, thenPrice, nowPrice) {
+  if (!series || series.length < 2) return '';
+  const prices = series.map(p => p.price);
+  const years = series.map(p => p.year);
+  const minP = Math.min(...prices);
+  const maxP = Math.max(...prices);
+  const range = maxP - minP || 1;
+  const W = 340, H = 60, PAD = 4;
+  const x = (i) => PAD + (i / (prices.length - 1)) * (W - PAD * 2);
+  const y = (p) => H - PAD - ((p - minP) / range) * (H - PAD * 2);
+  const pts = prices.map((p, i) => `${x(i).toFixed(1)},${y(p).toFixed(1)}`).join(' ');
+  return `<svg id="sparkline" viewBox="0 0 ${W} ${H}" xmlns="http://www.w3.org/2000/svg">
+    <polyline points="${pts}" fill="none" stroke="#c9a84c" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"/>
+    <circle cx="${x(0).toFixed(1)}" cy="${y(prices[0]).toFixed(1)}" r="3" fill="#8a6f30"/>
+    <circle cx="${x(prices.length-1).toFixed(1)}" cy="${y(prices[prices.length-1]).toFixed(1)}" r="3" fill="#e53e3e"/>
+  </svg>`;
+}
+
+// ── Actions ───────────────────────────────────────────────────────────────────
+async function confirmMapping() {
+  if (!currentUPC || !currentResult) return;
+  const item = currentResult.index_item;
+  if (!item) return;
+  try {
+    await fetch(`${WORKER_URL}/submit-upc`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        upc: currentUPC,
+        product_name: currentResult.product_name,
+        suggested_category: item.category,
+        suggested_item_id: item.id,
+        notes: 'User confirmed auto-match',
+      }),
+    });
+  } catch (e) {}
+  showToast('Thanks for confirming! ✓');
+}
+
+function showSubmitForm(upc, name, category) {
+  document.getElementById('f-upc').value = upc;
+  document.getElementById('f-name').value = name || '';
+  document.getElementById('f-notes').value = '';
+  const sel = document.getElementById('f-category');
+  for (const opt of sel.options) { if (opt.value === category) { sel.value = category; break; } }
+  document.getElementById('submit-section').classList.add('visible');
+  document.getElementById('submit-section').scrollIntoView({ behavior: 'smooth' });
+}
+
+function hideSubmitForm() {
+  document.getElementById('submit-section').classList.remove('visible');
+}
+
+async function submitUPC() {
+  const upc = document.getElementById('f-upc').value.replace(/\D/g,'');
+  const name = document.getElementById('f-name').value.trim();
+  const category = document.getElementById('f-category').value;
+  const notes = document.getElementById('f-notes').value.trim();
+  if (!name) { showToast('Please enter the product name'); return; }
+  if (!category) { showToast('Please select a category'); return; }
+  showLoading('Submitting…');
+  try {
+    const resp = await fetch(`${WORKER_URL}/submit-upc`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ upc, product_name: name, suggested_category: category, notes }),
+    });
+    const data = await resp.json();
+    hideLoading();
+    if (data.success) {
+      hideSubmitForm();
+      showToast('Submitted! It will be reviewed within 48 hours.');
+    } else {
+      showToast(data.error || 'Submission failed');
+    }
+  } catch (e) {
+    hideLoading();
+    showToast('Network error — please try again');
+  }
+}
+
+function togglePriceEntry(itemId) {
+  const form = document.getElementById('price-entry-form');
+  if (form) form.style.display = form.style.display === 'none' ? 'block' : 'none';
+}
+
+async function submitPrice(itemId) {
+  const input = document.getElementById('price-input');
+  const msg = document.getElementById('price-submit-msg');
+  const price = parseFloat(input && input.value);
+  if (!price || price <= 0) { if (msg) { msg.style.display='block'; msg.textContent='Please enter a valid price.'; } return; }
+
+  try {
+    const resp = await fetch(`${WORKER_URL}/submit-price`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ item_id: itemId, price }),
+    });
+    const data = await resp.json();
+    if (msg) {
+      msg.style.display = 'block';
+      msg.textContent = data.success
+        ? `✓ Recorded $${price.toFixed(2)}${data.city ? ' in ' + data.city : ''}. Thanks!`
+        : (data.error || 'Submission failed.');
+    }
+    if (input) input.disabled = true;
+  } catch (e) {
+    if (msg) { msg.style.display='block'; msg.textContent='Network error.'; }
+  }
+}
+
+async function shareResult() {
+  if (!currentResult || !currentResult.index_item) return;
+  const item = currentResult.index_item;
+  const text = `${currentResult.product_name}: ${item.then_price < 1 ? (item.then_price*100).toFixed(0)+'¢' : '$'+item.then_price.toFixed(2)} in ${item.then_year} → $${item.now_price.toFixed(2)} today — ${item.multiplier} increase.\n\n1913 Index: the real cost of living. 1913index.com`;
+  if (navigator.share) {
+    try { await navigator.share({ text, title: '1913 Index Price History' }); } catch (e) {}
+  } else {
+    await navigator.clipboard.writeText(text);
+    showToast('Copied to clipboard!');
+  }
+}
+
+// ── History ───────────────────────────────────────────────────────────────────
+function addToHistory(entry) {
+  const history = JSON.parse(localStorage.getItem(SCAN_HISTORY_KEY) || '[]');
+  history.unshift(entry);
+  const trimmed = history.slice(0, 50);
+  localStorage.setItem(SCAN_HISTORY_KEY, JSON.stringify(trimmed));
+}
+
+function toggleHistory() {
+  historyVisible = !historyVisible;
+  const section = document.getElementById('history-section');
+  if (historyVisible) {
+    renderHistory();
+    section.classList.add('visible');
+    document.getElementById('result-section').classList.remove('visible');
+  } else {
+    section.classList.remove('visible');
+  }
+}
+
+function renderHistory() {
+  const history = JSON.parse(localStorage.getItem(SCAN_HISTORY_KEY) || '[]');
+  const list = document.getElementById('history-list');
+  if (!history.length) {
+    list.innerHTML = '<p style="color:var(--muted);font-size:.85rem">No scans yet.</p>';
+    return;
+  }
+  list.innerHTML = history.map(h => `
+    <div class="history-item" onclick="handleUPC('${h.upc}')">
+      <div style="flex:1">
+        <div class="hi-name">${h.product_name || h.item_name}</div>
+        <div class="hi-date">${new Date(h.scanned_at).toLocaleDateString()} · ${h.category || ''}</div>
+      </div>
+      <div class="hi-mult">${h.multiplier || ''}</div>
+    </div>`).join('');
+}
+
+// ── Error / loading / toast ───────────────────────────────────────────────────
+function showLoading(msg) {
+  document.getElementById('loading-msg').textContent = msg || 'Loading…';
+  document.getElementById('loading-overlay').classList.add('visible');
+}
+function hideLoading() {
+  document.getElementById('loading-overlay').classList.remove('visible');
+}
+function showError(msg) {
+  showToast(msg);
+}
+function showToast(msg, duration = 3000) {
+  const t = document.getElementById('toast');
+  t.textContent = msg;
+  t.classList.add('show');
+  setTimeout(() => t.classList.remove('show'), duration);
+}
+function setStatus(msg, type = '') {
+  const el = document.getElementById('scan-status');
+  el.textContent = msg;
+  el.className = type;
+}
+
+// ── Service worker registration ───────────────────────────────────────────────
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('sw.js').catch(() => {});
+  });
+}
+
+// ── Enter key on manual input ─────────────────────────────────────────────────
+document.getElementById('manualUPC').addEventListener('keydown', e => {
+  if (e.key === 'Enter') lookupManual();
+});
+</script>
+</body>
+</html>

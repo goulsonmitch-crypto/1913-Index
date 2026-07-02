@@ -99,7 +99,7 @@
 
   function capitalize(s) { return s.charAt(0).toUpperCase() + s.slice(1); }
   function blurb(c) {
-    return 'Real money keeps shrinking — see <a href="explore.html">how every price has moved</a> or <a href="ask.html">ask the Index yourself</a>.';
+    return 'Real money keeps shrinking — see <a href="data.html">how every price has moved</a>.';
   }
 
   window.GAME = { mount: mount };

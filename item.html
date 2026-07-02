@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<link rel="manifest" href="manifest.json">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="icon" href="assets/favicon.ico">
+<meta name="theme-color" content="#0a0a0a">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Item — The 1913 Index</title>
@@ -117,7 +121,8 @@
     provTxt+=vtxt;
   }
   document.getElementById("prov").innerHTML=provTxt;
-  var cardLink=document.getElementById("cardlink"); if(cardLink) cardLink.href="card.html?id="+encodeURIComponent(it.id);
+  // card.html (share-card generator) was removed in the 7-page rebuild; hide the link until it's rebuilt
+  var cardLink=document.getElementById("cardlink"); if(cardLink) cardLink.style.display="none";
 
   // chart
   var svg=document.getElementById("chart");

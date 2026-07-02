@@ -15,7 +15,7 @@ window.INDEX_DATA = {
     version: "v2 (full CPI-mirrored basket)",
     base_year: 1913,
     now_year: 2026,
-    last_updated: "2026-06-22",
+    last_updated: "2026-07-01",
     update_cadence: "weekly (official figures for the index; freshest daily for gold/gas counters)",
     note: "Now mirrors CPI's full 8-group structure at CPI's own weights — every category measured by real prices, with shelter replacing CPI's OER survey. The items below are illustrative showcase examples; the headline number is driven by the `categories` block."
   },
@@ -32,9 +32,9 @@ window.INDEX_DATA = {
   /* ---- Sound-money panel: the dollar measured in gold ---- */
   gold: {
     then_year: 1913, then_price: 20.67,
-    now_year: 2026,  now_price: 4201.34,
+    now_year: 2026,  now_price: 4052.20,
     source_then: "U.S. statutory gold price, $20.67/oz (in force 1913)",
-    source_now: "Spot price, June 21 2026 (market)",
+    source_now: "Spot price, June 29 2026 (market)",
     url: "https://www.kitco.com/charts/gold",
     api: "MANUAL:SPOT"
   },
@@ -46,15 +46,15 @@ window.INDEX_DATA = {
      onto overall CPI before their start year (est:true). Headline = Σ weight×mult. ---- */
   weights_note: "The 1913 Index now mirrors CPI's full 8-group structure at CPI's own relative-importance weights (BLS, Dec 2024). Every category uses its real BLS sub-index, except shelter — where we replace CPI's Owners' Equivalent Rent survey with real home prices — and transport, where we use raw (anti-hedonic) car and gas prices. New BLS categories carry their quality (hedonic) adjustments; our number is therefore conservative there.",
   categories: [
-    { name:"Shelter (real home price)", weight:35.483, mult:68.32, start:1913, est:false, proxy:false, basis:"Real median home price — replaces CPI's OER survey" },
+    { name:"Shelter (real home price)", weight:35.483, mult:68.76, start:1913, est:false, proxy:false, basis:"Real median home price — replaces CPI's OER survey" },
     { name:"Transportation", weight:16.571, mult:50.61, start:1913, est:false, proxy:false, basis:"Raw new car + gasoline (anti-hedonic)" },
-    { name:"Food & beverages", weight:14.526, mult:34.97, start:1913, est:false, proxy:false, basis:"BLS Food CPI" },
-    { name:"Medical care", weight:8.273, mult:80.50, start:1935, est:true, proxy:false, basis:"BLS Medical care CPI" },
+    { name:"Food & beverages", weight:14.526, mult:35.01, start:1913, est:false, proxy:false, basis:"BLS Food CPI" },
+    { name:"Medical care", weight:8.273, mult:80.54, start:1935, est:true, proxy:false, basis:"BLS Medical care CPI" },
     { name:"Recreation", weight:5.292, mult:23.07, start:1993, est:true, proxy:false, basis:"BLS Recreation CPI" },
-    { name:"Fuels & utilities", weight:4.312, mult:41.99, start:1952, est:true, proxy:false, basis:"BLS Fuels & utilities CPI" },
+    { name:"Fuels & utilities", weight:4.312, mult:42.12, start:1952, est:true, proxy:false, basis:"BLS Fuels & utilities CPI" },
     { name:"Household furnishings & operations", weight:4.406, mult:9.24, start:1914, est:true, proxy:true, basis:"Proxied by apparel (durable goods)" },
-    { name:"Communication", weight:3.149, mult:10.81, start:1993, est:true, proxy:false, basis:"BLS Communication CPI" },
-    { name:"Other goods & services", weight:2.925, mult:57.32, start:1967, est:true, proxy:false, basis:"BLS Other goods & services CPI" },
+    { name:"Communication", weight:3.149, mult:10.84, start:1993, est:true, proxy:false, basis:"BLS Communication CPI" },
+    { name:"Other goods & services", weight:2.925, mult:57.47, start:1967, est:true, proxy:false, basis:"BLS Other goods & services CPI" },
     { name:"Education", weight:2.583, mult:99.79, start:1977, est:true, proxy:false, basis:"BLS College tuition & fees CPI" },
     { name:"Apparel", weight:2.480, mult:9.24, start:1914, est:false, proxy:false, basis:"BLS Apparel CPI" }
   ],
@@ -84,10 +84,10 @@ window.INDEX_DATA = {
     },
     {
       id: "gas", name: "Gasoline", category: "Transportation", unit: "per gallon",
-      then_year: 1929, then_price: 0.21, now_year: 2026, now_price: 3.94,
+      then_year: 1929, then_price: 0.21, now_year: 2026, now_price: 3.86,
       confidence: "High", flag: "Earliest reliable series is 1929, not 1913.",
       source_then: "EIA/BLS earliest reliable pump price, 1929 ($0.21)",
-      source_now: "AAA national average, June 22 2026 (~$3.94)",
+      source_now: "AAA national average, June 29 2026 (~$3.86)",
       url: "https://www.eia.gov/petroleum/gasdiesel/",
       api: "EIA:GASOLINE",
       cpi_note: "Energy is real transaction data — one place CPI and reality mostly agree.",
@@ -139,14 +139,14 @@ window.INDEX_DATA = {
     },
     {
       id: "bacon", name: "Bacon", category: "Food", unit: "per pound",
-      then_year: 1913, then_price: 0.254, now_year: 2026, now_price: 6.83,
+      then_year: 1913, then_price: 0.254, now_year: 2026, now_price: 6.71,
       confidence: "High", flag: "1913 value approximate (~25¢).",
       source_then: "BLS Retail Prices, ~25.4¢/lb (1913)",
-      source_now: "BLS Average Price Data, sliced bacon, $6.83/lb (Apr 2026)",
+      source_now: "BLS Average Price Data, sliced bacon, $6.71/lb (May 2026)",
       url: "https://fred.stlouisfed.org/series/APU0000704111",
       api: "FRED:APU0000704111",
       cpi_note: "Clean BLS series.",
-      explainer: "Bacon went from about 25 cents to $6.83 a pound — roughly 27× — one of the steeper protein climbs."
+      explainer: "Bacon went from about 25 cents to $6.71 a pound — roughly 26× — one of the steeper protein climbs."
     },
     {
       id: "beef", name: "Ground beef", category: "Food", unit: "per pound",
@@ -161,14 +161,14 @@ window.INDEX_DATA = {
     },
     {
       id: "sugar", name: "Sugar", category: "Food", unit: "per pound",
-      then_year: 1913, then_price: 0.058, now_year: 2026, now_price: 1.05,
-      confidence: "High", flag: "Current value approximate (latest BLS).",
+      then_year: 1913, then_price: 0.058, now_year: 2026, now_price: 1.03,
+      confidence: "High", flag: "",
       source_then: "BLS Retail Prices, 5.8¢/lb (1913)",
-      source_now: "BLS Average Price Data, white sugar, ~$1.05/lb (2026)",
-      url: "https://www.bls.gov/cpi/factsheets/average-prices.htm",
+      source_now: "BLS Average Price Data, white sugar, $1.03/lb (May 2026, APU0000715211)",
+      url: "https://fred.stlouisfed.org/series/APU0000715211",
       api: "FRED:APU0000715211",
       cpi_note: "Clean BLS series.",
-      explainer: "Sugar went from under 6 cents to about $1.05 a pound — roughly 18×."
+      explainer: "Sugar went from under 6 cents to about $1.03 a pound — roughly 18×."
     },
     {
       id: "stamp", name: "First-class stamp", category: "Other", unit: "per stamp",

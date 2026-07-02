@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="manifest" href="manifest.json">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="icon" href="assets/favicon.ico">
+<meta name="theme-color" content="#0a0a0a">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sticker Shock — Can you guess what things used to cost?</title>
+<meta name="description" content="A daily price-guessing game. Real goods, real years, real prices — and the answer will shock you. From The 1913 Index.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Sticker Shock · The 1913 Index">
+<meta property="og:title" content="Sticker Shock — guess the price">
+<meta property="og:description" content="How much did a gallon of milk cost in 1955? A new car in 1965? Play the daily price game and find out.">
+<meta property="og:image" content="assets/og-default.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Sticker Shock — can you guess what things used to cost?">
+<meta name="twitter:description" content="Real prices. Real years. Your dollar isn't what it was.">
+<meta name="twitter:image" content="assets/og-default.png">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --bg:     #1b1610;
+    --paper:  #efe4c8;
+    --gold:   #d9a441;
+    --gold2:  #9a7d2e;
+    --red:    #b22222;
+    --green:  #4a7c3f;
+    --ink:    #2b2317;
+    --ink2:   #6b5a3a;
+    --rule:   #c3b189;
+  }
+
+  html, body {
+    height: 100%;
+    background: var(--bg);
+    color: var(--paper);
+    font-family: Georgia, serif;
+  }
+
+  /* ── HEADER ── */
+  .ss-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 20px;
+    border-bottom: 2px solid var(--gold2);
+    background: var(--bg);
+  }
+  .ss-header .brand { font-weight: 700; font-size: 1.05rem; letter-spacing: .04em; color: var(--paper); text-decoration: none; }
+  .ss-header .brand b { color: var(--gold); }
+  .ss-header .back { font-size: .8rem; color: var(--gold); text-decoration: none; opacity: .8; }
+  .ss-header .back:hover { opacity: 1; }
+  .ss-header .title { font-size: .9rem; letter-spacing: .08em; text-transform: uppercase; color: var(--gold2); }
+
+  /* ── MAIN ARENA ── */
+  .arena {
+    min-height: calc(100vh - 56px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 28px 16px 40px;
+  }
+
+  .eyebrow {
+    font-size: .68rem;
+    letter-spacing: .18em;
+    text-transform: uppercase;
+    color: var(--gold2);
+    margin-bottom: 6px;
+    text-align: center;
+  }
+
+  .tagline {
+    font-size: clamp(1.3rem, 4vw, 1.75rem);
+    font-weight: 700;
+    text-align: center;
+    color: var(--paper);
+    margin-bottom: 4px;
+    line-height: 1.2;
+  }
+
+  .tagline span { color: var(--gold); }
+
+  .sub {
+    font-size: .88rem;
+    color: var(--ink2);
+    text-align: center;
+    margin-bottom: 26px;
+    max-width: 400px;
+  }
+
+  /* ── GAME CARD ── */
+  #game { width: 100%; max-width: 520px; }
+
+  /* override game.js card styles for full dark-mode */
+  .hl { background: #231e15 !important; border-color: var(--gold) !important; }
+  .hl .btns button { background: #2e2718 !important; color: var(--paper) !important; border-color: var(--gold2) !important; }
+  .hl .btns button:hover { background: var(--gold2) !important; color: var(--bg) !important; }
+  .hl .next { background: var(--gold) !important; color: var(--bg) !important; }
+
+  /* ── FOOTER STRIP ── */
+  .ss-foot {
+    text-align: center;
+    padding: 20px 16px 32px;
+    border-top: 1px solid var(--gold2);
+    max-width: 520px;
+    margin: 0 auto;
+  }
+  .ss-foot p { font-size: .82rem; color: var(--ink2); line-height: 1.6; margin-bottom: 10px; }
+  .ss-foot .cta {
+    display: inline-block;
+    background: var(--gold2);
+    color: var(--bg);
+    font-weight: 700;
+    font-family: Georgia, serif;
+    font-size: .88rem;
+    padding: 10px 22px;
+    border-radius: 6px;
+    text-decoration: none;
+    margin: 4px 6px;
+  }
+  .ss-foot .cta:hover { background: var(--gold); }
+  .ss-foot .cta.outline { background: transparent; border: 2px solid var(--gold2); color: var(--gold); }
+  .ss-foot .cta.outline:hover { background: var(--gold2); color: var(--bg); }
+
+  /* ── STATS ROW ── */
+  .stats {
+    display: flex;
+    gap: 0;
+    border: 1px solid var(--gold2);
+    margin: 0 auto 22px;
+    max-width: 360px;
+    width: 100%;
+  }
+  .stats .s { flex: 1; text-align: center; padding: 10px 6px; }
+  .stats .s + .s { border-left: 1px solid var(--gold2); }
+  .stats .sn { font-family: "Courier New", monospace; font-weight: 700; font-size: 1.5rem; color: var(--gold); }
+  .stats .sl { font-size: .62rem; letter-spacing: .1em; text-transform: uppercase; color: var(--ink2); }
+</style>
+</head>
+<body>
+
+<header class="ss-header">
+  <a class="back" href="index.html">← 1913 Index</a>
+  <span class="title">Sticker Shock</span>
+  <a class="brand" href="index.html"><b>1913</b> INDEX</a>
+</header>
+
+<div class="arena">
+  <div class="eyebrow">The Price Game</div>
+  <h1 class="tagline">Higher or <span>Lower</span>?</h1>
+  <p class="sub">Real goods. Real years. Real prices — and the answer will shock you.</p>
+
+  <div class="stats">
+    <div class="s"><div class="sn" id="stStreak">0</div><div class="sl">Streak</div></div>
+    <div class="s"><div class="sn" id="stBest">0</div><div class="sl">Best</div></div>
+    <div class="s"><div class="sn" id="stPlayed">0</div><div class="sl">Played</div></div>
+  </div>
+
+  <div id="game"></div>
+</div>
+
+<div class="ss-foot">
+  <p>Every price is sourced and documented. 5,000+ goods tracked since 1913.</p>
+  <a class="cta" href="data.html">Browse all prices →</a>
+  <a class="cta outline" href="the-number.html">The 52× figure →</a>
+</div>
+
+<script src="game-data.js"></script>
+<script src="game.js"></script>
+<script>
+// Update stats display from localStorage
+(function(){
+  function upd(){
+    try{
+      var best=parseInt(localStorage.getItem("hl_best")||"0",10)||0;
+      var played=parseInt(localStorage.getItem("hl_played")||"0",10)||0;
+      document.getElementById("stBest").textContent=best;
+      document.getElementById("stPlayed").textContent=played;
+    }catch(e){}
+  }
+  upd();
+
+  // patch game.js to also track rounds played and update stats bar
+  var origMount=window.GAME&&window.GAME.mount;
+  window.GAME={mount:function(id){
+    origMount&&origMount(id);
+    // observe streak from DOM changes (simple polling)
+    setInterval(function(){
+      try{
+        var streakEl=document.querySelector("#game .hl .score b");
+        if(streakEl) document.getElementById("stStreak").textContent=streakEl.textContent||"0";
+      }catch(e){}
+      upd();
+    },400);
+  }};
+})();
+window.GAME.mount("game");
+
+// track rounds played
+document.addEventListener("click",function(e){
+  if(e.target&&e.target.id==="hlN"){
+    try{
+      var p=parseInt(localStorage.getItem("hl_played")||"0",10)||0;
+      localStorage.setItem("hl_played",p+1);
+    }catch(e2){}
+  }
+});
+</script>
+</body>
+</html>
