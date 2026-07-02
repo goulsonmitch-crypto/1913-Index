@@ -415,7 +415,7 @@ window.DB={
       "verified": true,
       "scannable": "reference",
       "parent_item_id": null,
-      "unit_display": "per admission",
+      "unit_display": "each",
       "upc_ids": []
     },
     {
@@ -1496,7 +1496,7 @@ window.DB={
       "verified": true,
       "scannable": "reference",
       "parent_item_id": null,
-      "unit_display": "per admission",
+      "unit_display": "each",
       "upc_ids": []
     },
     {
@@ -1795,7 +1795,7 @@ window.DB={
       "verified": true,
       "scannable": "reference",
       "parent_item_id": null,
-      "unit_display": "per admission",
+      "unit_display": "each",
       "upc_ids": []
     },
     {
@@ -10190,7 +10190,7 @@ window.DB={
       "verified": true,
       "scannable": "reference",
       "parent_item_id": null,
-      "unit_display": "per admission",
+      "unit_display": "each",
       "upc_ids": []
     },
     {
@@ -12628,7 +12628,7 @@ window.DB={
       "verified": true,
       "scannable": "reference",
       "parent_item_id": null,
-      "unit_display": "per admission",
+      "unit_display": "each",
       "upc_ids": []
     },
     {
@@ -12697,7 +12697,7 @@ window.DB={
       "verified": true,
       "scannable": "reference",
       "parent_item_id": null,
-      "unit_display": "per admission",
+      "unit_display": "per book",
       "upc_ids": []
     },
     {
@@ -13134,7 +13134,7 @@ window.DB={
       "verified": true,
       "scannable": "reference",
       "parent_item_id": null,
-      "unit_display": "per admission",
+      "unit_display": "each",
       "upc_ids": []
     },
     {
@@ -15390,7 +15390,7 @@ window.DB={
       "verified": true,
       "scannable": "reference",
       "parent_item_id": null,
-      "unit_display": "per admission",
+      "unit_display": "each",
       "upc_ids": []
     },
     {
@@ -15919,7 +15919,7 @@ window.DB={
       "verified": true,
       "scannable": "reference",
       "parent_item_id": null,
-      "unit_display": "per admission",
+      "unit_display": "each",
       "upc_ids": []
     },
     {
@@ -16356,7 +16356,7 @@ window.DB={
       "verified": true,
       "scannable": "reference",
       "parent_item_id": null,
-      "unit_display": "per admission",
+      "unit_display": "each",
       "upc_ids": []
     },
     {
@@ -16839,7 +16839,7 @@ window.DB={
       "verified": true,
       "scannable": "reference",
       "parent_item_id": null,
-      "unit_display": "per admission",
+      "unit_display": "each",
       "upc_ids": []
     },
     {
@@ -17713,7 +17713,7 @@ window.DB={
       "verified": true,
       "scannable": "reference",
       "parent_item_id": null,
-      "unit_display": "per admission",
+      "unit_display": "each",
       "upc_ids": []
     },
     {
@@ -18679,7 +18679,7 @@ window.DB={
       "verified": true,
       "scannable": "reference",
       "parent_item_id": null,
-      "unit_display": "per admission",
+      "unit_display": "each",
       "upc_ids": []
     },
     {
@@ -18748,7 +18748,7 @@ window.DB={
       "verified": true,
       "scannable": "reference",
       "parent_item_id": null,
-      "unit_display": "per admission",
+      "unit_display": "each",
       "upc_ids": []
     },
     {
@@ -18817,7 +18817,7 @@ window.DB={
       "verified": true,
       "scannable": "reference",
       "parent_item_id": null,
-      "unit_display": "per admission",
+      "unit_display": "each",
       "upc_ids": []
     },
     {
@@ -18840,7 +18840,7 @@ window.DB={
       "verified": true,
       "scannable": "reference",
       "parent_item_id": null,
-      "unit_display": "per admission",
+      "unit_display": "per book",
       "upc_ids": []
     },
     {
@@ -19116,7 +19116,7 @@ window.DB={
       "verified": true,
       "scannable": "reference",
       "parent_item_id": null,
-      "unit_display": "per admission",
+      "unit_display": "each",
       "upc_ids": []
     },
     {
@@ -19461,7 +19461,7 @@ window.DB={
       "verified": true,
       "scannable": "reference",
       "parent_item_id": null,
-      "unit_display": "per admission",
+      "unit_display": "each",
       "upc_ids": []
     },
     {
@@ -19714,7 +19714,7 @@ window.DB={
       "verified": true,
       "scannable": "reference",
       "parent_item_id": null,
-      "unit_display": "per admission",
+      "unit_display": "each",
       "upc_ids": []
     },
     {
@@ -19783,7 +19783,7 @@ window.DB={
       "verified": true,
       "scannable": "reference",
       "parent_item_id": null,
-      "unit_display": "per admission",
+      "unit_display": "each",
       "upc_ids": []
     },
     {
@@ -19829,7 +19829,7 @@ window.DB={
       "verified": true,
       "scannable": "reference",
       "parent_item_id": null,
-      "unit_display": "per admission",
+      "unit_display": "each",
       "upc_ids": []
     },
     {
@@ -20358,7 +20358,7 @@ window.DB={
       "verified": true,
       "scannable": "reference",
       "parent_item_id": null,
-      "unit_display": "per admission",
+      "unit_display": "each",
       "upc_ids": []
     },
     {
@@ -20473,7 +20473,7 @@ window.DB={
       "verified": false,
       "scannable": "reference",
       "parent_item_id": null,
-      "unit_display": "per admission",
+      "unit_display": "each",
       "upc_ids": []
     },
     {
@@ -20588,7 +20588,7 @@ window.DB={
       "verified": false,
       "scannable": "reference",
       "parent_item_id": null,
-      "unit_display": "per admission",
+      "unit_display": "each",
       "upc_ids": []
     },
     {
@@ -20611,7 +20611,7 @@ window.DB={
       "verified": false,
       "scannable": "reference",
       "parent_item_id": null,
-      "unit_display": "per admission",
+      "unit_display": "each",
       "upc_ids": []
     },
     {
@@ -20703,7 +20703,7 @@ window.DB={
       "verified": false,
       "scannable": "reference",
       "parent_item_id": null,
-      "unit_display": "per admission",
+      "unit_display": "each",
       "upc_ids": []
     },
     {
@@ -20864,7 +20864,7 @@ window.DB={
       "verified": false,
       "scannable": "reference",
       "parent_item_id": null,
-      "unit_display": "per admission",
+      "unit_display": "per book",
       "upc_ids": []
     },
     {
@@ -20887,7 +20887,7 @@ window.DB={
       "verified": false,
       "scannable": "reference",
       "parent_item_id": null,
-      "unit_display": "per admission",
+      "unit_display": "each",
       "upc_ids": []
     },
     {
@@ -20910,7 +20910,7 @@ window.DB={
       "verified": false,
       "scannable": "reference",
       "parent_item_id": null,
-      "unit_display": "per admission",
+      "unit_display": "each",
       "upc_ids": []
     },
     {
@@ -21025,7 +21025,7 @@ window.DB={
       "verified": false,
       "scannable": "reference",
       "parent_item_id": null,
-      "unit_display": "per admission",
+      "unit_display": "each",
       "upc_ids": []
     },
     {
@@ -21048,7 +21048,7 @@ window.DB={
       "verified": false,
       "scannable": "reference",
       "parent_item_id": null,
-      "unit_display": "per admission",
+      "unit_display": "each",
       "upc_ids": []
     },
     {
@@ -21071,7 +21071,7 @@ window.DB={
       "verified": false,
       "scannable": "reference",
       "parent_item_id": null,
-      "unit_display": "per admission",
+      "unit_display": "per book",
       "upc_ids": []
     },
     {
@@ -21163,7 +21163,7 @@ window.DB={
       "verified": false,
       "scannable": "reference",
       "parent_item_id": null,
-      "unit_display": "per admission",
+      "unit_display": "each",
       "upc_ids": []
     },
     {
@@ -21186,7 +21186,7 @@ window.DB={
       "verified": false,
       "scannable": "reference",
       "parent_item_id": null,
-      "unit_display": "per admission",
+      "unit_display": "each",
       "upc_ids": []
     },
     {
@@ -21232,7 +21232,7 @@ window.DB={
       "verified": false,
       "scannable": "reference",
       "parent_item_id": null,
-      "unit_display": "per admission",
+      "unit_display": "each",
       "upc_ids": []
     },
     {
@@ -21393,7 +21393,7 @@ window.DB={
       "verified": false,
       "scannable": "reference",
       "parent_item_id": null,
-      "unit_display": "per admission",
+      "unit_display": "per book",
       "upc_ids": []
     },
     {
@@ -21485,7 +21485,7 @@ window.DB={
       "verified": false,
       "scannable": "reference",
       "parent_item_id": null,
-      "unit_display": "per admission",
+      "unit_display": "each",
       "upc_ids": []
     },
     {
@@ -21508,7 +21508,7 @@ window.DB={
       "verified": false,
       "scannable": "reference",
       "parent_item_id": null,
-      "unit_display": "per admission",
+      "unit_display": "each",
       "upc_ids": []
     },
     {
@@ -21577,7 +21577,7 @@ window.DB={
       "verified": false,
       "scannable": "reference",
       "parent_item_id": null,
-      "unit_display": "per admission",
+      "unit_display": "each",
       "upc_ids": []
     },
     {
@@ -21600,7 +21600,7 @@ window.DB={
       "verified": false,
       "scannable": "reference",
       "parent_item_id": null,
-      "unit_display": "per admission",
+      "unit_display": "each",
       "upc_ids": []
     },
     {
@@ -21646,7 +21646,7 @@ window.DB={
       "verified": false,
       "scannable": "reference",
       "parent_item_id": null,
-      "unit_display": "per admission",
+      "unit_display": "each",
       "upc_ids": []
     },
     {
@@ -21669,7 +21669,7 @@ window.DB={
       "verified": false,
       "scannable": "reference",
       "parent_item_id": null,
-      "unit_display": "per admission",
+      "unit_display": "each",
       "upc_ids": []
     },
     {
@@ -21738,7 +21738,7 @@ window.DB={
       "verified": false,
       "scannable": "reference",
       "parent_item_id": null,
-      "unit_display": "per admission",
+      "unit_display": "each",
       "upc_ids": []
     },
     {
@@ -21853,7 +21853,7 @@ window.DB={
       "verified": false,
       "scannable": "reference",
       "parent_item_id": null,
-      "unit_display": "per admission",
+      "unit_display": "each",
       "upc_ids": []
     },
     {
@@ -21899,7 +21899,7 @@ window.DB={
       "verified": false,
       "scannable": "reference",
       "parent_item_id": null,
-      "unit_display": "per admission",
+      "unit_display": "each",
       "upc_ids": []
     },
     {
@@ -22313,7 +22313,7 @@ window.DB={
       "verified": false,
       "scannable": "reference",
       "parent_item_id": null,
-      "unit_display": "per admission",
+      "unit_display": "each",
       "upc_ids": []
     },
     {
@@ -22451,7 +22451,7 @@ window.DB={
       "verified": false,
       "scannable": "reference",
       "parent_item_id": null,
-      "unit_display": "per admission",
+      "unit_display": "each",
       "upc_ids": []
     },
     {
@@ -22819,7 +22819,7 @@ window.DB={
       "verified": false,
       "scannable": "reference",
       "parent_item_id": null,
-      "unit_display": "per admission",
+      "unit_display": "each",
       "upc_ids": []
     },
     {
@@ -22911,7 +22911,7 @@ window.DB={
       "verified": false,
       "scannable": "reference",
       "parent_item_id": null,
-      "unit_display": "per admission",
+      "unit_display": "each",
       "upc_ids": []
     },
     {
@@ -23026,7 +23026,7 @@ window.DB={
       "verified": false,
       "scannable": "reference",
       "parent_item_id": null,
-      "unit_display": "per admission",
+      "unit_display": "each",
       "upc_ids": []
     },
     {
@@ -23072,7 +23072,7 @@ window.DB={
       "verified": false,
       "scannable": "reference",
       "parent_item_id": null,
-      "unit_display": "per admission",
+      "unit_display": "each",
       "upc_ids": []
     },
     {
@@ -23118,7 +23118,7 @@ window.DB={
       "verified": false,
       "scannable": "reference",
       "parent_item_id": null,
-      "unit_display": "per admission",
+      "unit_display": "each",
       "upc_ids": []
     },
     {
@@ -23256,7 +23256,7 @@ window.DB={
       "verified": false,
       "scannable": "reference",
       "parent_item_id": null,
-      "unit_display": "per admission",
+      "unit_display": "each",
       "upc_ids": []
     },
     {
@@ -23325,7 +23325,7 @@ window.DB={
       "verified": false,
       "scannable": "reference",
       "parent_item_id": null,
-      "unit_display": "per admission",
+      "unit_display": "each",
       "upc_ids": []
     },
     {
@@ -23348,7 +23348,7 @@ window.DB={
       "verified": false,
       "scannable": "reference",
       "parent_item_id": null,
-      "unit_display": "per admission",
+      "unit_display": "each",
       "upc_ids": []
     },
     {
@@ -23371,7 +23371,7 @@ window.DB={
       "verified": false,
       "scannable": "reference",
       "parent_item_id": null,
-      "unit_display": "per admission",
+      "unit_display": "each",
       "upc_ids": []
     },
     {
@@ -23394,7 +23394,7 @@ window.DB={
       "verified": false,
       "scannable": "reference",
       "parent_item_id": null,
-      "unit_display": "per admission",
+      "unit_display": "each",
       "upc_ids": []
     },
     {
@@ -23486,7 +23486,7 @@ window.DB={
       "verified": false,
       "scannable": "reference",
       "parent_item_id": null,
-      "unit_display": "per admission",
+      "unit_display": "each",
       "upc_ids": []
     },
     {
@@ -23509,7 +23509,7 @@ window.DB={
       "verified": false,
       "scannable": "reference",
       "parent_item_id": null,
-      "unit_display": "per admission",
+      "unit_display": "each",
       "upc_ids": []
     },
     {
@@ -23532,7 +23532,7 @@ window.DB={
       "verified": false,
       "scannable": "reference",
       "parent_item_id": null,
-      "unit_display": "per admission",
+      "unit_display": "each",
       "upc_ids": []
     },
     {
@@ -23785,7 +23785,7 @@ window.DB={
       "verified": false,
       "scannable": "reference",
       "parent_item_id": null,
-      "unit_display": "per admission",
+      "unit_display": "each",
       "upc_ids": []
     },
     {
@@ -23969,7 +23969,7 @@ window.DB={
       "verified": false,
       "scannable": "reference",
       "parent_item_id": null,
-      "unit_display": "per admission",
+      "unit_display": "each",
       "upc_ids": []
     },
     {
@@ -23992,7 +23992,7 @@ window.DB={
       "verified": false,
       "scannable": "reference",
       "parent_item_id": null,
-      "unit_display": "per admission",
+      "unit_display": "each",
       "upc_ids": []
     },
     {
@@ -24084,7 +24084,7 @@ window.DB={
       "verified": false,
       "scannable": "reference",
       "parent_item_id": null,
-      "unit_display": "per admission",
+      "unit_display": "each",
       "upc_ids": []
     },
     {
@@ -24130,7 +24130,7 @@ window.DB={
       "verified": true,
       "scannable": "reference",
       "parent_item_id": null,
-      "unit_display": "per admission",
+      "unit_display": "each",
       "upc_ids": []
     },
     {
@@ -24245,7 +24245,7 @@ window.DB={
       "verified": false,
       "scannable": "reference",
       "parent_item_id": null,
-      "unit_display": "per admission",
+      "unit_display": "each",
       "upc_ids": []
     },
     {
@@ -24314,7 +24314,7 @@ window.DB={
       "verified": false,
       "scannable": "reference",
       "parent_item_id": null,
-      "unit_display": "per admission",
+      "unit_display": "each",
       "upc_ids": []
     },
     {
@@ -24337,7 +24337,7 @@ window.DB={
       "verified": false,
       "scannable": "reference",
       "parent_item_id": null,
-      "unit_display": "per admission",
+      "unit_display": "each",
       "upc_ids": []
     },
     {
@@ -24383,7 +24383,7 @@ window.DB={
       "verified": false,
       "scannable": "reference",
       "parent_item_id": null,
-      "unit_display": "per admission",
+      "unit_display": "each",
       "upc_ids": []
     },
     {
@@ -24429,7 +24429,7 @@ window.DB={
       "verified": false,
       "scannable": "reference",
       "parent_item_id": null,
-      "unit_display": "per admission",
+      "unit_display": "each",
       "upc_ids": []
     },
     {
@@ -24498,7 +24498,7 @@ window.DB={
       "verified": false,
       "scannable": "reference",
       "parent_item_id": null,
-      "unit_display": "per admission",
+      "unit_display": "each",
       "upc_ids": []
     },
     {
@@ -24521,7 +24521,7 @@ window.DB={
       "verified": false,
       "scannable": "reference",
       "parent_item_id": null,
-      "unit_display": "per admission",
+      "unit_display": "each",
       "upc_ids": []
     },
     {
@@ -71161,12 +71161,12 @@ window.DB={
       "game": true,
       "then_year": 1990,
       "then_price": 3,
-      "now_year": 2026,
-      "now_price": 15,
+      "now_year": 2025,
+      "now_price": 15.65,
       "tier": 2,
       "verified": true,
       "source_then": "Federal Reserve consumer surveys, early 1990s (avg monthly fee when banks began charging)",
-      "source_now": "Documented/representative price (approximate)",
+      "source_now": "Bankrate 2025 Checking Account & ATM Fee Study — avg interest-checking monthly fee",
       "why": "Checking account monthly fee — reconstructed item-level series from documented anchors.",
       "note": "Reconstructed from documented anchors; interpolated. Approximate, flagged.",
       "scannable": "no",
@@ -71182,12 +71182,12 @@ window.DB={
       "game": true,
       "then_year": 1996,
       "then_price": 1,
-      "now_year": 2026,
-      "now_price": 3.5,
+      "now_year": 2025,
+      "now_price": 4.86,
       "tier": 2,
       "verified": true,
       "source_then": "Federal Reserve / GAO reports on ATM surcharges (1996 — first year widespread surcharging allowed)",
-      "source_now": "Documented/representative price (approximate)",
+      "source_now": "Bankrate 2025 ATM Fee Study — avg total out-of-network ATM cost ($3.22 surcharge + $1.64 own-bank fee)",
       "why": "ATM fee (out-of-network) — reconstructed item-level series from documented anchors.",
       "note": "Reconstructed from documented anchors; interpolated. Approximate, flagged.",
       "scannable": "no",
@@ -71203,12 +71203,12 @@ window.DB={
       "game": true,
       "then_year": 1980,
       "then_price": 5,
-      "now_year": 2026,
-      "now_price": 25,
+      "now_year": 2025,
+      "now_price": 26.77,
       "tier": 2,
       "verified": true,
       "source_then": "Reconstructed from documented prices (anchor years: 1980, 1995, 2008, 2022, 2026)",
-      "source_now": "Documented/representative price (approximate)",
+      "source_now": "Bankrate 2025 Checking Account & ATM Fee Study — avg overdraft fee",
       "why": "Bank overdraft fee — reconstructed item-level series from documented anchors.",
       "note": "Reconstructed from documented anchors; interpolated. Approximate, flagged.",
       "scannable": "no",
@@ -71225,11 +71225,11 @@ window.DB={
       "then_year": 1980,
       "then_price": 5,
       "now_year": 2026,
-      "now_price": 30,
+      "now_price": 29,
       "tier": 2,
       "verified": true,
       "source_then": "Reconstructed from documented prices (anchor years: 1980, 1995, 2010, 2026)",
-      "source_now": "Documented/representative price (approximate)",
+      "source_now": "NerdWallet/SmartAsset 2026 — avg outgoing domestic wire fee",
       "why": "Bank wire transfer (domestic) — reconstructed item-level series from documented anchors.",
       "note": "Reconstructed from documented anchors; interpolated. Approximate, flagged.",
       "scannable": "no",
@@ -71498,11 +71498,11 @@ window.DB={
       "then_year": 1970,
       "then_price": 100,
       "now_year": 2026,
-      "now_price": 2300,
+      "now_price": 2697,
       "tier": 2,
       "verified": true,
       "source_then": "Reconstructed from documented prices (anchor years: 1970, 1980, 1990, 2000, 2010, 2020, 2026)",
-      "source_now": "Documented/representative price (approximate)",
+      "source_now": "Bankrate — avg full-coverage auto premium, national (2026)",
       "why": "Auto insurance (annual, avg driver) — reconstructed item-level series from documented anchors.",
       "note": "Reconstructed from documented anchors; interpolated. Approximate, flagged.",
       "scannable": "reference",
@@ -71519,11 +71519,11 @@ window.DB={
       "then_year": 1970,
       "then_price": 80,
       "now_year": 2026,
-      "now_price": 1200,
+      "now_price": 1176,
       "tier": 2,
       "verified": true,
       "source_then": "Reconstructed from documented prices (anchor years: 1970, 1985, 2000, 2010, 2020, 2026)",
-      "source_now": "Documented/representative price (approximate)",
+      "source_now": "ValuePenguin/CNBC — avg liability-only auto premium ($98/mo, 2026)",
       "why": "Auto insurance (liability only, avg) — reconstructed item-level series from documented anchors.",
       "note": "Reconstructed from documented anchors; interpolated. Approximate, flagged.",
       "scannable": "reference",
@@ -71540,11 +71540,11 @@ window.DB={
       "then_year": 1970,
       "then_price": 120,
       "now_year": 2026,
-      "now_price": 2600,
+      "now_price": 2697,
       "tier": 2,
       "verified": true,
       "source_then": "Reconstructed from documented prices (anchor years: 1970, 1985, 2000, 2010, 2020, 2026)",
-      "source_now": "Documented/representative price (approximate)",
+      "source_now": "Bankrate — avg full-coverage auto premium, national (2026)",
       "why": "Auto insurance (full coverage, avg) — reconstructed item-level series from documented anchors.",
       "note": "Reconstructed from documented anchors; interpolated. Approximate, flagged.",
       "scannable": "reference",
@@ -71561,11 +71561,11 @@ window.DB={
       "then_year": 1970,
       "then_price": 100,
       "now_year": 2026,
-      "now_price": 2300,
+      "now_price": 2395,
       "tier": 2,
       "verified": true,
       "source_then": "Reconstructed from documented prices (anchor years: 1970, 1985, 2000, 2010, 2020, 2026)",
-      "source_now": "Documented/representative price (approximate)",
+      "source_now": "LendingTree State of Home Insurance 2026 — national avg annual premium",
       "why": "Homeowners insurance (avg, $300k home) — reconstructed item-level series from documented anchors.",
       "note": "Reconstructed from documented anchors; interpolated. Approximate, flagged.",
       "scannable": "reference",
@@ -71603,11 +71603,11 @@ window.DB={
       "then_year": 1980,
       "then_price": 150,
       "now_year": 2026,
-      "now_price": 1200,
+      "now_price": 976,
       "tier": 2,
       "verified": true,
       "source_then": "Reconstructed from documented prices (anchor years: 1980, 1995, 2010, 2020, 2026)",
-      "source_now": "Documented/representative price (approximate)",
+      "source_now": "NerdWallet analysis of 2026 NFIP rates — national avg annual premium",
       "why": "Flood insurance (NFIP, avg) — reconstructed item-level series from documented anchors.",
       "note": "Reconstructed from documented anchors; interpolated. Approximate, flagged.",
       "scannable": "reference",
@@ -71666,11 +71666,11 @@ window.DB={
       "then_year": 1980,
       "then_price": 50,
       "now_year": 2026,
-      "now_price": 700,
+      "now_price": 625,
       "tier": 2,
       "verified": true,
       "source_then": "Reconstructed from documented prices (anchor years: 1980, 1995, 2005, 2015, 2020, 2026)",
-      "source_now": "Documented/representative price (approximate)",
+      "source_now": "KFF — 2026 avg gross benchmark silver marketplace premium, monthly (age 40)",
       "why": "Health insurance premium (individual, ACA avg) — reconstructed item-level series from documented anchors.",
       "note": "Reconstructed from documented anchors; interpolated. Approximate, flagged.",
       "scannable": "reference",
@@ -71686,12 +71686,12 @@ window.DB={
       "game": true,
       "then_year": 1999,
       "then_price": 5000,
-      "now_year": 2026,
-      "now_price": 25500,
+      "now_year": 2025,
+      "now_price": 26993,
       "tier": 2,
       "verified": true,
       "source_then": "Reconstructed from documented prices (anchor years: 1999, 2005, 2010, 2015, 2020, 2026)",
-      "source_now": "Documented/representative price (approximate)",
+      "source_now": "KFF Employer Health Benefits Survey 2025 — avg annual family premium",
       "why": "Health insurance premium (family, employer plan) — reconstructed item-level series from documented anchors.",
       "note": "Reconstructed from documented anchors; interpolated. Approximate, flagged.",
       "scannable": "reference",
@@ -71707,12 +71707,12 @@ window.DB={
       "game": true,
       "then_year": 2000,
       "then_price": 500,
-      "now_year": 2026,
-      "now_price": 2800,
+      "now_year": 2025,
+      "now_price": 1886,
       "tier": 2,
       "verified": true,
       "source_then": "Reconstructed from documented prices (anchor years: 2000, 2008, 2015, 2020, 2026)",
-      "source_now": "Documented/representative price (approximate)",
+      "source_now": "KFF Employer Health Benefits Survey 2025 — avg general annual deductible, single coverage",
       "why": "Health plan deductible (individual avg) — reconstructed item-level series from documented anchors.",
       "note": "Reconstructed from documented anchors; interpolated. Approximate, flagged.",
       "scannable": "reference",
@@ -71728,12 +71728,12 @@ window.DB={
       "game": true,
       "then_year": 1986,
       "then_price": 150,
-      "now_year": 2026,
-      "now_price": 750,
+      "now_year": 2025,
+      "now_price": 793,
       "tier": 2,
       "verified": true,
       "source_then": "Reconstructed from documented prices (anchor years: 1986, 2000, 2010, 2020, 2026)",
-      "source_now": "Documented/representative price (approximate)",
+      "source_now": "Derived: KFF 2025 single premium $9,325/12 x 1.02 admin fee",
       "why": "COBRA continuation coverage (individual) — reconstructed item-level series from documented anchors.",
       "note": "Reconstructed from documented anchors; interpolated. Approximate, flagged.",
       "scannable": "reference",
@@ -71750,11 +71750,11 @@ window.DB={
       "then_year": 1980,
       "then_price": 100,
       "now_year": 2026,
-      "now_price": 600,
+      "now_price": 501,
       "tier": 2,
       "verified": true,
       "source_then": "Reconstructed from documented prices (anchor years: 1980, 1995, 2005, 2015, 2026)",
-      "source_now": "Documented/representative price (approximate)",
+      "source_now": "MoneyGeek 2026 — avg individual DPPO $41.76/mo",
       "why": "Dental insurance (individual, annual) — reconstructed item-level series from documented anchors.",
       "note": "Reconstructed from documented anchors; interpolated. Approximate, flagged.",
       "scannable": "reference",
@@ -72025,11 +72025,11 @@ window.DB={
       "then_year": 1966,
       "then_price": 3,
       "now_year": 2026,
-      "now_price": 185,
+      "now_price": 202.9,
       "tier": 2,
       "verified": true,
       "source_then": "Reconstructed from documented prices (anchor years: 1966, 1980, 1990, 2000, 2010, 2020, 2026)",
-      "source_now": "Documented/representative price (approximate)",
+      "source_now": "CMS — 2026 standard Medicare Part B monthly premium",
       "why": "Medicare Part B premium (monthly) — reconstructed item-level series from documented anchors.",
       "note": "Reconstructed from documented anchors; interpolated. Approximate, flagged.",
       "scannable": "no",
@@ -72050,7 +72050,7 @@ window.DB={
       "tier": 2,
       "verified": true,
       "source_then": "Reconstructed from documented prices (anchor years: 2010, 2015, 2020, 2026)",
-      "source_now": "Documented/representative price (approximate)",
+      "source_now": "MedicareSupplement.com/TheBig65 2026 — avg Plan G premium at age 65",
       "why": "Medicare Supplement Plan G (monthly, age 65) — reconstructed item-level series from documented anchors.",
       "note": "Reconstructed from documented anchors; interpolated. Approximate, flagged.",
       "scannable": "reference",
@@ -72067,11 +72067,11 @@ window.DB={
       "then_year": 2006,
       "then_price": 25,
       "now_year": 2026,
-      "now_price": 55,
+      "now_price": 34.5,
       "tier": 2,
       "verified": true,
       "source_then": "Reconstructed from documented prices (anchor years: 2006, 2010, 2015, 2020, 2026)",
-      "source_now": "Documented/representative price (approximate)",
+      "source_now": "CMS — 2026 avg stand-alone Part D plan total monthly premium",
       "why": "Medicare Part D (avg monthly premium) — reconstructed item-level series from documented anchors.",
       "note": "Reconstructed from documented anchors; interpolated. Approximate, flagged.",
       "scannable": "no",

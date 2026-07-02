@@ -4,138 +4,103 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Share Card — The 1913 Index</title>
+<meta name="description" content="Shareable price-history card for any tracked item on The 1913 Index.">
+<link rel="manifest" href="manifest.json">
+<link rel="icon" href="assets/favicon.ico">
+<meta name="theme-color" content="#0a0a0a">
 <link rel="stylesheet" href="styles.css">
 <style>
-  .cardwrap{max-width:840px;margin:0 auto;padding:20px}
-  .cardframe{width:100%;border:1px solid var(--rule);border-radius:8px;overflow:hidden;box-shadow:0 6px 22px rgba(0,0,0,.12)}
-  .cardframe svg{width:100%;height:auto;display:block}
-  .controls{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin:16px 0}
-  .controls input{flex:1;min-width:200px;background:var(--paper2);border:2px solid var(--ink);color:var(--ink);padding:10px 12px;font:inherit;border-radius:5px}
-  .controls button{background:var(--gold);color:#1a1306;border:none;font-weight:700;padding:11px 18px;border-radius:6px;cursor:pointer;font:inherit}
-  .controls a.btn{background:var(--ink);color:var(--paper);text-decoration:none;padding:11px 18px;border-radius:6px;font-weight:700}
-  .hint{font-size:.84rem;color:var(--ink2)}
+  #stage{max-width:920px;margin:0 auto;padding:20px}
+  #cardwrap{border:2px solid var(--ink);box-shadow:6px 6px 0 rgba(43,35,23,.18);background:var(--paper2)}
+  canvas{width:100%;height:auto;display:block}
+  .btns{display:flex;gap:10px;margin-top:14px;flex-wrap:wrap}
+  .btns button{font:inherit;font-weight:700;background:var(--ink);color:var(--paper);border:none;padding:11px 18px;border-radius:6px;cursor:pointer}
+  .btns button.alt{background:var(--red)}
+  #msg{font-size:.85rem;color:var(--ink2);margin-top:10px;font-style:italic}
 </style>
 </head>
 <body>
+<script src="nav.js"></script>
 <header class="mast"><div class="wrap">
-  <div class="eyebrow">Shareable Card</div>
+  <div class="eyebrow">Share</div>
   <h1><a href="index.html">The 1913 Index</a></h1>
-  <div class="sub">A branded chart card for any tracked item — ready to post</div>
+  <div class="sub">Shareable price-history card</div>
 </div></header>
-<div class="crumb"><div class="wrap"><a href="index.html">← Home</a> · <a href="ask.html">Ask</a> · <a href="data.html">Data</a><span class="here">Share Card</span></div></div>
+<div class="crumb"><div class="wrap"><a href="index.html">← Home</a><a href="data.html">Explore the Data</a><span class="here">Share card</span></div></div>
 
-<section><div class="wrap">
-  <div class="cardwrap">
-    <div class="controls">
-      <input id="pick" type="text" placeholder="Type an item — e.g. milk, home, gas, college tuition" autocomplete="off">
-      <button id="make">Make card</button>
-      <a class="btn" id="dl" download="1913-index-card.png">Download PNG</a>
-    </div>
-    <div class="hint" id="hint">Tip: open any item from the <a href="data.html">data page</a> or an Ask answer — its “Share” link lands here.</div>
-    <div class="cardframe" id="frame"></div>
+<div id="stage">
+  <div id="cardwrap"><canvas id="card" width="1200" height="675"></canvas></div>
+  <div class="btns">
+    <button onclick="downloadPNG()">Download PNG</button>
+    <button class="alt" onclick="sharePNG()">Share…</button>
   </div>
-</div></section>
-
-<footer><div class="wrap">
-  <p class="disclaimer">Cards are generated from the open, sourced dataset. Every figure is reproducible. Not investment advice.</p>
-</div></footer>
+  <div id="msg">Loading item…</div>
+</div>
 
 <script src="database.js"></script>
-<script src="corpus.js"></script>
-<script src="series.js"></script>
-<script src="verification.js"></script>
 <script>
-(function(){
-  var DB=window.DB, COR=window.CORPUS||{}, VER=(window.VERIFY&&window.VERIFY.byId)||{}, NOW=2026;
-  var C={ paper:"#f4ecd8", paper2:"#efe5cb", ink:"#1c1710", ink2:"#5b4f3a", red:"#8c1c13", gold:"#9a7d2e", green:"#1f6f43", rule:"#cdbb95" };
-  function fmtD(n){ return "$"+Number(n).toLocaleString("en-US",{maximumFractionDigits:Math.abs(n)<100?2:0}); }
-  function esc(s){ return String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;"); }
+// Same shard hash as build_corpus.js / item.html — keep in sync.
+function shardOf(id){let h=0;for(let i=0;i<id.length;i++)h=(h*31+id.charCodeAt(i))>>>0;return h%64;}
+const params=new URLSearchParams(location.search);
+const itemId=params.get('id')||'gas';
+const item=(window.DB&&window.DB.items||[]).find(i=>i.id===itemId);
+const msg=document.getElementById('msg');
 
-  function findItem(qs){
-    var q=qs.toLowerCase().replace(/[^a-z0-9 ]/g," ").trim();
-    var byId=DB.items.find(function(i){return i.id===qs;}); if(byId) return byId;
-    var toks=q.split(/\s+/).filter(function(t){return t.length>2;}); if(!toks.length) return null;
-    var best=null,bs=0;
-    DB.items.forEach(function(it){var n=it.name.toLowerCase(),nt=n.split(/\s+/),s=0;
-      toks.forEach(function(t){ if(it.id===t)s+=6; else if(nt.indexOf(t)>=0)s+=3; else if(n.indexOf(t)>=0)s+=2; });
-      if(s>0){ s-=n.length*0.003; if(s>bs){bs=s;best=it;} }});
-    return bs>=2?best:null;
+function money(v){return v<1?(v*100).toFixed(0)+'¢':'$'+Number(v).toLocaleString('en-US',{maximumFractionDigits:2});}
+
+function draw(series){
+  const c=document.getElementById('card'),g=c.getContext('2d');
+  g.fillStyle='#f4ecd8';g.fillRect(0,0,1200,675);
+  g.fillStyle='#2b2317';g.fillRect(0,0,1200,10);g.fillRect(0,665,1200,10);
+  g.fillStyle='#8c1c13';g.font='700 28px Georgia';g.fillText('THE 1913 INDEX — SAME GOODS, ACTUAL DOLLARS',60,72);
+  g.fillStyle='#2b2317';g.font='700 54px Georgia';
+  const name=item.name.length>38?item.name.slice(0,37)+'…':item.name;
+  g.fillText(name,60,150);
+  const mult=item.now_price/item.then_price;
+  const multTxt=mult>=10?Math.round(mult)+'×':mult.toFixed(1)+'×';
+  g.fillStyle='#8c1c13';g.font='700 150px Georgia';g.fillText(multTxt,60,320);
+  g.fillStyle='#4a3f2a';g.font='italic 30px Georgia';
+  g.fillText(money(item.then_price)+' in '+item.then_year+'  →  '+money(item.now_price)+' in '+item.now_year+(item.unit_display?'  ('+item.unit_display+')':''),60,375);
+  if(series&&series.length>2){
+    const xs=60,ys=430,W=1080,H=170;
+    const ps=series.map(p=>p.price),mn=Math.min(...ps),mx=Math.max(...ps),rg=(mx-mn)||1;
+    g.strokeStyle='#9a7d2e';g.lineWidth=4;g.beginPath();
+    series.forEach((p,i)=>{const x=xs+(i/(series.length-1))*W,y=ys+H-((p.price-mn)/rg)*H;i?g.lineTo(x,y):g.moveTo(x,y);});
+    g.stroke();
+    g.fillStyle='#8c1c13';g.beginPath();
+    const lx=xs+W,ly=ys+H-((ps[ps.length-1]-mn)/rg)*H;g.arc(lx,ly,9,0,7);g.fill();
+    g.fillStyle='#4a3f2a';g.font='22px Georgia';
+    g.fillText(String(series[0].year),xs,ys+H+34);g.fillText(String(series[series.length-1].year),xs+W-60,ys+H+34);
+  } else {
+    g.fillStyle='#4a3f2a';g.font='24px Georgia';
+    g.fillText((item.tier===3?'Estimate — pending verification. ':'')+(item.source_then||''),60,470);
   }
-  function confLabel(id){ var v=VER[id]; if(!v) return ["",""]; var m={"cross-verified":["Cross-verified",C.green],"audited-ok":["Audited",C.green],"plausible":["Plausible",C.gold],"review":["Under review",C.red],"conflict":["Conflict",C.red]}; return m[v.c]||["",C.gold]; }
+  g.fillStyle='#2b2317';g.font='700 26px Georgia';
+  g.fillText('the dollar keeps shrinking · scan any product → goulsonmitch-crypto.github.io/1913-Index',60,648);
+  msg.textContent=item.name+' — '+multTxt+' since '+item.then_year+(item.tier===3?' (flagged estimate)':'');
+}
 
-  function buildSVG(it){
-    var c=COR[it.id];
-    var mult=it.now_price/it.then_price, pct=(mult-1)*100;
-    var W=1200,H=675, pad=64;
-    var s="";
-    s+='<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 '+W+' '+H+'" font-family="Georgia, \'Times New Roman\', serif">';
-    s+='<rect width="'+W+'" height="'+H+'" fill="'+C.paper+'"/>';
-    s+='<rect x="14" y="14" width="'+(W-28)+'" height="'+(H-28)+'" fill="none" stroke="'+C.ink+'" stroke-width="3"/>';
-    // header
-    s+='<text x="'+pad+'" y="74" font-size="22" letter-spacing="5" fill="'+C.gold+'" font-weight="bold">THE 1913 INDEX</text>';
-    s+='<text x="'+pad+'" y="104" font-size="17" fill="'+C.ink2+'">What the dollar really bought — measured in real prices of real goods</text>';
-    s+='<line x1="'+pad+'" y1="124" x2="'+(W-pad)+'" y2="124" stroke="'+C.rule+'" stroke-width="2"/>';
-    // item name
-    s+='<text x="'+pad+'" y="186" font-size="48" font-weight="bold" fill="'+C.ink+'">'+esc(it.name)+(it.unit?(' <tspan font-size="24" fill="'+C.ink2+'">('+esc(it.unit)+')</tspan>'):'')+'</text>';
-    // big multiple block
-    s+='<text x="'+pad+'" y="300" font-size="120" font-weight="bold" fill="'+C.red+'" font-family="Courier New, monospace">'+mult.toFixed(1)+'×</text>';
-    s+='<text x="'+pad+'" y="346" font-size="26" fill="'+C.ink2+'">'+esc(fmtD(it.then_price))+' in '+it.then_year+'  →  '+esc(fmtD(it.now_price))+' today  ('+(pct>=0?"+":"")+Math.round(pct).toLocaleString()+'%)</text>';
-    // sparkline (right side) from corpus
-    if(c&&c.v&&c.v.length){
-      var gx0=W*0.52, gx1=W-pad, gy0=200, gy1=470;
-      var s0=c.s, e0=s0+c.v.length-1;
-      var vmin=Math.min.apply(null,c.v), vmax=Math.max.apply(null,c.v);
-      var lg=(vmin>0&&vmax/vmin>30), tv=function(v){return lg?Math.log10(v):v;}, lo=tv(vmin*0.95), hi=tv(vmax*1.05);
-      var X=function(y){return gx0+(gx1-gx0)*(y-s0)/((e0-s0)||1);}, Y=function(v){return gy1-(gy1-gy0)*(tv(v)-lo)/((hi-lo)||1);};
-      var d=c.v.map(function(v,i){return (i?"L":"M")+X(s0+i).toFixed(1)+","+Y(v).toFixed(1);}).join(" ");
-      s+='<path d="'+d+'" fill="none" stroke="'+C.red+'" stroke-width="3.5"/>';
-      if(c.real&&c.real.length){ var rp=c.real.filter(function(p){return p[1]>=vmin&&p[1]<=vmax;}); s+='<path d="'+rp.map(function(p,i){return (i?"L":"M")+X(p[0]).toFixed(1)+","+Y(p[1]).toFixed(1);}).join(" ")+'" fill="none" stroke="'+C.green+'" stroke-width="3.5"/>'; }
-      s+='<text x="'+gx0+'" y="190" font-size="14" fill="'+C.ink2+'">'+s0+'–'+NOW+(c.real?'  ·  green = real BLS data':'')+'</text>';
-    }
-    // confidence + footer
-    var cl=confLabel(it.id);
-    if(cl[0]){ s+='<circle cx="'+(pad+7)+'" cy="520" r="7" fill="'+cl[1]+'"/>'; s+='<text x="'+(pad+22)+'" y="526" font-size="18" fill="'+C.ink2+'">'+cl[0]+'</text>'; }
-    s+='<text x="'+pad+'" y="566" font-size="16" fill="'+C.ink2+'">Source: '+esc((it.source_now||"sourced")).slice(0,70)+'</text>';
-    s+='<line x1="'+pad+'" y1="596" x2="'+(W-pad)+'" y2="596" stroke="'+C.rule+'" stroke-width="2"/>';
-    s+='<text x="'+pad+'" y="634" font-size="20" font-weight="bold" fill="'+C.ink+'">The 1913 Index</text>';
-    s+='<text x="'+(W-pad)+'" y="634" font-size="16" fill="'+C.ink2+'" text-anchor="end">Open · sourced · reproducible — since the Fed was founded in 1913</text>';
-    s+='</svg>';
-    return s;
-  }
+async function blobOf(){return new Promise(r=>document.getElementById('card').toBlob(r,'image/png'));}
+async function downloadPNG(){const b=await blobOf();const a=document.createElement('a');a.href=URL.createObjectURL(b);a.download=itemId+'-1913index.png';a.click();}
+async function sharePNG(){
+  const b=await blobOf();const f=new File([b],itemId+'-1913index.png',{type:'image/png'});
+  if(navigator.share&&navigator.canShare&&navigator.canShare({files:[f]})){try{await navigator.share({files:[f],title:item.name+' — The 1913 Index'});return;}catch(e){}}
+  downloadPNG();
+}
 
-  function render(it){
-    var hint=document.getElementById("hint");
-    if(!it){ document.getElementById("frame").innerHTML=""; hint.innerHTML='No match — try an item name like <i>milk</i>, <i>home</i>, <i>gas</i>.'; document.getElementById("dl").removeAttribute("href"); return; }
-    var svg=buildSVG(it);
-    document.getElementById("frame").innerHTML=svg;
-    document.getElementById("pick").value=it.name;
-    hint.innerHTML='Card for <b>'+esc(it.name)+'</b>. Click <b>Download PNG</b> to save it, or screenshot the card.';
-    try{ history.replaceState(null,"","?id="+encodeURIComponent(it.id)); }catch(e){}
-    preparePNG(svg);
-  }
-
-  function preparePNG(svgStr){
-    var dl=document.getElementById("dl");
-    try{
-      var blob=new Blob([svgStr],{type:"image/svg+xml;charset=utf-8"}), url=URL.createObjectURL(blob);
-      var img=new Image();
-      img.onload=function(){
-        var sc=2, cv=document.createElement("canvas"); cv.width=1200*sc; cv.height=675*sc;
-        var ctx=cv.getContext("2d"); ctx.scale(sc,sc); ctx.drawImage(img,0,0,1200,675);
-        try{ dl.href=cv.toDataURL("image/png"); }catch(e){ /* tainted canvas fallback: leave SVG */ }
-        URL.revokeObjectURL(url);
-      };
-      img.onerror=function(){ URL.revokeObjectURL(url); };
-      img.src=url;
-    }catch(e){}
-  }
-
-  var pick=document.getElementById("pick");
-  document.getElementById("make").onclick=function(){ render(findItem(pick.value.trim())); };
-  pick.addEventListener("keydown",function(e){ if(e.key==="Enter") render(findItem(pick.value.trim())); });
-  var qid=new URLSearchParams(location.search).get("id");
-  render(qid? (DB.items.find(function(i){return i.id===qid;})||findItem(qid)) : findItem("milk"));
-})();
+if(!item){msg.textContent='Item not found: '+itemId;}
+else{
+  const s=document.createElement('script');
+  s.src='corpus/shard-'+shardOf(itemId)+'.js';
+  s.onload=()=>{try{
+    // Shard format: window.CORPUS[itemId] = { s: startYear, v: [annual values], real, shape, realsrc }
+    const rec=(window.CORPUS||{})[itemId];
+    const series=rec&&rec.v?rec.v.map((p,i)=>({year:rec.s+i,price:p})):null;
+    draw(series);
+  }catch(e){draw(null);}};
+  s.onerror=()=>draw(null);
+  document.head.appendChild(s);
+}
 </script>
 </body>
 </html>

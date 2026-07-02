@@ -369,6 +369,9 @@
       <div style="font-size:.72rem;color:var(--muted,#888);margin-top:6px;">Type ALL the digits printed under the bars — including the small single digits at the far left and right edges.</div>
     </div>
 
+    <!-- Session tally ("this trip") -->
+    <div id="session-tally" style="display:none;background:rgba(154,125,46,.1);border:1px solid rgba(154,125,46,.3);border-radius:10px;padding:10px 14px;margin:10px 16px"></div>
+
     <!-- Result card -->
     <div id="result-section">
       <div id="result-inner"></div>
@@ -449,6 +452,90 @@ let flashTrack = null;
 let historyVisible = false;
 
 const SCAN_HISTORY_KEY = '1913_scan_history';
+
+// ── Baseline year (the "since a year YOU remember" feature) ──────────────────
+const BASELINE_KEY = '1913_baseline_year';
+const BASELINE_CHOICES = [2020, 2015, 2010, 2000, 1990, 1980, 1971, 1913];
+function getBaseline() { return parseInt(localStorage.getItem(BASELINE_KEY) || '2020', 10); }
+function setBaselineYear(y) {
+  localStorage.setItem(BASELINE_KEY, String(y));
+  if (window._lastScanData) renderResult(window._lastScanData); // re-render live
+  renderTally();
+}
+// price at (or nearest before) a given year from a [{year,price}] series
+function priceAtYear(series, year) {
+  if (!series || !series.length) return null;
+  let best = null;
+  for (const p of series) { if (p.year <= year) best = p; else break; }
+  return best; // null if baseline predates the series entirely
+}
+function pctFmt(p) { return (p >= 0 ? '+' : '') + Math.round(p) + '%'; }
+
+// ── Session tally (the "rage walk") ──────────────────────────────────────────
+const SESSION_KEY = '1913_session';
+const SESSION_GAP_MS = 3 * 3600 * 1000; // 3h of silence = new trip
+function getSession() {
+  let s = null;
+  try { s = JSON.parse(localStorage.getItem(SESSION_KEY) || 'null'); } catch (e) {}
+  if (!s || (Date.now() - (s.last || 0)) > SESSION_GAP_MS) s = { started: Date.now(), last: Date.now(), scans: [] };
+  return s;
+}
+function addToSession(name, pctSinceBaseline, mult) {
+  const s = getSession();
+  if (s.scans.some(x => x.name === name)) { s.last = Date.now(); localStorage.setItem(SESSION_KEY, JSON.stringify(s)); return; }
+  s.scans.push({ name: name.slice(0, 60), pct: pctSinceBaseline, mult: mult || null });
+  s.last = Date.now();
+  localStorage.setItem(SESSION_KEY, JSON.stringify(s.scans.length > 40 ? { ...s, scans: s.scans.slice(-40) } : s));
+  renderTally();
+}
+function clearSession() { localStorage.removeItem(SESSION_KEY); renderTally(); }
+function renderTally() {
+  const el = document.getElementById('session-tally');
+  if (!el) return;
+  const s = getSession();
+  const withPct = s.scans.filter(x => typeof x.pct === 'number');
+  if (s.scans.length < 2) { el.style.display = 'none'; return; }
+  const avg = withPct.length ? withPct.reduce((a, x) => a + x.pct, 0) / withPct.length : null;
+  el.style.display = 'block';
+  el.innerHTML =
+    '<div style="display:flex;align-items:center;justify-content:space-between;gap:8px;flex-wrap:wrap">' +
+      '<div><span style="font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)">This trip</span><br>' +
+      '<b style="font-size:1.05rem">' + s.scans.length + ' items' +
+      (avg !== null ? ' · <span style="color:#e53e3e">' + pctFmt(avg) + '</span> avg since ' + getBaseline() : '') + '</b></div>' +
+      '<div style="display:flex;gap:6px">' +
+        '<button class="action-btn" style="padding:7px 12px;font-size:.78rem" onclick="shareTrip()">Share trip</button>' +
+        '<button class="action-btn" style="padding:7px 12px;font-size:.78rem" onclick="clearSession()">Reset</button>' +
+      '</div></div>';
+}
+// Shareable trip summary card (canvas → Web Share API, falls back to download)
+async function shareTrip() {
+  const s = getSession();
+  const withPct = s.scans.filter(x => typeof x.pct === 'number');
+  const avg = withPct.length ? withPct.reduce((a, x) => a + x.pct, 0) / withPct.length : null;
+  const base = getBaseline();
+  const c = document.createElement('canvas'); c.width = 1200; c.height = 675;
+  const g = c.getContext('2d');
+  g.fillStyle = '#f4ecd8'; g.fillRect(0, 0, 1200, 675);
+  g.fillStyle = '#2b2317'; g.fillRect(0, 0, 1200, 8); g.fillRect(0, 667, 1200, 8);
+  g.fillStyle = '#8c1c13'; g.font = '700 30px Georgia'; g.fillText('MY SHOPPING TRIP — THE 1913 INDEX', 60, 80);
+  g.fillStyle = '#2b2317'; g.font = '700 92px Georgia';
+  g.fillText(avg !== null ? pctFmt(avg) + ' since ' + base : s.scans.length + ' items scanned', 60, 190);
+  g.font = 'italic 26px Georgia'; g.fillStyle = '#4a3f2a';
+  g.fillText('average price increase across ' + s.scans.length + ' real products I scanned today', 60, 235);
+  g.font = '24px Georgia'; g.fillStyle = '#2b2317';
+  s.scans.slice(0, 8).forEach((x, i) => {
+    g.fillText('· ' + x.name + (typeof x.pct === 'number' ? '  —  ' + pctFmt(x.pct) : ''), 60, 300 + i * 38);
+  });
+  if (s.scans.length > 8) { g.fillStyle = '#4a3f2a'; g.fillText('…and ' + (s.scans.length - 8) + ' more', 60, 300 + 8 * 38); }
+  g.fillStyle = '#8c1c13'; g.font = '700 26px Georgia';
+  g.fillText('Scan yours → the1913index · same goods, actual dollars', 60, 640);
+  const blob = await new Promise(r => c.toBlob(r, 'image/png'));
+  const file = new File([blob], 'my-trip-1913index.png', { type: 'image/png' });
+  if (navigator.share && navigator.canShare && navigator.canShare({ files: [file] })) {
+    try { await navigator.share({ files: [file], title: 'My shopping trip vs ' + base }); return; } catch (e) {}
+  }
+  const a = document.createElement('a'); a.href = URL.createObjectURL(blob); a.download = file.name; a.click();
+}
 
 // ── Camera ───────────────────────────────────────────────────────────────────
 async function startCamera() {
@@ -711,6 +798,8 @@ function renderResult(data) {
     return;
   }
 
+  window._lastScanData = data; // enables live re-render when baseline changes
+
   const item = data.index_item;
   const parent = data.parent_item;
   const livePrice = data.live_price || null;
@@ -739,6 +828,31 @@ function renderResult(data) {
   const cpiMult = 34;
   const cityLabel = location.city ? `${location.city}${location.region ? ', ' + location.region : ''}` : null;
 
+  // ── Baseline verdict ("since a year you remember") ──────────────────────────
+  const baseline = getBaseline();
+  const basePoint = priceAtYear(series, baseline);
+  let baselinePct = null;
+  if (basePoint && basePoint.price > 0) baselinePct = (displayNowPrice / basePoint.price - 1) * 100;
+  else if (!series.length && item.then_year >= baseline) baselinePct = (displayNowPrice / item.then_price - 1) * 100;
+
+  const baselineSelect = '<select onchange="setBaselineYear(this.value)" style="background:#1a1510;border:1px solid rgba(154,125,46,.4);color:var(--gold);border-radius:6px;padding:2px 6px;font-size:.8rem;font-family:inherit">' +
+    BASELINE_CHOICES.map(y => `<option value="${y}" ${y === baseline ? 'selected' : ''}>since ${y}</option>`).join('') + '</select>';
+
+  const baselineHTML = baselinePct !== null ? `
+    <div style="background:rgba(140,28,19,.12);border:1px solid rgba(229,62,62,.35);border-radius:10px;padding:12px 14px;margin:10px 0">
+      <div style="display:flex;align-items:baseline;justify-content:space-between;gap:8px;flex-wrap:wrap">
+        <span style="font-size:1.7rem;font-weight:700;color:#e53e3e">${pctFmt(baselinePct)}</span>
+        ${baselineSelect}
+      </div>
+      <div style="font-size:.82rem;color:var(--muted);margin-top:4px">
+        ${basePoint ? '$' + basePoint.price.toFixed(2) + ' in ' + basePoint.year : thenDisplay + ' in ' + item.then_year} → ${nowDisplay} today
+      </div>
+    </div>` : `
+    <div style="border:1px solid rgba(154,125,46,.25);border-radius:10px;padding:10px 14px;margin:10px 0;display:flex;justify-content:space-between;align-items:center;gap:8px">
+      <span style="font-size:.8rem;color:var(--muted)">No annual data back to ${baseline} for this item yet</span>
+      ${baselineSelect}
+    </div>`;
+
   // Save to history
   addToHistory({
     upc: data.upc,
@@ -750,6 +864,9 @@ function renderResult(data) {
     live_price: livePrice ? livePrice.price : null,
     city: cityLabel,
   });
+
+  // Feed the trip tally
+  addToSession(item.name, baselinePct, livePrice ? liveMult : item.multiplier);
 
   // Live price block HTML
   const livePriceHTML = livePrice ? `
@@ -788,10 +905,11 @@ function renderResult(data) {
         <div class="match-label">1913 Index match</div>
         <div class="match-item-name">${item.name}</div>
 
+        ${baselineHTML}
         ${livePriceHTML}
         ${priceEntryHTML}
 
-        <div class="price-row">
+        <div class="price-row" style="margin-top:12px">
           <span class="price-then">${thenDisplay} in ${item.then_year}</span>
           <span class="price-arrow">→</span>
           <span class="price-now">${nowDisplay}</span>
@@ -1019,6 +1137,7 @@ function setStatus(msg, type = '') {
 if ('serviceWorker' in navigator) {
   window.addEventListener('load', () => {
     navigator.serviceWorker.register('sw.js').catch(() => {});
+  renderTally();
   });
 }
 

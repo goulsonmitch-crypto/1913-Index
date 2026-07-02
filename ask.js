@@ -243,7 +243,7 @@
       '<p>That is <b>' + mult.toFixed(1) + '×</b> (' + fmtPct(pct) + ')' + (rate !== null ? ', about <b>' + rate.toFixed(1) + '%</b> per year' : '') + '.</p>' +
       '<p class="asrc">' + confChip(it.id) + '</p>' +
       '<p class="asrc">' + startY + ' value: ' + startKind + '. ' + NOW + ': ' + (it.source_now || 'sourced') + '.' + realNote +
-      ' <a href="item.html?id=' + encodeURIComponent(it.id) + '">Full record &amp; chart &rarr;</a></p></div>';
+      ' <a href="item.html?id=' + encodeURIComponent(it.id) + '">Full record &amp; chart &rarr;</a> · <a href="card.html?id=' + encodeURIComponent(it.id) + '">Share card &rarr;</a></p></div>';
     var text = it.name + ": " + fmtD(sv.val) + " (" + startY + ") -> " + fmtD(nowv) + " (" + NOW + "), " + mult.toFixed(1) + "x";
     return { ok: true, kind: "item", html: html, text: text };
   }

@@ -8,8 +8,8 @@
  *   - External UPC APIs: Network-only
  */
 
-const CACHE_NAME = '1913-index-v3';
-const DATA_CACHE = '1913-data-v3';
+const CACHE_NAME = '1913-index-v4';
+const DATA_CACHE = '1913-data-v4';
 
 // RELATIVE paths — the site lives under /1913-Index/ on GitHub Pages, so
 // absolute "/scan.html" would point at the domain root (404) and break install.

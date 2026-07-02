@@ -121,8 +121,7 @@
     provTxt+=vtxt;
   }
   document.getElementById("prov").innerHTML=provTxt;
-  // card.html (share-card generator) was removed in the 7-page rebuild; hide the link until it's rebuilt
-  var cardLink=document.getElementById("cardlink"); if(cardLink) cardLink.style.display="none";
+  var cardLink=document.getElementById("cardlink"); if(cardLink){ cardLink.style.display=""; cardLink.href="card.html?id="+encodeURIComponent(it.id); }
 
   // chart
   var svg=document.getElementById("chart");
