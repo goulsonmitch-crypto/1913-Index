@@ -1,10 +1,10 @@
 window.DB={
   "meta": {
-    "last_updated": "2026-07-01",
+    "last_updated": "2026-07-02",
     "base_year": 1913,
     "now_year": 2026,
     "note": "Tier 1 is the verified, owner-approved core (objective official series: BLS, USDA, USGS, EIA, FRED, Census, USPS, Treasury). Tier 2/3 still verify over time. Only verified items feed the game & headline.",
-    "item_count": 5053
+    "item_count": 5441
   },
   "tiers": {
     "1": {
@@ -117205,6 +117205,52 @@ window.DB={
       "note": "Reconstructed from documented anchors; interpolated. Approximate.",
       "scannable": "store",
       "unit_display": "per pack",
+      "parent_item_id": null,
+      "upc_ids": []
+    },
+    {
+      "id": "creatine-500g",
+      "name": "Creatine monohydrate — 500g tub",
+      "phrase": "a 500g tub of creatine",
+      "category": "Health & OTC",
+      "unit": "500g tub",
+      "unit_display": "per 500g tub",
+      "then_year": 1996,
+      "then_price": 39.99,
+      "now_year": 2026,
+      "now_price": 27.99,
+      "tier": 3,
+      "source_then": "Estimate — mid-1990s specialty retail (creatine reached consumer market ~1993; EAS/GNC era pricing)",
+      "source_now": "Estimate (2026) — pending sourcing/verification",
+      "url": "",
+      "note": "ESTIMATE, flagged. Notable tech-deflation candidate: creatine got dramatically cheaper as production scaled.",
+      "why": "One of the most-scanned supplement products; added after a real user scan miss.",
+      "game": true,
+      "verified": false,
+      "scannable": "store",
+      "parent_item_id": null,
+      "upc_ids": []
+    },
+    {
+      "id": "preworkout-30srv",
+      "name": "Pre-workout powder — 30-serving tub",
+      "phrase": "a 30-serving tub of pre-workout",
+      "category": "Health & OTC",
+      "unit": "30-serving tub",
+      "unit_display": "per 30-serving tub",
+      "then_year": 2005,
+      "then_price": 34.99,
+      "now_year": 2026,
+      "now_price": 44.99,
+      "tier": 3,
+      "source_then": "Estimate — category emerged mid-2000s (BSN NO-Xplode 2004-05 era retail)",
+      "source_now": "Estimate (2026) — pending sourcing/verification",
+      "url": "",
+      "note": "ESTIMATE, flagged. Short history by nature — category did not exist before ~2004.",
+      "why": "High-scan-volume gym staple; complements creatine + existing protein-powder items.",
+      "game": true,
+      "verified": false,
+      "scannable": "store",
       "parent_item_id": null,
       "upc_ids": []
     }
