@@ -9,11 +9,11 @@
   "conflict"
  ],
  "counts": {
-  "plausible": 379,
+  "plausible": 380,
   "audited-ok": 3641,
   "category": 1231,
   "cross-verified": 14,
-  "review": 174
+  "review": 175
  },
  "by_id": {
   "10-year-treasury-yield": {
@@ -954,7 +954,7 @@
   "money-order-fee": {
    "c": "audited-ok",
    "r": 3.93,
-   "dev": 0,
+   "dev": 0.03,
    "f": [],
    "o": 1,
    "px": 0,
@@ -5120,7 +5120,7 @@
   "auto-insurance-yr": {
    "c": "plausible",
    "r": 3.08,
-   "dev": -1.08,
+   "dev": -1.1,
    "f": [],
    "o": 0,
    "px": 0,
@@ -5599,7 +5599,7 @@
   "homeowners-insurance-yr": {
    "c": "plausible",
    "r": 5.3,
-   "dev": 1.14,
+   "dev": 1.11,
    "f": [],
    "o": 0,
    "px": 0,
@@ -6948,7 +6948,7 @@
   "life-insurance-20-yr-term-yr": {
    "c": "review",
    "r": -0.92,
-   "dev": -5.08,
+   "dev": -5.11,
    "f": [
     "category-outlier"
    ],
@@ -7312,7 +7312,7 @@
   "overdraft-fee": {
    "c": "plausible",
    "r": 1.3,
-   "dev": -2.62,
+   "dev": -2.59,
    "f": [],
    "o": 0,
    "px": 0,
@@ -7384,7 +7384,7 @@
   "renters-insurance-yr": {
    "c": "plausible",
    "r": 1.11,
-   "dev": -3.05,
+   "dev": -3.07,
    "f": [],
    "o": 0,
    "px": 0,
@@ -7501,7 +7501,7 @@
   "assisted-living-per-month": {
    "c": "plausible",
    "r": 3.56,
-   "dev": -0.02,
+   "dev": 0,
    "f": [],
    "o": 0,
    "px": 0,
@@ -7510,7 +7510,7 @@
   "home-health-aide-per-hour": {
    "c": "plausible",
    "r": 3.35,
-   "dev": -0.24,
+   "dev": -0.22,
    "f": [],
    "o": 0,
    "px": 0,
@@ -11081,7 +11081,7 @@
   "notary-fee": {
    "c": "audited-ok",
    "r": 6.06,
-   "dev": 2.14,
+   "dev": 2.17,
    "f": [],
    "o": 1,
    "px": 0,
@@ -12899,7 +12899,7 @@
   "atm-fee": {
    "c": "category",
    "r": 4.21,
-   "dev": 0.29,
+   "dev": 0.32,
    "f": [],
    "o": 1,
    "px": 1,
@@ -12908,7 +12908,7 @@
   "wire-transfer": {
    "c": "category",
    "r": 4.21,
-   "dev": 0.28,
+   "dev": 0.31,
    "f": [],
    "o": 1,
    "px": 1,
@@ -12917,7 +12917,7 @@
   "check-cashing": {
    "c": "category",
    "r": 4.21,
-   "dev": 0.28,
+   "dev": 0.31,
    "f": [],
    "o": 1,
    "px": 1,
@@ -12989,7 +12989,7 @@
   "nursing-home-month": {
    "c": "category",
    "r": 4.57,
-   "dev": 0.98,
+   "dev": 1.01,
    "f": [],
    "o": 1,
    "px": 1,
@@ -12998,7 +12998,7 @@
   "assisted-living-month": {
    "c": "category",
    "r": 4.57,
-   "dev": 0.98,
+   "dev": 1.01,
    "f": [],
    "o": 1,
    "px": 1,
@@ -13007,7 +13007,7 @@
   "home-health-aide": {
    "c": "audited-ok",
    "r": 4.32,
-   "dev": 0.73,
+   "dev": 0.76,
    "f": [],
    "o": 1,
    "px": 0,
@@ -13964,7 +13964,7 @@
   "renters-insurance": {
    "c": "category",
    "r": 4.21,
-   "dev": 0.05,
+   "dev": 0.03,
    "f": [],
    "o": 1,
    "px": 1,
@@ -13973,7 +13973,7 @@
   "term-life": {
    "c": "category",
    "r": 4.21,
-   "dev": 0.06,
+   "dev": 0.03,
    "f": [],
    "o": 1,
    "px": 1,
@@ -13982,7 +13982,7 @@
   "auto-insurance": {
    "c": "category",
    "r": 4.21,
-   "dev": 0.05,
+   "dev": 0.03,
    "f": [],
    "o": 1,
    "px": 1,
@@ -13991,7 +13991,7 @@
   "homeowners-insurance": {
    "c": "category",
    "r": 4.21,
-   "dev": 0.05,
+   "dev": 0.03,
    "f": [],
    "o": 1,
    "px": 1,
@@ -14000,7 +14000,7 @@
   "travel-insurance": {
    "c": "category",
    "r": 4.21,
-   "dev": 0.05,
+   "dev": 0.03,
    "f": [],
    "o": 1,
    "px": 1,
@@ -14009,7 +14009,7 @@
   "umbrella-policy": {
    "c": "category",
    "r": 4.21,
-   "dev": 0.05,
+   "dev": 0.03,
    "f": [],
    "o": 1,
    "px": 1,
@@ -14963,7 +14963,7 @@
   "safe-deposit-box": {
    "c": "category",
    "r": 4.21,
-   "dev": 0.28,
+   "dev": 0.31,
    "f": [],
    "o": 1,
    "px": 1,
@@ -18490,7 +18490,7 @@
   "money-order": {
    "c": "audited-ok",
    "r": 4.23,
-   "dev": 0.3,
+   "dev": 0.33,
    "f": [],
    "o": 1,
    "px": 0,
@@ -20954,7 +20954,7 @@
   "bank-checking-fee": {
    "c": "audited-ok",
    "r": 3.1,
-   "dev": -0.83,
+   "dev": -0.8,
    "f": [],
    "o": 1,
    "px": 0,
@@ -20974,7 +20974,7 @@
   "atm-fee2": {
    "c": "audited-ok",
    "r": 5.51,
-   "dev": 1.59,
+   "dev": 1.62,
    "f": [],
    "o": 1,
    "px": 0,
@@ -20983,7 +20983,7 @@
   "wire-fee": {
    "c": "audited-ok",
    "r": 1.94,
-   "dev": -1.98,
+   "dev": -1.95,
    "f": [],
    "o": 1,
    "px": 0,
@@ -20992,7 +20992,7 @@
   "safe-deposit": {
    "c": "audited-ok",
    "r": 3.06,
-   "dev": -0.87,
+   "dev": -0.84,
    "f": [],
    "o": 1,
    "px": 0,
@@ -21273,7 +21273,7 @@
   "nursing-home-day": {
    "c": "audited-ok",
    "r": 3.73,
-   "dev": 0.15,
+   "dev": 0.17,
    "f": [],
    "o": 1,
    "px": 0,
@@ -24252,7 +24252,7 @@
   "health-premium-family": {
    "c": "audited-ok",
    "r": 5.27,
-   "dev": 1.11,
+   "dev": 1.09,
    "f": [],
    "o": 1,
    "px": 0,
@@ -24261,7 +24261,7 @@
   "medicare-supplement": {
    "c": "audited-ok",
    "r": 3.08,
-   "dev": -1.08,
+   "dev": -1.1,
    "f": [],
    "o": 1,
    "px": 0,
@@ -24270,7 +24270,7 @@
   "life-insurance-whole": {
    "c": "audited-ok",
    "r": 2.69,
-   "dev": -1.47,
+   "dev": -1.49,
    "f": [],
    "o": 1,
    "px": 0,
@@ -24279,7 +24279,7 @@
   "disability-insurance": {
    "c": "audited-ok",
    "r": 2.7,
-   "dev": -1.46,
+   "dev": -1.48,
    "f": [],
    "o": 1,
    "px": 0,
@@ -24288,7 +24288,7 @@
   "dental-insurance": {
    "c": "audited-ok",
    "r": 2.7,
-   "dev": -1.46,
+   "dev": -1.48,
    "f": [],
    "o": 1,
    "px": 0,
@@ -24297,7 +24297,7 @@
   "pet-insurance-dog": {
    "c": "audited-ok",
    "r": 3.86,
-   "dev": -0.3,
+   "dev": -0.32,
    "f": [],
    "o": 1,
    "px": 0,
@@ -24306,7 +24306,7 @@
   "flood-insurance": {
    "c": "audited-ok",
    "r": 3.59,
-   "dev": -0.57,
+   "dev": -0.6,
    "f": [],
    "o": 1,
    "px": 0,
@@ -24315,7 +24315,7 @@
   "financial-planner": {
    "c": "audited-ok",
    "r": 3.1,
-   "dev": -0.83,
+   "dev": -0.8,
    "f": [],
    "o": 1,
    "px": 0,
@@ -24324,7 +24324,7 @@
   "mortgage-origination": {
    "c": "audited-ok",
    "r": 3.54,
-   "dev": -0.38,
+   "dev": -0.35,
    "f": [],
    "o": 1,
    "px": 0,
@@ -24333,7 +24333,7 @@
   "credit-card-annual": {
    "c": "audited-ok",
    "r": 4.42,
-   "dev": 0.5,
+   "dev": 0.53,
    "f": [],
    "o": 1,
    "px": 0,
@@ -24342,7 +24342,7 @@
   "late-payment-fee": {
    "c": "audited-ok",
    "r": 3.21,
-   "dev": -0.71,
+   "dev": -0.68,
    "f": [],
    "o": 1,
    "px": 0,
@@ -24351,7 +24351,7 @@
   "tax-software": {
    "c": "audited-ok",
    "r": 4.32,
-   "dev": 0.39,
+   "dev": 0.42,
    "f": [],
    "o": 1,
    "px": 0,
@@ -24360,7 +24360,7 @@
   "assisted-living-month2": {
    "c": "audited-ok",
    "r": 3.26,
-   "dev": -0.33,
+   "dev": -0.31,
    "f": [],
    "o": 1,
    "px": 0,
@@ -24369,7 +24369,7 @@
   "memory-care-month": {
    "c": "audited-ok",
    "r": 2.7,
-   "dev": -0.89,
+   "dev": -0.86,
    "f": [],
    "o": 1,
    "px": 0,
@@ -24378,7 +24378,7 @@
   "home-aide-day": {
    "c": "audited-ok",
    "r": 3.31,
-   "dev": -0.27,
+   "dev": -0.25,
    "f": [],
    "o": 1,
    "px": 0,
@@ -24387,7 +24387,7 @@
   "hospice-day": {
    "c": "audited-ok",
    "r": 2.14,
-   "dev": -1.45,
+   "dev": -1.42,
    "f": [],
    "o": 1,
    "px": 0,
@@ -24396,7 +24396,7 @@
   "medical-alert": {
    "c": "audited-ok",
    "r": 2.46,
-   "dev": -1.12,
+   "dev": -1.1,
    "f": [],
    "o": 1,
    "px": 0,
@@ -29552,8 +29552,8 @@
   },
   "bank-checking-monthly": {
    "c": "audited-ok",
-   "r": 4.57,
-   "dev": 0.65,
+   "r": 4.83,
+   "dev": 0.94,
    "f": [],
    "o": 1,
    "px": 0,
@@ -29561,8 +29561,8 @@
   },
   "bank-atm-fee-oob": {
    "c": "audited-ok",
-   "r": 4.26,
-   "dev": 0.34,
+   "r": 5.6,
+   "dev": 1.71,
    "f": [],
    "o": 1,
    "px": 0,
@@ -29570,8 +29570,8 @@
   },
   "bank-overdraft-fee": {
    "c": "audited-ok",
-   "r": 3.56,
-   "dev": -0.37,
+   "r": 3.8,
+   "dev": -0.1,
    "f": [],
    "o": 1,
    "px": 0,
@@ -29579,8 +29579,8 @@
   },
   "bank-wire-transfer-domestic": {
    "c": "audited-ok",
-   "r": 3.97,
-   "dev": 0.05,
+   "r": 3.9,
+   "dev": 0,
    "f": [],
    "o": 1,
    "px": 0,
@@ -29589,7 +29589,7 @@
   "bank-wire-transfer-intl": {
    "c": "audited-ok",
    "r": 3.56,
-   "dev": -0.37,
+   "dev": -0.33,
    "f": [],
    "o": 1,
    "px": 0,
@@ -29598,7 +29598,7 @@
   "safe-deposit-box-sm": {
    "c": "audited-ok",
    "r": 4.29,
-   "dev": 0.36,
+   "dev": 0.39,
    "f": [],
    "o": 1,
    "px": 0,
@@ -29607,7 +29607,7 @@
   "cashiers-check": {
    "c": "audited-ok",
    "r": 3.56,
-   "dev": -0.37,
+   "dev": -0.33,
    "f": [],
    "o": 1,
    "px": 0,
@@ -29616,7 +29616,7 @@
   "cc-annual-fee-rewards": {
    "c": "audited-ok",
    "r": 3.45,
-   "dev": -0.48,
+   "dev": -0.45,
    "f": [],
    "o": 1,
    "px": 0,
@@ -29625,7 +29625,7 @@
   "cc-annual-fee-premium": {
    "c": "audited-ok",
    "r": 6.38,
-   "dev": 2.45,
+   "dev": 2.48,
    "f": [],
    "o": 1,
    "px": 0,
@@ -29634,7 +29634,7 @@
   "cc-apr-avg": {
    "c": "audited-ok",
    "r": 0.49,
-   "dev": -3.44,
+   "dev": -3.4,
    "f": [],
    "o": 1,
    "px": 0,
@@ -29643,7 +29643,7 @@
   "cc-late-payment-fee": {
    "c": "audited-ok",
    "r": 4.12,
-   "dev": 0.19,
+   "dev": 0.22,
    "f": [],
    "o": 1,
    "px": 0,
@@ -29652,7 +29652,7 @@
   "cc-foreign-transaction-fee": {
    "c": "audited-ok",
    "r": 3.1,
-   "dev": -0.83,
+   "dev": -0.8,
    "f": [],
    "o": 1,
    "px": 0,
@@ -29661,7 +29661,7 @@
   "mortgage-origination-fee": {
    "c": "audited-ok",
    "r": 0,
-   "dev": -3.93,
+   "dev": -3.9,
    "f": [],
    "o": 1,
    "px": 0,
@@ -29670,7 +29670,7 @@
   "mortgage-closing-costs": {
    "c": "audited-ok",
    "r": 4.15,
-   "dev": 0.23,
+   "dev": 0.26,
    "f": [],
    "o": 1,
    "px": 0,
@@ -29679,7 +29679,7 @@
   "mortgage-appraisal": {
    "c": "audited-ok",
    "r": 3.74,
-   "dev": -0.19,
+   "dev": -0.16,
    "f": [],
    "o": 1,
    "px": 0,
@@ -29688,7 +29688,7 @@
   "title-insurance-avg": {
    "c": "audited-ok",
    "r": 5.21,
-   "dev": 1.28,
+   "dev": 1.31,
    "f": [],
    "o": 1,
    "px": 0,
@@ -29696,8 +29696,8 @@
   },
   "auto-insurance-annual-avg": {
    "c": "audited-ok",
-   "r": 5.76,
-   "dev": 1.6,
+   "r": 6.06,
+   "dev": 1.88,
    "f": [],
    "o": 1,
    "px": 0,
@@ -29705,8 +29705,8 @@
   },
   "auto-insurance-liability-only": {
    "c": "audited-ok",
-   "r": 4.95,
-   "dev": 0.8,
+   "r": 4.92,
+   "dev": 0.73,
    "f": [],
    "o": 1,
    "px": 0,
@@ -29714,8 +29714,8 @@
   },
   "auto-insurance-full-coverage": {
    "c": "audited-ok",
-   "r": 5.65,
-   "dev": 1.49,
+   "r": 5.72,
+   "dev": 1.53,
    "f": [],
    "o": 1,
    "px": 0,
@@ -29723,8 +29723,8 @@
   },
   "homeowners-insurance-avg": {
    "c": "audited-ok",
-   "r": 5.76,
-   "dev": 1.6,
+   "r": 5.84,
+   "dev": 1.65,
    "f": [],
    "o": 1,
    "px": 0,
@@ -29733,7 +29733,7 @@
   "renters-insurance-avg": {
    "c": "audited-ok",
    "r": 3.65,
-   "dev": -0.51,
+   "dev": -0.53,
    "f": [],
    "o": 1,
    "px": 0,
@@ -29741,8 +29741,8 @@
   },
   "flood-insurance-avg": {
    "c": "audited-ok",
-   "r": 4.62,
-   "dev": 0.47,
+   "r": 4.16,
+   "dev": -0.03,
    "f": [],
    "o": 1,
    "px": 0,
@@ -29751,7 +29751,7 @@
   "life-insurance-20yr-term": {
    "c": "audited-ok",
    "r": 0.55,
-   "dev": -3.61,
+   "dev": -3.64,
    "f": [],
    "o": 1,
    "px": 0,
@@ -29760,7 +29760,7 @@
   "life-insurance-whole-life": {
    "c": "audited-ok",
    "r": 3.78,
-   "dev": -0.37,
+   "dev": -0.4,
    "f": [],
    "o": 1,
    "px": 0,
@@ -29768,8 +29768,8 @@
   },
   "health-insurance-individual-avg": {
    "c": "audited-ok",
-   "r": 5.9,
-   "dev": 1.75,
+   "r": 5.64,
+   "dev": 1.46,
    "f": [],
    "o": 1,
    "px": 0,
@@ -29777,8 +29777,8 @@
   },
   "health-insurance-family-avg": {
    "c": "audited-ok",
-   "r": 6.22,
-   "dev": 2.06,
+   "r": 6.7,
+   "dev": 2.52,
    "f": [],
    "o": 1,
    "px": 0,
@@ -29786,8 +29786,8 @@
   },
   "health-deductible-individual": {
    "c": "audited-ok",
-   "r": 6.85,
-   "dev": 2.69,
+   "r": 5.45,
+   "dev": 1.27,
    "f": [],
    "o": 1,
    "px": 0,
@@ -29795,8 +29795,8 @@
   },
   "cobra-individual-monthly": {
    "c": "audited-ok",
-   "r": 4.11,
-   "dev": -0.05,
+   "r": 4.36,
+   "dev": 0.18,
    "f": [],
    "o": 1,
    "px": 0,
@@ -29804,8 +29804,8 @@
   },
   "dental-insurance-individual": {
    "c": "audited-ok",
-   "r": 3.97,
-   "dev": -0.19,
+   "r": 3.57,
+   "dev": -0.62,
    "f": [],
    "o": 1,
    "px": 0,
@@ -29814,7 +29814,7 @@
   "vision-insurance-individual": {
    "c": "audited-ok",
    "r": 3.06,
-   "dev": -1.1,
+   "dev": -1.12,
    "f": [],
    "o": 1,
    "px": 0,
@@ -29823,7 +29823,7 @@
   "401k-expense-ratio-avg": {
    "c": "review",
    "r": -3.01,
-   "dev": -6.93,
+   "dev": -6.9,
    "f": [
     "category-outlier"
    ],
@@ -29834,7 +29834,7 @@
   "financial-advisor-fee": {
    "c": "review",
    "r": -1.5,
-   "dev": -5.42,
+   "dev": -5.39,
    "f": [
     "category-outlier"
    ],
@@ -29856,7 +29856,7 @@
   "tax-prep-simple": {
    "c": "audited-ok",
    "r": 4.83,
-   "dev": 0.9,
+   "dev": 0.93,
    "f": [],
    "o": 1,
    "px": 0,
@@ -29865,7 +29865,7 @@
   "tax-prep-cpa-individual": {
    "c": "audited-ok",
    "r": 4.89,
-   "dev": 0.97,
+   "dev": 1,
    "f": [],
    "o": 1,
    "px": 0,
@@ -29874,7 +29874,7 @@
   "turbotax-deluxe": {
    "c": "audited-ok",
    "r": 2.64,
-   "dev": -1.29,
+   "dev": -1.26,
    "f": [],
    "o": 1,
    "px": 0,
@@ -29883,7 +29883,7 @@
   "nursing-home-private-room": {
    "c": "audited-ok",
    "r": 4.51,
-   "dev": 0.92,
+   "dev": 0.95,
    "f": [],
    "o": 1,
    "px": 0,
@@ -29892,7 +29892,7 @@
   "assisted-living-avg": {
    "c": "audited-ok",
    "r": 4.85,
-   "dev": 1.26,
+   "dev": 1.29,
    "f": [],
    "o": 1,
    "px": 0,
@@ -29901,7 +29901,7 @@
   "adult-day-care": {
    "c": "audited-ok",
    "r": 4.33,
-   "dev": 0.74,
+   "dev": 0.77,
    "f": [],
    "o": 1,
    "px": 0,
@@ -29910,7 +29910,7 @@
   "memory-care-monthly": {
    "c": "audited-ok",
    "r": 3.59,
-   "dev": 0,
+   "dev": 0.02,
    "f": [],
    "o": 1,
    "px": 0,
@@ -29919,7 +29919,7 @@
   "hospice-care-daily": {
    "c": "audited-ok",
    "r": 2.98,
-   "dev": -0.61,
+   "dev": -0.59,
    "f": [],
    "o": 1,
    "px": 0,
@@ -29927,8 +29927,8 @@
   },
   "medicare-part-b-premium": {
    "c": "audited-ok",
-   "r": 7.11,
-   "dev": 3.52,
+   "r": 7.28,
+   "dev": 3.71,
    "f": [],
    "o": 1,
    "px": 0,
@@ -29937,7 +29937,7 @@
   "medicare-supplement-plan-g": {
    "c": "audited-ok",
    "r": 3.86,
-   "dev": -0.3,
+   "dev": -0.32,
    "f": [],
    "o": 1,
    "px": 0,
@@ -29945,8 +29945,8 @@
   },
   "prescription-drug-plan": {
    "c": "audited-ok",
-   "r": 4.02,
-   "dev": 0.43,
+   "r": 1.62,
+   "dev": -1.94,
    "f": [],
    "o": 1,
    "px": 0,
@@ -29955,7 +29955,7 @@
   "scooter-mobility": {
    "c": "audited-ok",
    "r": 2.09,
-   "dev": -1.5,
+   "dev": -1.47,
    "f": [],
    "o": 1,
    "px": 0,
@@ -29964,7 +29964,7 @@
   "stair-lift": {
    "c": "audited-ok",
    "r": 2.85,
-   "dev": -0.74,
+   "dev": -0.71,
    "f": [],
    "o": 1,
    "px": 0,
@@ -29973,7 +29973,7 @@
   "walk-in-tub": {
    "c": "audited-ok",
    "r": 4.32,
-   "dev": 0.73,
+   "dev": 0.75,
    "f": [],
    "o": 1,
    "px": 0,
@@ -29982,7 +29982,7 @@
   "funeral-burial-avg": {
    "c": "audited-ok",
    "r": 4.62,
-   "dev": 0.69,
+   "dev": 0.72,
    "f": [],
    "o": 1,
    "px": 0,
@@ -29991,7 +29991,7 @@
   "funeral-cremation-avg": {
    "c": "audited-ok",
    "r": 4.34,
-   "dev": 0.42,
+   "dev": 0.45,
    "f": [],
    "o": 1,
    "px": 0,
@@ -30000,7 +30000,7 @@
   "cemetery-plot": {
    "c": "audited-ok",
    "r": 5.5,
-   "dev": 1.57,
+   "dev": 1.6,
    "f": [],
    "o": 1,
    "px": 0,
@@ -30009,7 +30009,7 @@
   "casket-mid-range": {
    "c": "audited-ok",
    "r": 4,
-   "dev": 0.08,
+   "dev": 0.11,
    "f": [],
    "o": 1,
    "px": 0,
@@ -30018,7 +30018,7 @@
   "headstone-avg": {
    "c": "audited-ok",
    "r": 4.95,
-   "dev": 1.03,
+   "dev": 1.06,
    "f": [],
    "o": 1,
    "px": 0,
@@ -39119,7 +39119,7 @@
   "cd-rate-1year": {
    "c": "audited-ok",
    "r": 0.38,
-   "dev": -3.54,
+   "dev": -3.51,
    "f": [],
    "o": 1,
    "px": 0,
@@ -39128,7 +39128,7 @@
   "cd-rate-5year": {
    "c": "audited-ok",
    "r": 0.19,
-   "dev": -3.74,
+   "dev": -3.71,
    "f": [],
    "o": 1,
    "px": 0,
@@ -39137,7 +39137,7 @@
   "mortgage-15yr-fixed": {
    "c": "audited-ok",
    "r": -0.35,
-   "dev": -4.27,
+   "dev": -4.24,
    "f": [],
    "o": 1,
    "px": 0,
@@ -39146,7 +39146,7 @@
   "auto-loan-60mo-rate": {
    "c": "audited-ok",
    "r": -0.35,
-   "dev": -4.27,
+   "dev": -4.24,
    "f": [],
    "o": 1,
    "px": 0,
@@ -39155,7 +39155,7 @@
   "personal-loan-rate-avg": {
    "c": "audited-ok",
    "r": -0.22,
-   "dev": -4.15,
+   "dev": -4.12,
    "f": [],
    "o": 1,
    "px": 0,
@@ -39164,7 +39164,7 @@
   "credit-card-apr-avg": {
    "c": "audited-ok",
    "r": 0.69,
-   "dev": -3.24,
+   "dev": -3.21,
    "f": [],
    "o": 1,
    "px": 0,
@@ -40703,7 +40703,7 @@
   "tylenol-extra-strength-100ct": {
    "c": "audited-ok",
    "r": 4.66,
-   "dev": 0.8,
+   "dev": 0.82,
    "f": [],
    "o": 1,
    "px": 0,
@@ -40712,7 +40712,7 @@
   "tylenol-regular-100ct": {
    "c": "audited-ok",
    "r": 4.72,
-   "dev": 0.86,
+   "dev": 0.88,
    "f": [],
    "o": 1,
    "px": 0,
@@ -40721,7 +40721,7 @@
   "advil-ibuprofen-200ct": {
    "c": "audited-ok",
    "r": 3.7,
-   "dev": -0.16,
+   "dev": -0.14,
    "f": [],
    "o": 1,
    "px": 0,
@@ -40730,7 +40730,7 @@
   "advil-ibuprofen-100ct": {
    "c": "audited-ok",
    "r": 3.91,
-   "dev": 0.05,
+   "dev": 0.07,
    "f": [],
    "o": 1,
    "px": 0,
@@ -40739,7 +40739,7 @@
   "aleve-naproxen-100ct": {
    "c": "audited-ok",
    "r": 3.31,
-   "dev": -0.55,
+   "dev": -0.53,
    "f": [],
    "o": 1,
    "px": 0,
@@ -40748,7 +40748,7 @@
   "bayer-aspirin-100ct": {
    "c": "audited-ok",
    "r": 3.51,
-   "dev": -0.35,
+   "dev": -0.33,
    "f": [],
    "o": 1,
    "px": 0,
@@ -40757,7 +40757,7 @@
   "bayer-aspirin-81mg-300ct": {
    "c": "audited-ok",
    "r": 4.39,
-   "dev": 0.53,
+   "dev": 0.55,
    "f": [],
    "o": 1,
    "px": 0,
@@ -40766,7 +40766,7 @@
   "excedrin-migraine-100ct": {
    "c": "audited-ok",
    "r": 4.97,
-   "dev": 1.11,
+   "dev": 1.13,
    "f": [],
    "o": 1,
    "px": 0,
@@ -40775,7 +40775,7 @@
   "motrin-ib-100ct": {
    "c": "audited-ok",
    "r": 3.42,
-   "dev": -0.44,
+   "dev": -0.43,
    "f": [],
    "o": 1,
    "px": 0,
@@ -40784,7 +40784,7 @@
   "dayquil-severe-24ct": {
    "c": "audited-ok",
    "r": 4.24,
-   "dev": 0.38,
+   "dev": 0.4,
    "f": [],
    "o": 1,
    "px": 0,
@@ -40793,7 +40793,7 @@
   "nyquil-cold-flu-12oz": {
    "c": "audited-ok",
    "r": 4.39,
-   "dev": 0.53,
+   "dev": 0.55,
    "f": [],
    "o": 1,
    "px": 0,
@@ -40802,7 +40802,7 @@
   "mucinex-12hr-20ct": {
    "c": "audited-ok",
    "r": 3.39,
-   "dev": -0.47,
+   "dev": -0.46,
    "f": [],
    "o": 1,
    "px": 0,
@@ -40811,7 +40811,7 @@
   "mucinex-dm-20ct": {
    "c": "audited-ok",
    "r": 3.2,
-   "dev": -0.66,
+   "dev": -0.64,
    "f": [],
    "o": 1,
    "px": 0,
@@ -40820,7 +40820,7 @@
   "robitussin-dm-8oz": {
    "c": "audited-ok",
    "r": 3.85,
-   "dev": -0.01,
+   "dev": 0.01,
    "f": [],
    "o": 1,
    "px": 0,
@@ -40829,7 +40829,7 @@
   "theraflu-nighttime-6ct": {
    "c": "audited-ok",
    "r": 3.44,
-   "dev": -0.42,
+   "dev": -0.4,
    "f": [],
    "o": 1,
    "px": 0,
@@ -40838,7 +40838,7 @@
   "sudafed-pe-36ct": {
    "c": "audited-ok",
    "r": 4.2,
-   "dev": 0.34,
+   "dev": 0.36,
    "f": [],
    "o": 1,
    "px": 0,
@@ -40847,7 +40847,7 @@
   "halls-cough-drops-80ct": {
    "c": "audited-ok",
    "r": 4.08,
-   "dev": 0.22,
+   "dev": 0.24,
    "f": [],
    "o": 1,
    "px": 0,
@@ -40856,7 +40856,7 @@
   "ricola-cough-drops-45ct": {
    "c": "audited-ok",
    "r": 4.44,
-   "dev": 0.58,
+   "dev": 0.6,
    "f": [],
    "o": 1,
    "px": 0,
@@ -40865,7 +40865,7 @@
   "zicam-nasal-spray": {
    "c": "audited-ok",
    "r": 2.6,
-   "dev": -1.26,
+   "dev": -1.24,
    "f": [],
    "o": 1,
    "px": 0,
@@ -40874,7 +40874,7 @@
   "claritin-24hr-30ct": {
    "c": "audited-ok",
    "r": 1.24,
-   "dev": -2.62,
+   "dev": -2.6,
    "f": [],
    "o": 1,
    "px": 0,
@@ -40883,7 +40883,7 @@
   "zyrtec-10mg-30ct": {
    "c": "audited-ok",
    "r": 2.81,
-   "dev": -1.05,
+   "dev": -1.03,
    "f": [],
    "o": 1,
    "px": 0,
@@ -40892,7 +40892,7 @@
   "allegra-24hr-30ct": {
    "c": "audited-ok",
    "r": 1.48,
-   "dev": -2.38,
+   "dev": -2.36,
    "f": [],
    "o": 1,
    "px": 0,
@@ -40901,7 +40901,7 @@
   "benadryl-25mg-100ct": {
    "c": "audited-ok",
    "r": 4.13,
-   "dev": 0.27,
+   "dev": 0.29,
    "f": [],
    "o": 1,
    "px": 0,
@@ -40910,7 +40910,7 @@
   "flonase-sensimist-60ct": {
    "c": "audited-ok",
    "r": 1.35,
-   "dev": -2.51,
+   "dev": -2.5,
    "f": [],
    "o": 1,
    "px": 0,
@@ -40919,7 +40919,7 @@
   "nasacort-spray-120ct": {
    "c": "audited-ok",
    "r": 3.24,
-   "dev": -0.62,
+   "dev": -0.6,
    "f": [],
    "o": 1,
    "px": 0,
@@ -40928,7 +40928,7 @@
   "visine-original-eye-drops": {
    "c": "audited-ok",
    "r": 4.68,
-   "dev": 0.82,
+   "dev": 0.84,
    "f": [],
    "o": 1,
    "px": 0,
@@ -40937,7 +40937,7 @@
   "zaditor-eye-drops": {
    "c": "audited-ok",
    "r": 2.38,
-   "dev": -1.48,
+   "dev": -1.46,
    "f": [],
    "o": 1,
    "px": 0,
@@ -40946,7 +40946,7 @@
   "pepto-bismol-16oz": {
    "c": "audited-ok",
    "r": 3.95,
-   "dev": 0.09,
+   "dev": 0.11,
    "f": [],
    "o": 1,
    "px": 0,
@@ -40955,7 +40955,7 @@
   "tums-ultra-72ct": {
    "c": "audited-ok",
    "r": 5.01,
-   "dev": 1.15,
+   "dev": 1.16,
    "f": [],
    "o": 1,
    "px": 0,
@@ -40964,7 +40964,7 @@
   "maalox-advanced-26oz": {
    "c": "audited-ok",
    "r": 5.16,
-   "dev": 1.3,
+   "dev": 1.32,
    "f": [],
    "o": 1,
    "px": 0,
@@ -40973,7 +40973,7 @@
   "miralax-30dose": {
    "c": "audited-ok",
    "r": 1.77,
-   "dev": -2.09,
+   "dev": -2.07,
    "f": [],
    "o": 1,
    "px": 0,
@@ -40982,7 +40982,7 @@
   "gas-x-softgels-50ct": {
    "c": "audited-ok",
    "r": 5.08,
-   "dev": 1.22,
+   "dev": 1.24,
    "f": [],
    "o": 1,
    "px": 0,
@@ -40991,7 +40991,7 @@
   "imodium-ad-24ct": {
    "c": "audited-ok",
    "r": 2.62,
-   "dev": -1.24,
+   "dev": -1.22,
    "f": [],
    "o": 1,
    "px": 0,
@@ -41000,7 +41000,7 @@
   "dulcolax-50ct": {
    "c": "audited-ok",
    "r": 4.73,
-   "dev": 0.87,
+   "dev": 0.89,
    "f": [],
    "o": 1,
    "px": 0,
@@ -41009,7 +41009,7 @@
   "zantac-360-30ct": {
    "c": "audited-ok",
    "r": 2.53,
-   "dev": -1.33,
+   "dev": -1.31,
    "f": [],
    "o": 1,
    "px": 0,
@@ -41018,7 +41018,7 @@
   "prilosec-otc-28ct": {
    "c": "audited-ok",
    "r": 1.7,
-   "dev": -2.16,
+   "dev": -2.14,
    "f": [],
    "o": 1,
    "px": 0,
@@ -41027,7 +41027,7 @@
   "neosporin-1oz": {
    "c": "audited-ok",
    "r": 4.31,
-   "dev": 0.45,
+   "dev": 0.47,
    "f": [],
    "o": 1,
    "px": 0,
@@ -41036,7 +41036,7 @@
   "band-aid-100ct": {
    "c": "audited-ok",
    "r": 4.22,
-   "dev": 0.36,
+   "dev": 0.38,
    "f": [],
    "o": 1,
    "px": 0,
@@ -41045,7 +41045,7 @@
   "band-aid-30ct": {
    "c": "audited-ok",
    "r": 4.16,
-   "dev": 0.3,
+   "dev": 0.31,
    "f": [],
    "o": 1,
    "px": 0,
@@ -41054,7 +41054,7 @@
   "peroxide-hydrogen-16oz": {
    "c": "audited-ok",
    "r": 3.9,
-   "dev": 0.04,
+   "dev": 0.06,
    "f": [],
    "o": 1,
    "px": 0,
@@ -41063,7 +41063,7 @@
   "isopropyl-alcohol-16oz": {
    "c": "audited-ok",
    "r": 4.41,
-   "dev": 0.55,
+   "dev": 0.57,
    "f": [],
    "o": 1,
    "px": 0,
@@ -41072,7 +41072,7 @@
   "ace-bandage-4inch": {
    "c": "audited-ok",
    "r": 3.83,
-   "dev": -0.03,
+   "dev": -0.01,
    "f": [],
    "o": 1,
    "px": 0,
@@ -41081,7 +41081,7 @@
   "thermometer-digital": {
    "c": "audited-ok",
    "r": 1.66,
-   "dev": -2.2,
+   "dev": -2.18,
    "f": [],
    "o": 1,
    "px": 0,
@@ -41090,7 +41090,7 @@
   "tylenol-childrens-4oz": {
    "c": "audited-ok",
    "r": 4.48,
-   "dev": 0.62,
+   "dev": 0.64,
    "f": [],
    "o": 1,
    "px": 0,
@@ -41099,7 +41099,7 @@
   "motrin-childrens-4oz": {
    "c": "audited-ok",
    "r": 3.36,
-   "dev": -0.5,
+   "dev": -0.48,
    "f": [],
    "o": 1,
    "px": 0,
@@ -41108,7 +41108,7 @@
   "centrum-adults-130ct": {
    "c": "audited-ok",
    "r": 3.72,
-   "dev": -0.14,
+   "dev": -0.13,
    "f": [],
    "o": 1,
    "px": 0,
@@ -41117,7 +41117,7 @@
   "one-a-day-womens-100ct": {
    "c": "audited-ok",
    "r": 3.94,
-   "dev": 0.08,
+   "dev": 0.1,
    "f": [],
    "o": 1,
    "px": 0,
@@ -41126,7 +41126,7 @@
   "nature-made-vitamin-d3-1000iu": {
    "c": "audited-ok",
    "r": 3.98,
-   "dev": 0.12,
+   "dev": 0.14,
    "f": [],
    "o": 1,
    "px": 0,
@@ -41135,7 +41135,7 @@
   "vitafusion-gummies-150ct": {
    "c": "audited-ok",
    "r": 2.96,
-   "dev": -0.9,
+   "dev": -0.88,
    "f": [],
    "o": 1,
    "px": 0,
@@ -41144,7 +41144,7 @@
   "airborne-vitamin-c-116ct": {
    "c": "audited-ok",
    "r": 2.79,
-   "dev": -1.07,
+   "dev": -1.05,
    "f": [],
    "o": 1,
    "px": 0,
@@ -41153,7 +41153,7 @@
   "emergen-c-30ct": {
    "c": "audited-ok",
    "r": 2.71,
-   "dev": -1.15,
+   "dev": -1.13,
    "f": [],
    "o": 1,
    "px": 0,
@@ -41162,7 +41162,7 @@
   "fish-oil-1200mg-100ct": {
    "c": "audited-ok",
    "r": 3.88,
-   "dev": 0.02,
+   "dev": 0.04,
    "f": [],
    "o": 1,
    "px": 0,
@@ -41171,7 +41171,7 @@
   "biotin-5000mcg-120ct": {
    "c": "audited-ok",
    "r": 3.61,
-   "dev": -0.25,
+   "dev": -0.23,
    "f": [],
    "o": 1,
    "px": 0,
@@ -41180,7 +41180,7 @@
   "melatonin-5mg-90ct": {
    "c": "audited-ok",
    "r": 2.91,
-   "dev": -0.95,
+   "dev": -0.93,
    "f": [],
    "o": 1,
    "px": 0,
@@ -41189,7 +41189,7 @@
   "magnesium-250mg-100ct": {
    "c": "audited-ok",
    "r": 3.71,
-   "dev": -0.15,
+   "dev": -0.13,
    "f": [],
    "o": 1,
    "px": 0,
@@ -41198,7 +41198,7 @@
   "zinc-50mg-100ct": {
    "c": "audited-ok",
    "r": 4.16,
-   "dev": 0.3,
+   "dev": 0.32,
    "f": [],
    "o": 1,
    "px": 0,
@@ -41207,7 +41207,7 @@
   "neutrogena-spf50-face": {
    "c": "audited-ok",
    "r": 4.78,
-   "dev": 0.92,
+   "dev": 0.94,
    "f": [],
    "o": 1,
    "px": 0,
@@ -41216,7 +41216,7 @@
   "coppertone-sport-7oz": {
    "c": "audited-ok",
    "r": 4.55,
-   "dev": 0.69,
+   "dev": 0.71,
    "f": [],
    "o": 1,
    "px": 0,
@@ -41225,7 +41225,7 @@
   "banana-boat-spf50-8oz": {
    "c": "audited-ok",
    "r": 5.59,
-   "dev": 1.73,
+   "dev": 1.74,
    "f": [],
    "o": 1,
    "px": 0,
@@ -41234,7 +41234,7 @@
   "clearasil-acne-face-wash": {
    "c": "audited-ok",
    "r": 4.53,
-   "dev": 0.67,
+   "dev": 0.69,
    "f": [],
    "o": 1,
    "px": 0,
@@ -41243,7 +41243,7 @@
   "clean-clear-face-wash": {
    "c": "audited-ok",
    "r": 4.54,
-   "dev": 0.68,
+   "dev": 0.7,
    "f": [],
    "o": 1,
    "px": 0,
@@ -41252,7 +41252,7 @@
   "neutrogena-acne-wash": {
    "c": "audited-ok",
    "r": 4.5,
-   "dev": 0.64,
+   "dev": 0.65,
    "f": [],
    "o": 1,
    "px": 0,
@@ -41261,7 +41261,7 @@
   "hydrocortisone-cream-1oz": {
    "c": "audited-ok",
    "r": 4.74,
-   "dev": 0.88,
+   "dev": 0.9,
    "f": [],
    "o": 1,
    "px": 0,
@@ -41270,7 +41270,7 @@
   "refresh-tears-15ml": {
    "c": "audited-ok",
    "r": 2.82,
-   "dev": -1.04,
+   "dev": -1.02,
    "f": [],
    "o": 1,
    "px": 0,
@@ -41279,7 +41279,7 @@
   "systane-ultra-10ml": {
    "c": "audited-ok",
    "r": 2.92,
-   "dev": -0.94,
+   "dev": -0.92,
    "f": [],
    "o": 1,
    "px": 0,
@@ -41288,7 +41288,7 @@
   "renu-contact-solution-16oz": {
    "c": "audited-ok",
    "r": 2.82,
-   "dev": -1.04,
+   "dev": -1.02,
    "f": [],
    "o": 1,
    "px": 0,
@@ -41297,7 +41297,7 @@
   "biotrue-contact-solution-16oz": {
    "c": "audited-ok",
    "r": 2.37,
-   "dev": -1.49,
+   "dev": -1.47,
    "f": [],
    "o": 1,
    "px": 0,
@@ -41306,7 +41306,7 @@
   "tampax-pearl-36ct": {
    "c": "audited-ok",
    "r": 4.18,
-   "dev": 0.32,
+   "dev": 0.34,
    "f": [],
    "o": 1,
    "px": 0,
@@ -41315,7 +41315,7 @@
   "always-infinity-36ct": {
    "c": "audited-ok",
    "r": 4.64,
-   "dev": 0.78,
+   "dev": 0.8,
    "f": [],
    "o": 1,
    "px": 0,
@@ -41324,7 +41324,7 @@
   "playtex-sport-36ct": {
    "c": "audited-ok",
    "r": 3.98,
-   "dev": 0.12,
+   "dev": 0.14,
    "f": [],
    "o": 1,
    "px": 0,
@@ -41333,7 +41333,7 @@
   "monistat-7-treatment": {
    "c": "audited-ok",
    "r": 2.92,
-   "dev": -0.94,
+   "dev": -0.92,
    "f": [],
    "o": 1,
    "px": 0,
@@ -41342,7 +41342,7 @@
   "azo-urinary-pain-relief-24ct": {
    "c": "audited-ok",
    "r": 2.69,
-   "dev": -1.17,
+   "dev": -1.16,
    "f": [],
    "o": 1,
    "px": 0,
@@ -41351,7 +41351,7 @@
   "zzzquil-sleep-12oz": {
    "c": "audited-ok",
    "r": 3.87,
-   "dev": 0.01,
+   "dev": 0.02,
    "f": [],
    "o": 1,
    "px": 0,
@@ -41360,7 +41360,7 @@
   "unisom-tablets-48ct": {
    "c": "audited-ok",
    "r": 3.55,
-   "dev": -0.31,
+   "dev": -0.29,
    "f": [],
    "o": 1,
    "px": 0,
@@ -41369,7 +41369,7 @@
   "nicorette-gum-2mg-110ct": {
    "c": "audited-ok",
    "r": 4.04,
-   "dev": 0.18,
+   "dev": 0.2,
    "f": [],
    "o": 1,
    "px": 0,
@@ -41378,7 +41378,7 @@
   "nicoderm-cq-14ct": {
    "c": "audited-ok",
    "r": 3.53,
-   "dev": -0.33,
+   "dev": -0.31,
    "f": [],
    "o": 1,
    "px": 0,
@@ -41387,7 +41387,7 @@
   "otc-pregnancy-test-2ct": {
    "c": "audited-ok",
    "r": 2.52,
-   "dev": -1.34,
+   "dev": -1.32,
    "f": [],
    "o": 1,
    "px": 0,
@@ -41396,7 +41396,7 @@
   "plan-b-one-step": {
    "c": "audited-ok",
    "r": 1.33,
-   "dev": -2.53,
+   "dev": -2.51,
    "f": [],
    "o": 1,
    "px": 0,
@@ -49450,6 +49450,26 @@
    "dev": 2.34,
    "f": [],
    "o": 1,
+   "px": 0,
+   "x": null
+  },
+  "creatine-500g": {
+   "c": "review",
+   "r": -1.18,
+   "dev": -5.02,
+   "f": [
+    "category-outlier"
+   ],
+   "o": 0,
+   "px": 0,
+   "x": null
+  },
+  "preworkout-30srv": {
+   "c": "plausible",
+   "r": 1.2,
+   "dev": -2.64,
+   "f": [],
+   "o": 0,
    "px": 0,
    "x": null
   }

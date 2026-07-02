@@ -4,11 +4,11 @@
  "n_items": 5441,
  "n_verified": 4547,
  "confidence": {
-  "plausible": 379,
+  "plausible": 380,
   "audited-ok": 3641,
   "category": 1231,
   "cross-verified": 14,
-  "review": 174
+  "review": 175
  },
  "license": "Open data; cite as 'The 1913 Index'.",
  "note": "Tier 1 is the verified, owner-approved core (objective official series: BLS, USDA, USGS, EIA, FRED, Census, USPS, Treasury). Tier 2/3 still verify over time. Only verified items feed the game & headline."
