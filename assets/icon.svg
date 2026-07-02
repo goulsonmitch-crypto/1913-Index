@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <!-- Background -->
+  <rect width="512" height="512" rx="112" fill="#0a0a0a"/>
+
+  <!-- Outer ring accent -->
+  <circle cx="256" cy="256" r="220" fill="none" stroke="#1c1c1e" stroke-width="8"/>
+
+  <!-- Dollar sign body — vertical bar -->
+  <rect x="244" y="80" width="24" height="352" rx="12" fill="#c9a84c"/>
+
+  <!-- Dollar sign — top curve (S top) -->
+  <path d="M256 130 C200 130 155 158 155 200 C155 245 200 262 256 275 C312 288 357 308 357 355 C357 400 312 382 256 382"
+        fill="none" stroke="#c9a84c" stroke-width="32" stroke-linecap="round"/>
+
+  <!-- Dollar sign — bottom curve (S bottom) -->
+  <path d="M256 130 C312 130 357 158 357 200"
+        fill="none" stroke="#c9a84c" stroke-width="32" stroke-linecap="round"/>
+  <path d="M155 355 C155 400 200 430 256 382"
+        fill="none" stroke="#c9a84c" stroke-width="32" stroke-linecap="round"/>
+
+  <!-- "1913" text below dollar sign — small label -->
+  <text x="256" y="490" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Helvetica Neue', sans-serif"
+        font-size="52" font-weight="800" fill="#8a6f30" letter-spacing="4">1913</text>
+
+  <!-- Subtle downward arrow — "falling dollar" -->
+  <path d="M210 340 L256 390 L302 340" fill="none" stroke="#8a6f30" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
