@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>UPC Review Queue — 1913 Index Admin</title>
+<style>
+  :root {
+    --bg: #0a0a0a; --surface: #141414; --card: #1c1c1e; --border: #2c2c2e;
+    --gold: #c9a84c; --red: #e53e3e; --green: #38a169; --text: #f0f0f0; --muted: #8e8e93;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: var(--bg); color: var(--text); font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; padding: 24px; max-width: 860px; margin: 0 auto; }
+  h1 { font-size: 1.4rem; color: var(--gold); margin-bottom: 4px; }
+  .subtitle { color: var(--muted); font-size: .85rem; margin-bottom: 24px; }
+  #login-section { max-width: 380px; margin: 80px auto; }
+  #login-section h2 { margin-bottom: 16px; font-size: 1.1rem; }
+  .field { margin-bottom: 12px; }
+  .field label { display: block; font-size: .8rem; color: var(--muted); margin-bottom: 4px; }
+  .field input { width: 100%; padding: 10px 12px; border-radius: 8px; background: var(--card); border: 1px solid var(--border); color: var(--text); font-size: .9rem; }
+  .btn { padding: 10px 20px; border-radius: 8px; font-size: .9rem; font-weight: 600; cursor: pointer; border: none; }
+  .btn-gold { background: var(--gold); color: #000; }
+  .btn-green { background: var(--green); color: #fff; }
+  .btn-red { background: var(--red); color: #fff; }
+  .btn-ghost { background: none; border: 1px solid var(--border); color: var(--muted); }
+  #main-section { display: none; }
+  #main-section.visible { display: block; }
+  .stats { display: flex; gap: 16px; margin-bottom: 24px; }
+  .stat-box { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 14px 20px; flex: 1; }
+  .stat-box .val { font-size: 1.8rem; font-weight: 800; color: var(--gold); }
+  .stat-box .lbl { font-size: .78rem; color: var(--muted); margin-top: 2px; }
+  .queue-item {
+    background: var(--card); border: 1px solid var(--border); border-radius: 12px;
+    padding: 16px; margin-bottom: 12px;
+  }
+  .qi-header { display: flex; align-items: flex-start; justify-content: space-between; gap: 12px; margin-bottom: 10px; }
+  .qi-name { font-size: 1rem; font-weight: 700; }
+  .qi-meta { font-size: .78rem; color: var(--muted); margin-top: 2px; }
+  .qi-upc { font-family: monospace; color: var(--gold); font-size: .85rem; }
+  .qi-status { font-size: .75rem; font-weight: 700; padding: 3px 8px; border-radius: 10px; white-space: nowrap; }
+  .qi-status.pending { background: rgba(201,168,76,.15); color: var(--gold); }
+  .qi-status.approved { background: rgba(56,161,105,.15); color: var(--green); }
+  .qi-status.rejected { background: rgba(229,62,62,.15); color: var(--red); }
+  .qi-body { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-bottom: 12px; }
+  .qi-field label { display: block; font-size: .72rem; color: var(--muted); margin-bottom: 3px; }
+  .qi-field select, .qi-field input { width: 100%; padding: 7px 10px; border-radius: 6px; background: var(--surface); border: 1px solid var(--border); color: var(--text); font-size: .85rem; }
+  .qi-field select option { background: var(--surface); }
+  .qi-actions { display: flex; gap: 8px; flex-wrap: wrap; }
+  .qi-actions .btn { padding: 8px 16px; font-size: .82rem; }
+  .empty { text-align: center; padding: 60px 20px; color: var(--muted); }
+  .empty .icon { font-size: 3rem; margin-bottom: 12px; }
+  .refresh-row { display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px; }
+  .refresh-row h2 { font-size: 1rem; font-weight: 700; }
+  #error-msg { background: rgba(229,62,62,.1); border: 1px solid rgba(229,62,62,.3); color: var(--red); padding: 10px 14px; border-radius: 8px; margin-bottom: 16px; display: none; font-size: .85rem; }
+  #error-msg.visible { display: block; }
+  #toast { position: fixed; bottom: 24px; left: 50%; transform: translateX(-50%); background: var(--card); color: var(--text); padding: 10px 20px; border-radius: 24px; font-size: .85rem; font-weight: 600; border: 1px solid var(--border); opacity: 0; transition: opacity .3s; pointer-events: none; white-space: nowrap; z-index: 200; }
+  #toast.show { opacity: 1; }
+</style>
+</head>
+<body>
+
+<!-- Login -->
+<div id="login-section">
+  <h2>🔐 1913 Index Admin</h2>
+  <p style="color:var(--muted);font-size:.85rem;margin-bottom:20px">UPC Review Queue</p>
+  <div class="field">
+    <label>Worker URL</label>
+    <input type="url" id="worker-url" value="https://1913-index-api.YOUR_SUBDOMAIN.workers.dev" placeholder="https://…">
+  </div>
+  <div class="field">
+    <label>Admin Token</label>
+    <input type="password" id="admin-token" placeholder="Your ADMIN_TOKEN">
+  </div>
+  <button class="btn btn-gold" onclick="login()" style="width:100%">Sign In →</button>
+</div>
+
+<!-- Main queue UI -->
+<div id="main-section">
+  <h1>1913 Index — UPC Review Queue</h1>
+  <p class="subtitle">Approve or reject crowdsourced UPC → category mappings. Approved mappings become permanent.</p>
+
+  <div id="error-msg"></div>
+
+  <div class="stats">
+    <div class="stat-box"><div class="val" id="stat-pending">—</div><div class="lbl">Pending</div></div>
+    <div class="stat-box"><div class="val" id="stat-total">—</div><div class="lbl">Total in queue</div></div>
+  </div>
+
+  <div class="refresh-row">
+    <h2>Pending submissions</h2>
+    <button class="btn btn-ghost" onclick="loadQueue()" style="font-size:.82rem;padding:7px 14px">↻ Refresh</button>
+  </div>
+
+  <div id="queue-list"></div>
+</div>
+
+<div id="toast"></div>
+
+<script>
+const CATS = ['Food','Beverages','Alcohol','Household goods','Personal care','Pets','Baby & children','Tech & electronics','Apparel','Tools & hardware','Building','Healthcare','Education','Housing','Travel & lodging','Recreation','Entertainment','Automobiles','Transportation','Energy','Insurance','Financial & banking','Professional & legal','Trades & home services','Senior care','Commodities','Money & civic','Other'];
+
+let WORKER = '';
+let TOKEN = '';
+
+function login() {
+  WORKER = document.getElementById('worker-url').value.trim().replace(/\/$/, '');
+  TOKEN = document.getElementById('admin-token').value.trim();
+  if (!WORKER || !TOKEN) { alert('Please fill in both fields.'); return; }
+  sessionStorage.setItem('admin_worker', WORKER);
+  sessionStorage.setItem('admin_token', TOKEN);
+  document.getElementById('login-section').style.display = 'none';
+  document.getElementById('main-section').classList.add('visible');
+  loadQueue();
+}
+
+// Auto-restore session
+window.addEventListener('DOMContentLoaded', () => {
+  const w = sessionStorage.getItem('admin_worker');
+  const t = sessionStorage.getItem('admin_token');
+  if (w && t) {
+    WORKER = w; TOKEN = t;
+    document.getElementById('worker-url').value = w;
+    document.getElementById('admin-token').value = t;
+    document.getElementById('login-section').style.display = 'none';
+    document.getElementById('main-section').classList.add('visible');
+    loadQueue();
+  }
+});
+
+async function apiCall(path, method = 'GET', body = null) {
+  const opts = {
+    method,
+    headers: { 'Authorization': `Bearer ${TOKEN}`, 'Content-Type': 'application/json' },
+  };
+  if (body) opts.body = JSON.stringify(body);
+  const resp = await fetch(`${WORKER}${path}`, opts);
+  const data = await resp.json();
+  if (!resp.ok) throw new Error(data.error || `HTTP ${resp.status}`);
+  return data;
+}
+
+async function loadQueue() {
+  showError('');
+  try {
+    const data = await apiCall('/admin/queue');
+    const queue = data.queue || [];
+    const pending = queue.filter(q => q.status === 'pending');
+    document.getElementById('stat-pending').textContent = pending.length;
+    document.getElementById('stat-total').textContent = queue.length;
+    renderQueue(pending);
+  } catch (e) {
+    showError('Failed to load queue: ' + e.message);
+  }
+}
+
+function renderQueue(items) {
+  const list = document.getElementById('queue-list');
+  if (!items.length) {
+    list.innerHTML = '<div class="empty"><div class="icon">✅</div><p>No pending submissions.</p></div>';
+    return;
+  }
+  list.innerHTML = items.map(item => `
+    <div class="queue-item" id="qi-${item.id}">
+      <div class="qi-header">
+        <div>
+          <div class="qi-name">${esc(item.product_name)}</div>
+          <div class="qi-meta">
+            Submitted: ${new Date(item.submitted_at).toLocaleString()}
+          </div>
+          <div class="qi-upc">UPC: ${item.upc}</div>
+        </div>
+        <span class="qi-status ${item.status}">${item.status}</span>
+      </div>
+      <div class="qi-body">
+        <div class="qi-field">
+          <label>Suggested category</label>
+          <select id="cat-${item.id}">
+            ${CATS.map(c => `<option value="${c}" ${c===item.suggested_category?'selected':''}>${c}</option>`).join('')}
+          </select>
+        </div>
+        <div class="qi-field">
+          <label>Item ID (optional — exact match)</label>
+          <input type="text" id="iid-${item.id}" value="${item.suggested_item_id||''}" placeholder="e.g. paper-towels-roll">
+        </div>
+      </div>
+      ${item.notes ? `<p style="font-size:.8rem;color:var(--muted);margin-bottom:10px">Notes: ${esc(item.notes)}</p>` : ''}
+      <div class="qi-actions">
+        <button class="btn btn-green" onclick="approve('${item.id}')">✓ Approve</button>
+        <button class="btn btn-red" onclick="reject('${item.id}')">✗ Reject</button>
+        <button class="btn btn-ghost" onclick="lookupUPC('${item.upc}')">🔍 Lookup UPC</button>
+      </div>
+    </div>`).join('');
+}
+
+async function approve(id) {
+  const category = document.getElementById(`cat-${id}`).value;
+  const item_id = document.getElementById(`iid-${id}`).value.trim() || null;
+  if (!category) { showToast('Select a category first'); return; }
+  try {
+    await apiCall('/admin/approve', 'POST', { queue_id: id, category, item_id, confidence: 'exact' });
+    showToast('Approved ✓');
+    document.getElementById(`qi-${id}`).remove();
+    updateCounts(-1);
+  } catch (e) {
+    showToast('Error: ' + e.message);
+  }
+}
+
+async function reject(id) {
+  if (!confirm('Reject this submission?')) return;
+  try {
+    await apiCall('/admin/reject', 'POST', { queue_id: id });
+    showToast('Rejected');
+    document.getElementById(`qi-${id}`).remove();
+    updateCounts(-1);
+  } catch (e) {
+    showToast('Error: ' + e.message);
+  }
+}
+
+async function lookupUPC(upc) {
+  window.open(`${WORKER}/scan?upc=${upc}`, '_blank');
+}
+
+function updateCounts(delta) {
+  const el = document.getElementById('stat-pending');
+  el.textContent = Math.max(0, parseInt(el.textContent || '0') + delta);
+}
+
+function showError(msg) {
+  const el = document.getElementById('error-msg');
+  el.textContent = msg;
+  el.classList.toggle('visible', !!msg);
+}
+
+function showToast(msg) {
+  const t = document.getElementById('toast');
+  t.textContent = msg;
+  t.classList.add('show');
+  setTimeout(() => t.classList.remove('show'), 3000);
+}
+
+function esc(s) {
+  return (s || '').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+}
+</script>
+</body>
+</html>
