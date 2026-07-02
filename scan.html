@@ -363,9 +363,10 @@
     <!-- Manual UPC entry -->
     <div id="manual-entry">
       <div class="manual-row" style="margin-top:12px">
-        <input type="number" id="manualUPC" placeholder="Or enter barcode number manually…" inputmode="numeric">
+        <input type="number" id="manualUPC" placeholder="Or type the barcode number…" inputmode="numeric">
         <button onclick="lookupManual()">Go</button>
       </div>
+      <div style="font-size:.72rem;color:var(--muted,#888);margin-top:6px;">Type ALL the digits printed under the bars — including the small single digits at the far left and right edges.</div>
     </div>
 
     <!-- Result card -->
@@ -478,7 +479,7 @@ async function startCamera() {
     // Initialize a detector: native BarcodeDetector (Chrome/Android) or ZXing fallback (iOS Safari)
     detector = await createDetector();
     if (detector) {
-      setStatus('Point at a barcode…', 'scanning');
+      if (!detector.compat) setStatus('Point at a barcode…', 'scanning');
       startScanLoop();
     } else {
       // Fallback: show manual entry hint
@@ -538,23 +539,58 @@ async function createDetector() {
       ZXing.BarcodeFormat.CODE_128, ZXing.BarcodeFormat.CODE_39,
       ZXing.BarcodeFormat.ITF, ZXing.BarcodeFormat.QR_CODE,
     ]);
-    const reader = new ZXing.BrowserMultiFormatReader(hints);
+    hints.set(ZXing.DecodeHintType.TRY_HARDER, true); // helps curved cans/glossy labels
+
+    // Defensive cascade: find a decode path that actually exists in this build.
+    let decodeCanvas = null;
+    try {
+      if (ZXing.BrowserMultiFormatReader) {
+        const r = new ZXing.BrowserMultiFormatReader(hints);
+        if (typeof r.decodeFromCanvas === 'function') decodeCanvas = c => r.decodeFromCanvas(c);
+      }
+    } catch (e) {}
+    if (!decodeCanvas && ZXing.MultiFormatReader && ZXing.HTMLCanvasElementLuminanceSource) {
+      const mfr = new ZXing.MultiFormatReader();
+      mfr.setHints(hints);
+      decodeCanvas = c => mfr.decode(new ZXing.BinaryBitmap(
+        new ZXing.HybridBinarizer(new ZXing.HTMLCanvasElementLuminanceSource(c))));
+    }
+    if (!decodeCanvas) {
+      console.error('ZXing loaded but no usable decode API');
+      setStatus('Camera scanner unavailable on this browser — type the barcode number below (include ALL digits, even the small ones at the edges)', 'error');
+      return null;
+    }
+
     let lastTry = 0;
+    let hardErrors = 0;
+    const isNotFound = e => e && (e.name === 'NotFoundException' ||
+      (ZXing.NotFoundException && e instanceof ZXing.NotFoundException) ||
+      /NotFound/i.test(String(e && e.message)));
+    setStatus('Point at a barcode… (compat mode)', 'scanning');
     return {
-      // Throttled: ZXing decode is CPU-heavy, so only attempt ~6x/sec.
-      // Throws are swallowed by the loop's try/catch (NotFound = no code in frame).
+      compat: true,
+      // Throttled: TRY_HARDER decode is CPU-heavy — attempt ~4x/sec.
       detect(canvas) {
         const now = performance.now();
-        if (now - lastTry < 160) return [];
+        if (now - lastTry < 250) return [];
         lastTry = now;
         try {
-          const result = reader.decodeFromCanvas(canvas);
+          const result = decodeCanvas(canvas);
           return result ? [{ rawValue: result.getText() }] : [];
-        } catch (e) { return []; }
+        } catch (e) {
+          if (!isNotFound(e)) {
+            // A REAL error (not "no barcode in this frame") — don't hide it forever.
+            hardErrors++;
+            console.error('ZXing decode error', e);
+            if (hardErrors === 8) setStatus('Scanner is struggling — try more light, hold steady, or type the number below (ALL digits, including the small edge ones)', 'error');
+          }
+          return [];
+        }
       },
     };
   } catch (e) {
     console.error('ZXing load failed', e);
+    setStatus('Camera scanner unavailable — type the barcode number below (include ALL digits, even the small ones at the edges)', 'error');
     return null; // manual entry only
   }
 }

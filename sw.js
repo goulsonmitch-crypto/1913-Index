@@ -8,8 +8,8 @@
  *   - External UPC APIs: Network-only
  */
 
-const CACHE_NAME = '1913-index-v1';
-const DATA_CACHE = '1913-data-v1';
+const CACHE_NAME = '1913-index-v2';
+const DATA_CACHE = '1913-data-v2';
 
 const SHELL_ASSETS = [
   '/scan.html',
