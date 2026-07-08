@@ -9,7 +9,7 @@
     "method.html":"method",
     "the-why.html":"why",
     "the-fed.html":"fed",
-    "sticker-shock.html":"play",
+    "guessflation.html":"play","sticker-shock.html":"play","game.html":"play",
     "scan.html":"scan"
   };
   var section = SECTION[FILE] || "home";
@@ -21,7 +21,7 @@
     ["method", "Method",     "method.html"],
     ["why",    "The Why",    "the-why.html"],
     ["fed",    "The Fed",    "the-fed.html"],
-    ["play",   "Play",       "sticker-shock.html"],
+    ["play",   "Play",       "guessflation.html"],
     ["scan",   "📷 Scan",    "scan.html"]
   ];
 

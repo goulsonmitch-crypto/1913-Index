@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="manifest" href="manifest.json">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="icon" href="assets/favicon.ico">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="theme-color" content="#0d1320">
+<title>Guessflation — by The 1913 Index</title>
+<style>
+  :root{ color-scheme: dark;
+    --bg:#0d1320; --panel:#141d2e; --panel2:#1b2740; --ink:#eef2f8;
+    --muted:#8ea0bd; --gold:#e8b54b; --gold2:#caa23f;
+    --line:#26334d; --good:#3ec46d; --warn:#e8893b; --bad:#e3554f; }
+  *{box-sizing:border-box;-webkit-tap-highlight-color:transparent;}
+  html,body{margin:0;padding:0;background:var(--bg);color:var(--ink);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;}
+  body{display:flex;flex-direction:column;align-items:center;min-height:100vh;}
+  .app{width:100%;max-width:460px;padding:14px 16px 60px;}
+  header{text-align:center;padding:8px 0 14px;border-bottom:1px solid var(--line);margin-bottom:14px;}
+  .brand{font-size:11px;letter-spacing:3px;color:var(--muted);font-weight:700;text-transform:uppercase;}
+  .title{font-size:32px;font-weight:800;margin:4px 0 2px;letter-spacing:-.5px;color:var(--gold);}
+  .sub{font-size:12.5px;color:var(--muted);}
+  .tag{display:inline-block;font-size:10px;letter-spacing:1.5px;color:var(--muted);
+    border:1px solid var(--line);border-radius:20px;padding:3px 10px;margin-top:8px;text-transform:uppercase;}
+  .progress{display:flex;gap:6px;justify-content:center;margin:16px 0 6px;}
+  .dot{width:30px;height:5px;border-radius:3px;background:var(--line);transition:.3s;}
+  .dot.done{background:var(--gold);} .dot.active{background:var(--ink);}
+  .card{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:22px 20px;margin-top:14px;}
+  .mode{font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--gold);font-weight:700;margin-bottom:14px;}
+  .q{font-size:21px;line-height:1.4;font-weight:600;}
+  .q .hl{color:var(--gold);}
+  .inputwrap{margin-top:22px;display:flex;align-items:center;gap:10px;background:var(--panel2);
+    border:1px solid var(--line);border-radius:12px;padding:6px 14px;}
+  .inputwrap .pre,.inputwrap .post{font-size:22px;color:var(--muted);font-weight:600;}
+  input[type=number]{flex:1;background:transparent;border:none;outline:none;color:var(--ink);
+    font-size:30px;font-weight:700;width:100%;padding:12px 2px;-moz-appearance:textfield;}
+  input::-webkit-outer-spin-button,input::-webkit-inner-spin-button{-webkit-appearance:none;margin:0;}
+  .hint{font-size:12px;color:var(--muted);margin-top:10px;}
+  .btn{display:block;width:100%;border:none;border-radius:12px;padding:16px;font-size:17px;font-weight:700;
+    margin-top:14px;cursor:pointer;background:var(--gold);color:#1a1306;transition:.15s;}
+  .btn:active{transform:scale(.98);} .btn:disabled{opacity:.4;}
+  .btn.ghost{background:transparent;color:var(--ink);border:1px solid var(--line);}
+  .menulabel{font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:1.5px;margin:22px 0 8px;text-align:center;}
+  .modebtn{display:flex;justify-content:space-between;align-items:center;width:100%;background:var(--panel);
+    border:1px solid var(--line);border-radius:12px;padding:15px 16px;margin-top:9px;cursor:pointer;color:var(--ink);
+    font-size:15px;font-weight:600;text-align:left;transition:.15s;}
+  .modebtn:active{transform:scale(.99);}
+  .modebtn .arrow{color:var(--gold);font-size:18px;}
+  .modebtn small{display:block;color:var(--muted);font-weight:400;font-size:12px;margin-top:2px;}
+  .reveal{margin-top:20px;border-top:1px solid var(--line);padding-top:18px;}
+  .scoreline{display:flex;justify-content:space-between;align-items:baseline;}
+  .yourg{font-size:13px;color:var(--muted);}
+  .answer{font-size:28px;font-weight:800;color:var(--gold);}
+  .pts{font-size:13px;font-weight:700;}
+  .explain{font-size:14px;line-height:1.5;color:var(--ink);margin-top:12px;background:var(--panel2);
+    border-radius:10px;padding:12px 14px;}
+  .paren{color:var(--muted);font-size:13px;}
+  .badge{display:inline-block;font-size:10px;font-weight:700;letter-spacing:.6px;text-transform:uppercase;
+    border-radius:6px;padding:4px 8px;margin-top:12px;}
+  .badge.real{background:rgba(62,196,109,.14);color:var(--good);border:1px solid rgba(62,196,109,.4);}
+  .badge.cpi{background:rgba(232,137,59,.14);color:var(--warn);border:1px solid rgba(232,137,59,.45);}
+  .src{font-size:11px;color:var(--muted);margin-top:8px;font-style:italic;}
+  .src a{color:var(--gold2);}
+  .final{text-align:center;}
+  .bignum{font-size:64px;font-weight:800;color:var(--gold);line-height:1;margin:6px 0;}
+  .outof{font-size:16px;color:var(--muted);}
+  .bands{font-size:30px;letter-spacing:6px;margin:16px 0;}
+  .breakdown{text-align:left;margin-top:10px;}
+  .brow{display:flex;justify-content:space-between;align-items:center;padding:11px 4px;border-bottom:1px solid var(--line);font-size:14px;}
+  .brow .bm{color:var(--muted);font-size:12px;}
+  .copied{font-size:13px;color:var(--good);text-align:center;height:18px;margin-top:8px;}
+  .footnote{font-size:11px;color:var(--muted);text-align:center;margin-top:24px;line-height:1.5;}
+  .footnote a{color:var(--gold2);}
+</style>
+</head>
+<body>
+<script src="nav.js"></script>
+<div class="app">
+  <header>
+    <div class="brand">by The 1913 Index</div>
+    <div class="title">Guessflation</div>
+    <div class="sub">How well do you know what a dollar used to buy?</div>
+    <div class="tag" id="tag">Every figure sourced from the index</div>
+  </header>
+  <div class="progress" id="progress" style="display:none"></div>
+  <div id="stage"></div>
+  <div class="footnote">
+    Every number is a real, sourced figure from The 1913 Index dataset — nothing is invented.
+    Guesses are scored on a log-ratio curve, so a perfect 100 is nearly impossible.
+    <a href="data.html">Explore the data →</a>
+  </div>
+</div>
+
+<script src="database.js"></script>
+<script src="series.js"></script>
+<script>
+(function(){
+  var DB=window.DB, SER=window.SERIES;
+  if(!DB||!SER){ document.getElementById("stage").innerHTML='<div class="card">Data failed to load. <a href="index.html">Home</a></div>'; return; }
+  var NOW=(DB.meta&&DB.meta.now_year)||2026;
+  var CPI={}, IDX={};
+  SER.rows.forEach(function(r){ CPI[r.y]=r.cpi; IDX[r.y]=r.idx; });
+
+  /* ---------- pools (all real, sourced, verified) ---------- */
+  var SAL_RE=/salary|wage|income|earnings|monthly pay|daily wage/i;
+  var BAD_RE=/%|yield|\brate\b|\bindex\b|ratio|per \$/i;
+  function ok(it){ return it.verified && it.then_price>0 && it.now_price>0 && it.then_year && it.then_year<NOW && it.then_price!==it.now_price; }
+  var SALARIES=DB.items.filter(function(it){ return ok(it) && SAL_RE.test(it.name); });
+  var GOODS=DB.items.filter(function(it){ return it.core===true && ok(it) && it.category!=="Money & civic" && !BAD_RE.test(it.name) && !SAL_RE.test(it.name); });
+  // Which-Year prefers non-1913 anchors for year variety; fall back to all goods.
+  var WYEAR=GOODS.filter(function(it){ return it.then_year>=1935 && it.then_year<=2010; });
+  if(WYEAR.length<20) WYEAR=GOODS.slice();
+
+  /* ---------- helpers ---------- */
+  function cap(s){ return s.charAt(0).toUpperCase()+s.slice(1); }
+  function money(v){ v=+v; var d=Math.abs(v)<100?2:0; return "$"+v.toLocaleString("en-US",{minimumFractionDigits:d,maximumFractionDigits:d}); }
+  function pctTxt(n){ return (n>=0?"+":"")+Math.round(n).toLocaleString()+"%"; }
+  function phraseOf(it){ return it.phrase && it.phrase.length>3 ? it.phrase : ("a "+it.name.toLowerCase()); }
+  function jobParts(name){ var m=name.match(/^(.*?)\s*\(([^)]+)\)\s*$/); return m?{job:m[1].trim(),per:m[2].trim()}:{job:name,per:""}; }
+  function srcLine(it){ var s="Sourced: "+it.then_year+" — "+(it.source_then||"documented")+" · "+NOW+" — "+(it.source_now||"documented"); if(it.url) s+=' · <a href="'+it.url+'" target="_blank" rel="noopener">series ↗</a>'; return s; }
+
+  /* ---------- question builders ---------- */
+  function qPriceIt(it){ var m=it.now_price/it.then_price; return {
+    mode:"Price It", key:"Price It", item:it.name, type:"currency", answer:it.then_price, basis:"real",
+    html:cap(phraseOf(it))+' costs about <span class="hl">'+money(it.now_price)+'</span> today.<br>What did it cost in <span class="hl">'+it.then_year+'</span>?',
+    explain:cap(phraseOf(it))+' was about '+money(it.then_price)+' in '+it.then_year+' — '+m.toFixed(1)+'× ('+pctTxt((m-1)*100)+') to today.'+(it.why?' '+it.why:''),
+    paren:m.toFixed(1)+'× since '+it.then_year, src:srcLine(it) }; }
+
+  function qWhichYear(it){ return {
+    mode:"Which Year", key:"Which Year", item:it.name, type:"year", answer:it.then_year, basis:"real",
+    html:cap(phraseOf(it))+' cost <span class="hl">'+money(it.then_price)+'</span>.<br>What <span class="hl">year</span> was that?',
+    explain:cap(phraseOf(it))+' cost about '+money(it.then_price)+' in '+it.then_year+'; today it is '+money(it.now_price)+'.',
+    paren:'today: '+money(it.now_price), src:srcLine(it) }; }
+
+  function qSalary(it){ var p=jobParts(it.name); var per=p.per?(" ("+p.per+")"):""; var m=it.now_price/it.then_price; return {
+    mode:"Salary Time Machine", key:"Salary Time Machine", item:it.name, type:"currency", answer:it.then_price, basis:"real",
+    html:'A <span class="hl">'+p.job.toLowerCase()+'</span> makes about <span class="hl">'+money(it.now_price)+'</span> today'+per+'.<br>What did the same job pay in <span class="hl">'+it.then_year+'</span>?',
+    explain:'A '+p.job.toLowerCase()+' earned about '+money(it.then_price)+' in '+it.then_year+' — pay is up '+m.toFixed(1)+'× ('+pctTxt((m-1)*100)+') since then.'+(it.why?' '+it.why:''),
+    paren:m.toFixed(1)+'× since '+it.then_year, src:srcLine(it) }; }
+
+  function qPP(year){ var ans=CPI[NOW]/CPI[year]; var lost=(1-1/ans)*100; return {
+    mode:"Purchasing Power", key:"Purchasing Power", item:"the "+year+" dollar", type:"currency", answer:+ans.toFixed(2), basis:"cpi",
+    html:'To match what <span class="hl">$1</span> bought in <span class="hl">'+year+'</span>, how many dollars do you need today?',
+    explain:'About '+money(ans)+' today matches a $1 in '+year+' — the dollar has lost roughly '+Math.round(lost)+'% of its purchasing power since then.',
+    paren:'-'+Math.round(lost)+'% purchasing power', src:'Sourced: official BLS CPI-U, '+year+'–'+NOW+' (the 1913 Index headline series).' }; }
+
+  function qRN(year){ var off=(CPI[NOW]/CPI[year]-1)*100; var real=(IDX[NOW]/IDX[year]-1)*100; return {
+    mode:"The Real Number", key:"The Real Number", item:"official vs. real, since "+year, type:"percent", answer:+real.toFixed(0), basis:"cpi",
+    html:'Official CPI says prices rose <span class="hl">'+Math.round(off)+'%</span> since <span class="hl">'+year+'</span>.<br>What was the <span class="hl">real</span> increase, per the 1913 Index?',
+    explain:'Official CPI reports about '+pctTxt(off)+' since '+year+'. Measuring the same-goods basket with real housing and no substitution, the 1913 Index puts it closer to '+pctTxt(real)+' — the gap is the whole point.',
+    paren:'official said '+pctTxt(off), src:'Sourced: BLS CPI-U vs. the 1913 Index headline series, '+year+'–'+NOW+'.' }; }
+
+  var PP_YEARS=[1913,1933,1950,1971,1985,2000].filter(function(y){return CPI[y];});
+  var RN_YEARS=[1980,1985,1990,2000,2010].filter(function(y){return CPI[y]&&IDX[y];});
+
+  /* ---------- scoring ---------- */
+  function scoreQ(q,guess){
+    if(q.type==="year"){ var off=Math.abs(guess-q.answer); return Math.max(0,Math.round(100*Math.exp(-Math.pow(off/8,2)))); }
+    var g=guess,a=q.answer;
+    if(q.type==="percent"){ g=1+guess/100; a=1+a/100; }
+    if(g<=0) return 0;
+    var d=Math.abs(Math.log(g/a)), sigma=0.5;
+    return Math.max(0,Math.round(100*Math.exp(-(d*d)/(2*sigma*sigma))));
+  }
+  function band(s){ return s>=90?"🟩":s>=70?"🟨":s>=45?"🟧":"🟥"; }
+  function fmt(q,v){ if(q.type==="currency")return money(v); if(q.type==="percent")return pctTxt(+v); if(q.type==="year")return v; return v; }
+
+  /* ---------- daily (seeded, stable per day) ---------- */
+  var LAUNCH=new Date(2026,6,8); // Jul 8 2026 = #1
+  function dayNumber(){ var n=new Date(); var a=Date.UTC(n.getFullYear(),n.getMonth(),n.getDate());
+    var b=Date.UTC(LAUNCH.getFullYear(),LAUNCH.getMonth(),LAUNCH.getDate()); return Math.max(0,Math.floor((a-b)/86400000)); }
+  function puzzleNo(){ return dayNumber()+1; }
+  function mulberry32(seed){ return function(){ seed|=0; seed=seed+0x6D2B79F5|0; var t=Math.imul(seed^seed>>>15,1|seed);
+    t=t+Math.imul(t^t>>>7,61|t)^t; return ((t^t>>>14)>>>0)/4294967296; }; }
+  function pickSeeded(arr,rnd){ return arr[Math.floor(rnd()*arr.length)]; }
+  function buildDaily(){ var rnd=mulberry32(0x1913+dayNumber()*2654435761);
+    return [ qPriceIt(pickSeeded(GOODS,rnd)),
+             qWhichYear(pickSeeded(WYEAR,rnd)),
+             qSalary(pickSeeded(SALARIES,rnd)),
+             qPP(pickSeeded(PP_YEARS,rnd)),
+             qRN(pickSeeded(RN_YEARS,rnd)) ]; }
+
+  function todayKey(){ var d=new Date(); return d.getFullYear()+"-"+(d.getMonth()+1)+"-"+d.getDate(); }
+  function lsGet(k){ try{return JSON.parse(localStorage.getItem(k));}catch(e){return null;} }
+  function lsSet(k,v){ try{localStorage.setItem(k,JSON.stringify(v));}catch(e){} }
+
+  /* ---------- UI ---------- */
+  var stage=document.getElementById("stage"), prog=document.getElementById("progress");
+  var flow=null;
+  function showProgress(show,total,idx){ prog.style.display=show?"flex":"none"; if(!show)return;
+    prog.innerHTML=""; for(var i=0;i<total;i++){ var x=document.createElement("div");
+      x.className="dot "+(i<idx?"done":(i===idx?"active":"")); prog.appendChild(x); } }
+
+  function renderHome(){ flow=null; showProgress(false); var done=lsGet("gf_daily_"+todayKey());
+    stage.innerHTML=
+      '<div class="card" style="text-align:center">'+
+        '<div class="mode">Today · Puzzle #'+puzzleNo()+'</div>'+
+        '<div style="font-size:18px;font-weight:700;margin-bottom:4px">The Daily Five</div>'+
+        '<div style="font-size:13px;color:var(--muted)">One question from each mode. One shot a day.</div>'+
+        (done ? '<div class="explain" style="margin-top:16px">You’ve played today — <b>'+done.total+'/100</b> '+done.bands+'<br>Come back tomorrow for #'+(puzzleNo()+1)+'.</div><button class="btn ghost" id="seeres">See today’s result</button>'
+              : '<button class="btn" id="playdaily">Play today’s Guessflation</button>')+
+      '</div>'+
+      '<div class="menulabel">Or practice a single mode (unlimited)</div>'+
+      '<button class="modebtn" data-m="Price It"><span>Price It<small>Guess the old price</small></span><span class="arrow">→</span></button>'+
+      '<button class="modebtn" data-m="Which Year"><span>Which Year<small>Name the year from a price</small></span><span class="arrow">→</span></button>'+
+      '<button class="modebtn" data-m="Salary Time Machine"><span>Salary Time Machine<small>Guess what a job used to pay</small></span><span class="arrow">→</span></button>'+
+      '<button class="modebtn" data-m="Purchasing Power"><span>Purchasing Power<small>What the dollar lost</small></span><span class="arrow">→</span></button>'+
+      '<button class="modebtn" data-m="The Real Number"><span>The Real Number<small>Official vs. reality</small></span><span class="arrow">→</span></button>';
+    var pd=document.getElementById("playdaily"); if(pd) pd.onclick=startDaily;
+    var sr=document.getElementById("seeres"); if(sr) sr.onclick=function(){ renderDailyResultFromSave(done); };
+    var btns=document.querySelectorAll(".modebtn"); for(var i=0;i<btns.length;i++){ (function(b){ b.onclick=function(){ startPractice(b.getAttribute("data-m")); }; })(btns[i]); }
+  }
+
+  function renderQuestion(q,total,idx,onSubmit,daily){ showProgress(daily,total,idx);
+    var pre=q.type==="currency"?"$":"", post=q.type==="percent"?"%":"";
+    var ph=q.type==="year"?"e.g. 1965":"";
+    stage.innerHTML=
+      '<div class="card">'+
+        '<div class="mode">'+q.mode+(daily?(' · '+(idx+1)+' of '+total):' · practice')+'</div>'+
+        '<div class="q">'+q.html+'</div>'+
+        '<div class="inputwrap">'+(pre?'<span class="pre">'+pre+'</span>':'')+
+          '<input type="number" id="guess" inputmode="decimal" placeholder="'+ph+'" autocomplete="off">'+
+          (post?'<span class="post">'+post+'</span>':'')+'</div>'+
+        '<div class="hint">'+(q.type==="percent"?"Enter a percent, e.g. 120 for +120%.":q.type==="year"?"Enter a 4-digit year.":"Type your best estimate.")+'</div>'+
+        '<button class="btn" id="submit" disabled>Lock it in</button>'+
+      '</div>';
+    var inp=document.getElementById("guess"), btn=document.getElementById("submit");
+    inp.addEventListener("input",function(){ btn.disabled=inp.value===""; }); inp.focus();
+    var go=function(){ if(!btn.disabled) onSubmit(parseFloat(inp.value)); };
+    btn.onclick=go; inp.addEventListener("keydown",function(e){ if(e.key==="Enter") go(); });
+  }
+
+  function renderReveal(q,guess,s,nextLabel,onNext,total,idx,daily){ showProgress(daily,total,idx);
+    stage.innerHTML=
+      '<div class="card">'+
+        '<div class="mode">'+q.mode+'</div>'+
+        '<div class="q">'+q.html+'</div>'+
+        '<div class="reveal">'+
+          '<div class="scoreline"><span class="yourg">You said '+fmt(q,guess)+'</span>'+
+            '<span class="pts" style="color:'+(s>=70?'var(--good)':s>=45?'var(--warn)':'var(--bad)')+'">'+band(s)+' '+s+' pts</span></div>'+
+          '<div class="answer">'+fmt(q,q.answer)+' <span class="paren">('+q.paren+')</span></div>'+
+          '<div class="explain">'+q.explain+'</div>'+
+          '<div class="badge '+q.basis+'">'+(q.basis==="real"?"✓ Sourced from a real transaction price":"✓ Official BLS CPI-U + 1913 Index series")+'</div>'+
+          '<div class="src">'+q.src+'</div>'+
+        '</div>'+
+        '<button class="btn" id="next">'+nextLabel+'</button>'+
+      '</div>';
+    document.getElementById("next").onclick=onNext;
+  }
+
+  function startDaily(){ flow={questions:buildDaily(),results:[],idx:0,daily:true}; stepDaily(); }
+  function stepDaily(){ var f=flow, q=f.questions[f.idx];
+    renderQuestion(q,f.questions.length,f.idx,function(guess){ var s=scoreQ(q,guess); f.results.push({q:q,guess:guess,s:s});
+      renderReveal(q,guess,s, f.idx<f.questions.length-1?"Next question":"See my score",
+        function(){ f.idx++; if(f.idx<f.questions.length) stepDaily(); else renderDailyResult(); },
+        f.questions.length,f.idx,true); }, true); }
+  function renderDailyResult(){ var f=flow, total=Math.round(f.results.reduce(function(a,r){return a+r.s;},0)/f.results.length);
+    var bands=f.results.map(function(r){return band(r.s);}).join("");
+    lsSet("gf_daily_"+todayKey(),{total:total,bands:bands,results:f.results.map(function(r){return {m:r.q.mode,item:r.q.item,s:r.s};})});
+    drawResult(total,bands,f.results.map(function(r){return {mode:r.q.mode,item:r.q.item,s:r.s};})); }
+  function renderDailyResultFromSave(d){ drawResult(d.total,d.bands,d.results.map(function(r){return {mode:r.m,item:r.item,s:r.s};})); }
+
+  function drawResult(total,bands,rows){ showProgress(false);
+    var rh=rows.map(function(r){ return '<div class="brow"><div>'+r.mode+'<div class="bm">'+r.item+'</div></div><div>'+band(r.s)+' <b>'+r.s+'</b></div></div>'; }).join("");
+    stage.innerHTML=
+      '<div class="card final">'+
+        '<div class="outof">Guessflation · Puzzle #'+puzzleNo()+'</div>'+
+        '<div class="bignum">'+total+'</div><div class="outof">out of 100</div>'+
+        '<div class="bands">'+bands+'</div>'+
+        '<div class="breakdown">'+rh+'</div>'+
+        '<button class="btn" id="share" style="margin-top:18px">Copy result to share</button>'+
+        '<div class="copied" id="copied"></div>'+
+        '<button class="btn ghost" id="home">Back to menu</button>'+
+      '</div>';
+    document.getElementById("share").onclick=function(){
+      // No-spoiler share: emoji bands + score only, never the answers.
+      var txt="Guessflation #"+puzzleNo()+"\n"+bands+"  "+total+"/100\nthe1913index.com/guessflation.html";
+      if(navigator.clipboard&&navigator.clipboard.writeText){
+        navigator.clipboard.writeText(txt).then(function(){ document.getElementById("copied").textContent="Copied! Paste it to a friend."; })
+          .catch(function(){ document.getElementById("copied").textContent="Press and hold to copy: "+bands+" "+total+"/100"; });
+      } else { document.getElementById("copied").textContent=bands+" "+total+"/100"; }
+    };
+    document.getElementById("home").onclick=renderHome;
+  }
+
+  /* ---------- practice (unlimited) ---------- */
+  function randOf(a){ return a[Math.floor(Math.random()*a.length)]; }
+  function makePractice(mode){
+    if(mode==="Price It") return qPriceIt(randOf(GOODS));
+    if(mode==="Which Year") return qWhichYear(randOf(WYEAR));
+    if(mode==="Salary Time Machine") return qSalary(randOf(SALARIES));
+    if(mode==="Purchasing Power") return qPP(randOf(PP_YEARS));
+    if(mode==="The Real Number") return qRN(randOf(RN_YEARS));
+    return qPriceIt(randOf(GOODS));
+  }
+  function startPractice(mode){ practiceStep(mode); }
+  function practiceStep(mode){ var q=makePractice(mode);
+    renderQuestion(q,1,0,function(guess){ var s=scoreQ(q,guess);
+      renderReveal(q,guess,s,"Another one",function(){ practiceStep(mode); },1,0,false);
+      var card=stage.querySelector(".card"); var back=document.createElement("button");
+      back.className="btn ghost"; back.textContent="Back to menu"; back.onclick=renderHome; card.appendChild(back);
+    },false); }
+
+  renderHome();
+})();
+</script>
+</body>
+</html>
