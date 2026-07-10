@@ -230,6 +230,11 @@ html.embed .app{padding:8px 12px 24px!important}
   }
 
   /* ---------- UI ---------- */
+  /* Platform split (Mitch 2026-07-10): WEB = the Daily Five only, once per device per day,
+     no day-to-day memory (no streaks/stats/practice). APP (?embed=1) = the full experience:
+     streaks, stats, unlimited practice. Cross-platform streaks are impossible without accounts
+     (browser and app localStorage are separate silos) — decided: streaks live in the app only. */
+  var IS_APP=document.documentElement.classList.contains("embed");
   var stage=document.getElementById("stage"), prog=document.getElementById("progress");
   var flow=null;
   function showProgress(show,total,idx){ prog.style.display=show?"flex":"none"; if(!show)return;
@@ -245,13 +250,14 @@ html.embed .app{padding:8px 12px 24px!important}
         (done ? '<div class="explain" style="margin-top:16px">You’ve played today — <b>'+done.total+'/100</b> '+done.bands+'<br>Come back tomorrow for #'+(puzzleNo()+1)+'.</div><button class="btn ghost" id="seeres">See today’s result</button>'
               : '<button class="btn" id="playdaily">Play today’s Guessflation</button>')+
       '</div>'+
-      statsStripHTML()+
+      (IS_APP ? (statsStripHTML()+
       '<div class="menulabel">Or practice a single mode (unlimited)</div>'+
       '<button class="modebtn" data-m="Price It"><span>Price It<small>Guess the old price</small></span><span class="arrow">→</span></button>'+
       '<button class="modebtn" data-m="Which Year"><span>Which Year<small>Name the year from a price</small></span><span class="arrow">→</span></button>'+
       '<button class="modebtn" data-m="Salary Time Machine"><span>Salary Time Machine<small>Guess what a job used to pay</small></span><span class="arrow">→</span></button>'+
       '<button class="modebtn" data-m="Purchasing Power"><span>Purchasing Power<small>What the dollar lost</small></span><span class="arrow">→</span></button>'+
-      '<button class="modebtn" data-m="The Real Number"><span>The Real Number<small>Official vs. reality</small></span><span class="arrow">→</span></button>';
+      '<button class="modebtn" data-m="The Real Number"><span>The Real Number<small>Official vs. reality</small></span><span class="arrow">→</span></button>')
+      : '<div class="card" style="text-align:center;margin-top:14px"><div style="font-size:13px;color:var(--muted)">Streaks, stats and unlimited practice live in the app.</div><a href="https://apps.apple.com/app/id6786975995" style="color:var(--gold);font-size:13px;font-weight:700;text-decoration:none">Get 1913 Index: Inflation Tracker →</a></div>');
     var pd=document.getElementById("playdaily"); if(pd) pd.onclick=startDaily;
     var sr=document.getElementById("seeres"); if(sr) sr.onclick=function(){ renderDailyResultFromSave(done); };
     var btns=document.querySelectorAll(".modebtn"); for(var i=0;i<btns.length;i++){ (function(b){ b.onclick=function(){ startPractice(b.getAttribute("data-m")); }; })(btns[i]); }
@@ -307,9 +313,9 @@ html.embed .app{padding:8px 12px 24px!important}
   function renderDailyResult(){ var f=flow, total=Math.round(f.results.reduce(function(a,r){return a+r.s;},0)/f.results.length);
     var bands=f.results.map(function(r){return band(r.s);}).join("");
     lsSet("gf_daily_"+todayKey(),{total:total,bands:bands,results:f.results.map(function(r){return {m:r.q.mode,item:r.q.item,s:r.s};})});
-    var st=recordStats(total);
+    var st=IS_APP?recordStats(total):null;
     drawResult(total,bands,f.results.map(function(r){return {mode:r.q.mode,item:r.q.item,s:r.s};}),st); }
-  function renderDailyResultFromSave(d){ drawResult(d.total,d.bands,d.results.map(function(r){return {mode:r.m,item:r.item,s:r.s};}),lsGet("gf_stats")); }
+  function renderDailyResultFromSave(d){ drawResult(d.total,d.bands,d.results.map(function(r){return {mode:r.m,item:r.item,s:r.s};}),IS_APP?lsGet("gf_stats"):null); }
 
   function drawResult(total,bands,rows,st){ showProgress(false);
     var rh=rows.map(function(r){ return '<div class="brow"><div>'+r.mode+'<div class="bm">'+r.item+'</div></div><div>'+band(r.s)+' <b>'+r.s+'</b></div></div>'; }).join("");
