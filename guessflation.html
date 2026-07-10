@@ -8,6 +8,15 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <meta name="theme-color" content="#0d1320">
 <title>Guessflation — by The 1913 Index</title>
+<meta name="description" content="Guessflation — the daily inflation guessing game from The 1913 Index. Five questions a day, all real sourced prices. How well do you know what a dollar used to buy?">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://the1913index.com/guessflation.html">
+<meta property="og:site_name" content="The 1913 Index">
+<meta property="og:title" content="Guessflation — the daily price game">
+<meta property="og:description" content="Five questions a day, all real sourced prices. How well do you know what a dollar used to buy?">
+<meta property="og:image" content="assets/og-default.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="assets/og-default.png">
 <style>
   :root{ color-scheme: dark;
     --bg:#0d1320; --panel:#141d2e; --panel2:#1b2740; --ink:#eef2f8;
@@ -74,6 +83,13 @@
   .footnote{font-size:11px;color:var(--muted);text-align:center;margin-top:24px;line-height:1.5;}
   .footnote a{color:var(--gold2);}
 </style>
+<script>/*embedMode: app wrapper hides site chrome*/if(new URLSearchParams(location.search).has('embed'))document.documentElement.classList.add('embed');</script>
+<style>html.embed .gnav{display:none!important}html.embed .footnote a{display:none!important}
+html.embed .sub,html.embed .tag,html.embed .brand{display:none!important}
+html.embed header{padding:2px 0 8px!important;margin-bottom:8px!important}
+html.embed .title{font-size:24px!important}
+html.embed .app{padding:8px 12px 24px!important}
+.exitlink{display:block;margin:12px auto 0;background:none;border:none;color:var(--muted);font-size:12px;cursor:pointer;text-decoration:underline}</style>
 </head>
 <body>
 <script src="nav.js"></script>
@@ -117,7 +133,10 @@
   function cap(s){ return s.charAt(0).toUpperCase()+s.slice(1); }
   function money(v){ v=+v; var d=Math.abs(v)<100?2:0; return "$"+v.toLocaleString("en-US",{minimumFractionDigits:d,maximumFractionDigits:d}); }
   function pctTxt(n){ return (n>=0?"+":"")+Math.round(n).toLocaleString()+"%"; }
-  function phraseOf(it){ return it.phrase && it.phrase.length>3 ? it.phrase : ("a "+it.name.toLowerCase()); }
+  function phraseOf(it){ if(it.phrase && it.phrase.length>3) return it.phrase;
+    var n=it.name, lw=n.toLowerCase();
+    var generic=/^(gallon|dozen|pound|loaf|quart|pint|box|bag|can|bottle|jar|six|pack|pair|ticket|cup|head|stick|roll|carton|case|bar|tube|bunch|liter|litre|ounce|slice|sack|gal|lb|oz)\b/.test(lw);
+    return generic ? ("a "+lw) : n; }
   function jobParts(name){ var m=name.match(/^(.*?)\s*\(([^)]+)\)\s*$/); return m?{job:m[1].trim(),per:m[2].trim()}:{job:name,per:""}; }
   function srcLine(it){ var s="Sourced: "+it.then_year+" — "+(it.source_then||"documented")+" · "+NOW+" — "+(it.source_now||"documented"); if(it.url) s+=' · <a href="'+it.url+'" target="_blank" rel="noopener">series ↗</a>'; return s; }
 
@@ -157,19 +176,24 @@
 
   /* ---------- scoring ---------- */
   function scoreQ(q,guess){
-    if(q.type==="year"){ var off=Math.abs(guess-q.answer); return Math.max(0,Math.round(100*Math.exp(-Math.pow(off/8,2)))); }
-    var g=guess,a=q.answer;
-    if(q.type==="percent"){ g=1+guess/100; a=1+a/100; }
-    if(g<=0) return 0;
-    var d=Math.abs(Math.log(g/a)), sigma=0.5;
-    return Math.max(0,Math.round(100*Math.exp(-(d*d)/(2*sigma*sigma))));
+    // 100 is reserved for the EXACT answer; the closest miss caps at 99.
+    if(q.type==="year"){ var off=Math.abs(guess-q.answer);
+      var ys=Math.max(0,Math.round(100*Math.exp(-Math.pow(off/8,2))));
+      return off===0?100:Math.min(ys,99); }
+    var g=guess,a=q.answer,sigma=0.5;
+    if(q.type==="percent"){ sigma=0.35; } // score % answers on the % itself, not the ratio-of-ratios
+    if(g<=0||a<=0) return g===a?100:0;
+    var d=Math.abs(Math.log(g/a));
+    var sc=Math.max(0,Math.round(100*Math.exp(-(d*d)/(2*sigma*sigma))));
+    return d===0?100:Math.min(sc,99);
   }
   function band(s){ return s>=90?"🟩":s>=70?"🟨":s>=45?"🟧":"🟥"; }
   function fmt(q,v){ if(q.type==="currency")return money(v); if(q.type==="percent")return pctTxt(+v); if(q.type==="year")return v; return v; }
 
   /* ---------- daily (seeded, stable per day) ---------- */
   var LAUNCH=new Date(2026,6,8); // Jul 8 2026 = #1
-  function dayNumber(){ var n=new Date(); var a=Date.UTC(n.getFullYear(),n.getMonth(),n.getDate());
+  var FREEZE_AT_1=true; // pre-launch: pin the Daily Five to Puzzle #1 for everyone. Flip to false at public launch.
+  function dayNumber(){ if(FREEZE_AT_1) return 0; var n=new Date(); var a=Date.UTC(n.getFullYear(),n.getMonth(),n.getDate());
     var b=Date.UTC(LAUNCH.getFullYear(),LAUNCH.getMonth(),LAUNCH.getDate()); return Math.max(0,Math.floor((a-b)/86400000)); }
   function puzzleNo(){ return dayNumber()+1; }
   function mulberry32(seed){ return function(){ seed|=0; seed=seed+0x6D2B79F5|0; var t=Math.imul(seed^seed>>>15,1|seed);
@@ -185,6 +209,25 @@
   function todayKey(){ var d=new Date(); return d.getFullYear()+"-"+(d.getMonth()+1)+"-"+d.getDate(); }
   function lsGet(k){ try{return JSON.parse(localStorage.getItem(k));}catch(e){return null;} }
   function lsSet(k,v){ try{localStorage.setItem(k,JSON.stringify(v));}catch(e){} }
+  // Retention stats: played count, current/max daily streak, running average. One record per day.
+  function recordStats(total){
+    var s=lsGet("gf_stats")||{played:0,sum:0,cur:0,max:0,last:null};
+    var d=dayNumber();
+    if(s.last!==d){
+      s.cur=(s.last===d-1)?(s.cur+1):1;
+      if(s.cur>s.max)s.max=s.cur;
+      s.last=d; s.played++; s.sum+=total;
+      lsSet("gf_stats",s);
+    }
+    return s;
+  }
+  function statBox(n,l){ return '<div><div style="font-size:1.4rem;font-weight:800;color:var(--gold);line-height:1">'+n+'</div><div style="font-size:.6rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-top:3px">'+l+'</div></div>'; }
+  function statsStripHTML(){
+    var s=lsGet("gf_stats"); if(!s||!s.played) return "";
+    var avg=Math.round(s.sum/s.played);
+    return '<div class="card" style="display:flex;justify-content:space-around;text-align:center;padding:14px 10px">'+
+      statBox(s.played,"Played")+statBox(s.cur,"Streak")+statBox(s.max,"Max")+statBox(avg,"Avg")+'</div>';
+  }
 
   /* ---------- UI ---------- */
   var stage=document.getElementById("stage"), prog=document.getElementById("progress");
@@ -202,6 +245,7 @@
         (done ? '<div class="explain" style="margin-top:16px">You’ve played today — <b>'+done.total+'/100</b> '+done.bands+'<br>Come back tomorrow for #'+(puzzleNo()+1)+'.</div><button class="btn ghost" id="seeres">See today’s result</button>'
               : '<button class="btn" id="playdaily">Play today’s Guessflation</button>')+
       '</div>'+
+      statsStripHTML()+
       '<div class="menulabel">Or practice a single mode (unlimited)</div>'+
       '<button class="modebtn" data-m="Price It"><span>Price It<small>Guess the old price</small></span><span class="arrow">→</span></button>'+
       '<button class="modebtn" data-m="Which Year"><span>Which Year<small>Name the year from a price</small></span><span class="arrow">→</span></button>'+
@@ -225,7 +269,9 @@
           (post?'<span class="post">'+post+'</span>':'')+'</div>'+
         '<div class="hint">'+(q.type==="percent"?"Enter a percent, e.g. 120 for +120%.":q.type==="year"?"Enter a 4-digit year.":"Type your best estimate.")+'</div>'+
         '<button class="btn" id="submit" disabled>Lock it in</button>'+
+        '<button class="exitlink" id="exitq">\u2715 Exit to menu</button>'+
       '</div>';
+    document.getElementById("exitq").onclick=renderHome;
     var inp=document.getElementById("guess"), btn=document.getElementById("submit");
     inp.addEventListener("input",function(){ btn.disabled=inp.value===""; }); inp.focus();
     var go=function(){ if(!btn.disabled) onSubmit(parseFloat(inp.value)); };
@@ -246,8 +292,10 @@
           '<div class="src">'+q.src+'</div>'+
         '</div>'+
         '<button class="btn" id="next">'+nextLabel+'</button>'+
+        (daily?'<button class="exitlink" id="exitr">\u2715 Exit to menu</button>':'')+
       '</div>';
     document.getElementById("next").onclick=onNext;
+    var _ex=document.getElementById("exitr"); if(_ex)_ex.onclick=renderHome;
   }
 
   function startDaily(){ flow={questions:buildDaily(),results:[],idx:0,daily:true}; stepDaily(); }
@@ -259,24 +307,28 @@
   function renderDailyResult(){ var f=flow, total=Math.round(f.results.reduce(function(a,r){return a+r.s;},0)/f.results.length);
     var bands=f.results.map(function(r){return band(r.s);}).join("");
     lsSet("gf_daily_"+todayKey(),{total:total,bands:bands,results:f.results.map(function(r){return {m:r.q.mode,item:r.q.item,s:r.s};})});
-    drawResult(total,bands,f.results.map(function(r){return {mode:r.q.mode,item:r.q.item,s:r.s};})); }
-  function renderDailyResultFromSave(d){ drawResult(d.total,d.bands,d.results.map(function(r){return {mode:r.m,item:r.item,s:r.s};})); }
+    var st=recordStats(total);
+    drawResult(total,bands,f.results.map(function(r){return {mode:r.q.mode,item:r.q.item,s:r.s};}),st); }
+  function renderDailyResultFromSave(d){ drawResult(d.total,d.bands,d.results.map(function(r){return {mode:r.m,item:r.item,s:r.s};}),lsGet("gf_stats")); }
 
-  function drawResult(total,bands,rows){ showProgress(false);
+  function drawResult(total,bands,rows,st){ showProgress(false);
     var rh=rows.map(function(r){ return '<div class="brow"><div>'+r.mode+'<div class="bm">'+r.item+'</div></div><div>'+band(r.s)+' <b>'+r.s+'</b></div></div>'; }).join("");
+    var streakLine=(st&&st.cur>1)?'<div style="color:var(--gold);font-weight:700;margin:2px 0 6px">🔥 '+st.cur+'-day streak</div>':'';
     stage.innerHTML=
       '<div class="card final">'+
         '<div class="outof">Guessflation · Puzzle #'+puzzleNo()+'</div>'+
         '<div class="bignum">'+total+'</div><div class="outof">out of 100</div>'+
         '<div class="bands">'+bands+'</div>'+
+        streakLine+
         '<div class="breakdown">'+rh+'</div>'+
         '<button class="btn" id="share" style="margin-top:18px">Copy result to share</button>'+
         '<div class="copied" id="copied"></div>'+
         '<button class="btn ghost" id="home">Back to menu</button>'+
       '</div>';
     document.getElementById("share").onclick=function(){
-      // No-spoiler share: emoji bands + score only, never the answers.
-      var txt="Guessflation #"+puzzleNo()+"\n"+bands+"  "+total+"/100\nthe1913index.com/guessflation.html";
+      // No-spoiler share: emoji bands + score (+ streak) only, never the answers.
+      var streakTxt=(st&&st.cur>1)?("\n🔥 "+st.cur+"-day streak"):"";
+      var txt="Guessflation #"+puzzleNo()+"\n"+bands+"  "+total+"/100"+streakTxt+"\nthe1913index.com/guessflation.html";
       if(navigator.clipboard&&navigator.clipboard.writeText){
         navigator.clipboard.writeText(txt).then(function(){ document.getElementById("copied").textContent="Copied! Paste it to a friend."; })
           .catch(function(){ document.getElementById("copied").textContent="Press and hold to copy: "+bands+" "+total+"/100"; });
