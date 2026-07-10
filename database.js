@@ -1,6 +1,6 @@
 window.DB={
   "meta": {
-    "last_updated": "2026-07-07",
+    "last_updated": "2026-07-09",
     "base_year": 1913,
     "now_year": 2026,
     "note": "Tier 1 is the verified, owner-approved core (objective official series: BLS, USDA, USGS, EIA, FRED, Census, USPS, Treasury). Tier 2/3 still verify over time. Only verified items feed the game & headline.",
@@ -140,7 +140,8 @@ window.DB={
       "scannable": "store",
       "parent_item_id": null,
       "unit_display": "per unit (avg)",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "average-hourly-wage-mfg",
@@ -600,7 +601,8 @@ window.DB={
       "scannable": "store",
       "parent_item_id": null,
       "unit_display": "per unit (avg)",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "butterfat-lb",
@@ -1290,7 +1292,8 @@ window.DB={
       "scannable": "no",
       "parent_item_id": null,
       "unit_display": "per dozen",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "farm-laborer-daily-wage",
@@ -1474,7 +1477,8 @@ window.DB={
       "scannable": "no",
       "parent_item_id": null,
       "unit_display": "per stamp",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "fishing-license",
@@ -1612,7 +1616,8 @@ window.DB={
       "scannable": "no",
       "parent_item_id": null,
       "unit_display": "per ounce",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "graphite-lb",
@@ -1957,7 +1962,8 @@ window.DB={
       "scannable": "store",
       "parent_item_id": null,
       "unit_display": "per lb",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "lead-lb",
@@ -2026,7 +2032,8 @@ window.DB={
       "scannable": "no",
       "parent_item_id": null,
       "unit_display": "per trip",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "lime-ton",
@@ -2210,7 +2217,8 @@ window.DB={
       "scannable": "reference",
       "parent_item_id": null,
       "unit_display": "per unit",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "mica-lb",
@@ -2509,7 +2517,8 @@ window.DB={
       "scannable": "no",
       "parent_item_id": null,
       "unit_display": "per trip",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "oats-bushel",
@@ -2578,7 +2587,8 @@ window.DB={
       "scannable": "store",
       "parent_item_id": null,
       "unit_display": "per unit (avg)",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "parcel-post-per-lb",
@@ -2601,7 +2611,8 @@ window.DB={
       "scannable": "no",
       "parent_item_id": null,
       "unit_display": "per trip",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "patent-filing-fee",
@@ -2716,7 +2727,8 @@ window.DB={
       "scannable": "no",
       "parent_item_id": null,
       "unit_display": "per unit",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "platinum-oz",
@@ -2877,7 +2889,8 @@ window.DB={
       "scannable": "store",
       "parent_item_id": null,
       "unit_display": "per unit (avg)",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "president-s-salary",
@@ -2969,7 +2982,8 @@ window.DB={
       "scannable": "no",
       "parent_item_id": null,
       "unit_display": "per trip",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "raisins-lb",
@@ -3360,7 +3374,8 @@ window.DB={
       "scannable": "no",
       "parent_item_id": null,
       "unit_display": "per unit",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "sirloin-steak",
@@ -3429,7 +3444,8 @@ window.DB={
       "scannable": "store",
       "parent_item_id": null,
       "unit_display": "per lb",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "sorghum-bushel",
@@ -3498,7 +3514,8 @@ window.DB={
       "scannable": "no",
       "parent_item_id": null,
       "unit_display": "per trip",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "sugar",
@@ -3659,7 +3676,8 @@ window.DB={
       "scannable": "store",
       "parent_item_id": null,
       "unit_display": "per lb",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "talc-ton",
@@ -4004,7 +4022,8 @@ window.DB={
       "scannable": "no",
       "parent_item_id": null,
       "unit_display": "per trip",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "wheat",
@@ -4142,7 +4161,8 @@ window.DB={
       "scannable": "no",
       "parent_item_id": null,
       "unit_display": "per lb",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "world-raw-sugar-lb",
@@ -4165,7 +4185,8 @@ window.DB={
       "scannable": "no",
       "parent_item_id": null,
       "unit_display": "per lb",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "zinc-lb",
@@ -4211,7 +4232,8 @@ window.DB={
       "scannable": "store",
       "parent_item_id": null,
       "unit_display": "per item",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "fed-discount-rate",
@@ -4257,7 +4279,8 @@ window.DB={
       "scannable": "store",
       "parent_item_id": null,
       "unit_display": "per item",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "men-s-suit",
@@ -4280,7 +4303,8 @@ window.DB={
       "scannable": "store",
       "parent_item_id": null,
       "unit_display": "per item",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "men-s-work-shoes",
@@ -4303,7 +4327,8 @@ window.DB={
       "scannable": "store",
       "parent_item_id": null,
       "unit_display": "per item",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "overalls-pair",
@@ -4326,7 +4351,8 @@ window.DB={
       "scannable": "store",
       "parent_item_id": null,
       "unit_display": "per pair",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "socks-pair",
@@ -4349,7 +4375,8 @@ window.DB={
       "scannable": "store",
       "parent_item_id": null,
       "unit_display": "per pair",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "wool-fabric-yard",
@@ -4372,7 +4399,8 @@ window.DB={
       "scannable": "store",
       "parent_item_id": null,
       "unit_display": "per item",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "hops-lb",
@@ -4832,7 +4860,8 @@ window.DB={
       "scannable": "store",
       "parent_item_id": null,
       "unit_display": "per can",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "figs-lb",
@@ -5223,7 +5252,8 @@ window.DB={
       "scannable": "store",
       "parent_item_id": null,
       "unit_display": "per item",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "women-s-shoes",
@@ -5246,7 +5276,8 @@ window.DB={
       "scannable": "store",
       "parent_item_id": null,
       "unit_display": "per item",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "capital-gains-tax-rate",
@@ -5568,7 +5599,8 @@ window.DB={
       "scannable": "no",
       "parent_item_id": null,
       "unit_display": "per gallon",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "aviation-gasoline-gal",
@@ -5752,7 +5784,8 @@ window.DB={
       "scannable": "no",
       "parent_item_id": null,
       "unit_display": "per trip",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "beryllium-lb",
@@ -5844,7 +5877,8 @@ window.DB={
       "scannable": "reference",
       "parent_item_id": null,
       "unit_display": "per unit",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "intercity-bus-per-mile",
@@ -5867,7 +5901,8 @@ window.DB={
       "scannable": "no",
       "parent_item_id": null,
       "unit_display": "per trip",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "motor-oil-quart",
@@ -5890,7 +5925,8 @@ window.DB={
       "scannable": "no",
       "parent_item_id": null,
       "unit_display": "per quart",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "whole-wheat-bread-lb",
@@ -5913,7 +5949,8 @@ window.DB={
       "scannable": "store",
       "parent_item_id": null,
       "unit_display": "per lb",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "chicken",
@@ -5936,7 +5973,8 @@ window.DB={
       "scannable": "store",
       "parent_item_id": null,
       "unit_display": "per unit (avg)",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "social-security-tax-rate",
@@ -6005,7 +6043,8 @@ window.DB={
       "scannable": "no",
       "parent_item_id": null,
       "unit_display": "per trip",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "median-monthly-rent",
@@ -6028,7 +6067,8 @@ window.DB={
       "scannable": "reference",
       "parent_item_id": null,
       "unit_display": "per month",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "pinto-beans-cwt",
@@ -6212,7 +6252,8 @@ window.DB={
       "scannable": "no",
       "parent_item_id": null,
       "unit_display": "per gallon",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "appalachian-coal-ton",
@@ -6948,7 +6989,8 @@ window.DB={
       "scannable": "store",
       "parent_item_id": null,
       "unit_display": "per lb",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "ginger-lb",
@@ -7155,7 +7197,8 @@ window.DB={
       "scannable": "store",
       "parent_item_id": null,
       "unit_display": "per unit",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "lamb-chops-lb",
@@ -7546,7 +7589,8 @@ window.DB={
       "scannable": "store",
       "parent_item_id": null,
       "unit_display": "per unit (avg)",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "plywood-sheet",
@@ -7776,7 +7820,8 @@ window.DB={
       "scannable": "reference",
       "parent_item_id": null,
       "unit_display": "per unit",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "salami-lb",
@@ -8190,7 +8235,8 @@ window.DB={
       "scannable": "reference",
       "parent_item_id": null,
       "unit_display": "per unit",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "accountant-annual-salary",
@@ -9179,7 +9225,8 @@ window.DB={
       "scannable": "store",
       "parent_item_id": null,
       "unit_display": "per gallon",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "bbq-sauce-bottle",
@@ -9386,7 +9433,8 @@ window.DB={
       "scannable": "reference",
       "parent_item_id": null,
       "unit_display": "per kwh",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "english-muffins-pack",
@@ -9501,7 +9549,8 @@ window.DB={
       "scannable": "store",
       "parent_item_id": null,
       "unit_display": "per unit (avg)",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "heavy-cream-pint",
@@ -9547,7 +9596,8 @@ window.DB={
       "scannable": "store",
       "parent_item_id": null,
       "unit_display": "per unit (avg)",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "hot-sauce-bottle",
@@ -9938,7 +9988,8 @@ window.DB={
       "scannable": "store",
       "parent_item_id": null,
       "unit_display": "per gallon",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "soy-sauce-bottle",
@@ -10743,7 +10794,8 @@ window.DB={
       "scannable": "reference",
       "parent_item_id": null,
       "unit_display": "per year",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "college-tuition-public-in-state-yr",
@@ -10766,7 +10818,8 @@ window.DB={
       "scannable": "reference",
       "parent_item_id": null,
       "unit_display": "per year",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "express-mail-flat",
@@ -10950,7 +11003,8 @@ window.DB={
       "scannable": "no",
       "parent_item_id": null,
       "unit_display": "per unit",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "chicken-breast-lb",
@@ -10973,7 +11027,8 @@ window.DB={
       "scannable": "store",
       "parent_item_id": null,
       "unit_display": "per lb",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "chicken-thighs-lb",
@@ -10996,7 +11051,8 @@ window.DB={
       "scannable": "store",
       "parent_item_id": null,
       "unit_display": "per lb",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "chicken-wings-lb",
@@ -11019,7 +11075,8 @@ window.DB={
       "scannable": "store",
       "parent_item_id": null,
       "unit_display": "per lb",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "cilantro-bunch",
@@ -11088,7 +11145,8 @@ window.DB={
       "scannable": "no",
       "parent_item_id": null,
       "unit_display": "per trip",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "feta-lb",
@@ -11456,7 +11514,8 @@ window.DB={
       "scannable": "store",
       "parent_item_id": null,
       "unit_display": "per unit (avg)",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "plantains-lb",
@@ -11778,7 +11837,8 @@ window.DB={
       "scannable": "store",
       "parent_item_id": null,
       "unit_display": "per lb",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "turkey-breast-lb",
@@ -12468,7 +12528,8 @@ window.DB={
       "scannable": "no",
       "parent_item_id": null,
       "unit_display": "per unit",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "coca-cola-bottle",
@@ -12583,7 +12644,8 @@ window.DB={
       "scannable": "reference",
       "parent_item_id": null,
       "unit_display": "per ticket",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "car",
@@ -12606,7 +12668,8 @@ window.DB={
       "scannable": "no",
       "parent_item_id": null,
       "unit_display": "per car",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "newspaper-daily",
@@ -12629,7 +12692,8 @@ window.DB={
       "scannable": "reference",
       "parent_item_id": null,
       "unit_display": "each",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "steel",
@@ -12675,7 +12739,8 @@ window.DB={
       "scannable": "store",
       "parent_item_id": null,
       "unit_display": "½ gal",
-      "upc_ids": []
+      "upc_ids": [],
+      "shrink_note": "Shrinkflation: Breyers \"half gallon\" shrank 64→56 (2007)→48 oz (2008) = +33% per-oz vs the true half gallon (Mouse Print era, Routing by Rumor)."
     },
     {
       "id": "comic-book",
@@ -13089,7 +13154,8 @@ window.DB={
       "scannable": "no",
       "parent_item_id": null,
       "unit_display": "per trip",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "clothes-dryer",
@@ -13227,7 +13293,8 @@ window.DB={
       "scannable": "store",
       "parent_item_id": null,
       "unit_display": "per item",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "bookshelf",
@@ -13388,7 +13455,8 @@ window.DB={
       "scannable": "reference",
       "parent_item_id": null,
       "unit_display": "per unit",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "sat-exam-fee",
@@ -13457,7 +13525,8 @@ window.DB={
       "scannable": "store",
       "parent_item_id": null,
       "unit_display": "per item",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "winter-coat",
@@ -13595,7 +13664,8 @@ window.DB={
       "scannable": "reference",
       "parent_item_id": null,
       "unit_display": "per unit",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "big-mac",
@@ -13894,7 +13964,8 @@ window.DB={
       "scannable": "store",
       "parent_item_id": null,
       "unit_display": "per unit",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "golf-greens-fee",
@@ -14147,7 +14218,8 @@ window.DB={
       "scannable": "no",
       "parent_item_id": null,
       "unit_display": "per trip",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "ski-lift-ticket",
@@ -14308,7 +14380,8 @@ window.DB={
       "scannable": "store",
       "parent_item_id": null,
       "unit_display": "per item",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "toilet-paper-roll",
@@ -14331,7 +14404,9 @@ window.DB={
       "scannable": "store",
       "parent_item_id": null,
       "unit_display": "per roll",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true,
+      "shrink_note": "Shrinkflation: a \"roll\" is a moving target — Charmin regular roll had 650 sheets (1970), 400 (1979); today's mega roll has 244 (The Hustle/CNN)."
     },
     {
       "id": "underwear-pack",
@@ -14747,7 +14822,8 @@ window.DB={
       "scannable": "store",
       "parent_item_id": null,
       "unit_display": "per item",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "baby-formula-tub",
@@ -15253,7 +15329,8 @@ window.DB={
       "scannable": "store",
       "parent_item_id": null,
       "unit_display": "per item",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "knife-set",
@@ -16771,7 +16848,8 @@ window.DB={
       "scannable": "no",
       "parent_item_id": null,
       "unit_display": "per trip",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "olive-garden-entree",
@@ -20129,7 +20207,8 @@ window.DB={
       "scannable": "store",
       "parent_item_id": null,
       "unit_display": "per unit",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "e-bike",
@@ -21302,7 +21381,8 @@ window.DB={
       "scannable": "store",
       "parent_item_id": null,
       "unit_display": "each",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "moon-pie",
@@ -22084,7 +22164,8 @@ window.DB={
       "scannable": "store",
       "parent_item_id": null,
       "unit_display": "each",
-      "upc_ids": []
+      "upc_ids": [],
+      "shrink_note": "Shrinkflation: standard bag 9.75→9.25 oz in 2021, price unchanged in most stores (Newsweek/Frito-Lay confirmed)."
     },
     {
       "id": "dry-cleaning-shirt",
@@ -23855,7 +23936,8 @@ window.DB={
       "scannable": "store",
       "parent_item_id": null,
       "unit_display": "per bottle",
-      "upc_ids": []
+      "upc_ids": [],
+      "shrink_note": "Shrinkflation: 32 oz bottle widely replaced by 28 oz at same price (2021) = +14.3% per-oz (KHOU)."
     },
     {
       "id": "sour-patch-kids",
@@ -26019,7 +26101,8 @@ window.DB={
       "scannable": "store",
       "parent_item_id": null,
       "unit_display": "each",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "polo-shirt",
@@ -26063,7 +26146,8 @@ window.DB={
       "scannable": "store",
       "parent_item_id": null,
       "unit_display": "per pair",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "chinos-pair",
@@ -26283,7 +26367,8 @@ window.DB={
       "scannable": "store",
       "parent_item_id": null,
       "unit_display": "per pair",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "running-shoes-2",
@@ -28351,7 +28436,8 @@ window.DB={
       "scannable": "store",
       "parent_item_id": null,
       "unit_display": "each",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "breast-pump",
@@ -33937,7 +34023,8 @@ window.DB={
       "scannable": "store",
       "parent_item_id": null,
       "unit_display": "each",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "tshirt-basic",
@@ -34641,7 +34728,8 @@ window.DB={
       "scannable": "store",
       "parent_item_id": null,
       "unit_display": "each",
-      "upc_ids": []
+      "upc_ids": [],
+      "shrink_note": "Shrinkflation: sheet counts per roll fall continuously (Charmin regular roll: 650 sheets in 1970 → mega roll 244 sheets today); per-sheet is the honest unit (The Hustle/CNN)."
     },
     {
       "id": "paper-towels",
@@ -34729,7 +34817,8 @@ window.DB={
       "scannable": "reference",
       "parent_item_id": null,
       "unit_display": "per month",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "term-life",
@@ -39524,7 +39613,8 @@ window.DB={
       "scannable": "store",
       "parent_item_id": null,
       "unit_display": "per gallon",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "eggs-dozen-hist",
@@ -39545,7 +39635,8 @@ window.DB={
       "scannable": "store",
       "parent_item_id": null,
       "unit_display": "per dozen",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "bread-loaf-hist",
@@ -39566,7 +39657,8 @@ window.DB={
       "scannable": "store",
       "parent_item_id": null,
       "unit_display": "each",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "gasoline-gallon-hist",
@@ -39587,7 +39679,8 @@ window.DB={
       "scannable": "reference",
       "parent_item_id": null,
       "unit_display": "per gallon",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "stamp-hist",
@@ -39608,7 +39701,8 @@ window.DB={
       "scannable": "no",
       "parent_item_id": null,
       "unit_display": "each",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "coca-cola-hist",
@@ -39629,7 +39723,8 @@ window.DB={
       "scannable": "store",
       "parent_item_id": null,
       "unit_display": "each",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "coffee-lb-hist",
@@ -39650,7 +39745,8 @@ window.DB={
       "scannable": "store",
       "parent_item_id": null,
       "unit_display": "per lb",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "new-car-hist",
@@ -39671,7 +39767,8 @@ window.DB={
       "scannable": "no",
       "parent_item_id": null,
       "unit_display": "each",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "newspaper-hist",
@@ -39692,7 +39789,8 @@ window.DB={
       "scannable": "reference",
       "parent_item_id": null,
       "unit_display": "each",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "mens-haircut-hist",
@@ -39713,7 +39811,8 @@ window.DB={
       "scannable": "store",
       "parent_item_id": null,
       "unit_display": "each",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "candy-bar-hist",
@@ -39734,7 +39833,8 @@ window.DB={
       "scannable": "store",
       "parent_item_id": null,
       "unit_display": "each",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "cigarettes-hist",
@@ -39755,7 +39855,8 @@ window.DB={
       "scannable": "no",
       "parent_item_id": null,
       "unit_display": "per pack",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "sugar-5lb-hist",
@@ -39797,7 +39898,8 @@ window.DB={
       "scannable": "reference",
       "parent_item_id": null,
       "unit_display": "each",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "dozen-donuts-hist",
@@ -39839,7 +39941,8 @@ window.DB={
       "scannable": "store",
       "parent_item_id": null,
       "unit_display": "each",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "ford-f150",
@@ -40674,7 +40777,8 @@ window.DB={
       "scannable": "reference",
       "parent_item_id": null,
       "unit_display": "per kwh",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "doctor-visit-hist",
@@ -40695,7 +40799,8 @@ window.DB={
       "scannable": "reference",
       "parent_item_id": null,
       "unit_display": "per visit",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "hershey-bar-hist",
@@ -40716,7 +40821,8 @@ window.DB={
       "scannable": "store",
       "parent_item_id": null,
       "unit_display": "each",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "ground-beef-hist",
@@ -40737,7 +40843,8 @@ window.DB={
       "scannable": "store",
       "parent_item_id": null,
       "unit_display": "per lb",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "chicken-hist",
@@ -40779,7 +40886,8 @@ window.DB={
       "scannable": "store",
       "parent_item_id": null,
       "unit_display": "per lb",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "flour-hist",
@@ -40800,7 +40908,8 @@ window.DB={
       "scannable": "store",
       "parent_item_id": null,
       "unit_display": "each",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "bananas-hist",
@@ -40842,7 +40951,8 @@ window.DB={
       "scannable": "store",
       "parent_item_id": null,
       "unit_display": "each",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "college-public-hist",
@@ -40884,7 +40994,8 @@ window.DB={
       "scannable": "reference",
       "parent_item_id": null,
       "unit_display": "per year",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "gold-oz-hist",
@@ -40905,7 +41016,8 @@ window.DB={
       "scannable": "no",
       "parent_item_id": null,
       "unit_display": "per oz",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "silver-oz-hist",
@@ -40926,7 +41038,8 @@ window.DB={
       "scannable": "no",
       "parent_item_id": null,
       "unit_display": "per oz",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "movie-popcorn-hist",
@@ -40968,7 +41081,8 @@ window.DB={
       "scannable": "store",
       "parent_item_id": null,
       "unit_display": "per lb",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "apples-hist",
@@ -40989,7 +41103,8 @@ window.DB={
       "scannable": "store",
       "parent_item_id": null,
       "unit_display": "per lb",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "coffee-cup-hist",
@@ -41010,7 +41125,8 @@ window.DB={
       "scannable": "store",
       "parent_item_id": null,
       "unit_display": "each",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "wsj-paper-hist",
@@ -41052,7 +41168,8 @@ window.DB={
       "scannable": "store",
       "parent_item_id": null,
       "unit_display": "each",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "levis-jeans-hist",
@@ -41073,7 +41190,8 @@ window.DB={
       "scannable": "store",
       "parent_item_id": null,
       "unit_display": "each",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "gas-ca",
@@ -41095,7 +41213,8 @@ window.DB={
       "scannable": "reference",
       "parent_item_id": null,
       "unit_display": "per gallon",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "gas-tx",
@@ -41117,7 +41236,8 @@ window.DB={
       "scannable": "reference",
       "parent_item_id": null,
       "unit_display": "per gallon",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "gas-ny",
@@ -41139,7 +41259,8 @@ window.DB={
       "scannable": "reference",
       "parent_item_id": null,
       "unit_display": "per gallon",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "gas-fl",
@@ -41161,7 +41282,8 @@ window.DB={
       "scannable": "reference",
       "parent_item_id": null,
       "unit_display": "per gallon",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "gas-il",
@@ -41183,7 +41305,8 @@ window.DB={
       "scannable": "reference",
       "parent_item_id": null,
       "unit_display": "per gallon",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "gas-pa",
@@ -41205,7 +41328,8 @@ window.DB={
       "scannable": "reference",
       "parent_item_id": null,
       "unit_display": "per gallon",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "gas-wa",
@@ -41227,7 +41351,8 @@ window.DB={
       "scannable": "reference",
       "parent_item_id": null,
       "unit_display": "per gallon",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "gas-ga",
@@ -41249,7 +41374,8 @@ window.DB={
       "scannable": "reference",
       "parent_item_id": null,
       "unit_display": "per gallon",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "gas-oh",
@@ -41271,7 +41397,8 @@ window.DB={
       "scannable": "reference",
       "parent_item_id": null,
       "unit_display": "per gallon",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "gas-az",
@@ -41293,7 +41420,8 @@ window.DB={
       "scannable": "reference",
       "parent_item_id": null,
       "unit_display": "per gallon",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "gas-co",
@@ -41315,7 +41443,8 @@ window.DB={
       "scannable": "reference",
       "parent_item_id": null,
       "unit_display": "per gallon",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "gas-mi",
@@ -41337,7 +41466,8 @@ window.DB={
       "scannable": "reference",
       "parent_item_id": null,
       "unit_display": "per gallon",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "rent-nyc",
@@ -42436,7 +42566,8 @@ window.DB={
       "scannable": "no",
       "parent_item_id": null,
       "unit_display": "per call",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "pocket-calculator",
@@ -42478,7 +42609,8 @@ window.DB={
       "scannable": "reference",
       "parent_item_id": null,
       "unit_display": "per ticket",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "washing-machine-hist",
@@ -42583,7 +42715,8 @@ window.DB={
       "scannable": "reference",
       "parent_item_id": null,
       "unit_display": "each",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "mcdonalds-coffee-hist",
@@ -44351,7 +44484,8 @@ window.DB={
       "scannable": "store",
       "parent_item_id": null,
       "unit_display": "each",
-      "upc_ids": []
+      "upc_ids": [],
+      "shrink_note": "Shrinkflation: the \"half gallon\" carton is now 48 oz (64→56→48, 2007–08) = +33% per-oz vs a true half gallon."
     },
     {
       "id": "margarine-lb",
@@ -44708,7 +44842,8 @@ window.DB={
       "scannable": "store",
       "parent_item_id": null,
       "unit_display": "each",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "tea-bags",
@@ -44771,7 +44906,8 @@ window.DB={
       "scannable": "store",
       "parent_item_id": null,
       "unit_display": "each",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "beer-sixpack2",
@@ -44792,7 +44928,8 @@ window.DB={
       "scannable": "store",
       "parent_item_id": null,
       "unit_display": "each",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "wine-bottle2",
@@ -44855,7 +44992,8 @@ window.DB={
       "scannable": "store",
       "parent_item_id": null,
       "unit_display": "each",
-      "upc_ids": []
+      "upc_ids": [],
+      "shrink_note": "Shrinkflation: 32 oz bottle widely replaced by 28 oz at same price (2021) = +14.3% per-oz (KHOU/congressional letters)."
     },
     {
       "id": "orange-juice2",
@@ -44897,7 +45035,8 @@ window.DB={
       "scannable": "store",
       "parent_item_id": null,
       "unit_display": "each",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "toilet-paper2",
@@ -44918,7 +45057,9 @@ window.DB={
       "scannable": "store",
       "parent_item_id": null,
       "unit_display": "each",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true,
+      "shrink_note": "Shrinkflation: Charmin mega roll 264→244 sheets (2019–2024) while a 24-pack rose $23.82→$26.48; sheets also physically smaller than 1966 (CNN/Yahoo)."
     },
     {
       "id": "paper-towels2",
@@ -45065,7 +45206,8 @@ window.DB={
       "scannable": "store",
       "parent_item_id": null,
       "unit_display": "each",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "bar-soap",
@@ -45086,7 +45228,8 @@ window.DB={
       "scannable": "store",
       "parent_item_id": null,
       "unit_display": "each",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "razor-blades",
@@ -45233,7 +45376,8 @@ window.DB={
       "scannable": "store",
       "parent_item_id": null,
       "unit_display": "each",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "sneakers2",
@@ -45338,7 +45482,8 @@ window.DB={
       "scannable": "no",
       "parent_item_id": null,
       "unit_display": "each",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "bicycle-tire",
@@ -45527,7 +45672,8 @@ window.DB={
       "scannable": "store",
       "parent_item_id": null,
       "unit_display": "each",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "dry-cleaning2",
@@ -45611,7 +45757,8 @@ window.DB={
       "scannable": "no",
       "parent_item_id": null,
       "unit_display": "each",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "money-order",
@@ -46136,7 +46283,8 @@ window.DB={
       "scannable": "no",
       "parent_item_id": null,
       "unit_display": "per ride",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "airfare-mile",
@@ -46157,7 +46305,8 @@ window.DB={
       "scannable": "reference",
       "parent_item_id": null,
       "unit_display": "per mile",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "train-ticket-commuter",
@@ -46472,7 +46621,8 @@ window.DB={
       "scannable": "reference",
       "parent_item_id": null,
       "unit_display": "per day",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "antibiotics-rx",
@@ -46493,7 +46643,8 @@ window.DB={
       "scannable": "reference",
       "parent_item_id": null,
       "unit_display": "per fill",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "flu-shot2",
@@ -47081,7 +47232,8 @@ window.DB={
       "scannable": "store",
       "parent_item_id": null,
       "unit_display": "each",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "hot-chocolate",
@@ -47144,7 +47296,8 @@ window.DB={
       "scannable": "store",
       "parent_item_id": null,
       "unit_display": "each",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "diner-breakfast2",
@@ -51239,7 +51392,8 @@ window.DB={
       "scannable": "reference",
       "parent_item_id": null,
       "unit_display": "per month",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "water-bill2",
@@ -51281,7 +51435,8 @@ window.DB={
       "scannable": "reference",
       "parent_item_id": null,
       "unit_display": "per gallon",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "accountant-return",
@@ -51766,7 +51921,8 @@ window.DB={
       "scannable": "reference",
       "parent_item_id": null,
       "unit_display": "per month",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "magazine-sub",
@@ -51850,7 +52006,8 @@ window.DB={
       "scannable": "reference",
       "parent_item_id": null,
       "unit_display": "per night",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "motel-night-hist",
@@ -51892,7 +52049,8 @@ window.DB={
       "scannable": "reference",
       "parent_item_id": null,
       "unit_display": "per ticket",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "rental-car-hist",
@@ -51913,7 +52071,8 @@ window.DB={
       "scannable": "reference",
       "parent_item_id": null,
       "unit_display": "per day",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "cruise-night",
@@ -51997,7 +52156,8 @@ window.DB={
       "scannable": "reference",
       "parent_item_id": null,
       "unit_display": "per birth",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "dentures",
@@ -56386,7 +56546,8 @@ window.DB={
       "scannable": "store",
       "parent_item_id": null,
       "unit_display": "per unit",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "outlet-receptacle",
@@ -60187,7 +60348,8 @@ window.DB={
       "scannable": "reference",
       "parent_item_id": null,
       "unit_display": "night",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "hotel-sf",
@@ -62161,7 +62323,8 @@ window.DB={
       "scannable": "store",
       "parent_item_id": null,
       "unit_display": "each",
-      "upc_ids": []
+      "upc_ids": [],
+      "shrink_note": "Shrinkflation: Family Size box cut 19.3→18.1 oz in 2021 at the same shelf price = +6.6% per-oz (NPR/Mouse Print); now 18 oz."
     },
     {
       "id": "frosted-flakes",
@@ -62434,7 +62597,8 @@ window.DB={
       "scannable": "store",
       "parent_item_id": null,
       "unit_display": "each",
-      "upc_ids": []
+      "upc_ids": [],
+      "shrink_note": "Shrinkflation: carton shrank 64→59 (2010)→52 (2018)→46 oz (2024) — 28% less OJ in the \"half gallon\" since 2009 (Mouse Print/Fortune)."
     },
     {
       "id": "folgers",
@@ -62455,7 +62619,8 @@ window.DB={
       "scannable": "store",
       "parent_item_id": null,
       "unit_display": "each",
-      "upc_ids": []
+      "upc_ids": [],
+      "shrink_note": "Shrinkflation: large canister 51→43.5 oz (2022) = +17.2% per-oz; ground coffee cans were 16 oz until 1988 (Mouse Print)."
     },
     {
       "id": "maxwell-house",
@@ -62539,7 +62704,8 @@ window.DB={
       "scannable": "store",
       "parent_item_id": null,
       "unit_display": "each",
-      "upc_ids": []
+      "upc_ids": [],
+      "shrink_note": "Shrinkflation: standard bag 9.75→9.25 oz in 2021 (\"about 5 fewer chips\"), price unchanged in most stores (Newsweek/Frito-Lay confirmed)."
     },
     {
       "id": "oreo-brand",
@@ -71508,7 +71674,8 @@ window.DB={
       "scannable": "reference",
       "parent_item_id": null,
       "unit_display": "year",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "auto-insurance-liability-only",
@@ -71550,7 +71717,8 @@ window.DB={
       "scannable": "reference",
       "parent_item_id": null,
       "unit_display": "year",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "homeowners-insurance-avg",
@@ -71592,7 +71760,8 @@ window.DB={
       "scannable": "reference",
       "parent_item_id": null,
       "unit_display": "year",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "flood-insurance-avg",
@@ -72497,7 +72666,8 @@ window.DB={
       "scannable": "no",
       "parent_item_id": null,
       "unit_display": "ticket",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "japan-sushi-combo",
@@ -72791,7 +72961,8 @@ window.DB={
       "scannable": "no",
       "parent_item_id": null,
       "unit_display": "bushel",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "soybeans-bushel-farm",
@@ -72812,7 +72983,8 @@ window.DB={
       "scannable": "no",
       "parent_item_id": null,
       "unit_display": "bushel",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "wheat-bushel-farm",
@@ -72833,7 +73005,8 @@ window.DB={
       "scannable": "no",
       "parent_item_id": null,
       "unit_display": "bushel",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "cotton-lb-farm",
@@ -72854,7 +73027,8 @@ window.DB={
       "scannable": "no",
       "parent_item_id": null,
       "unit_display": "lb",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "hogs-cwt",
@@ -72875,7 +73049,8 @@ window.DB={
       "scannable": "no",
       "parent_item_id": null,
       "unit_display": "cwt",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "cattle-beef-cwt",
@@ -72896,7 +73071,8 @@ window.DB={
       "scannable": "no",
       "parent_item_id": null,
       "unit_display": "cwt",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "broilers-lb-farm",
@@ -72917,7 +73093,8 @@ window.DB={
       "scannable": "no",
       "parent_item_id": null,
       "unit_display": "lb",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "milk-cwt-farm",
@@ -72938,7 +73115,8 @@ window.DB={
       "scannable": "no",
       "parent_item_id": null,
       "unit_display": "cwt",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "eggs-dozen-farm",
@@ -72959,7 +73137,8 @@ window.DB={
       "scannable": "no",
       "parent_item_id": null,
       "unit_display": "dozen",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "organic-milk-halfgallon",
@@ -73570,7 +73749,8 @@ window.DB={
       "scannable": "store",
       "parent_item_id": null,
       "unit_display": "box",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "yeast-strip",
@@ -73717,7 +73897,8 @@ window.DB={
       "scannable": "store",
       "parent_item_id": null,
       "unit_display": "can",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "canned-tuna-5oz",
@@ -73843,7 +74024,8 @@ window.DB={
       "scannable": "store",
       "parent_item_id": null,
       "unit_display": "jug",
-      "upc_ids": []
+      "upc_ids": [],
+      "shrink_note": "Shrinkflation: Tropicana carton shrank 64→59 (2010)→52 (2018)→46 oz (2024) (Mouse Print/Fortune)."
     },
     {
       "id": "cranberry-juice-64oz",
@@ -73948,7 +74130,8 @@ window.DB={
       "scannable": "store",
       "parent_item_id": null,
       "unit_display": "bottle",
-      "upc_ids": []
+      "upc_ids": [],
+      "shrink_note": "Shrinkflation: 32 oz bottle widely replaced by 28 oz at same price (2021) = +14.3% per-oz (KHOU/congressional letters)."
     },
     {
       "id": "kombucha-16oz",
@@ -74169,11 +74352,11 @@ window.DB={
       "then_year": 2025,
       "then_price": 5,
       "now_year": 2026,
-      "now_price": 40.9,
+      "now_price": 41.4,
       "tier": 2,
       "verified": true,
       "source_then": "DoD/OMB, escalating since 2025 strikes; Watson/Brown methodology",
-      "source_now": "CSIS $34–42B (~$40B central, Jun 23 2026) + ~9 days ceasefire-standby burn ~$95M/day (militaryspend.org, Jul 2 2026); Pentagon official count $29B (incomplete)",
+      "source_now": "CSIS $34–42B (~$40B central, Jun 23 2026) + ~15 days ceasefire-standby burn ~$95M/day through Jul 8 (militaryspend.org phased model, Jul 9 2026); Pentagon/OMB official count $29–30B (incomplete). Fighting RESUMED Jul 8 2026 — Jul 8–9 strike costs not yet in any tracker.",
       "why": "The Iran conflict is ongoing. Cost estimates are preliminary and contested — initial strikes, naval operations, and force deployments account for the bulk of the direct tab so far. Long-tail costs (veterans, interest) will dwarf the direct figure, as they have in every U.S. war since WWII. Updated monthly by the auto-refresh task.",
       "note": "ESTIMATE — updated weekly by 1913-index-iran-war-refresh. Direct operations cost only; all-in figure (veterans + interest) will be 3–5× larger over 30 years.",
       "scannable": "no",
@@ -74194,7 +74377,7 @@ window.DB={
       "tier": 2,
       "verified": true,
       "source_then": "Aggregated from CRS RS22926 + Brown/Watson Costs of War",
-      "source_now": "Sum of all-in costs per site/wars.js (CRS + Brown Costs of War + CSIS): Korea $648B, Vietnam $1,402B, Iraq $2,100B, Afghanistan $2,300B, Gulf $25B, Kosovo $7B, Libya $2B, Iran $115B ≈ $6.6T (2026, mixed dollar-years, all-in incl. veterans + interest)",
+      "source_now": "Sum of all-in costs per site/wars.js (CRS + Brown Costs of War + CSIS, as of Jul 9 2026): Korea $648B, Vietnam $1,402B, Iraq $2,100B, Afghanistan $2,300B, Gulf $25B, Kosovo $7B, Libya $2B, Iran $115B (projected all-in, est.; fighting resumed Jul 8 2026) ≈ $6.6T (mixed dollar-years, all-in incl. veterans + interest)",
       "why": "Add it up: WWI, WWII, Korea, Vietnam, Gulf War, Iraq, Afghanistan, and the emerging Iran conflict total more than $6 trillion in nominal dollars — a figure that will keep rising as veterans' care and interest payments compound for decades. Not a single dollar of the post-9/11 wars was raised through taxation or savings. All of it was deficit-financed, meaning the Fed printed money to cover it, eroding the purchasing power of every American who ever saved in dollars.",
       "note": "Aggregate nominal all-in cost across major conflicts. Approximated from CRS and Brown/Watson sources. Long-tail costs (veterans, interest) are still accumulating and will substantially increase this figure.",
       "scannable": "no",
@@ -74221,7 +74404,8 @@ window.DB={
       "scannable": "reference",
       "parent_item_id": null,
       "unit_display": "year",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "tuition-yale",
@@ -74242,7 +74426,8 @@ window.DB={
       "scannable": "reference",
       "parent_item_id": null,
       "unit_display": "year",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "tuition-princeton",
@@ -74263,7 +74448,8 @@ window.DB={
       "scannable": "reference",
       "parent_item_id": null,
       "unit_display": "year",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "tuition-columbia",
@@ -74284,7 +74470,8 @@ window.DB={
       "scannable": "reference",
       "parent_item_id": null,
       "unit_display": "year",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "tuition-nyu",
@@ -74305,7 +74492,8 @@ window.DB={
       "scannable": "reference",
       "parent_item_id": null,
       "unit_display": "year",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "tuition-usc",
@@ -74326,7 +74514,8 @@ window.DB={
       "scannable": "reference",
       "parent_item_id": null,
       "unit_display": "year",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "tuition-northwestern",
@@ -74347,7 +74536,8 @@ window.DB={
       "scannable": "reference",
       "parent_item_id": null,
       "unit_display": "year",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "tuition-duke",
@@ -74368,7 +74558,8 @@ window.DB={
       "scannable": "reference",
       "parent_item_id": null,
       "unit_display": "year",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "tuition-vanderbilt",
@@ -74389,7 +74580,8 @@ window.DB={
       "scannable": "reference",
       "parent_item_id": null,
       "unit_display": "year",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "tuition-mit",
@@ -74410,7 +74602,8 @@ window.DB={
       "scannable": "reference",
       "parent_item_id": null,
       "unit_display": "year",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "tuition-stanford",
@@ -74431,7 +74624,8 @@ window.DB={
       "scannable": "reference",
       "parent_item_id": null,
       "unit_display": "year",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "tuition-uchicago",
@@ -74452,7 +74646,8 @@ window.DB={
       "scannable": "reference",
       "parent_item_id": null,
       "unit_display": "year",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "tuition-notre-dame",
@@ -74473,7 +74668,8 @@ window.DB={
       "scannable": "reference",
       "parent_item_id": null,
       "unit_display": "year",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "tuition-georgetown",
@@ -74494,7 +74690,8 @@ window.DB={
       "scannable": "reference",
       "parent_item_id": null,
       "unit_display": "year",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "tuition-emory",
@@ -74599,7 +74796,8 @@ window.DB={
       "scannable": "reference",
       "parent_item_id": null,
       "unit_display": "year",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "tuition-ucla",
@@ -74620,7 +74818,8 @@ window.DB={
       "scannable": "reference",
       "parent_item_id": null,
       "unit_display": "year",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "tuition-u-michigan",
@@ -74641,7 +74840,8 @@ window.DB={
       "scannable": "reference",
       "parent_item_id": null,
       "unit_display": "year",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "tuition-u-virginia",
@@ -74662,7 +74862,8 @@ window.DB={
       "scannable": "reference",
       "parent_item_id": null,
       "unit_display": "year",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "tuition-ut-austin",
@@ -74683,7 +74884,8 @@ window.DB={
       "scannable": "reference",
       "parent_item_id": null,
       "unit_display": "year",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "tuition-u-florida",
@@ -74704,7 +74906,8 @@ window.DB={
       "scannable": "reference",
       "parent_item_id": null,
       "unit_display": "year",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "tuition-ohio-state",
@@ -74725,7 +74928,8 @@ window.DB={
       "scannable": "reference",
       "parent_item_id": null,
       "unit_display": "year",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "tuition-penn-state",
@@ -74746,7 +74950,8 @@ window.DB={
       "scannable": "reference",
       "parent_item_id": null,
       "unit_display": "year",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "tuition-purdue",
@@ -74767,7 +74972,8 @@ window.DB={
       "scannable": "reference",
       "parent_item_id": null,
       "unit_display": "year",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "tuition-u-illinois",
@@ -74788,7 +74994,8 @@ window.DB={
       "scannable": "reference",
       "parent_item_id": null,
       "unit_display": "year",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "tuition-u-north-carolina",
@@ -74809,7 +75016,8 @@ window.DB={
       "scannable": "reference",
       "parent_item_id": null,
       "unit_display": "year",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "tuition-u-wisconsin",
@@ -74830,7 +75038,8 @@ window.DB={
       "scannable": "reference",
       "parent_item_id": null,
       "unit_display": "year",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "tuition-georgia-tech",
@@ -74851,7 +75060,8 @@ window.DB={
       "scannable": "reference",
       "parent_item_id": null,
       "unit_display": "year",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "tuition-community-college",
@@ -74872,7 +75082,8 @@ window.DB={
       "scannable": "reference",
       "parent_item_id": null,
       "unit_display": "year",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "trade-school-electrician",
@@ -75082,7 +75293,8 @@ window.DB={
       "scannable": "reference",
       "parent_item_id": null,
       "unit_display": "year",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "k12-private-high-school",
@@ -75103,7 +75315,8 @@ window.DB={
       "scannable": "reference",
       "parent_item_id": null,
       "unit_display": "year",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "k12-boarding-school",
@@ -75124,7 +75337,8 @@ window.DB={
       "scannable": "reference",
       "parent_item_id": null,
       "unit_display": "year",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "sat-registration-fee",
@@ -75292,7 +75506,8 @@ window.DB={
       "scannable": "reference",
       "parent_item_id": null,
       "unit_display": "year",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "college-meal-plan",
@@ -75439,7 +75654,8 @@ window.DB={
       "scannable": "reference",
       "parent_item_id": null,
       "unit_display": "100 tablets",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "rx-penicillin",
@@ -75922,7 +76138,8 @@ window.DB={
       "scannable": "reference",
       "parent_item_id": null,
       "unit_display": "procedure",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "hospital-c-section",
@@ -75943,7 +76160,8 @@ window.DB={
       "scannable": "reference",
       "parent_item_id": null,
       "unit_display": "procedure",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "hospital-vaginal-delivery",
@@ -75964,7 +76182,8 @@ window.DB={
       "scannable": "reference",
       "parent_item_id": null,
       "unit_display": "procedure",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "hospital-hip-replacement",
@@ -76027,7 +76246,8 @@ window.DB={
       "scannable": "reference",
       "parent_item_id": null,
       "unit_display": "procedure",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "hospital-angioplasty",
@@ -76153,7 +76373,8 @@ window.DB={
       "scannable": "reference",
       "parent_item_id": null,
       "unit_display": "visit",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "hospital-icu-day",
@@ -76174,7 +76395,8 @@ window.DB={
       "scannable": "reference",
       "parent_item_id": null,
       "unit_display": "day",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "ambulance-basic",
@@ -76216,7 +76438,8 @@ window.DB={
       "scannable": "reference",
       "parent_item_id": null,
       "unit_display": "day",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "therapy-psychologist-50min",
@@ -76615,7 +76838,8 @@ window.DB={
       "scannable": "reference",
       "parent_item_id": null,
       "unit_display": "kwh",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "electricity-bill-avg-monthly",
@@ -76636,7 +76860,8 @@ window.DB={
       "scannable": "reference",
       "parent_item_id": null,
       "unit_display": "month",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "natural-gas-therm",
@@ -76657,7 +76882,8 @@ window.DB={
       "scannable": "reference",
       "parent_item_id": null,
       "unit_display": "therm",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "natural-gas-monthly-bill",
@@ -76678,7 +76904,8 @@ window.DB={
       "scannable": "reference",
       "parent_item_id": null,
       "unit_display": "month",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "heating-oil-gallon",
@@ -76699,7 +76926,8 @@ window.DB={
       "scannable": "reference",
       "parent_item_id": null,
       "unit_display": "gallon",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "propane-gallon",
@@ -76951,7 +77179,8 @@ window.DB={
       "scannable": "store",
       "parent_item_id": null,
       "unit_display": "per sheet",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "roofing-shingles-square",
@@ -77329,7 +77558,8 @@ window.DB={
       "scannable": "reference",
       "parent_item_id": null,
       "unit_display": "night",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "hotel-midscale-night",
@@ -77350,7 +77580,8 @@ window.DB={
       "scannable": "reference",
       "parent_item_id": null,
       "unit_display": "night",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "hotel-upscale-night",
@@ -77371,7 +77602,8 @@ window.DB={
       "scannable": "reference",
       "parent_item_id": null,
       "unit_display": "night",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "hotel-nyc-midscale",
@@ -77392,7 +77624,8 @@ window.DB={
       "scannable": "reference",
       "parent_item_id": null,
       "unit_display": "night",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "hotel-sf-midscale",
@@ -77413,7 +77646,8 @@ window.DB={
       "scannable": "reference",
       "parent_item_id": null,
       "unit_display": "night",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "hotel-las-vegas",
@@ -77434,7 +77668,8 @@ window.DB={
       "scannable": "reference",
       "parent_item_id": null,
       "unit_display": "night",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "airbnb-1br-avg",
@@ -77644,7 +77879,8 @@ window.DB={
       "scannable": "reference",
       "parent_item_id": null,
       "unit_display": "day",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "car-rental-suv-day",
@@ -77686,7 +77922,8 @@ window.DB={
       "scannable": "reference",
       "parent_item_id": null,
       "unit_display": "ticket",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "disneyland-1day",
@@ -77707,7 +77944,8 @@ window.DB={
       "scannable": "reference",
       "parent_item_id": null,
       "unit_display": "ticket",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "universal-studios-1day",
@@ -77980,7 +78218,8 @@ window.DB={
       "scannable": "store",
       "parent_item_id": null,
       "unit_display": "pack",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "baby-wipes-72ct",
@@ -78148,7 +78387,8 @@ window.DB={
       "scannable": "reference",
       "parent_item_id": null,
       "unit_display": "each",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "textbook-intro-economics",
@@ -78169,7 +78409,8 @@ window.DB={
       "scannable": "reference",
       "parent_item_id": null,
       "unit_display": "each",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "textbook-organic-chemistry",
@@ -78190,7 +78431,8 @@ window.DB={
       "scannable": "reference",
       "parent_item_id": null,
       "unit_display": "each",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "textbook-anatomy-physiology",
@@ -78232,7 +78474,8 @@ window.DB={
       "scannable": "reference",
       "parent_item_id": null,
       "unit_display": "each",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "textbook-accounting",
@@ -78253,7 +78496,8 @@ window.DB={
       "scannable": "reference",
       "parent_item_id": null,
       "unit_display": "each",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "textbook-psychology-intro",
@@ -78274,7 +78518,8 @@ window.DB={
       "scannable": "reference",
       "parent_item_id": null,
       "unit_display": "each",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "textbook-history-us",
@@ -78295,7 +78540,8 @@ window.DB={
       "scannable": "reference",
       "parent_item_id": null,
       "unit_display": "each",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "textbook-physics-halliday",
@@ -78316,7 +78562,8 @@ window.DB={
       "scannable": "reference",
       "parent_item_id": null,
       "unit_display": "each",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "textbook-statistics",
@@ -78400,7 +78647,8 @@ window.DB={
       "scannable": "reference",
       "parent_item_id": null,
       "unit_display": "application",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "college-app-fee-ivy",
@@ -78421,7 +78669,8 @@ window.DB={
       "scannable": "reference",
       "parent_item_id": null,
       "unit_display": "application",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "common-app-fee",
@@ -78505,7 +78754,8 @@ window.DB={
       "scannable": "reference",
       "parent_item_id": null,
       "unit_display": "semester",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "college-technology-fee",
@@ -79051,7 +79301,8 @@ window.DB={
       "scannable": "reference",
       "parent_item_id": null,
       "unit_display": "each",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "law-school-app-fee",
@@ -79387,7 +79638,8 @@ window.DB={
       "scannable": "reference",
       "parent_item_id": null,
       "unit_display": "test",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "visit-cardiologist",
@@ -82243,7 +82495,8 @@ window.DB={
       "scannable": "store",
       "parent_item_id": null,
       "unit_display": "box",
-      "upc_ids": []
+      "upc_ids": [],
+      "shrink_note": "Shrinkflation: Family Size box cut 19.3→18.1 oz in 2021 at the same price (NPR/Mouse Print)."
     },
     {
       "id": "heinz-ketchup-32oz",
@@ -82264,7 +82517,8 @@ window.DB={
       "scannable": "store",
       "parent_item_id": null,
       "unit_display": "per bottle",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "hellmanns-mayo-30oz",
@@ -82306,7 +82560,8 @@ window.DB={
       "scannable": "store",
       "parent_item_id": null,
       "unit_display": "per pack",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "campbells-chicken-noodle",
@@ -82327,7 +82582,8 @@ window.DB={
       "scannable": "store",
       "parent_item_id": null,
       "unit_display": "per can",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "general-mills-progresso",
@@ -82411,7 +82667,8 @@ window.DB={
       "scannable": "store",
       "parent_item_id": null,
       "unit_display": "package",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "doritios-large-bag",
@@ -82474,7 +82731,8 @@ window.DB={
       "scannable": "store",
       "parent_item_id": null,
       "unit_display": "lb",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "cream-cheese-8oz",
@@ -82957,7 +83215,8 @@ window.DB={
       "scannable": "store",
       "parent_item_id": null,
       "unit_display": "6-pack",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "bread-arnold-whole-grain",
@@ -83251,7 +83510,8 @@ window.DB={
       "scannable": "store",
       "parent_item_id": null,
       "unit_display": "2 lb",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "cheese-kraft-shredded-mozzarella",
@@ -83566,7 +83826,8 @@ window.DB={
       "scannable": "store",
       "parent_item_id": "breakfast-cereal-box",
       "unit_display": "box",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "cereal-wheaties",
@@ -83755,7 +84016,8 @@ window.DB={
       "scannable": "store",
       "parent_item_id": null,
       "unit_display": "6-pack",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "beer-bud-light-6pk",
@@ -83839,7 +84101,8 @@ window.DB={
       "scannable": "store",
       "parent_item_id": null,
       "unit_display": "6-pack",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "beer-corona-extra-6pk",
@@ -83860,7 +84123,8 @@ window.DB={
       "scannable": "store",
       "parent_item_id": null,
       "unit_display": "6-pack",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "beer-modelo-especial-6pk",
@@ -83881,7 +84145,8 @@ window.DB={
       "scannable": "store",
       "parent_item_id": null,
       "unit_display": "6-pack",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "beer-michelob-ultra-6pk",
@@ -83923,7 +84188,8 @@ window.DB={
       "scannable": "store",
       "parent_item_id": null,
       "unit_display": "6-pack",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "beer-sam-adams-boston-lager",
@@ -84196,7 +84462,8 @@ window.DB={
       "scannable": "store",
       "parent_item_id": "whiskey-bottle",
       "unit_display": "bottle",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "spirits-jim-beam-750",
@@ -84217,7 +84484,8 @@ window.DB={
       "scannable": "store",
       "parent_item_id": "whiskey-bottle",
       "unit_display": "bottle",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "spirits-makers-mark-750",
@@ -84259,7 +84527,8 @@ window.DB={
       "scannable": "store",
       "parent_item_id": "whiskey-bottle",
       "unit_display": "bottle",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "spirits-titos-750",
@@ -84385,7 +84654,8 @@ window.DB={
       "scannable": "store",
       "parent_item_id": null,
       "unit_display": "bottle",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "spirits-hennessy-vs-750",
@@ -84406,7 +84676,8 @@ window.DB={
       "scannable": "store",
       "parent_item_id": null,
       "unit_display": "bottle",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "spirits-johnnie-walker-red",
@@ -84427,7 +84698,8 @@ window.DB={
       "scannable": "store",
       "parent_item_id": null,
       "unit_display": "bottle",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "soda-coca-cola-12pk",
@@ -84448,7 +84720,8 @@ window.DB={
       "scannable": "store",
       "parent_item_id": null,
       "unit_display": "12-pack",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "soda-pepsi-2liter",
@@ -84511,7 +84784,8 @@ window.DB={
       "scannable": "store",
       "parent_item_id": null,
       "unit_display": "12-pack",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "soda-mountain-dew-2liter",
@@ -84532,7 +84806,8 @@ window.DB={
       "scannable": "store",
       "parent_item_id": null,
       "unit_display": "2l",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "soda-sprite-2liter",
@@ -84553,7 +84828,8 @@ window.DB={
       "scannable": "store",
       "parent_item_id": null,
       "unit_display": "2l",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "soda-canada-dry-ginger-ale",
@@ -84574,7 +84850,8 @@ window.DB={
       "scannable": "store",
       "parent_item_id": null,
       "unit_display": "2l",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "water-dasani-20oz",
@@ -84637,7 +84914,8 @@ window.DB={
       "scannable": "store",
       "parent_item_id": null,
       "unit_display": "each",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "water-fiji-1liter",
@@ -84679,7 +84957,8 @@ window.DB={
       "scannable": "store",
       "parent_item_id": null,
       "unit_display": "can",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "soup-campbells-cream-mushroom",
@@ -84721,7 +85000,8 @@ window.DB={
       "scannable": "store",
       "parent_item_id": null,
       "unit_display": "can",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "crackers-ritz-13.7oz",
@@ -85141,7 +85421,8 @@ window.DB={
       "scannable": "store",
       "parent_item_id": null,
       "unit_display": "bottle",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "hostess-twinkies-10ct",
@@ -88858,7 +89139,8 @@ window.DB={
       "scannable": "store",
       "parent_item_id": null,
       "unit_display": "pair",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "jeans-levis-505",
@@ -88879,7 +89161,8 @@ window.DB={
       "scannable": "store",
       "parent_item_id": null,
       "unit_display": "pair",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "jeans-levis-550",
@@ -88921,7 +89204,8 @@ window.DB={
       "scannable": "store",
       "parent_item_id": null,
       "unit_display": "pair",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "jeans-lee-regular",
@@ -88942,7 +89226,8 @@ window.DB={
       "scannable": "store",
       "parent_item_id": null,
       "unit_display": "pair",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "jeans-gap-womens",
@@ -88963,7 +89248,8 @@ window.DB={
       "scannable": "store",
       "parent_item_id": null,
       "unit_display": "pair",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "jeans-american-eagle-womens",
@@ -89005,7 +89291,8 @@ window.DB={
       "scannable": "store",
       "parent_item_id": null,
       "unit_display": "each",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "tshirt-fruit-of-loom-3pk",
@@ -89026,7 +89313,8 @@ window.DB={
       "scannable": "store",
       "parent_item_id": null,
       "unit_display": "3-pack",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "tshirt-gildan-heavy-cotton",
@@ -89068,7 +89356,8 @@ window.DB={
       "scannable": "store",
       "parent_item_id": null,
       "unit_display": "6-pack",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "underwear-hanes-boxers-5pk",
@@ -89173,7 +89462,8 @@ window.DB={
       "scannable": "store",
       "parent_item_id": null,
       "unit_display": "pair",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "shoes-adidas-stan-smith",
@@ -89341,7 +89631,8 @@ window.DB={
       "scannable": "store",
       "parent_item_id": null,
       "unit_display": "pair",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "shoes-crocs-classic",
@@ -89383,7 +89674,8 @@ window.DB={
       "scannable": "store",
       "parent_item_id": null,
       "unit_display": "pair",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "shoes-cole-haan-mens",
@@ -89425,7 +89717,8 @@ window.DB={
       "scannable": "store",
       "parent_item_id": null,
       "unit_display": "suit",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "suit-mens-mens-wearhouse",
@@ -89530,7 +89823,8 @@ window.DB={
       "scannable": "store",
       "parent_item_id": null,
       "unit_display": "cut",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "haircut-mens-greatclips",
@@ -89572,7 +89866,8 @@ window.DB={
       "scannable": "store",
       "parent_item_id": null,
       "unit_display": "service",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "haircut-womens-color",
@@ -89719,7 +90014,8 @@ window.DB={
       "scannable": "store",
       "parent_item_id": null,
       "unit_display": "bottle",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "shampoo-pantene-12oz",
@@ -89740,7 +90036,8 @@ window.DB={
       "scannable": "store",
       "parent_item_id": "shampoo",
       "unit_display": "bottle",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "shampoo-dove-12oz",
@@ -89761,7 +90058,8 @@ window.DB={
       "scannable": "store",
       "parent_item_id": "shampoo",
       "unit_display": "bottle",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "conditioner-pantene-12oz",
@@ -90013,7 +90311,8 @@ window.DB={
       "scannable": "store",
       "parent_item_id": "toothpaste",
       "unit_display": "tube",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "toothpaste-crest-5.4oz",
@@ -90034,7 +90333,8 @@ window.DB={
       "scannable": "store",
       "parent_item_id": "toothpaste",
       "unit_display": "tube",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "toothpaste-sensodyne-4oz",
@@ -90055,7 +90355,8 @@ window.DB={
       "scannable": "store",
       "parent_item_id": "toothpaste",
       "unit_display": "tube",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "electric-toothbrush-oral-b",
@@ -90328,7 +90629,8 @@ window.DB={
       "scannable": "store",
       "parent_item_id": null,
       "unit_display": "12-pack",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "toilet-paper-cottonelle-12roll",
@@ -90412,7 +90714,8 @@ window.DB={
       "scannable": "store",
       "parent_item_id": "dish-soap",
       "unit_display": "bottle",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "windex-glass-cleaner-26oz",
@@ -90454,7 +90757,8 @@ window.DB={
       "scannable": "store",
       "parent_item_id": null,
       "unit_display": "can",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "clorox-wipes-75ct",
@@ -90895,7 +91199,8 @@ window.DB={
       "scannable": "reference",
       "parent_item_id": null,
       "unit_display": "vehicle",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "car-ford-explorer-base",
@@ -91000,7 +91305,8 @@ window.DB={
       "scannable": "reference",
       "parent_item_id": null,
       "unit_display": "vehicle",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "car-chevy-tahoe-base",
@@ -91042,7 +91348,8 @@ window.DB={
       "scannable": "reference",
       "parent_item_id": null,
       "unit_display": "vehicle",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "car-chevy-equinox-base",
@@ -91273,7 +91580,8 @@ window.DB={
       "scannable": "reference",
       "parent_item_id": null,
       "unit_display": "vehicle",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "car-vw-jetta-base",
@@ -91861,7 +92169,8 @@ window.DB={
       "scannable": "no",
       "parent_item_id": null,
       "unit_display": "day",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "car-parking-nyc-daily",
@@ -92029,7 +92338,8 @@ window.DB={
       "scannable": "no",
       "parent_item_id": null,
       "unit_display": "tire",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "rent-nyc-1br",
@@ -92050,7 +92360,8 @@ window.DB={
       "scannable": "reference",
       "parent_item_id": null,
       "unit_display": "month",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "rent-nyc-2br",
@@ -92071,7 +92382,8 @@ window.DB={
       "scannable": "reference",
       "parent_item_id": null,
       "unit_display": "month",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "rent-la-1br",
@@ -92092,7 +92404,8 @@ window.DB={
       "scannable": "reference",
       "parent_item_id": null,
       "unit_display": "month",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "rent-la-2br",
@@ -92113,7 +92426,8 @@ window.DB={
       "scannable": "reference",
       "parent_item_id": null,
       "unit_display": "month",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "rent-chicago-1br",
@@ -92134,7 +92448,8 @@ window.DB={
       "scannable": "reference",
       "parent_item_id": null,
       "unit_display": "month",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "rent-houston-1br",
@@ -92155,7 +92470,8 @@ window.DB={
       "scannable": "reference",
       "parent_item_id": null,
       "unit_display": "month",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "rent-phoenix-1br",
@@ -92176,7 +92492,8 @@ window.DB={
       "scannable": "reference",
       "parent_item_id": null,
       "unit_display": "month",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "rent-miami-1br",
@@ -92197,7 +92514,8 @@ window.DB={
       "scannable": "reference",
       "parent_item_id": null,
       "unit_display": "month",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "rent-seattle-1br",
@@ -92218,7 +92536,8 @@ window.DB={
       "scannable": "reference",
       "parent_item_id": null,
       "unit_display": "month",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "rent-austin-1br",
@@ -92239,7 +92558,8 @@ window.DB={
       "scannable": "reference",
       "parent_item_id": null,
       "unit_display": "month",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "rent-denver-1br",
@@ -92260,7 +92580,8 @@ window.DB={
       "scannable": "reference",
       "parent_item_id": null,
       "unit_display": "month",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "rent-boston-1br",
@@ -92281,7 +92602,8 @@ window.DB={
       "scannable": "reference",
       "parent_item_id": null,
       "unit_display": "month",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "rent-dc-1br",
@@ -92302,7 +92624,8 @@ window.DB={
       "scannable": "reference",
       "parent_item_id": null,
       "unit_display": "month",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "rent-sf-1br",
@@ -92323,7 +92646,8 @@ window.DB={
       "scannable": "reference",
       "parent_item_id": null,
       "unit_display": "month",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "rent-national-avg-1br",
@@ -92344,7 +92668,8 @@ window.DB={
       "scannable": "reference",
       "parent_item_id": null,
       "unit_display": "month",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "home-price-nyc-median",
@@ -92365,7 +92690,8 @@ window.DB={
       "scannable": "reference",
       "parent_item_id": null,
       "unit_display": "home",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "home-price-la-median",
@@ -92386,7 +92712,8 @@ window.DB={
       "scannable": "reference",
       "parent_item_id": null,
       "unit_display": "home",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "home-price-chicago-median",
@@ -92407,7 +92734,8 @@ window.DB={
       "scannable": "reference",
       "parent_item_id": null,
       "unit_display": "home",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "home-price-houston-median",
@@ -92428,7 +92756,8 @@ window.DB={
       "scannable": "reference",
       "parent_item_id": null,
       "unit_display": "home",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "home-price-miami-median",
@@ -92449,7 +92778,8 @@ window.DB={
       "scannable": "reference",
       "parent_item_id": null,
       "unit_display": "home",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "home-price-dallas-median",
@@ -92470,7 +92800,8 @@ window.DB={
       "scannable": "reference",
       "parent_item_id": null,
       "unit_display": "home",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "moving-local-4hr",
@@ -92491,7 +92822,8 @@ window.DB={
       "scannable": "reference",
       "parent_item_id": null,
       "unit_display": "move",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "moving-crosscountry-1br",
@@ -92512,7 +92844,8 @@ window.DB={
       "scannable": "reference",
       "parent_item_id": null,
       "unit_display": "move",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "storage-unit-10x10",
@@ -92575,7 +92908,8 @@ window.DB={
       "scannable": "reference",
       "parent_item_id": null,
       "unit_display": "day",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "gym-planet-fitness",
@@ -92638,7 +92972,8 @@ window.DB={
       "scannable": "reference",
       "parent_item_id": null,
       "unit_display": "month",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "gym-equinox",
@@ -92743,7 +93078,8 @@ window.DB={
       "scannable": "reference",
       "parent_item_id": null,
       "unit_display": "ticket",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "movie-amc-imax",
@@ -92806,7 +93142,8 @@ window.DB={
       "scannable": "reference",
       "parent_item_id": null,
       "unit_display": "each",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "nfl-avg-ticket",
@@ -92974,7 +93311,8 @@ window.DB={
       "scannable": "reference",
       "parent_item_id": null,
       "unit_display": "ticket",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "bowling-one-game",
@@ -92995,7 +93333,8 @@ window.DB={
       "scannable": "reference",
       "parent_item_id": null,
       "unit_display": "game",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "mini-golf-adult",
@@ -93079,7 +93418,8 @@ window.DB={
       "scannable": "reference",
       "parent_item_id": null,
       "unit_display": "round",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "museum-admission-natural-history",
@@ -93121,7 +93461,8 @@ window.DB={
       "scannable": "reference",
       "parent_item_id": null,
       "unit_display": "pass",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "cd-rate-1year",
@@ -93268,7 +93609,8 @@ window.DB={
       "scannable": "reference",
       "parent_item_id": null,
       "unit_display": "200 ct",
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "vitamins-vitamin-c-250ct",
@@ -93604,7 +93946,8 @@ window.DB={
       "scannable": "store",
       "unit_display": "per bottle",
       "parent_item_id": null,
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "heinz-mustard-14oz",
@@ -93625,7 +93968,8 @@ window.DB={
       "scannable": "store",
       "unit_display": "per bottle",
       "parent_item_id": null,
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "heinz-relish-12oz",
@@ -93646,7 +93990,8 @@ window.DB={
       "scannable": "store",
       "unit_display": "per jar",
       "parent_item_id": null,
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "heinz-mayo-30oz",
@@ -93688,7 +94033,8 @@ window.DB={
       "scannable": "store",
       "unit_display": "per can",
       "parent_item_id": null,
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "campbells-cream-mushroom",
@@ -93709,7 +94055,8 @@ window.DB={
       "scannable": "store",
       "unit_display": "per can",
       "parent_item_id": null,
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "campbells-chunky-soup",
@@ -93751,7 +94098,8 @@ window.DB={
       "scannable": "store",
       "unit_display": "per can",
       "parent_item_id": null,
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "kraft-mac-cheese",
@@ -93772,7 +94120,8 @@ window.DB={
       "scannable": "store",
       "unit_display": "per box",
       "parent_item_id": null,
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "kraft-parm-8oz",
@@ -93963,7 +94312,8 @@ window.DB={
       "scannable": "store",
       "unit_display": "per jar",
       "parent_item_id": null,
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "jif-peanut-butter-16oz",
@@ -93984,7 +94334,8 @@ window.DB={
       "scannable": "store",
       "unit_display": "per jar",
       "parent_item_id": null,
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "peter-pan-pb-16oz",
@@ -94005,7 +94356,8 @@ window.DB={
       "scannable": "store",
       "unit_display": "per jar",
       "parent_item_id": null,
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "skippy-pb-40oz",
@@ -94194,7 +94546,8 @@ window.DB={
       "scannable": "store",
       "unit_display": "per box",
       "parent_item_id": null,
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "honey-nut-cheerios-19oz",
@@ -94322,7 +94675,8 @@ window.DB={
       "scannable": "store",
       "unit_display": "per box",
       "parent_item_id": null,
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "cocoa-puffs-18oz",
@@ -94385,7 +94739,8 @@ window.DB={
       "scannable": "store",
       "unit_display": "per can",
       "parent_item_id": null,
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "folgers-k-cups-72ct",
@@ -94534,7 +94889,8 @@ window.DB={
       "scannable": "store",
       "unit_display": "per bottle",
       "parent_item_id": null,
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "french-gulden-mustard-12oz",
@@ -94807,7 +95163,8 @@ window.DB={
       "scannable": "store",
       "unit_display": "per carton",
       "parent_item_id": null,
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "minute-maid-oj-52oz",
@@ -94828,7 +95185,8 @@ window.DB={
       "scannable": "store",
       "unit_display": "per carton",
       "parent_item_id": null,
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "v8-46oz",
@@ -94912,7 +95270,8 @@ window.DB={
       "scannable": "store",
       "unit_display": "per bag",
       "parent_item_id": null,
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "doritos-nacho-9oz",
@@ -95017,7 +95376,8 @@ window.DB={
       "scannable": "store",
       "unit_display": "per pack",
       "parent_item_id": null,
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "chips-ahoy-13oz",
@@ -95164,7 +95524,8 @@ window.DB={
       "scannable": "store",
       "unit_display": "per box",
       "parent_item_id": null,
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "quaker-oats-42oz",
@@ -95754,7 +96115,8 @@ window.DB={
       "scannable": "store",
       "unit_display": "per bottle",
       "parent_item_id": null,
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "cascade-actionpacs-60ct",
@@ -95922,7 +96284,8 @@ window.DB={
       "scannable": "store",
       "unit_display": "per pack",
       "parent_item_id": null,
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "kleenex-facial-tissue-3pk",
@@ -96174,7 +96537,8 @@ window.DB={
       "scannable": "store",
       "unit_display": "per can",
       "parent_item_id": null,
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "lysol-wipes-110ct",
@@ -96384,7 +96748,8 @@ window.DB={
       "scannable": "store",
       "unit_display": "per bottle",
       "parent_item_id": null,
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "mop-glo-33oz",
@@ -96426,7 +96791,8 @@ window.DB={
       "scannable": "store",
       "unit_display": "per bottle",
       "parent_item_id": null,
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "pantene-shampoo-12oz",
@@ -96447,7 +96813,8 @@ window.DB={
       "scannable": "store",
       "unit_display": "per bottle",
       "parent_item_id": null,
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "dove-body-wash-22oz",
@@ -96552,7 +96919,8 @@ window.DB={
       "scannable": "store",
       "unit_display": "per pack",
       "parent_item_id": null,
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "irish-spring-bar-soap",
@@ -96594,7 +96962,8 @@ window.DB={
       "scannable": "store",
       "unit_display": "per tube",
       "parent_item_id": null,
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "crest-toothpaste-6oz",
@@ -96615,7 +96984,8 @@ window.DB={
       "scannable": "store",
       "unit_display": "per tube",
       "parent_item_id": null,
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "listerine-mouthwash-33oz",
@@ -96636,7 +97006,8 @@ window.DB={
       "scannable": "store",
       "unit_display": "per bottle",
       "parent_item_id": null,
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "scope-mouthwash-33oz",
@@ -96762,7 +97133,8 @@ window.DB={
       "scannable": "store",
       "unit_display": "per can",
       "parent_item_id": null,
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "aveeno-lotion-18oz",
@@ -96825,7 +97197,8 @@ window.DB={
       "scannable": "store",
       "unit_display": "per bottle",
       "parent_item_id": null,
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "tylenol-extra-strength-100ct",
@@ -96951,7 +97324,8 @@ window.DB={
       "scannable": "store",
       "unit_display": "per bottle",
       "parent_item_id": null,
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "bayer-aspirin-81mg-300ct",
@@ -97413,7 +97787,8 @@ window.DB={
       "scannable": "store",
       "unit_display": "per bottle",
       "parent_item_id": null,
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "tums-ultra-72ct",
@@ -97623,7 +97998,8 @@ window.DB={
       "scannable": "store",
       "unit_display": "per box",
       "parent_item_id": null,
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "band-aid-30ct",
@@ -97644,7 +98020,8 @@ window.DB={
       "scannable": "store",
       "unit_display": "per box",
       "parent_item_id": null,
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "peroxide-hydrogen-16oz",
@@ -97707,7 +98084,8 @@ window.DB={
       "scannable": "store",
       "unit_display": "per roll",
       "parent_item_id": null,
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "thermometer-digital",
@@ -97728,7 +98106,8 @@ window.DB={
       "scannable": "store",
       "unit_display": "per unit",
       "parent_item_id": null,
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "tylenol-childrens-4oz",
@@ -98694,7 +99073,8 @@ window.DB={
       "scannable": "store",
       "unit_display": "per box",
       "parent_item_id": null,
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "beggin-strips-25oz",
@@ -99807,7 +100187,8 @@ window.DB={
       "scannable": "store",
       "unit_display": "per unit",
       "parent_item_id": null,
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "extension-cord-25ft",
@@ -100122,7 +100503,8 @@ window.DB={
       "scannable": "store",
       "unit_display": "per gallon",
       "parent_item_id": null,
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "rustoleum-spray-12oz",
@@ -100143,7 +100525,8 @@ window.DB={
       "scannable": "store",
       "unit_display": "per can",
       "parent_item_id": null,
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "krylon-spray-12oz",
@@ -100248,7 +100631,8 @@ window.DB={
       "scannable": "store",
       "unit_display": "per pack",
       "parent_item_id": null,
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "owens-corning-r19-batt",
@@ -100437,7 +100821,8 @@ window.DB={
       "scannable": "store",
       "unit_display": "per pack",
       "parent_item_id": null,
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "pampers-swaddlers-size2-148ct",
@@ -100458,7 +100843,8 @@ window.DB={
       "scannable": "store",
       "unit_display": "per pack",
       "parent_item_id": null,
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "pampers-swaddlers-size3-120ct",
@@ -100479,7 +100865,8 @@ window.DB={
       "scannable": "store",
       "unit_display": "per pack",
       "parent_item_id": null,
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "pampers-swaddlers-size4-104ct",
@@ -100500,7 +100887,8 @@ window.DB={
       "scannable": "store",
       "unit_display": "per pack",
       "parent_item_id": null,
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "pampers-swaddlers-size5-88ct",
@@ -100521,7 +100909,8 @@ window.DB={
       "scannable": "store",
       "unit_display": "per pack",
       "parent_item_id": null,
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "huggies-little-snugglers-newborn",
@@ -100983,7 +101372,8 @@ window.DB={
       "scannable": "store",
       "unit_display": "per bottle",
       "parent_item_id": null,
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "johnsons-baby-lotion-27oz",
@@ -101025,7 +101415,8 @@ window.DB={
       "scannable": "store",
       "unit_display": "per bottle",
       "parent_item_id": null,
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "desitin-max-strength-4oz",
@@ -101046,7 +101437,8 @@ window.DB={
       "scannable": "store",
       "unit_display": "per tube",
       "parent_item_id": null,
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "balmex-complete-4oz",
@@ -101067,7 +101459,8 @@ window.DB={
       "scannable": "store",
       "unit_display": "per tube",
       "parent_item_id": null,
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "aquaphor-baby-7oz",
@@ -101529,7 +101922,8 @@ window.DB={
       "scannable": "store",
       "unit_display": "per 6-pack",
       "parent_item_id": null,
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "coors-light-6pk",
@@ -101592,7 +101986,8 @@ window.DB={
       "scannable": "store",
       "unit_display": "per 6-pack",
       "parent_item_id": null,
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "pbr-6pk",
@@ -101613,7 +102008,8 @@ window.DB={
       "scannable": "store",
       "unit_display": "per 6-pack",
       "parent_item_id": null,
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "busch-light-6pk",
@@ -101781,7 +102177,8 @@ window.DB={
       "scannable": "store",
       "unit_display": "per 6-pack",
       "parent_item_id": null,
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "guinness-draught-6pk",
@@ -101802,7 +102199,8 @@ window.DB={
       "scannable": "store",
       "unit_display": "per 6-pack",
       "parent_item_id": null,
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "stella-artois-6pk",
@@ -101844,7 +102242,8 @@ window.DB={
       "scannable": "store",
       "unit_display": "per 6-pack",
       "parent_item_id": null,
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "tecate-6pk",
@@ -101886,7 +102285,8 @@ window.DB={
       "scannable": "store",
       "unit_display": "per 6-pack",
       "parent_item_id": null,
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "sam-adams-boston-lager-6pk",
@@ -102579,7 +102979,8 @@ window.DB={
       "scannable": "store",
       "unit_display": "per bottle",
       "parent_item_id": null,
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "kendall-jackson-chardonnay-750ml",
@@ -102642,7 +103043,8 @@ window.DB={
       "scannable": "store",
       "unit_display": "per bottle",
       "parent_item_id": null,
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "veuve-clicquot-brut-750ml",
@@ -102663,7 +103065,8 @@ window.DB={
       "scannable": "store",
       "unit_display": "per bottle",
       "parent_item_id": null,
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "freixenet-brut-750ml",
@@ -102684,7 +103087,8 @@ window.DB={
       "scannable": "store",
       "unit_display": "per bottle",
       "parent_item_id": null,
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "andre-brut-champagne-750ml",
@@ -102726,7 +103130,8 @@ window.DB={
       "scannable": "store",
       "unit_display": "per bottle",
       "parent_item_id": null,
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "jim-beam-white-750ml",
@@ -102747,7 +103152,8 @@ window.DB={
       "scannable": "store",
       "unit_display": "per bottle",
       "parent_item_id": null,
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "jameson-irish-750ml",
@@ -102768,7 +103174,8 @@ window.DB={
       "scannable": "store",
       "unit_display": "per bottle",
       "parent_item_id": null,
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "makers-mark-750ml",
@@ -102915,7 +103322,8 @@ window.DB={
       "scannable": "store",
       "unit_display": "per bottle",
       "parent_item_id": null,
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "johnnie-walker-black-750ml",
@@ -102936,7 +103344,8 @@ window.DB={
       "scannable": "store",
       "unit_display": "per bottle",
       "parent_item_id": null,
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "glenfiddich-12yr-750ml",
@@ -102957,7 +103366,8 @@ window.DB={
       "scannable": "store",
       "unit_display": "per bottle",
       "parent_item_id": null,
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "jack-daniels-honey-750ml",
@@ -103041,7 +103451,8 @@ window.DB={
       "scannable": "store",
       "unit_display": "per bottle",
       "parent_item_id": null,
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "absolut-vodka-750ml",
@@ -103062,7 +103473,8 @@ window.DB={
       "scannable": "store",
       "unit_display": "per bottle",
       "parent_item_id": null,
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "grey-goose-750ml",
@@ -103167,7 +103579,8 @@ window.DB={
       "scannable": "store",
       "unit_display": "per bottle",
       "parent_item_id": null,
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "captain-morgan-spiced-750ml",
@@ -103230,7 +103643,8 @@ window.DB={
       "scannable": "store",
       "unit_display": "per bottle",
       "parent_item_id": null,
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "jose-cuervo-gold-750ml",
@@ -103251,7 +103665,8 @@ window.DB={
       "scannable": "store",
       "unit_display": "per bottle",
       "parent_item_id": null,
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "patron-silver-750ml",
@@ -103356,7 +103771,8 @@ window.DB={
       "scannable": "store",
       "unit_display": "per bottle",
       "parent_item_id": null,
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "hendricks-gin-750ml",
@@ -103419,7 +103835,8 @@ window.DB={
       "scannable": "store",
       "unit_display": "per bottle",
       "parent_item_id": null,
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "courvoisier-vs-750ml",
@@ -103440,7 +103857,8 @@ window.DB={
       "scannable": "store",
       "unit_display": "per bottle",
       "parent_item_id": null,
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "e&j-brandy-750ml",
@@ -103524,7 +103942,8 @@ window.DB={
       "scannable": "store",
       "unit_display": "per handle",
       "parent_item_id": null,
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "bacardi-1750ml",
@@ -103671,7 +104090,8 @@ window.DB={
       "scannable": "store",
       "unit_display": "per bottle",
       "parent_item_id": null,
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "amaretto-disaronno-750ml",
@@ -103692,7 +104112,8 @@ window.DB={
       "scannable": "store",
       "unit_display": "per bottle",
       "parent_item_id": null,
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "grand-marnier-750ml",
@@ -103713,7 +104134,8 @@ window.DB={
       "scannable": "store",
       "unit_display": "per bottle",
       "parent_item_id": null,
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "cointreau-750ml",
@@ -103734,7 +104156,8 @@ window.DB={
       "scannable": "store",
       "unit_display": "per bottle",
       "parent_item_id": null,
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "digiorno-rising-crust-12inch",
@@ -103923,7 +104346,8 @@ window.DB={
       "scannable": "store",
       "unit_display": "per pizza",
       "parent_item_id": null,
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "totinos-pizza-rolls-50ct",
@@ -103944,7 +104368,8 @@ window.DB={
       "scannable": "store",
       "unit_display": "per bag",
       "parent_item_id": null,
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "stouffers-mac-cheese-12oz",
@@ -103965,7 +104390,8 @@ window.DB={
       "scannable": "store",
       "unit_display": "per tray",
       "parent_item_id": null,
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "stouffers-lasagna-38oz",
@@ -104007,7 +104433,8 @@ window.DB={
       "scannable": "store",
       "unit_display": "per tray",
       "parent_item_id": null,
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "lean-cuisine-chicken-alfredo",
@@ -104133,7 +104560,8 @@ window.DB={
       "scannable": "store",
       "unit_display": "per pie",
       "parent_item_id": null,
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "swanson-hungry-man-turkey",
@@ -104259,7 +104687,8 @@ window.DB={
       "scannable": "store",
       "unit_display": "per bag",
       "parent_item_id": null,
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "amy-kitchen-cheese-pizza",
@@ -104322,7 +104751,8 @@ window.DB={
       "scannable": "store",
       "unit_display": "per box",
       "parent_item_id": null,
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "eggo-buttermilk-waffles-16ct",
@@ -104343,7 +104773,8 @@ window.DB={
       "scannable": "store",
       "unit_display": "per box",
       "parent_item_id": null,
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "eggo-blueberry-waffles-16ct",
@@ -104364,7 +104795,8 @@ window.DB={
       "scannable": "store",
       "unit_display": "per box",
       "parent_item_id": null,
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "jimmy-dean-sausage-egg-biscuit-8ct",
@@ -104511,7 +104943,8 @@ window.DB={
       "scannable": "store",
       "unit_display": "per carton",
       "parent_item_id": null,
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "haagen-dazs-vanilla-14oz",
@@ -104889,7 +105322,8 @@ window.DB={
       "scannable": "store",
       "unit_display": "per pack",
       "parent_item_id": null,
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "oscar-mayer-turkey-bacon-12oz",
@@ -105183,7 +105617,8 @@ window.DB={
       "scannable": "store",
       "unit_display": "per pack",
       "parent_item_id": null,
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "tyson-chicken-nuggets-32oz",
@@ -105246,7 +105681,8 @@ window.DB={
       "scannable": "store",
       "unit_display": "per pound",
       "parent_item_id": null,
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "land-o-lakes-unsalted-1lb",
@@ -105267,7 +105703,8 @@ window.DB={
       "scannable": "store",
       "unit_display": "per pound",
       "parent_item_id": null,
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "kerrygold-irish-butter-8oz",
@@ -105435,7 +105872,8 @@ window.DB={
       "scannable": "store",
       "unit_display": "per block",
       "parent_item_id": null,
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "kraft-velveeta-32oz",
@@ -105456,7 +105894,8 @@ window.DB={
       "scannable": "store",
       "unit_display": "per block",
       "parent_item_id": null,
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "babybel-mini-cheese-9ct",
@@ -105477,7 +105916,8 @@ window.DB={
       "scannable": "store",
       "unit_display": "per pack",
       "parent_item_id": null,
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "string-cheese-12ct",
@@ -105668,7 +106108,8 @@ window.DB={
       "scannable": "store",
       "unit_display": "per tub",
       "parent_item_id": null,
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "good-culture-cottage-cheese-16oz",
@@ -105794,7 +106235,8 @@ window.DB={
       "scannable": "store",
       "unit_display": "per bag",
       "parent_item_id": null,
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "gold-medal-all-purpose-5lb",
@@ -105815,7 +106257,8 @@ window.DB={
       "scannable": "store",
       "unit_display": "per bag",
       "parent_item_id": null,
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "pillsbury-all-purpose-5lb",
@@ -105836,7 +106279,8 @@ window.DB={
       "scannable": "store",
       "unit_display": "per bag",
       "parent_item_id": null,
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "bisquick-original-40oz",
@@ -106025,7 +106469,8 @@ window.DB={
       "scannable": "store",
       "unit_display": "per bag",
       "parent_item_id": null,
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "domino-powdered-sugar-2lb",
@@ -106046,7 +106491,8 @@ window.DB={
       "scannable": "store",
       "unit_display": "per bag",
       "parent_item_id": null,
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "crisco-vegetable-shortening-48oz",
@@ -106088,7 +106534,8 @@ window.DB={
       "scannable": "store",
       "unit_display": "per box",
       "parent_item_id": null,
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "clabber-girl-baking-powder-10oz",
@@ -106216,7 +106663,8 @@ window.DB={
       "scannable": "store",
       "unit_display": "per bag",
       "parent_item_id": null,
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "ghirardelli-choc-chips-11oz",
@@ -106596,7 +107044,8 @@ window.DB={
       "scannable": "store",
       "unit_display": "per bottle",
       "parent_item_id": null,
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "bragg-apple-cider-vinegar-32oz",
@@ -106617,7 +107066,8 @@ window.DB={
       "scannable": "store",
       "unit_display": "per bottle",
       "parent_item_id": null,
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "red-bull-8oz-single",
@@ -106974,7 +107424,8 @@ window.DB={
       "scannable": "store",
       "unit_display": "per bottle",
       "parent_item_id": null,
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "motts-apple-juice-64oz",
@@ -106995,7 +107446,8 @@ window.DB={
       "scannable": "store",
       "unit_display": "per bottle",
       "parent_item_id": null,
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "juicy-juice-box-8pk",
@@ -107121,7 +107573,8 @@ window.DB={
       "scannable": "store",
       "unit_display": "per bottle",
       "parent_item_id": null,
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "dasani-water-20oz",
@@ -107163,7 +107616,8 @@ window.DB={
       "scannable": "store",
       "unit_display": "per pack",
       "parent_item_id": null,
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "la-croix-12pk-lime",
@@ -107205,7 +107659,8 @@ window.DB={
       "scannable": "store",
       "unit_display": "per quart",
       "parent_item_id": null,
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "pennzoil-5w30-5qt",
@@ -107226,7 +107681,8 @@ window.DB={
       "scannable": "store",
       "unit_display": "per jug",
       "parent_item_id": null,
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "pennzoil-platinum-5w30-5qt",
@@ -107394,7 +107850,8 @@ window.DB={
       "scannable": "store",
       "unit_display": "per quart",
       "parent_item_id": null,
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "valvoline-5w30-5qt",
@@ -107415,7 +107872,8 @@ window.DB={
       "scannable": "store",
       "unit_display": "per jug",
       "parent_item_id": null,
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "valvoline-maxlife-5w30-5qt",
@@ -107604,7 +108062,8 @@ window.DB={
       "scannable": "store",
       "unit_display": "per filter",
       "parent_item_id": null,
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "wix-oil-filter",
@@ -107646,7 +108105,8 @@ window.DB={
       "scannable": "store",
       "unit_display": "per blade",
       "parent_item_id": null,
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "rain-x-wiper-21in",
@@ -107709,7 +108169,8 @@ window.DB={
       "scannable": "store",
       "unit_display": "per blade",
       "parent_item_id": null,
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "rain-x-glass-treatment-7oz",
@@ -107835,7 +108296,8 @@ window.DB={
       "scannable": "store",
       "unit_display": "per tin",
       "parent_item_id": null,
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "wd-40-12oz",
@@ -107919,7 +108381,8 @@ window.DB={
       "scannable": "store",
       "unit_display": "per battery",
       "parent_item_id": null,
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "little-trees-air-freshener",
@@ -107982,7 +108445,8 @@ window.DB={
       "scannable": "store",
       "unit_display": "per bottle",
       "parent_item_id": null,
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "maybelline-fit-me-foundation",
@@ -108003,7 +108467,8 @@ window.DB={
       "scannable": "store",
       "unit_display": "per bottle",
       "parent_item_id": null,
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "covergirl-clean-foundation",
@@ -108213,7 +108678,8 @@ window.DB={
       "scannable": "store",
       "unit_display": "per stick",
       "parent_item_id": null,
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "maybelline-colorsensational-lipstick",
@@ -108234,7 +108700,8 @@ window.DB={
       "scannable": "store",
       "unit_display": "per stick",
       "parent_item_id": null,
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "chapstick-original-3pk",
@@ -108255,7 +108722,8 @@ window.DB={
       "scannable": "store",
       "unit_display": "per pack",
       "parent_item_id": null,
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "burt-bees-lip-balm-4pk",
@@ -108297,7 +108765,8 @@ window.DB={
       "scannable": "store",
       "unit_display": "per pan",
       "parent_item_id": null,
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "maybelline-expert-wear-eyeshadow",
@@ -108318,7 +108787,8 @@ window.DB={
       "scannable": "store",
       "unit_display": "per pan",
       "parent_item_id": null,
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "loreal-infallible-eyeliner",
@@ -108339,7 +108809,8 @@ window.DB={
       "scannable": "store",
       "unit_display": "per pencil",
       "parent_item_id": null,
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "maybelline-unstoppable-eyeliner",
@@ -108360,7 +108831,8 @@ window.DB={
       "scannable": "store",
       "unit_display": "per pencil",
       "parent_item_id": null,
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "covergirl-simply-ageless-blush",
@@ -108423,7 +108895,8 @@ window.DB={
       "scannable": "store",
       "unit_display": "per compact",
       "parent_item_id": null,
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "opi-nail-lacquer-05oz",
@@ -108591,7 +109064,8 @@ window.DB={
       "scannable": "store",
       "unit_display": "per box",
       "parent_item_id": null,
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "cetaphil-gentle-skin-cleanser-16oz",
@@ -109620,7 +110094,8 @@ window.DB={
       "scannable": "store",
       "unit_display": "per bag",
       "parent_item_id": null,
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "hersheys-kisses-12oz",
@@ -109641,7 +110116,8 @@ window.DB={
       "scannable": "store",
       "unit_display": "per bag",
       "parent_item_id": null,
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "hersheys-king-size",
@@ -109662,7 +110138,8 @@ window.DB={
       "scannable": "store",
       "unit_display": "per bar",
       "parent_item_id": null,
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "hersheys-symphony-bar",
@@ -111153,7 +111630,8 @@ window.DB={
       "scannable": "store",
       "unit_display": "per bag",
       "parent_item_id": null,
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "brachs-caramels-7oz",
@@ -111174,7 +111652,8 @@ window.DB={
       "scannable": "store",
       "unit_display": "per bag",
       "parent_item_id": null,
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "brachs-starlite-mints-12oz",
@@ -111300,7 +111779,8 @@ window.DB={
       "scannable": "store",
       "unit_display": "per roll",
       "parent_item_id": null,
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "lifesavers-gummies-7oz",
@@ -112098,7 +112578,8 @@ window.DB={
       "scannable": "store",
       "unit_display": "per pack",
       "parent_item_id": null,
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "energizer-aa-8pk",
@@ -112266,7 +112747,8 @@ window.DB={
       "scannable": "store",
       "unit_display": "per pack",
       "parent_item_id": null,
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "bic-classic-lighter",
@@ -112896,7 +113378,8 @@ window.DB={
       "scannable": "store",
       "unit_display": "per deck",
       "parent_item_id": null,
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "uno-card-game",
@@ -113043,7 +113526,8 @@ window.DB={
       "scannable": "store",
       "unit_display": "per pack",
       "parent_item_id": null,
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "austin-pb-crackers-6pk",
@@ -114114,7 +114598,8 @@ window.DB={
       "scannable": "store",
       "unit_display": "per pack",
       "parent_item_id": null,
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "hammermill-copy-paper-ream",
@@ -114975,7 +115460,8 @@ window.DB={
       "scannable": "store",
       "unit_display": "per can",
       "parent_item_id": null,
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "dunkin-original-blend-12oz",
@@ -114996,7 +115482,8 @@ window.DB={
       "scannable": "store",
       "unit_display": "per bag",
       "parent_item_id": null,
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "eight-oclock-coffee-36oz",
@@ -115017,7 +115504,8 @@ window.DB={
       "scannable": "store",
       "unit_display": "per bag",
       "parent_item_id": null,
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "maxwell-house-medium-42oz",
@@ -115038,7 +115526,8 @@ window.DB={
       "scannable": "store",
       "unit_display": "per can",
       "parent_item_id": null,
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "maxwell-house-medium-11-5oz",
@@ -115059,7 +115548,8 @@ window.DB={
       "scannable": "store",
       "unit_display": "per can",
       "parent_item_id": null,
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "folgers-classic-roast-43oz",
@@ -115080,7 +115570,8 @@ window.DB={
       "scannable": "store",
       "unit_display": "per can",
       "parent_item_id": null,
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "folgers-classic-roast-11-3oz",
@@ -115101,7 +115592,8 @@ window.DB={
       "scannable": "store",
       "unit_display": "per can",
       "parent_item_id": null,
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "nescafe-clasico-instant-7oz",
@@ -115122,7 +115614,8 @@ window.DB={
       "scannable": "store",
       "unit_display": "per jar",
       "parent_item_id": null,
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "nescafe-tasters-choice-7oz",
@@ -115143,7 +115636,8 @@ window.DB={
       "scannable": "store",
       "unit_display": "per jar",
       "parent_item_id": null,
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "folgers-instant-coffee-8oz",
@@ -115164,7 +115658,8 @@ window.DB={
       "scannable": "store",
       "unit_display": "per jar",
       "parent_item_id": null,
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "k-cup-dunkin-24ct",
@@ -115458,7 +115953,8 @@ window.DB={
       "scannable": "store",
       "unit_display": "per box",
       "parent_item_id": null,
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "lipton-green-tea-40ct",
@@ -115479,7 +115975,8 @@ window.DB={
       "scannable": "store",
       "unit_display": "per box",
       "parent_item_id": null,
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "bigelow-constant-comment-20ct",
@@ -115647,7 +116144,8 @@ window.DB={
       "scannable": "store",
       "unit_display": "per box",
       "parent_item_id": null,
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "twinings-earl-grey-50ct",
@@ -115668,7 +116166,8 @@ window.DB={
       "scannable": "store",
       "unit_display": "per box",
       "parent_item_id": null,
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "stash-premium-green-20ct",
@@ -115710,7 +116209,8 @@ window.DB={
       "scannable": "store",
       "unit_display": "per box",
       "parent_item_id": null,
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "swiss-miss-dark-chocolate-8pk",
@@ -115794,7 +116294,8 @@ window.DB={
       "scannable": "store",
       "unit_display": "per bottle",
       "parent_item_id": null,
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "poland-spring-1liter",
@@ -115857,7 +116358,8 @@ window.DB={
       "scannable": "store",
       "unit_display": "per bottle",
       "parent_item_id": null,
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "arrowhead-water-20oz",
@@ -115878,7 +116380,8 @@ window.DB={
       "scannable": "store",
       "unit_display": "per bottle",
       "parent_item_id": null,
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "crystal-geyser-1gal",
@@ -115962,7 +116465,8 @@ window.DB={
       "scannable": "store",
       "unit_display": "per bottle",
       "parent_item_id": null,
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "ocean-spray-cranberry-64oz",
@@ -116025,7 +116529,8 @@ window.DB={
       "scannable": "store",
       "unit_display": "per can",
       "parent_item_id": null,
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "v8-original-46oz",
@@ -116109,7 +116614,8 @@ window.DB={
       "scannable": "store",
       "unit_display": "per carton",
       "parent_item_id": null,
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "honest-tea-green-16oz",
@@ -116214,7 +116720,8 @@ window.DB={
       "scannable": "store",
       "unit_display": "per bag",
       "parent_item_id": null,
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "kingsford-instant-light-11-6lb",
@@ -116403,7 +116910,8 @@ window.DB={
       "scannable": "store",
       "unit_display": "per bag",
       "parent_item_id": null,
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "scotts-turf-builder-30lb",
@@ -116760,7 +117268,8 @@ window.DB={
       "scannable": "store",
       "unit_display": "per pack",
       "parent_item_id": null,
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "spectracide-fire-ant-killer-1-5lb",
@@ -116907,7 +117416,8 @@ window.DB={
       "scannable": "store",
       "unit_display": "per bag",
       "parent_item_id": null,
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "wagners-sunflower-seed-10lb",
@@ -116970,7 +117480,8 @@ window.DB={
       "scannable": "store",
       "unit_display": "per bag",
       "parent_item_id": null,
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "clorox-pool-shock-12lb",
@@ -116991,7 +117502,8 @@ window.DB={
       "scannable": "store",
       "unit_display": "per bag",
       "parent_item_id": null,
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "hth-super-shock-1lb",
@@ -117033,7 +117545,8 @@ window.DB={
       "scannable": "store",
       "unit_display": "per bucket",
       "parent_item_id": null,
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "pool-ph-up-4lb",
@@ -117096,7 +117609,8 @@ window.DB={
       "scannable": "store",
       "unit_display": "per tool",
       "parent_item_id": null,
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "fiskars-garden-trowel",
@@ -117138,7 +117652,8 @@ window.DB={
       "scannable": "store",
       "unit_display": "per pair",
       "parent_item_id": null,
-      "upc_ids": []
+      "upc_ids": [],
+      "core": true
     },
     {
       "id": "miracle-gro-bloom-booster-4lb",
