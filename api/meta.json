@@ -1,10 +1,10 @@
 {
  "name": "The 1913 Index",
- "last_updated": "2026-07-07",
+ "last_updated": "2026-07-09",
  "n_items": 5558,
  "n_verified": 4547,
  "confidence": {
-  "plausible": 380,
+  "plausible": 497,
   "audited-ok": 3641,
   "category": 1231,
   "cross-verified": 14,

@@ -67791,12 +67791,12 @@
   "then_year": 2025,
   "then_price": 5,
   "now_year": 2026,
-  "now_price": 40.9,
-  "multiple": 8.18,
+  "now_price": 41.4,
+  "multiple": 8.28,
   "game": false,
   "verified": true,
   "source_then": "DoD/OMB, escalating since 2025 strikes; Watson/Brown methodology",
-  "source_now": "CSIS $34–42B (~$40B central, Jun 23 2026) + ~9 days ceasefire-standby burn ~$95M/day (militaryspend.org, Jul 2 2026); Pentagon official count $29B (incomplete)",
+  "source_now": "CSIS $34–42B (~$40B central, Jun 23 2026) + ~15 days ceasefire-standby burn ~$95M/day through Jul 8 (militaryspend.org phased model, Jul 9 2026); Pentagon/OMB official count $29–30B (incomplete). Fighting RESUMED Jul 8 2026 — Jul 8–9 strike costs not yet in any tracker.",
   "url": null
  },
  {
@@ -67816,7 +67816,7 @@
   "game": false,
   "verified": true,
   "source_then": "Aggregated from CRS RS22926 + Brown/Watson Costs of War",
-  "source_now": "Sum of all-in costs per site/wars.js (CRS + Brown Costs of War + CSIS): Korea $648B, Vietnam $1,402B, Iraq $2,100B, Afghanistan $2,300B, Gulf $25B, Kosovo $7B, Libya $2B, Iran $115B ≈ $6.6T (2026, mixed dollar-years, all-in incl. veterans + interest)",
+  "source_now": "Sum of all-in costs per site/wars.js (CRS + Brown Costs of War + CSIS, as of Jul 9 2026): Korea $648B, Vietnam $1,402B, Iraq $2,100B, Afghanistan $2,300B, Gulf $25B, Kosovo $7B, Libya $2B, Iran $115B (projected all-in, est.; fighting resumed Jul 8 2026) ≈ $6.6T (mixed dollar-years, all-in incl. veterans + interest)",
   "url": null
  },
  {
