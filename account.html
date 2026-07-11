@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Your account — The 1913 Index</title>
+<meta name="description" content="Sign in to The 1913 Index — your scans, receipts and price history, backed up and synced.">
+<meta property="og:title" content="Your account — The 1913 Index">
+<meta property="og:url" content="https://the1913index.com/account.html">
+<meta property="og:site_name" content="The 1913 Index">
+<meta property="og:type" content="website">
+<style>
+  :root{--bg:#0d1320;--panel:#141d2e;--line:#26324a;--ink:#eef2f8;--muted:#8fa0b8;--gold:#c9a84e;--red:#e5544a;--green:#38a169}
+  html,body{margin:0;padding:0;background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+  .app{max-width:460px;margin:0 auto;padding:14px 16px 60px}
+  h1{font-size:26px;color:var(--gold);margin:18px 0 4px}
+  .sub{font-size:13px;color:var(--muted);margin-bottom:18px}
+  .card{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:18px;margin-bottom:14px}
+  .field{width:100%;box-sizing:border-box;background:#0f1626;border:1px solid var(--line);border-radius:10px;color:var(--ink);padding:12px;font-size:15px;margin-bottom:10px}
+  .btn{display:block;width:100%;box-sizing:border-box;background:var(--gold);color:#1a1306;border:none;border-radius:10px;padding:13px;font-size:15px;font-weight:700;cursor:pointer;margin-bottom:8px}
+  .btn.sec{background:transparent;color:var(--ink);border:1px solid var(--line)}
+  .btn.danger{background:var(--red);color:#fff}
+  .linkbtn{background:none;border:none;color:var(--muted);font-size:12px;text-decoration:underline;cursor:pointer}
+  .msg{font-size:12.5px;color:var(--muted);min-height:16px;margin-top:6px}
+  .row{display:flex;justify-content:space-between;padding:9px 0;border-bottom:1px solid var(--line);font-size:14px}
+  .row:last-child{border-bottom:none}
+  .row b{color:var(--gold)}
+  a{color:var(--gold)}
+</style>
+</head>
+<body>
+<script src="nav.js"></script>
+<div class="app">
+  <h1>Your account</h1>
+  <div class="sub">One account backs up your scans, receipts and price history from the app and syncs them across devices.</div>
+
+  <div class="card" id="authCard">
+    <input class="field" id="email" type="email" autocomplete="email" placeholder="Email">
+    <input class="field" id="pass" type="password" autocomplete="current-password" placeholder="Password (8+ characters)">
+    <button class="btn" onclick="signIn()">Sign in</button>
+    <button class="btn sec" onclick="signUp()">Create account</button>
+    <button class="linkbtn" onclick="resetPw()">Forgot password?</button>
+    <div class="msg" id="authMsg"></div>
+    <div class="msg">By creating an account you agree to the <a href="privacy.html">privacy policy</a> — we store your email to run the account and may contact you about 1913 Index products.</div>
+  </div>
+
+  <div class="card" id="meCard" style="display:none">
+    <div class="row"><span>Signed in as</span><b id="meEmail"></b></div>
+    <div class="row"><span>Scans backed up</span><b id="nScans">—</b></div>
+    <div class="row"><span>Receipts backed up</span><b id="nReceipts">—</b></div>
+    <div class="row"><span>Baskets backed up</span><b id="nBaskets">—</b></div>
+    <div style="margin-top:14px">
+      <button class="btn sec" onclick="downloadCSV()">Download my data (CSV)</button>
+      <button class="btn sec" onclick="signOut()">Sign out</button>
+      <button class="btn danger" onclick="delAccount()">Delete account &amp; server data</button>
+    </div>
+    <div class="msg" id="meMsg"></div>
+  </div>
+
+  <div class="sub">Your data belongs to you: it stays on your phone even without an account, and deleting your account removes every copy from our servers.</div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script>
+var SB_URL='https://ikbcwkgqizdnnvzsfmff.supabase.co';
+var SB_KEY='sb_publishable_JPlT5gJ6a2q22T2JMjrHFg_VDJt2OoR';
+var sb=window.supabase.createClient(SB_URL,SB_KEY);
+function $(s){return document.querySelector(s);}
+function msg(id,m){$(id).textContent=m;}
+function vals(){return {email:$('#email').value.trim(),pass:$('#pass').value};}
+async function refresh(){
+  var s=(await sb.auth.getSession()).data.session;
+  var u=s&&s.user;
+  $('#authCard').style.display=u?'none':'block';
+  $('#meCard').style.display=u?'block':'none';
+  if(!u)return;
+  $('#meEmail').textContent=u.email||'account';
+  var kinds=[['scans','#nScans'],['receipts','#nReceipts'],['baskets','#nBaskets']];
+  for(var i=0;i<kinds.length;i++){
+    try{
+      var r=await sb.from(kinds[i][0]).select('id',{count:'exact',head:true});
+      $(kinds[i][1]).textContent=(r.count==null?'0':String(r.count));
+    }catch(e){$(kinds[i][1]).textContent='?';}
+  }
+}
+async function signIn(){
+  var v=vals();if(!v.email||!v.pass)return msg('#authMsg','Enter your email and password.');
+  msg('#authMsg','Signing in…');
+  var r=await sb.auth.signInWithPassword({email:v.email,password:v.pass});
+  if(r.error)return msg('#authMsg',r.error.message||'Sign-in failed.');
+  msg('#authMsg','');refresh();
+}
+async function signUp(){
+  var v=vals();if(!v.email||v.pass.length<8)return msg('#authMsg','Enter an email and a password of 8+ characters.');
+  msg('#authMsg','Creating account…');
+  var r=await sb.auth.signUp({email:v.email,password:v.pass});
+  if(r.error)return msg('#authMsg',r.error.message||'Could not create the account.');
+  if(r.data.session){msg('#authMsg','');refresh();}
+  else msg('#authMsg','Check your email — click the confirmation link, then sign in here.');
+}
+async function resetPw(){
+  var v=vals();if(!v.email)return msg('#authMsg','Type your email above first.');
+  await sb.auth.resetPasswordForEmail(v.email,{redirectTo:'https://the1913index.com/account.html'});
+  msg('#authMsg','Reset link sent — check your email.');
+}
+async function signOut(){await sb.auth.signOut();refresh();}
+async function downloadCSV(){
+  msg('#meMsg','Building CSV…');
+  var out=[['type','name','price','date','store'].join(',')];
+  function csv(c){return '"'+String(c==null?'':c).replace(/"/g,'""')+'"';}
+  var r1=await sb.from('scans').select('data');
+  (r1.data||[]).forEach(function(row){var d=row.data||{};out.push([csv('scan'),csv(d.name),csv(d.price),csv((d.date||'').slice(0,10)),csv(d.store||'')].join(','));});
+  var r2=await sb.from('receipts').select('data');
+  (r2.data||[]).forEach(function(row){var d=row.data||{};(d.items||[]).forEach(function(it){out.push([csv('receipt'),csv(it.name),csv(it.price),csv((d.date||'').slice(0,10)),csv(d.store||'')].join(','));});});
+  var blob=new Blob([out.join('\n')],{type:'text/csv'});
+  var a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='1913-index-data.csv';a.click();
+  msg('#meMsg','Downloaded.');
+}
+async function delAccount(){
+  if(!confirm('Permanently delete your account and all backed-up data from our servers? This cannot be undone.'))return;
+  msg('#meMsg','Deleting…');
+  var r=await sb.rpc('delete_account');
+  if(r.error)return msg('#meMsg','Could not delete: '+(r.error.message||'try again.'));
+  await sb.auth.signOut();msg('#meMsg','');refresh();
+}
+refresh();
+</script>
+</body>
+</html>
