@@ -180,16 +180,22 @@ html.embed .footnote{display:none!important}
 
   /* ---------- scoring ---------- */
   function scoreQ(q,guess){
-    // 100 is reserved for the EXACT answer; the closest miss caps at 99.
+    // 100 is reserved for the EXACT answer. Every other real guess earns partial credit on a gentle
+    // curve and never a punishing 0 — there is a FLOOR of 5 — with non-exact answers capped at 99.
+    // (Mitch 2026-07-11: a 30-year miss scoring 0 wasn't reasonable; year curve widened + floor added.)
+    var FLOOR=5;
     if(q.type==="year"){ var off=Math.abs(guess-q.answer);
-      var ys=Math.max(0,Math.round(100*Math.exp(-Math.pow(off/8,2))));
-      return off===0?100:Math.min(ys,99); }
+      if(off===0) return 100;
+      // ~89 pts at 10 yrs off, ~62 at 20, ~34 at 30, ~12 at 45, floor 5 beyond.
+      var ys=Math.round(100*Math.exp(-Math.pow(off/29,2)));
+      return Math.max(FLOOR,Math.min(ys,99)); }
     var g=guess,a=q.answer,sigma=0.5;
     if(q.type==="percent"){ sigma=0.35; } // score % answers on the % itself, not the ratio-of-ratios
-    if(g<=0||a<=0) return g===a?100:0;
+    if(g<=0||a<=0) return g===a?100:FLOOR;
     var d=Math.abs(Math.log(g/a));
-    var sc=Math.max(0,Math.round(100*Math.exp(-(d*d)/(2*sigma*sigma))));
-    return d===0?100:Math.min(sc,99);
+    if(d===0) return 100;
+    var sc=Math.round(100*Math.exp(-(d*d)/(2*sigma*sigma)));
+    return Math.max(FLOOR,Math.min(sc,99));
   }
   function band(s){ return s>=90?"🟩":s>=70?"🟨":s>=45?"🟧":"🟥"; }
   function fmt(q,v){ if(q.type==="currency")return money(v); if(q.type==="percent")return pctTxt(+v); if(q.type==="year")return v; return v; }
