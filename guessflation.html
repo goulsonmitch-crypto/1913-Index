@@ -88,7 +88,11 @@
 html.embed .sub,html.embed .tag,html.embed .brand{display:none!important}
 html.embed header{padding:2px 0 8px!important;margin-bottom:8px!important}
 html.embed .title{font-size:24px!important}
-html.embed .app{padding:8px 12px 24px!important}
+html.embed,html.embed body{height:100dvh;max-height:100dvh;overflow:hidden}
+html.embed body{display:flex}
+html.embed .app{padding:8px 12px 10px!important;height:100dvh;max-height:100dvh;display:flex;flex-direction:column;overflow:hidden}
+html.embed #stage{flex:1 1 auto;min-height:0}
+html.embed .footnote{display:none!important}
 .exitlink{display:block;margin:12px auto 0;background:none;border:none;color:var(--muted);font-size:12px;cursor:pointer;text-decoration:underline}</style>
 </head>
 <body>
@@ -241,22 +245,36 @@ html.embed .app{padding:8px 12px 24px!important}
     prog.innerHTML=""; for(var i=0;i<total;i++){ var x=document.createElement("div");
       x.className="dot "+(i<idx?"done":(i===idx?"active":"")); prog.appendChild(x); } }
 
+  // Non-scroll fit (app/embed only): after any render, if the stage content is taller than the
+  // locked viewport, scale it down until it fits. Guarantees zero scroll in every state — landing,
+  // question, reveal, result — even on long questions. Web (non-embed) is untouched.
+  function fitStage(){ if(!IS_APP) return; requestAnimationFrame(function(){
+    stage.style.transform=''; var avail=stage.clientHeight, need=stage.scrollHeight;
+    if(avail>40 && need>avail+1){ var k=Math.max(0.5, avail/need);
+      stage.style.transformOrigin='top center'; stage.style.transform='scale('+k+')'; } }); }
+  if(IS_APP){ try{ new MutationObserver(fitStage).observe(stage,{childList:true,subtree:true});
+    window.addEventListener('resize',fitStage);
+    window.addEventListener('orientationchange',function(){ setTimeout(fitStage,250); }); }catch(e){} }
+
   function renderHome(){ flow=null; showProgress(false); var done=lsGet("gf_daily_"+todayKey());
     stage.innerHTML=
       '<div class="card" style="text-align:center">'+
         '<div class="mode">Today · Puzzle #'+puzzleNo()+'</div>'+
         '<div style="font-size:18px;font-weight:700;margin-bottom:4px">The Daily Five</div>'+
-        '<div style="font-size:13px;color:var(--muted)">One question from each mode. One shot a day.</div>'+
+        '<div style="font-size:12.5px;color:var(--muted);margin-bottom:2px">One shot a day — five questions:</div>'+
+        '<ul style="text-align:left;margin:6px auto 0;max-width:290px;padding-left:16px;font-size:12px;color:var(--muted);line-height:1.55">'+
+          '<li><b style="color:var(--ink)">Price It</b> — guess an item\'s old price</li>'+
+          '<li><b style="color:var(--ink)">Which Year</b> — the year from a price</li>'+
+          '<li><b style="color:var(--ink)">Salary Time Machine</b> — what a job used to pay</li>'+
+          '<li><b style="color:var(--ink)">Purchasing Power</b> — what the dollar lost</li>'+
+          '<li><b style="color:var(--ink)">The Real Number</b> — official vs. reality</li>'+
+        '</ul>'+
         (done ? '<div class="explain" style="margin-top:16px">You’ve played today — <b>'+done.total+'/100</b> '+done.bands+'<br>Come back tomorrow for #'+(puzzleNo()+1)+'.</div><button class="btn ghost" id="seeres">See today’s result</button>'
               : '<button class="btn" id="playdaily">Play today’s Guessflation</button>')+
       '</div>'+
       (IS_APP ? (statsStripHTML()+
-      '<div class="menulabel">Or practice a single mode (unlimited)</div>'+
-      '<button class="modebtn" data-m="Price It"><span>Price It<small>Guess the old price</small></span><span class="arrow">→</span></button>'+
-      '<button class="modebtn" data-m="Which Year"><span>Which Year<small>Name the year from a price</small></span><span class="arrow">→</span></button>'+
-      '<button class="modebtn" data-m="Salary Time Machine"><span>Salary Time Machine<small>Guess what a job used to pay</small></span><span class="arrow">→</span></button>'+
-      '<button class="modebtn" data-m="Purchasing Power"><span>Purchasing Power<small>What the dollar lost</small></span><span class="arrow">→</span></button>'+
-      '<button class="modebtn" data-m="The Real Number"><span>The Real Number<small>Official vs. reality</small></span><span class="arrow">→</span></button>')
+      '<div class="menulabel">Practice</div>'+
+      '<button class="modebtn" data-m="__RANDOM__"><span>Randomized Practice<small>Random questions from all five types — no order</small></span><span class="arrow">→</span></button>')
       : '<div class="card" style="text-align:center;margin-top:14px"><div style="font-size:13px;color:var(--muted)">Streaks, stats and unlimited practice live in the app.</div><a href="https://apps.apple.com/app/id6786975995" style="color:var(--gold);font-size:13px;font-weight:700;text-decoration:none">Get 1913 Index: Inflation Tracker →</a></div>');
     var pd=document.getElementById("playdaily"); if(pd) pd.onclick=startDaily;
     var sr=document.getElementById("seeres"); if(sr) sr.onclick=function(){ renderDailyResultFromSave(done); };
@@ -346,6 +364,7 @@ html.embed .app{padding:8px 12px 24px!important}
   /* ---------- practice (unlimited) ---------- */
   function randOf(a){ return a[Math.floor(Math.random()*a.length)]; }
   function makePractice(mode){
+    if(mode==="__RANDOM__") mode=randOf(["Price It","Which Year","Salary Time Machine","Purchasing Power","The Real Number"]);
     if(mode==="Price It") return qPriceIt(randOf(GOODS));
     if(mode==="Which Year") return qWhichYear(randOf(WYEAR));
     if(mode==="Salary Time Machine") return qSalary(randOf(SALARIES));
